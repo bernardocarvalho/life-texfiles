@@ -1,17 +1,35 @@
-%&program=xelatex
+﻿%&program=xelatex
 %&encoding=UTF-8 Unicode
+% SVN keywords
+% $Author$
+% $Date$
+% $Revision$
+% $URL$
 \documentclass[a4paper,12pt]{article}      % Comments after  % are ignored
 %\usepackage{hyperref}                 % For creating hyperlinks in cross references
 %\documentclass[a4paper,12pt]{article} 
 %
 \usepackage{ifxetex}% for LATEX, or
+\usepackage{ifplatform} 
+
 \ifxetex
 \usepackage{polyglossia} \setmainlanguage{portuges}
 \usepackage{fontspec}
+%
+\ifwindows
+\setmainfont{Garamond}
+\setsansfont{Gill Sans MT}
+\setmonofont[Scale=MatchLowercase]{Courier}
+\fi
+\iflinux
 \setmainfont[Ligatures=TeX]{Linux Libertine O}
 \setsansfont[Ligatures=TeX,Scale=MatchLowercase]{Linux Biolinum}
-%\setsansfont{Gill Sans MT}
 \setmonofont[Scale=MatchLowercase]{Courier}
+\fi
+\ifmacosx
+% add settings
+\fi
+%
 \usepackage{xcolor,graphicx} 
 \else
 %PdfLaTEX
@@ -31,7 +49,7 @@
 \pagestyle{myheadings}         % Option to put page headers
                                % Needed \documentclass[a4paper,twoside]{article}
 \markboth{{\small\it MEFT - 2012/2013}}
-{{\small\it Laboratório de Física Experimental Básica - MEFT - 2012/2013}}
+{{\small\it Laboratório de Física Experimental Básica - MEFT - 2013/2014}}
 
 \textwidth 15.5cm
 \topmargin -1cm
@@ -74,7 +92,7 @@
 	
 	\HRule \\[0.5cm]
 	{ \huge   \bfseries \textsc{ Pendulo Gravítico } }\\[0.4cm]
-	{ \large \bfseries Determinação do período do pêndulo simples e aferição com o valor da atracção gravítica $g$  }\\
+	{ \large \bfseries Determinação do período do pêndulo simples e aferição com o valor da Aceleração da Gravidade local $g$  }\\
 %	{ \large \begin{flushleft}
 %	 $\bullet$ Deflexão magnética \\
 %	 $\bullet$ Deflexão magnética em equilíbrio com deflexão eléctrica
@@ -105,10 +123,31 @@
 
 Comece a sessão de laboratório por estimar a precisão que obtém na medição do tempo com o cronómetro, tendo em conta 
 o tempo de reacção do corpo humano. 
-Com a ajuda de um colega e de uma régua graduada obtenha 15 medidas do seu tempo de reacção e obtenha o seu valor médio e a incerteza.
+Com a ajuda de um colega e de uma régua graduada obtenha 15 medidas da queda da régua e a partir da média e desvio padrão obtenha o seu tempo de reação e a incerteza \footnote{$\overline{t}=\sqrt{\frac{2 \overline{D}}{g}}$ e   
+$e_{\overline{t}}=\sqrt{\frac{2 }{g}} \cdot \frac{1}{2\sqrt{\overline{D}}} \cdot e_{\overline{D}}  
+= \overline{t} \cdot \frac{1}{2\overline{D}} \cdot e_{\overline{D}} $ }
+
+\begin{tabular}{|r|c|c|c|}
+\hline
+Ensaio  & A - Distância & B - Distância & C - Distância  \\
+\# & de queda (cm) & de queda (cm) & de queda (cm)\\
+\hline \hline
+1 & & & \\
+\hline
+2 & &  &\\
+\hline 3 & & & \\
+\hline 4 & & & \\
+\hline 5 & & & \\
+\hline \hline
+Média $\overline{D}$ (m) & &  & \\
+Desvio padrão (m) & & & \\
+Erro da Média  $e_{\overline{D}}$ (m) & & & \\ 
+Tempo de reação $\overline{t} \pm e_{\overline{t}}$ (s) & $\qquad \pm$ \quad(m) & $\qquad \pm$ \quad (m) & $\qquad \pm$ \quad (m) \\
+\hline
+\end{tabular}
 
 Monte o sistema de pêndulo gravítico e obtenha o seu período para diversos comprimentos do fio. 
-Obtenha o valor de $g_{exp}$ para estes ensaios, usando a expressão (9) do texto, bem como a respectiva incerteza experimental. 
+Obtenha o valor de $g_{exp}$ para estes ensaios, usando a expressão (9) do texto de apoio, bem como a respectiva incerteza experimental. 
 Compare o valor final de $g_{exp}$ obtido com o valor tabelado $g_{tab}$ e estime o desvio à exactidão que obteve. 
 
 \smallskip
@@ -118,16 +157,20 @@ Tenha em atenção os seguintes aspectos:
 	 $\bullet$ Uma massa pendurada num fio tem mais que o grau de liberdade em $\theta$. Tente assegurar-se que o pêndulo oscila apenas ao longo de um plano. \\
 	 $\bullet$ Tente minimizar o efeitos de paralaxe na determinação do ângulo máximo, quer no posição usada para cronometrar um período  \\
 	 $\bullet$ Naturalmente a massa utilizada, não é pontual. Qual é o efeito  na medida e incerteza do comprimento $l$? \\	
-	 $\bullet$ Como pode minimizar a incerteza da medição do período? Usando um ou mais ciclos? \\
-	 $\bullet$ Verifique experimentalmente que o período do pêndulo não depende do valor da massa.\\
-	 $\bullet$ Verifique experimentalmente a dependência do ângulo máximo no período do pêndulo. Para que valores de $\theta_0$ deixamos de poder usar a equação (9), com um desvio de $g_{exp}$ superior a uma décima?\\
-	 $\bullet$ Tente estimar a percentagem de energia  devido ao atrito que se perde em cada ciclo e calcule o  factor $Q$  e a sua influencia no período.
+	 $\bullet$ Como pode minimizar a incerteza da medição do período? Usando um ou $N$ ciclos? \\
 \end{flushleft} 
 
 
+Actividades adicionais, se tiver tempo:
+ \begin{flushleft}
+	 $\bullet$ Verifique experimentalmente que o período do pêndulo não depende do valor da massa.\\
+	 $\bullet$ Verifique experimentalmente a dependência do ângulo máximo no período do pêndulo. 
+	 Para que valores de $\theta_0$ o valor calculado de $g_{exp}$ se afasta de $\overline{g_{exp}}$ com desvio de $0.05$ ?\\
+	 $\bullet$ Tente estimar a percentagem de energia devido ao atrito que se perde em cada ciclo .
+\end{flushleft} 
+
  
 
-%	 $\bullet$ Deflexão magnética em equilíbrio com deflexão eléctrica
 
 %\textbf{Ver descrição no guia de laboratório pgs.77-81}
 
