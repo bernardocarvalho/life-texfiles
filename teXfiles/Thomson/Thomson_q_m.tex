@@ -1,0 +1,593 @@
+﻿%&program=xelatex
+%&encoding=UTF-8 Unicode
+% SVN keywords
+% $Author$
+% $Date$
+% $Revision$
+% $URL$
+\documentclass[a4paper,twoside,12pt]{article}      % Comments after  % are ignored
+%\usepackage{hyperref}                 % For creating hyperlinks in cross references
+%
+\usepackage{ifxetex}% for XELATEX, or PDFlatex
+\usepackage{ifplatform} 
+%
+\ifxetex
+	\usepackage{polyglossia} \setmainlanguage{portuges}
+	\usepackage{fontspec}
+	\ifwindows
+		\setmainfont[Ligatures=TeX]{Garamond}
+		\setsansfont[Ligatures=TeX]{Gill Sans MT}
+		\setmonofont[Scale=MatchLowercase]{Courier}
+	\fi
+	\iflinux
+		\setmainfont[Ligatures=TeX]{Linux Libertine O}
+		\setsansfont[Ligatures=TeX,Scale=MatchLowercase]{Linux Biolinum}
+		\setmonofont[Scale=MatchLowercase]{Courier}
+	\fi
+	\ifmacosx
+	% add settings
+	% Use xelatex -no-shell ...
+	\fi
+	\usepackage{xcolor,graphicx} 
+\else
+	\usepackage[portuguese]{babel}
+	%\usepackage[latin1]{inputenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphics}                 % Packages to allow inclusion of graphics
+	\usepackage{color}                    % For creating coloured text and background
+\fi
+
+\usepackage{amsmath,amssymb,amsfonts} % Typical maths resource packages
+
+\oddsidemargin 0cm
+\evensidemargin 0cm
+
+\pagestyle{myheadings}         % Option to put page headers
+                               % Needed \documentclass[a4paper,twoside]{article}
+\markboth{{\small\it MEFT - 2013/2014}}
+{{\small\it Laboratório de Física Experimental Básica}}
+
+\textwidth 15.5cm
+\topmargin -1cm
+\parindent 0cm
+\textheight 24cm
+\parskip 1mm
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+%\usepackage{textcomp}
+
+% Math macros
+\newcommand{\ud}{\,\mathrm{d}} 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\author{Prof. Bernardo B. Carvalho} 
+
+%, Bernardo Brotas Carvalho\\bernardo@ipfn.ist.utl.pt} 
+\date{ Setembro 2012} 
+
+\begin{document} 
+
+\includegraphics[width=0.2\textwidth]{../logo-ist}%\\[1cm]  %%  Logo_IST_color
+
+\HRule \\[0.5cm]
+{ \huge   \bfseries \textsc{ Experiência de Thomson} }\\[0.4cm]
+{ \large \bfseries Determinação Experimental da Relação $q/m$ do Eletrão }\\
+\HRule \\%[0.5cm]
+
+
+\section{\sf  Conceitos necessários:} 
+\begin{enumerate}
+	\item Força elétrica. Campo elétrico (Eletrostático).
+	\item Potencial elétrico. Equipotencial. Energia potencial elétrica.
+	\item Condutores e dielétricos. Condensador plano.
+	\item Efeitos da corrente elétrica estacionária criada por uma espira. 	
+	\item Força de Lorentz e Laplace.
+\end{enumerate}
+
+\section{\sf Campo eletrostático}
+
+ Campo elétrico criado por uma distribuição de cargas que não evolui no tempo (p.ex. $q_1$ e $q_2$ imersas no vácuo à distância $r_{12}$, situadas respetivamente em $P_1$ e $P_2$)
+
+A força elétrica que sofre $q_1$ no ponto $P_1$ devido a $q_2$ em $P_2$ à distância $r_{12}$ é
+\begin{equation}
+	\vec{f}_{P_1,q_1} (q_2, r_{1 2} ) = \frac{q_1 q_2}{4 \pi \varepsilon_0 r_{1 2}^2} \vec{u}_{r,P_1} = 
+	- \vec{f}_{P_2,q_2} (q_1, r_{1 2} )
+%	B = \mu H \to H= \sqrt{\frac{ \varepsilon}{\mu}} E 
+\end{equation}
+em que $\varepsilon_0$  é a constante dielétrica ou permitividade elétrica do vazio ($\varepsilon_0 \simeq 8.854 \cdot 10^{-12} F/m$) e	
+ $\vec{u}_{r,P_1}$  é o \emph{versor} da distância $r_{1 2} $ no ponto $P_1$  (vetor unitário dirigido de $P_2$ para $P_1$ ).
+
+\begin{minipage}[b]{0.4\linewidth}
+Define-se campo elétrico, $\vec{E}$,  num ponto, $P$, criado por uma carga, $q_1$, à distância, $r$, como a força elétrica que se exerce em $P$  devido à carga $q_1$ sobre uma carga de prova ou teste, suposta unitária e positiva.
+\begin{equation}
+	\vec{E}_P (q_1, r) = \frac{q_1}{4 \pi \varepsilon_0 r^2} \vec{u}_{r, P} 
+\end{equation}
+
+\end{minipage}
+%\hspace{0.1cm}
+				\begin{minipage}[b]{0.5\linewidth}
+				\setlength{\unitlength}{1.0cm} 
+				\begin{picture}(6,6)
+				\linethickness{0.075mm} 
+				\put(1,1){\line(1,1){4}}
+				\put(1,1){\circle*{0.1}}
+				\put(5,5){\circle*{0.1}}
+
+				\put(.8,1.4){$P_2$}
+				\put(1.2,.7){$q_2$}
+				\put(4.8,5.4){$P_1$}
+				\put(5.2,4.7){$q_1$}
+				\put(3.6,3.0){$r_{12}$}
+				\put(5.4,5.3){$\vec{u}_{r,P_1}$}
+				%\linethickness{1.1mm} 
+				\thicklines
+				\put(5,5){\vector(1,1){0.8}}
+				\put(1,1){\vector(-1,-1){0.8}}
+				\end{picture}
+				\end{minipage}
+
+Se se colocasse em $P$  a carga $q$  a força elétrica a que esta carga ficaria submetida devido a $q_1$  seria	
+$\vec{f}_{P,q} (q_1, r ) = q \vec{E}$, 
+ou mais simplesmente:
+\begin{equation}
+\vec{f} = q \vec{E}
+\end{equation}
+
+A expressão campo elétrico também define a região do espaço onde se fazem sentir as acções elétricas.
+
+\section{\sf Potencial elétrico}
+	
+O campo elétrico e a força elétrica, que são entidades vetoriais, podem também ser calculadas a partir de uma entidade capaz de descrever o campo mas de natureza escalar, o potencial elétrico $V$. Para a situação referida acima, o potencial elétrico criado no ponto $P$ à distância $r$ da carga $q_1$ é calculado por:
+\begin{equation} \label{eq:pot_ele}
+	V_P (q_1, r) = \frac{q_1}{4 \pi \varepsilon_0 r} 
+\end{equation}
+
+
+No caso de uma distribuição de $n$ cargas elétricas $q_i$ à distância $r_i$ do ponto $P$ onde se pretende calcular o	campo elétrico e o potencial tem-se:
+\begin{align}
+	\vec{E}_P &= \frac{1}{4 \pi \varepsilon_0 } \sum_{i=1}^n \Big( \frac{q_i}{ r_i^2}\; \vec{u}_{r_i , P}  \Big) \nonumber \\ 
+ V_P &= \frac{1}{4 \pi \varepsilon_0 } \sum_{i=1}^n \Big( \frac{q_i}{ r_i}  \Big) \nonumber
+\end{align}
+
+%\setlength{\unitlength}{0.8cm} 
+%\begin{picture}(6,4)
+%\linethickness{0.075mm} \multiput(0,0)(1,0){7}
+%{\line(0,1){4}} \multiput(0,0)(0,1){5}
+%{\line(1,0){6}} \thicklines \put(0.5,0.5){\line(1,5){0.5}} \put(1,3){\line(4,1){2}} \qbezier(0.5,0.5)(1,3)(3,3.5) \thinlines %\put(2.5,2){\line(2,-1){3}} \put(5.5,0.5){\line(-1,5){0.5}} \linethickness{1mm} \qbezier(2.5,2)(5.5,0.5)(5,3) \thinlines %\qbezier(4,2)(4,3)(3,3) \qbezier(3,3)(2,3)(2,2) \qbezier(2,2)(2,1)(3,1) \qbezier(3,1)(4,1)(4,2)
+%\end{picture}
+
+
+Recorde-se que se se considera uma única carga, $q$, positiva, as linhas de força elétricas são radiais e dirigidas para o exterior. Essas linhas de força são perpendiculares às superfícies equipotenciais, que são esféricas ($r =c^{te}$ na equação \ref{eq:pot_ele}) e concêntricas com as cargas. Atendendo a (\ref{eq:pot_ele}) para $r_2 > r_1$,	$V(r_2) < V(r_1)$ e portanto as linhas de força dirigem-se para os potenciais decrescentes.
+
+No caso de duas cargas, $q_1 > 0$ e $q_2 < 0$, (que quando afastadas uma da outra produziriam campos radiais, respetivamente divergindo e convergindo) há uma única linha de força que é linear (de $q_1$ para $q_2$). Todas as outras, que na vizinhança próxima de cada carga são radiais, acabam por infletir dirigindo-se todas de $q_1$ para $q_2$. A figura das linhas de força tem simetria de revolução em torno do eixo que contém $q_1$ e $q_2$ e é esquematicamente a indicada abaixo. Se o valor absoluto das duas cargas for o mesmo a figura é simétrica em relação ao plano mediatriz das cargas $q_1$ e $q_2$.
+
+Se se calcular a diferença de potencial entre dois pontos infinitamente próximos $P$ e $P+dP$ devido a uma carga $q_1$ à distância $r$ e $r+dr$ respetivamente, a variação elementar do potencial $V$ será:
+
+\begin{minipage}[b]{0.45\linewidth}
+\begin{align}
+d V &= V_{P+dP} - V_P = \frac{q_1}{4 \pi \varepsilon_0 r} \big(  \frac{1}{r + dr} -\frac{1}{r} \big)\nonumber\\
+	 &= \frac{q_1}{4 \pi \varepsilon_0 } \big(  - \frac{dr}{r^2} \big) = - \vec{E} \cdot d \vec{r}  \end{align}
+\end{minipage}
+%
+\hspace{0.1cm}
+%
+%\begin{center}
+\begin{minipage}[b]{0.6\linewidth}
+%\framebox[0.6\linewidth][c]{
+\setlength{\unitlength}{0.8cm} 
+\begin{picture}(6,4)
+%\linethickness{0.075mm} \multiput(0,0)(1,0){7}
+%{\line(0,1){4}} \multiput(0,0)(0,1){5}
+%{\line(1,0){6}} \thicklines \put(0.5,0.5){\line(1,5){0.5}} \put(1,3){\line(4,1){2}} \qbezier(0.5,0.5)(1,3)(3,3.5) \thinlines %\put(2.5,2){\line(2,-1){3}} \put(5.5,0.5){\line(-1,5){0.5}} \linethickness{1mm} \qbezier(2.5,2)(5.5,0.5)(5,3) 
+\put(1,2){\circle*{0.15}}
+\put(5,2){\circle*{0.15}}
+\put(.8,0.8){$q_1 (+)$}
+\put(4.8,0.8){$q_2 (-)$}
+\thinlines 
+\qbezier(1.15,2.15)(3,4)(4.9,2.1) 
+%\qbezier(1.1,2.1)(3,3)(4.9,2.1) 
+\put(4.5,2.5){\vector(1,-1){0.4}}
+\qbezier(1.1,1.9)(3,1)(4.9,2)
+%\put(4.9,1.9){\vector(1,1){0.4}}
+
+
+\qbezier(1.2,2.2)(3,3.5)(4.8,2.2) 
+%\put(4.8,2.2){\vector(1,-1){0.3}}
+\qbezier(1.2,1.8)(3,.5)(4.8,1.8)
+\put(4.5,1.5){\vector(1,1){0.4}}
+
+\put(.9,2){\vector(-1,0){.8}} 
+\put(1.1,2){\vector(1,0){3.7}} 
+\put(5.9,2){\vector(-1,0){.8}} 
+%\qbezier(2,2)(2,1)(3,1) \qbezier(3,1)(4,1)(4,2)
+\end{picture}
+\end{minipage}
+
+%\setlength{\unitlength}{1mm} 
+%\begin{picture}(60,40)
+ 
+%\put(10,20){\circle*{0}}
+%\put(50,20){\circle*{0}}
+%\qbezier(11.5,21.5)(30,40)(49,21) 
+%\put(45,25){\vector(1,-1){1}}
+%\put(45,25){\vector(1,-1){2}}
+%\end{picture}
+
+Esta quantidade representa o trabalho elementar (energia) associado ao deslocamento da
+carga teste, ($q_t=1\,C$), de $P$ para $P+dP$. Para $q_1 > 0$,	$\vec{E}$ e $\vec{dr}$ são paralelos e $dV < 0$. Isto significa que
+não será necessário fornecer energia para realizar esse transporte. 
+De facto afastar a carga teste da carga $q_1$ (i.e. ir de $P$ para $P+dP$) leva a uma configuração de cargas ($q_1$ e $q_t$) energeticamente mais favorável. Relembrar que para um campo conservativo o trabalho realizado (que não depende do percurso mas só dos pontos inicial e final) é simétrico da variação de energia potencial.
+
+No caso de uma diferença finita de potencial i.e. de uma diferença de potencial entre dois pontos, $P$ e $Q$, ter-se-á que somar um número infinito de contribuições infinitesimais no intervalo $P$ a $Q$
+
+\begin{equation}
+V_Q-V_P  = \lim_{n  \to \infty } \sum_{i=1}^n dV_i = \lim_{n \to \infty } \sum_{i=1}^n \underbrace{( - \vec{E}_i \cdot d\vec{r}_i )}_{\bar{PQ}} \rightarrow \int - \vec{E} \cdot d\vec{r}
+\end{equation}
+%\frown 
+
+\begin{equation*} 
+V_P - V_Q  = \int_{\bar{PQ}}  \vec{E} \cdot d \vec{r}
+\end{equation*}
+
+e porque $\vec{E}$ (campo eletrostático) é um campo conservativo este integral não vai depender do percurso mas apenas dos pontos extremos i.e.
+\begin{equation*} 
+V_P - V_Q  = \int_P^Q  \vec{E} \cdot d\vec{r}
+\end{equation*}
+
+
+No caso particular de $E$ ser homogéneo (por exemplo no interior de um condensador plano)  na região onde se situam os pontos $P$ e $Q$ afastados de $D$, obtém-se 
+\begin{equation}\label{eq:difPot}
+V_P - V_Q  =  E\cdot D
+\end{equation}
+
+Para se obter o significado físico de $V_P$ considera-se que $Q$ é um ponto infinitamente
+afastado da região em que se faz sentir o campo elétrico, $\vec{E}$.
+Nesse ponto $r \to \infty $, e $V_Q=0$,
+obtendo-se $V_P =  \int_P^\infty  \vec{E} \cdot d\vec{r}$, que permite ``ler'' $V_P$ como a energia necessária para transportar a carga teste sob acção de $\vec{E}$, desde o ponto $P$ até distâncias suficientemente grandes tal que
+o campo elétrico não se faça sentir ($V$ tem sempre o significado de uma diferença de potencial).
+
+Se for a carga $q_2$, a energia necessária será $W= q_2\cdot V$. A energia associada a uma configuração de cargas $q_1$ e $q_2$, à distância $r$:
+
+\begin{equation}\label{eq:enrPot}
+ W = \frac{q_1 q_2}{4 \pi \varepsilon_0 r} = q_1 V_1 = q_2 V_2 =  \frac{q_1 V_1 +q_2 V_2}{2} 
+\end{equation}
+
+em que $V_1$ é o potencial no ponto $P_1$ criado pela carga $q_2$, e $V_2$ é o potencial no ponto $P_2$ criado pela carga $q_1$. A equação (\ref{eq:enrPot}) pode escrever-se com toda a generalidade como:
+
+\begin{equation}%\label{eq:enrPot}
+ W_E =  \frac{1}{2} \sum_{i,j (i\ne j)}^n \frac{ 1 }{4 \pi \varepsilon_0} \frac{ q_i \, q_j }{r_{i\,j}}  = 
+	 \frac{1}{2} \sum_{i=1}^n q_i \left( \sum_{j \ne i}^n \frac{ q_j }{4 \pi \varepsilon_0 \,r_{i\,j}} \right) =
+	\frac{1}{2} \sum_{i=1}^n q_i V_i
+\end{equation}
+
+que corresponde à energia necessária para criar a distribuição de cargas $q_i$. $W_E$ é uma energia potencial porque está associada às posições que as diferentes cargas ocupam, podendo ser recuperada se as cargas se afastarem umas das outras até distâncias $r \to \infty$.
+
+\section{\sf Condutores elétricos e dielétricos. Condensador plano}
+Um material é um condutor elétrico ideal se as cargas elétricas do mesmo sinal em excesso (que o carregam) são livres de se movimentarem no seu interior e à sua superfície. Quando pelo contrário isso não acontece estamos perante um dielétrico.
+
+Assim, se carregarmos um condutor com uma carga total $Q$ (se $Q > 0$,  retiramos eletrões ao condutor inicialmente neutro) essas cargas, todas do mesmo sinal, vão
+acomodar-se logo que se atinja o equilíbrio eletrostático, em posições que são o mais
+afastadas possíveis umas das outras, ou seja na superfície exterior do condutor, formando uma ``folha'' de carga. Pode mostrar-se que $\vec{E}$ no interior do condutor é nulo (enquanto num
+dielétrico $\vec{E} \ne \vec{0}$), e que a superfície do condutor é uma \emph{equipotencial}. Daí que as linhas de força elétricas são perpendiculares à superfície do condutor. Quando um material é carregado, a velocidade com que essas cargas se transferem de todo o volume do condutor para a superfície depende da condutividade material. Se se considerar um condutor carregado, com geometria plana (uma placa), a carga vai distribuir-se sobre a superfície.
+
+\setlength{\unitlength}{0.8cm} 
+\begin{center}
+	\framebox[0.6\linewidth][c]{
+		\begin{picture}(6,3)
+		%\linethickness{0.075mm} 
+		\put(1,1){\line(1,0){4}}
+		\put(5,1){\line(0,1){1}}
+		\put(5,2){\line(-1,0){4}}
+		\put(1,2){\line(0,-1){1}}
+		\multiput(1.1, 2.1)(.5, 0){8}{$+$}
+		\multiput(1.1, 0.7)(.5, 0){8}{$+$}
+		\put(.7,1.4){$+$}
+		\put(5.0,1.4){$+$}
+		\end{picture}
+} 
+\end{center}
+
+Se se colocar agora em frente desta placa uma outra idêntica com carga igual mas de sinal contrário haverá uma redistribuição de carga que produz um campo elétrico tal como assinalado. Nas extremidades as linhas de força saem perpendicularmente à superfície mas encurvam deixando de ser lineares. Só na região central as linhas de força são paralelas entre si e o campo elétrico é homogéneo. Esta geometria e distribuição de carga são características de um condensador plano.
+
+\setlength{\unitlength}{1.0cm} 
+\begin{center}
+	\framebox[0.6\linewidth][c]{
+		\begin{picture}(6,6)
+		%\linethickness{0.075mm} 
+		\put(1,4){\line(1,0){4}}
+		\put(5,4){\line(0,1){1}}
+		\put(5,5){\line(-1,0){4}}
+		\put(1,5){\line(0,-1){1}}
+		\multiput(1.1, 3.7)(.5, 0){8}{$+$}
+		\put(.65,4.4){$-$} \put(5.0,4.4){$+$}
+		%
+		\put(1,1){\line(1,0){4}}
+		\put(5,1){\line(0,1){1}}
+		\put(5,2){\line(-1,0){4}}
+		\put(1,2){\line(0,-1){1}}
+		\multiput(1.1, 2.1)(.5, 0){8}{$-$}
+		\put(.7,1.4){$-$} \put(5.0,1.4){$-$}
+		\color{red}
+		\multiput(1.5, 3.7)(1, 0){4}{\vector(0,-1){1.5}}
+		\qbezier(0.9,3.7)(0.7,2.95)(0.9,2.2)
+		\put(.89,2.3){\vector(1,-2){0.1}}
+		\qbezier(5.1,3.7)(5.3,2.95)(5.1,2.2)
+		\put(5.11,2.3){\vector(-1,-2){0.1}}
+		\put(4.7,2.5){$\vec{E}$}
+		\end{picture}
+	} 
+\end{center}
+
+A diferença de potencial entre as duas placas, ($V_+ \, – \, V_–$), afastadas de $D$, será: ($V_+ \,–\, V_-) = E\cdot D$, pois $\vec{E}$ é homogéneo (equação \ref{eq:difPot}).\\
+Pode mostrar-se que $\vec{E}$ fica confinado à região entre as placas. Se o condensador fosse infinito (sem extremidades) teríamos três regiões, as duas exteriores ao condensador onde o campo  $\vec{E}$  é nulo  e entre as placas do condensador (também designadas por armaduras) onde o campo seria homogéneo.
+
+
+\section{\sf Efeitos da corrente elétrica estacionária criada por uma \\ espira}
+A passagem da corrente elétrica estacionária (i.e. corrente elétrica cuja intensidade não varia no tempo) cria um campo magnético $\vec{B}$, além de produzir calor por feito de Joule. As linhas de força magnética produzidas por um condutor linear são circulares, concêntricas com o condutor, enquanto uma espira circular cria um campo magnético cujas linhas de força são curvas fora do eixo e apenas linear segundo o eixo da espira. 
+Para o campo criado por um condutor linear o módulo de $B$ num ponto do eixo é
+
+
+%\begin{minipage}[b]{0.45\linewidth}
+\begin{center}
+\framebox[0.6\linewidth][c]{
+\begin{picture}(6,6)
+\thicklines
+\put(3,0){\vector(0,1){6}}
+\put(3.2,5.2){$I$}
+\thinlines
+\color{red}
+% Ellipse:  u = 3.0  v = 4.0  a = 2.0  b = 0.5  phi = 0.0 Grad
+\qbezier(5.0, 4.0)(5.0, 4.2071)(4.4142, 4.3536)
+\qbezier(4.4142, 4.3536)(3.8284, 4.5)(3.0, 4.5)
+\qbezier(3.0, 4.5)(2.1716, 4.5)(1.5858, 4.3536)
+\qbezier(1.5858, 4.3536)(1.0, 4.2071)(1.0, 4.0)
+\qbezier(1.0, 4.0)(1.0, 3.7929)(1.5858, 3.6464)
+\qbezier(1.5858, 3.6464)(2.1716, 3.5)(3.0, 3.5)
+\qbezier(3.0, 3.5)(3.8284, 3.5)(4.4142, 3.6464)
+\qbezier(4.4142, 3.6464)(5.0, 3.7929)(5.0, 4.0)
+\put(3.2, 3.5){\vector(1,0){0.1}}
+
+% Ellipse:  u = 3.0  v = 2.0  a = 2.0  b = 0.5  phi = 0.0 Grad
+\qbezier(5.0, 2.0)(5.0, 2.2071)(4.4142, 2.3536)
+\qbezier(4.4142, 2.3536)(3.8284, 2.5)(3.0, 2.5)
+\qbezier(3.0, 2.5)(2.1716, 2.5)(1.5858, 2.3536)
+\qbezier(1.5858, 2.3536)(1.0, 2.2071)(1.0, 2.0)
+\qbezier(1.0, 2.0)(1.0, 1.7929)(1.5858, 1.6464)
+\qbezier(1.5858, 1.6464)(2.1716, 1.5)(3.0, 1.5)
+\qbezier(3.0, 1.5)(3.8284, 1.5)(4.4142, 1.6464)
+\qbezier(4.4142, 1.6464)(5.0, 1.7929)(5.0, 2.0)
+\put(3.2, 1.5){\vector(1,0){0.1}}
+
+\put(5.1,2.8){$\vec{B}$}
+\end{picture}
+}
+\end{center}
+%\end{minipage}
+%
+\begin{equation}
+	|\vec{B_{fio}}| = \frac{\mu_0 I}{2\, \pi \, r} 
+\end{equation}
+ em que $\mu_0$ é a \emph{permeabilidade magnética}  do vazio, ($\mu_0 =  4 \pi× 10^{−7}\, H/m$). 
+%No sistema SI, a unidade de $\vec{B}$ é o Tesla (T).
+%\footnote{No sistema SI, a unidade de $\vec{B}$ é o Tesla (T).} %N·A^{−2}
+%\hspace{0.2cm}
+
+%
+%\begin{minipage}[b]{0.45\linewidth}
+%\end{minipage}
+
+Pode provar-se que o campo magnético, criado por uma espira de raio, $r$, percorrida por $I$, tem linhas de força fechadas (mesmo aquelas que fecham no infinito, ao contrário das linhas de força elétricas,  
+pondo em evidência que $\vec{B}$ nos pontos do plano da espira mas exteriores a esta é antiparalelo a $\vec{B}$ no eixo da espira.
+O módulo de $\vec{B}$ num ponto do eixo é
+
+%\begin{minipage}[b]{0.9\linewidth}
+
+\begin{center}
+\framebox[0.6\linewidth][c]{
+% \centering 
+\begin{picture}(6,6)
+
+\thicklines
+\put(5.1,2.8){$I$}
+% Ellipse:  u = 3.0  v = 3.0  a = 2.0  b = 0.5  phi = 0.0 Grad
+\qbezier(5.0, 3.0)(5.0, 3.2071)(4.4142, 3.3536)
+\qbezier(4.4142, 3.3536)(3.8284, 3.5)(3.0, 3.5)
+\qbezier(3.0, 3.5)(2.1716, 3.5)(1.5858, 3.3536)
+\qbezier(1.5858, 3.3536)(1.0, 3.2071)(1.0, 3.0)
+\qbezier(1.0, 3.0)(1.0, 2.7929)(1.5858, 2.6464)
+\qbezier(1.5858, 2.6464)(2.1716, 2.5)(3.0, 2.5)
+\qbezier(3.0, 2.5)(3.8284, 2.5)(4.4142, 2.6464)
+\qbezier(4.4142, 2.6464)(5.0, 2.7929)(5.0, 3.0)
+\put(3.2, 2.5){\vector(1,0){0.1}}
+
+\thinlines
+%
+%\put(3,5){\line(1,-1){2.1}}
+%\put(3,3){\line(1,-1){0.3}}
+%\put(3,3){\line(1,-1){0.4}}
+%\put(3,3){\line(1,-1){0.6}}
+\multiput(3, 5.1)(0.5, -0.5){4}{\line(1,-1){0.4}}
+%\multiput(3, 5)(0.5, -0.5){3}{$-$}
+%\multiput(3, 5)(0.5, -0.5){3}{\line(1,0){0.2}}
+%\multiput(3, 5)(0.5, -0.5){3}{\line(1,1){0.3}}
+\qbezier(3, 4.4)(3.1, 4.4)(3.4, 4.6)
+\put(3.2,4.3){$\alpha$}
+
+\color{red}
+% Ellipse:  u = 1.0  v = 3.0  a = 1.5  b = 2.0  phi = 0.0 Grad
+\qbezier(2.5, 3.0)(2.5, 3.8284)(2.0607, 4.4142)
+\qbezier(2.0607, 4.4142)(1.6213, 5.0)(1.0, 5.0)
+\qbezier(1.0, 5.0)(0.3787, 5.0)(-0.0607, 4.4142)
+\qbezier(-0.0607, 4.4142)(-0.5, 3.8284)(-0.5, 3.0)
+\qbezier(-0.5, 3.0)(-0.5, 2.1716)(-0.0607, 1.5858)
+\qbezier(-0.0607, 1.5858)(0.3787, 1.0)(1.0, 1.0)
+\qbezier(1.0, 1.0)(1.6213, 1.0)(2.0607, 1.5858)
+\qbezier(2.0607, 1.5858)(2.5, 2.1716)(2.5, 3.0)
+\put(2.5,3){\vector(0,1){.2}}
+\put(2.6,5.2){$\vec{B}$}
+
+%\multiput(3, 0)(0, 0.4){9}{\vector(0,1){.2}}
+%\put(3,5.5){\vector(0,1){0.2}}
+\put(3,0){\vector(0,1){6}}
+
+\end{picture}
+}
+\end{center}
+%\end{minipage}
+
+\begin{equation}
+	|\vec{B_{espira}}| = \frac{\mu_0 I}{2 r} \sin^3 \alpha
+\end{equation}
+
+\newpage
+\section{\sf Procedimento Experimental}
+{ \large Material }
+\begin{itemize}
+	\item Ampola (tubo) de raios catódicos (TRC), modelo TEL 525.
+	\item 	Fonte de alimentação do TRC, que inclui alimentação de alta tensão contínua 
+	(até $5000\;V$) aplicada aos eletrodos (cátodo e ânodo) do TRC e alimentação de baixa tensão
+	(6.3V AC) contínua para o filamento do TRC.
+	\item Par de bobinas que envolvem a parte esférica do TRC na configuração de
+	Helmholtz (para criar um campo magnético aproximadamente homogéneo na
+	região central entre as bobinas, de raio médio, $r$, e afastadas de $r$ uma da outra).
+	\item Fonte de alimentação de corrente \textbf{contínua} (em modo DC) para as bobinas.
+	\item Multímetro (como amperímetro) a instalar em \textbf{série} no circuito das bobinas.
+\end{itemize}
+
+O tubo TRC tem um filamento alimentado por 6.3V (em modo AC). Este filamento emite eletrões por efeito termiónico. 
+Entre o ânodo e o cátodo do tubo estabelecem-se diferenças de potencial $ (V_+ - V_-) = U_a$ . Os eletrões são acelerados entre o cátodo e o ânodo e a sua velocidade à saída do ânodo é função de $U_a$. 
+
+Entram assim na parte esférica do tubo onde podem ser deflectidos por campos magnéticos provocados por correntes que percorrem as bobinas de Helmoltz e/ou por campos elétricos devidos à aplicação de tensão entre duas placas paralelas ligadas aos pontos 1 e 2 do diagrama (Fig. \ref{fig:TL})
+
+O campo de indução magnética $B$\footnote{No sistema SI, a unidade de $\vec{B}$ é o Tesla (T), $1\,T=1\,Weber/m^{2}$ .}  devido às bobinas de Helmoltz é aproximadamente uniforme na região central entre as bobinas e para uma corrente $I$ é dado por:
+\begin{align}
+	\label{eq:helmotz}
+	 n &= 320\textrm{ espiras} \nonumber \\ 
+B = \left(\frac{4}{5}\right)^{3/2} \cdot \frac{\mu_0 n I}{r} =  \frac{32 \pi n }{5 \sqrt{5}} \cdot \frac{I}{r} \cdot 10^{-7} Weber/m^{2}
+ \qquad  r  &= 0.068 m \\
+r  &= d/2 \nonumber
+\end{align}
+
+\begin{figure}
+	[!tb]  \centering 
+	\includegraphics[width=0.8\textwidth]{TuboTL} 
+	\caption{Diagrama do tubo utilizado e geometria das bobines de Helmoltz \label{fig:TL}} 
+\end{figure}
+
+\subsection{\sf DETERMINAÇÃO DE $q/m$ POR  DEFLEXÃO MAGNÉTICA}
+\subsubsection{\sf Trajectórias de partículas carregadas sujeitas a campo magnético constante}
+Quando se aplica uma tensão Ua entre o ânodo e o cátodo (sem aplicar tensão entre 1 e 2 (Fig. \ref{fig:TL}), pode admitir-se que a velocidade final $v$ dos eletrões ao abandonarem o ânodo pode ser calculada utilizando a expressão (\ref{eq:encin}). Nessa expressão  $q$  é a carga do eletrão e $m$ a sua massa.
+
+\begin{equation}
+	\label{eq:encin}
+q\, U_a = \frac{1}{2} m \, v^2
+\end{equation}
+
+Assim os eletrões ao chegarem à parte esférica do tubo são deflectidos por $\vec{B}\,(\vec{B}\perp\vec{v})$ e a sua trajectória é circular de raio $R$. 
+Verifica-se ser:
+\begin{equation}
+	\label{eq:encin2}
+B \, q\, v = \frac{m\,v^2}{R} 
+\end{equation}
+As trajectórias dos eletrões podem ser visualizadas numa escala graduada feita de material fluorescente. 
+A origem do reticulado está situada aproximadamente no início da zona 
+sujeita ao campo $\vec{B}$.
+
+Combinando (\ref{eq:encin}) e (\ref{eq:encin2}) obtém-se:
+\begin{equation}
+	\label{eq:encin3}
+ \frac{q}{m} = \frac{2\, U_a}{B^2\,R^2} 
+\end{equation}
+
+Onde
+\begin{description}
+\item[$U_a$] - impõem-se e mede-se diretamente no voltímetro da fonte.
+\item[$B$] - calcula-se para a corrente I a partir da expressão (\ref{eq:helmotz}).
+\item[$R$] – determina-se por leitura no écran fluorescente, das coordenadas de posição $y$ (horizontal) e $z$ (vertical) de pontos do feixe. Por construção do tubo verifica-se:
+\begin{equation}
+	\label{eq:eR}
+ R = \frac{y^2 + z^2}{2 \, z} 
+\end{equation}
+\end{description}
+
+
+\subsubsection{\sf Questões a responder ANTES da sessão de Laboratório:}
+\begin{enumerate}
+\item Desenhe um diagrama dos campos elétricos, magnéticos, da velocidade do eletrões e forças 
+aplicadas nas diferentes zonas do TRC.
+\item Para uma diferença de potencial da Fonte $U_a$  de $4000 V$ calcule a velocidade dos eletrões na saída do ânodo \footnote{$q_e \simeq  −1.602×10^{−19}\, C$, $m_e\simeq 9.109×10^{−31}\, kg$}. Justifica-se utilizar as equações relativistas para o movimento?
+\item Aplicando uma corrente de $I= 1A$ nas as bobines de Helmoltz, calcule o campo $\vec{B}$ e a força magnética aplicada nos eletrões. Como se compara com o seu peso?
+\end{enumerate}
+
+\subsubsection{\sf Modo de proceder}
+
+
+\begin{enumerate}
+	\item Montar os circuitos elétricos de acordo com a  Figura \ref{fig:TL} 
+	(\emph{não os ligue antes de serem verificados pelo Docente!}).
+	\item Observe qual é o valor máximo de tensão no gerador de  alta tensão que dispõe. Escolha um valor ligeiramente inferior.
+	\item Ajustar a corrente das bobinas de Helmoltz $I_+$ de modo a que a circunferência passe por um ponto bem determinado\footnote{Utilize de preferência os maiores valores de possíveis para o raio $R$, de forma a que o feixe se encontre na zona central entre as bobines}.  Calcule R.
+	Inverta o sentido da corrente e determine um novo $I_-$ para o mesmo raio $R$.
+	Tomando $I_{medio} = (I_+ + I_-)/2 $ calcule o campo magnético $B_{medio}$. Utilize a semi-diferença, $(I_+ - I_-)/2$, para a estimativa das Incertezas $\Delta I_{medio}$ e $\Delta B_{medio}$.
+	\item Repita o ponto 2) para quatro novos valores de $R$. 
+	\item Repetir 1), 2) e 3)  e para os mesmos $R$, para 2 valores inferiores de tensão, afastados por exemplo de 500V entre si.
+	\item Apresente os valores de $q/m$ para os 15 pares de determinações. Calcule a média desses valores assim como a incerteza da média.
+	\item Para um dos pares de pontos estime a contribuição relativa das incertezas das grandezas que mediu para a incerteza total. Compare este erro assim calculado com a incerteza calculada a partir dos 15 valores calculados.
+	Apresente para cada raio o valor de $q/m$ assim como o erro associado a cada uma das determinações. Compare e comente os resultados.
+	\item Apresente um valor final para $q/m$. Estime a precisão e a exatidão obtida nas determinações que realizou.
+\end{enumerate}
+ 
+\subsection{\sf DETERMINAÇÃO DE $q/m$ POR DEFLEXÃO\\ MAGNÉTICA E ELÉTRICA QUASE COMPENSADA }
+
+\subsubsection{\sf Situação de equilíbrio entre as interacções elétrica e magnética}
+Uma carga q animada de uma velocidade ($\vec{v}$) numa região em que existe um campo de indução ($\vec{B}$) e um campo elétrico ($\vec{E}$) fica submetida a uma força de Lorentz\footnote{Se a força for apenas de origem magnética, $\vec{f}_m =  q\,(\vec{v} \times \vec{B})$, pode chamar-se também de \emph{Laplace}} ($\vec{f}$) dada por:
+\begin{equation}
+	\label{eq:Lorentz}
+ \vec{f} = q\; \vec{E} + q\,(\vec{v} \times \vec{B})
+\end{equation}
+
+Se as duas forças se equilibrarem ou seja se forem de igual módulo e de sentidos opostos a carga $q$ não é desviada da sua trajetória. No nosso caso em que $\vec{B} \perp \vec{v}$ , a condição de equilíbrio é dada por:
+\begin{equation}
+	\label{eq:equil}
+ |\vec{E}| = v\, |\vec{B}|
+\end{equation}
+
+\subsubsection{\sf Montagem a efetuar}
+
+Aproveitando a montagem já efetuada no ponto anterior, ligue os terminais 1 e 2 (Fig.\ref{fig:TL}) à fonte de alta tensão que gera a tensão $U_a$ produzindo assim na região do écran fluorescente um campo elétrico. Fazendo com que as bobinas sejam percorridas por uma corrente com intensidade e  ``sentido'' convenientes podemos obter uma força de origem magnética anti-paralela à provocada pelo campo $\vec{E}$. 
+Deste modo a trajetória visualizada no écran será aproximadamente retilínea sendo a condição de equilíbrio dada por (\ref{eq:equil}):
+
+\begin{equation*}
+	%\label{eq:equil2}
+ |\vec{E}| = v\, |\vec{B}| = \frac{U_a}{d} \qquad  \qquad  \textrm{(\ref{eq:equil}a)}
+\end{equation*}
+
+
+Onde $d$ é a distância entre as placas do écran fluorescente e $U_a$ a tensão entre as mesmas, que é como se disse igual à tensão de aceleração. A equação (\ref{eq:equil}a) permite-nos calcular a velocidade dos eletrões uma vez que podemos conhecer os valores de todas as outras variáveis aí intervenientes. O conhecimento de $v$ permite-nos calcular $q/m$ tendo em conta que segundo (\ref{eq:encin}) deverá ser:
+
+\begin{equation*}
+%	\label{eq:encin}
+\frac{q}{m} = \frac{v^2}{2} \; \frac{1}{U_a} \qquad \textrm{(\ref{eq:encin}a)}
+\end{equation*}
+
+Ou finalmente por combinação com (\ref{eq:equil}a):
+\begin{equation}
+%	\label{eq:encin}
+\frac{q}{m} = \frac{1}{2} \; \frac{U_a}{B^2\; d^2} 
+\end{equation}
+
+\subsubsection{\sf Modo de proceder}
+\begin{enumerate}
+	\item Para cada uma das quatro tensões de trabalho $U_a$ já referidas, aplicadas também às placas que produzem o campo elétrico, determine o $B$ (a partir de $I$) que conduz ao anulamento das forças de origem elétrica e magnética.
+	\item Inverta o sentido dos campos elétricos e magnéticos e repita a determinação de $B$.
+	\item Apresente os valores de $q/m$. Analise as diferentes contribuições para a incerteza total. Estime o valor da \emph{carga / massa } do eletrão, assim como a precisão e a exatidão obtida nas determinações que realizou.
+	\item  Observe  a  trajetória  quando  as  forças  de 
+origem elétrica e magnética não se compensam. Comente. 
+%	Apresente os valores de q/m calculados assim como o erro associado a cada determinação. Apresente um valor final para $q/m$.
+\end{enumerate}
+
+\end{document} 	
+
