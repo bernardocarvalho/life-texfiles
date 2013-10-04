@@ -38,7 +38,9 @@
 	\usepackage{color}                    % For creating coloured text and background
 \fi
 
+
 \usepackage{amsmath,amssymb,amsfonts} % Typical maths resource packages
+\usepackage{multicol}
 
 \oddsidemargin 0cm
 \evensidemargin 0cm
@@ -68,6 +70,7 @@
 
 \begin{document} 
 
+%\begin{multicols}{1}
 	\includegraphics[width=0.2\textwidth]{../logo-ist}%\\[1cm]  %%  Logo_IST_color
 
 		\HRule \\[0.5cm]
@@ -85,8 +88,12 @@ condutor. (Experiência de Millikan)}\\
 %	{ \large \bfseries Procedimento Experimental}\\
 %	\HRule \\%[0.5cm]
 
-\section{\sf OBJECTIVO DESTE TRABALHO}
+%\twocolumn
+%\end{multicols}
 
+\begin{multicols}{2}
+
+\section{\sf OBJECTIVO DO TRABALHO}
 Pretende-se com este trabalho determinar a carga elétrica de pequenas gotas de óleo, tendo como objectivo final mostrar que a carga elétrica não aparece com uma quantidade qualquer, mas sempre como um múltiplo de uma unidade fundamental que é a carga do protão ou do eletrão. Deste modo um corpo eletrizado apresenta um excesso de carga de um dos sinais, mas sempre de valor múltiplo da carga elementar $q_{p,e}=\pm 1.602176565(35)\cdot 10^{-19}\,C$.
 Traduz-se este facto dizendo-se que a carga elétrica se \emph{quantifica}.
 
@@ -138,12 +145,17 @@ o que poderá ser facilmente constatado pela resolução da equação (\ref{eq:m
 	v(t) = \frac{m\,g}{k  \, \eta} (1 - e^{- (k\,\eta / m) t})
 \end{equation}
 
-à qual corresponde à seguinte representação gráfica:
-\begin{figure}
-	[!htb]  \centering 
+à qual corresponde à seguinte representação gráfica.
+
+\end{multicols}
+
+\begin{figure*}
+	[tb]  \centering 
 	\includegraphics[width=0.8\textwidth]{./plote}
 	\caption{ Evolução da velocidade de um corpo em queda livre sujeito a uma força de atrito. \label{fig:vLim}} 
-\end{figure}
+\end{figure*}
+
+\begin{multicols}{2}
 
 e quando $t \to \infty :\; v(t) \to v_L = \frac{m\,g}{k  \, \eta} $
 
@@ -176,13 +188,18 @@ Obtemos:
 em que $\rho$  e $\rho_f$ são as massas específicas do corpo e do fluido.
 
 %
-\subsection{\sf Equilíbrio dum corpo carregado eletricamente, imerso num fluido através de um campo eletrico vertical.}
+
+\end{multicols}
 
 \begin{figure}
-	[!htb]  \centering 
-	\includegraphics[width=0.8\textwidth]{./F_equil}
+	[tb]  \centering 
+	\includegraphics[width=0.5\textwidth]{./F_equil}
 	\caption{Equilíbrio de forças elétrica e gravítica \label{fig:f_equil}} 
 \end{figure}
+
+\begin{multicols}{2}
+
+\subsection{\sf Equilíbrio dum corpo carregado eletricamente, imerso num fluido através de um campo eletrico vertical.}
 
 Seja o esquema representado na figura \ref{fig:f_equil}, em que entre duas placas condutoras paralelas se encontra um fluido não condutor. Aplica-se uma diferença de potencial $\Delta V = V_1 -V_1 > 0$ com a polaridade indicada na figura. Esta diferença de potencial criará um campo elétrico de baixo para cima. No caso de entre as duas placas se encontrar uma partícula de massa, $m$, e de carga, $q$, positiva\footnote{No caso da partícula estar carregada negativamente obteríamos o mesmo resultado invertendo o sentido do campo elétrico.} esta ficará sujeita a uma força elétrica que contrariará a sua queda.
 
@@ -306,5 +323,7 @@ que a gotícula se move com a velocidade limite.
 
 Critique a precisão dos resultados obtidos. A partir dos resultados obtidos e atendendo
 aos erros experimentais é possível, ou não, concluir sobre a quantificação da carga elétrica?
+
+\end{multicols}
 
 \end{document} 
