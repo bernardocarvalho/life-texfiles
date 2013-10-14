@@ -48,7 +48,7 @@
 \pagestyle{myheadings}         % Option to put page headers
                                % Needed \documentclass[a4paper,twoside]{article}
 \markboth{{\small \it  Laboratório de Física Experimental Básica}}
-{{\small\it MEFT - 1º Sem. 2013/2014} }
+{{\small\it MEFT - LFEB 1º Sem. 2013/2014} }
 
 \addtolength{\hoffset}{-0.5cm}
 \addtolength{\textwidth}{2.5cm}
@@ -83,61 +83,68 @@
 %	{ \large \bfseries Procedimento Experimental}\\
 	\HRule \\%[0.5cm]
 
+
 \section{\sf Introdução}
 Em muitas das experiências descritas na literatura para
 determinacão da velocidade da luz tem-se utilizado feixes luminosos
-modulados que percorrem determinados trajetos de maior ou menor
-comprimento, tudo dependendo da forma e frequência da modulação
-utilizada. 
+pulsados (ou modulados), que percorrem determinados trajetos de maior ou menor
+comprimento (Fig. \ref{fig:Fizeau}). 
 No presente trabalho utiliza-se como fonte luminosa um díodo que
 emite radiação eletromagnética visível com um comprimento de onda na
 zona do vermelho. A tensão aplicada ao díodo emissor é alternada
-sinusoidal de frequência $f=50\,MHz$ verificando-se assim que o sinal luminoso
-que este emite é Modulado em Amplitute(AM) naquela frequência. 
+sinusoidal de frequência $f=50\,MHz$ verificando-se assim que a intensidade sinal luminoso
+que este emite é Modulado em Amplitute(AM), naquela frequência. 
 
 \begin{equation*}
 	\label{eq:f_am}
-		s_{diodo}(t) = \underbrace{A_0 \sin ( 2\pi \cdot 50\times 10^6 \, t)}_\text{Amplitude Modulada} \cdot \sin ( 2\pi \cdot f_{luz} \, t)
+		s_{diodo}(t) = A(t) \cdot \sin ( 2\pi \cdot f_{luz} \, t) = \underbrace{A_0 \sin ( 2\pi \cdot 50\times 10^6 \, t)}_\text{Amplitude Modulada} \cdot \sin ( 2\pi \cdot f_{luz} \, t)
 \end{equation*}
+
+\begin{figure}
+	[ht!b]  \centering 
+	\includegraphics[width=0.5\textwidth]{Fizeau}
+	\caption{Esquema do aparelho para determinar a Velocidade da Luz utilizado por Fizeau em 1849. \label{fig:Fizeau}} 
+\end{figure}
 
 %\section{\sf Introdução}
 
 \section{\sf Base do Método}
 No presente trabalho o feixe luminoso proveniente do díodo emissor
 é forçado a percorrer um determinado trajeto sendo em seguida detetado
-por um foto-díodo receptor (Fig. 1). O sistema de espelhos E, constituído
-pelos espelhos E1 e E2, pode deslocar-se ao longo de uma calha graduada,
+por um foto-díodo receptor (Fig. \ref{fig:Montagem}). O sistema de espelhos $E_1\,E_1$, pode deslocar-se ao longo de uma calha graduada,
 sendo assim possível variar o comprimento do trajeto do raio luminoso. Os
-sinais de amplitude impostos ao emissor e captados no receptor são aplicados\footnote{Depois de uma deteção \emph{homodínica}, em que a frequência modulada é desviada $f_{}=50\, MHz -50.050\, MHz = 50\,kHz$. Esta operação permite a utilização deum osciloscopio de banda estreita.} 
-aos canais de um osciloscópio funcionando no modo “XY”.
+sinais de amplitude impostos ao emissor e captados no receptor são aplicados\footnote{Depois de uma deteção \emph{heterodínica}, em que a frequência modulada é desviada \\ 
+$f_{bat}=50\, MHz -50.050\, MHz = 50\,kHz$. Esta operação permite a utilização de um osciloscópio de banda de frequências mais reduzida.} 
+aos canais de um osciloscópio funcionando em modo “XY”.
 
-O sinal visualizado no osciloscópio é uma figura de Lissajous e normalmente uma elipse de equação geral:
+O sinal visualizado no osciloscópio é uma figura de Lissajous e como em ambos os sinais vertical e horizontal a frequência é a 
+mesma\footnote{Na realidade são sinais \emph{coerentes}, pois provêm da mesma fonte}, é uma elipse com a equação geral:
 \begin{equation}
 	\label{eq:elipse}
-	\sin^2 \delta = \frac{x^2}{x_0^2} + \frac{y^2}{y_0^2} - \frac{2y\,x}{y_0\,x_0} \cos  \delta
+	\sin^2 \delta = \frac{A_x^2}{A_{x0}^2} + \frac{A_y^2}{A_{y0}^2} - \frac{2 A_y\,A_x}{A_{y0}\,A_{x0}} \cos  \delta
 \end{equation}
 
 \begin{figure}
-	[!htb]  \centering 
+	[htb]  \centering 
 	\includegraphics[width=0.8\textwidth]{Vel_esquema}
-	\caption{Montagem para determinar a Velocidade da Luz. \label{fig:Montagem}} 
+	\caption{Montagem no Laboratório para determinar a Velocidade da Luz. \label{fig:Montagem}} 
 \end{figure}
 
-Sendo $x(t)$ o sinal proveniente do emissor,  $x_0$  a sua amplitude,  $y(t)$ o sinal
-proveniente do recetor, $y_0$ a sua ampliıude e $\delta$ a desfazagem entre os dois
-sınais. A elipse pode degenerar em retas quando os dois sinais estiverem
-em fase $\delta = 2n\,\pi$  ou em oposição de fase $\delta = (2n+1)\,\pi$. 
+Sendo $A_x(t)$ o sinal de intensidade captado no emissor,  $A_{x0}$ a sua amplitude máxima,  $A_y(t)$ o sinal
+proveniente do recetor, $A_{y0}$ a sua amplitude máxima e $\delta$ a desfasagem entre os dois
+sınais. O angulo $\delta$ irá variar com a trajecto do raio luminoso.  A elipse pode degenerar em retas quando os dois sinais estiverem
+em fase, $\delta = 2n\,\pi$ (nos quadrantes pares)  ou em oposição de fase, $\delta = (2n+1)\,\pi$ (nos quadrantes ímpares). 
 
 \subsection{\sf Velocidade da Luz no ar}
 Neste trabalho a
 velocidade da luz é calculada a partir da determinação do comprimento do
-caminho suplemenıar que a luz tem de percorrer para que se passe de uma
+caminho suplementar, ($2\,\Delta\,z$), que a luz tem de percorrer para que se passe de uma
 situação em que os sinais estão em oposição de fase à situação contígua de
-fase ($2\,\Delta\,x$). Assim a luz percorre esse comprimento suplementar num intervalo de
-tempo que é igual a metade do periodo ($T/2$) do sinal modulante ($T=1/50\,MHz= 20\,ns$). 
+fase. Assim a luz percorre esse comprimento suplementar num intervalo de
+tempo, ($\Delta t$) ,  que é igual a metade do periodo ($T/2$) do sinal modulante ($T=1/50\,MHz= 20\,ns$). 
 
 \begin{figure}
-	[!htb]  \centering 
+	[htb]  \centering 
 	\includegraphics[width=0.8\textwidth]{osci_fase}
 	\caption{Figuras de Lissajous observadas no osciloscópio. \label{fig:fase}} 
 \end{figure}
@@ -145,32 +152,26 @@ tempo que é igual a metade do periodo ($T/2$) do sinal modulante ($T=1/50\,MHz=
 No ar teremos:
 \begin{equation}
 	\label{eq:vc}
-	c_{ar} = \frac{2\,\Delta x_0}{T/2} 
+	c_{ar} = \frac{2\,\Delta z_0}{T/2} 
 \end{equation}
 
 \subsection{\sf Velocidade da Luz em meios sólidos e líquidos}
-Neste trabalho será também determınada a velocidade da
-luz em  mais dois meios materiais uma resina e a água. 
-A partir dos valores obtidos 
-será também possível calcular o índice de refração da resina e da água em
-relação ao ar. Assim o índice de refração de
-a um meio material $1$ em relação a um meio material $0$
- para um dado comprimento de onda pode ser definido como a relação entre as velocidades de propagação da luz no meio 
- $0$ e no meio $1$ \footnote{Esta definição só é válida se as condutividades dos meios $0$ e $1$ forem nulas.}
- 
- 
+ O índice de refração de a um meio material $1$ em relação a um meio material $0$
+ para um dado comprimento de onda pode ser definido \footnote{Esta definição só é válida se as condutividades dos meios $0$ e $1$ forem nulas, ou seja nos \emph{dielétricos} perfeitos.}
+ como a relação entre as velocidades de propagação da luz nos meios $0$ e $1$:
+
  \begin{equation}
 	\label{eq:index}
-	n= \frac{c_0}{c_1}  = \frac{\frac{1}{\sqrt{\varepsilon_0 \, \mu_0}} }{\frac{1}{\sqrt{\varepsilon_1 \, \mu_1}} } =
+	n_1 \equiv \frac{c_0}{c_1}  = \frac{\frac{1}{\sqrt{\varepsilon_0 \, \mu_0}} }{\frac{1}{\sqrt{\varepsilon_1 \, \mu_1}} } =
 		\sqrt{\frac{\varepsilon_1 \, \mu_1}{\varepsilon_0 \, \mu_0}} = \sqrt{\varepsilon_r \, \mu_r}
 \end{equation}
 
-Nesta expressão $\varepsilon_0$, $\varepsilon_1$ e $\varepsilon_r$   e  $\mu_0$, $\mu_1$, e $\mu_r$ são as constantes dielétricas  as permeabilidades magnéticas respetivamente do meio $0$, do meio $1$ e relativa $(\varepsilon_1= \varepsilon_r\, \varepsilon_0)$.
+Nesta expressão $\varepsilon_0$, $\varepsilon_1$ e $\varepsilon_r$   e  $\mu_0$, $\mu_1$, e $\mu_r$ são as constantes dielétricas  as permeabilidades magnéticas respetivamente do meios $0$ e $1$ e a relativa $(\varepsilon_1= \varepsilon_r\, \varepsilon_0)$.
 
 \begin{figure}[h!tb]  
 	\centering 
 	\includegraphics[width=0.8\textwidth]{Vel_esquema_bloco}
-	\caption{Montagem para determinar a Velocidade da Luz. \label{fig:Montagem_bloco}} 
+	\caption{Montagem para determinar índices de refração em sólidos e líquidos. \label{fig:Montagem_bloco}} 
 \end{figure}
 
 Se no percurso do feixe luminoso interpormos um bloco de material sólido ou líquido transparente 
@@ -178,19 +179,31 @@ Se no percurso do feixe luminoso interpormos um bloco de material sólido ou lí
 
 \begin{equation}
 	\label{eq:vc_bloco}
-	{T/2}  = \frac{2\,\Delta x_1 - l_B}{c_{ar}}  +  \frac{l_B}{c_{B}}
+	{T/2}  = \frac{2\,\Delta z_1 - l_B}{c_{ar}}  +  \frac{l_B}{c_{B}}
 \end{equation}
+De onde se pode pode extrair a velocidade $c_{B}$. 
 
-De onde se pode pode extrair a velocidade $c_{1}$. 
-Também se pode obter  o indíce de refração $n_{B}$ a partir de (\ref{eq:vc}) e (\ref{eq:index}).
+Pode obter-se directamente o indíce de refração $n_{B}$, a partir de (\ref{eq:vc}) e (\ref{eq:index}).
 
 \begin{align}
 	\label{eq:n_bloco}
-	{T/2}  = \frac{2\,\Delta x_0}{c_{ar}}  &=  \frac{2\,\Delta x_1 }{c_{ar}} -   \frac{l_B}{c_{ar}}  +  \frac{l_B}{c_{B}} \nonumber \\ 
-	\frac{2\,(\Delta x_0- \Delta x_1 )}{c_{ar}}  &= -   \frac{l_B}{c_{ar}}  +  \frac{l_B}{c_{B}} \nonumber \\
-	\frac{2\,(\Delta x_0- \Delta x_1 )}{l_B} &= -1 +  \frac{c_{ar}}{c_{B}} \nonumber \\
-	n_{B} &= 1 +  \frac{2\,(\Delta x_0- \Delta x_1 )}{l_B}
+	{T/2}  = \frac{2\,\Delta z_0}{c_{ar}}  &=  \frac{2\,\Delta z_1 }{c_{ar}} -   \frac{l_B}{c_{ar}}  +  \frac{l_B}{c_{B}} \nonumber \\ 
+	\frac{2\,(\Delta z_0- \Delta z_1 )}{c_{ar}}  &= -   \frac{l_B}{c_{ar}}  +  \frac{l_B}{c_{B}} \nonumber \\
+	\frac{2\,(\Delta z_0- \Delta z_1 )}{l_B} &= -1 +  \frac{c_{ar}}{c_{B}} \nonumber \\
+	n_{B} &= 1 +  \frac{2\,(\Delta z_0- \Delta z_1 )}{l_B} 
 \end{align}
+
+ Neste trabalho será  determınada os índices de refração, e a velocidade da
+luz, em  mais dois meios materiais, a resina acrílica e a água. 
+ 
+
+\subsubsection{\sf Questões a responder ANTES da sessão de Laboratório:}
+\begin{enumerate}
+\item A luz emitida pelo diodo tem um comprimento de onda de $\lambda \approx 600 \, nm$. Calcule $f_{luz}$.
+\item Explique porque razão a luz utilizada nas experiência tem de ter a intensidade variável, tal como na experiência da Velocidade do Som.
+\item Uma montagem desenvolvida no IST utiliza um diodo laser de longo alcance. No entanto apenas se consegue modular a $f=1\, MHz$. Calcule a distância
+dos espelhos necessária para se obter o mesmo efeito de oposição de fase.
+\end{enumerate}
 
 \newpage
 \section{\sf Protocolo Experimental}
@@ -199,13 +212,13 @@ Também se pode obter  o indíce de refração $n_{B}$ a partir de (\ref{eq:vc})
 \begin{enumerate}
 \setlength{\itemsep}{0mm}
 \item Unidade de emissão de luz (díodo emissor) e de recepção (díodo receptor)
-[amplitude modulada por um sinal de frequência $50\,MHz$] 
+(amplitude modulada por um sinal de frequência $50\,MHz$)
 \item Duas lentes plano-cilindrícas
 \item Conjunto de dois espelhos planos para inversão do sentido de propagação da luz 
-\item Calha graduada (até 1.50m em 0.5cm) 
+\item Calha graduada  
 \item Bloco de vidro acrílico transparente 
 \item Dois tubos com cerca de 1 metro de comprimento para conter água ou ar. 
-\item Osciloscópio de dois canais a funcionar em modo XY
+\item Osciloscópio de dois canais a funcionar em modo “XY”
 \end{enumerate}
 
 \subsection{\sf Procedimento Experimental}
@@ -217,32 +230,30 @@ verifique que está centrada com a lente receptora e com o orifício que permite
 díodo receptor. Ajuste os parafusos dos espelhos de forma a maximizar a amplitude do sinal 
 recebido.
 Coloque os espelhos na posição de zero da escala e, rodando o botão que modifica 
-continuamente a diferença de fase entre os dois sinais, coloque-os em fase. 
+continuamente a diferença de fase entre os dois sinais, obtenha uma reta dos quadrantes pares. 
 
 \subsubsection{\sf Velocidade de propagação da luz no ar}
 Desloque os espelhos sobre a calha e observe a modificação da figura no ecrã do 
 osciloscópio, em particular, nas posições que correspondem aos sinais recebidos estarem 
 desfasados de π/2 (quadratura) e em oposição de fase. Para esta última situação registe a 
-posição dos espelhos e o domínio espacial para o qual os sinais parecem estar ainda em 
+posição dos espelhos e o intervalo, $e_z$,  para o qual os sinais parecem estar ainda em 
 oposição de fase. Repita a medida pelo menos duas vezes (cada observador). 
-Calcule a velocidade de propagação da luz no ar e os desvios à precisão e à exatidão. 
+Calcule a velocidade de propagação da luz no ar, a sua incerteza e o desvios à exatidão\footnote{O valor $c_{ar}$ é muito próximo de $c_{vacuo} = 299 792 458\,m/s$, que é uma constante exacta do Sistema Internacional de Medidas. O índice de refração do ar para a luz visível é $n_{ar}=1.000293$}. 
 
 \subsubsection{\sf Velocidade de propagação da luz no vidro acrílico}
-Verifique de novo se no zero da escala os sinais estão em fase. Coloque o bloco de vidro 
+Verifique de novo se no zero da escala de posição os sinais estão em fase. Coloque o bloco de vidro 
 acrílico no feixe incidente de modo que entre perpendicularmente às faces e faça o percurso 
-mais longo no vidro acrílico. Meça a posição (e a incerteza correspondente) dos espelhos tal 
+mais longo no vidro acrílico. Meça a posição e a incerteza correspondente dos espelhos para que 
 que os dois sinais detetados estejam em oposição em fase. Repita a medida pelo menos 
 duas vezes (cada observador).
-Calcule o valor da velocidade obtido para o vidro acrílico e os desvios à precisão e à 
-exatidão. Calcule o índice de refração do vidro acrílico.
+Calcule o índice de refração obtido para o vidro acrílico, $n_{vidro}$, pela expressão (\ref{eq:n_bloco}),  e a sua incerteza. Calcule o valor da velocidade.
 
 \subsubsection{\sf Velocidade de propagação da luz na água}
 Verifique de novo que no zero da escala os sinais estão em fase. Coloque o tubo vazio de 
 água nos suportes de modo que o feixe incidente entre perpendicularmente às faces.
 Registe a posição dos espelhos que produz um sinal em oposição de fase com o incidente. 
 Repita estas medidas para o tubo cheio de água. 
-Calcule o valor da velocidade obtida para a água e os desvios à precisão e à exatidão. 
-Calcule o índice de refração da água. 
+Calcule o valor da índice de refração obtida para a água $n_{agua}$, a sua incerteza e os desvio à exatidão\footnote{O valor tabelado é $n_{agua}=1.3330$}. 
 Comente criticamente a precisão do valor da velocidade de propagação da luz obtida nos 
 diferentes meios.
 \end{document} 
