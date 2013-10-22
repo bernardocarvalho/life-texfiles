@@ -46,7 +46,6 @@
 \usepackage[retainorgcmds]{IEEEtrantools}
 \usepackage{caption}
 
-
 \oddsidemargin 0cm
 \evensidemargin 0cm
 
@@ -84,9 +83,7 @@
 
 	\HRule \\[0.5cm]
 	{ \huge \sf  \textsc{A Propagação de Ondas Mecânicas em Meios Sólidos Homogéneos e Isótropos.}} \\[0.4cm] % \bfseries 
-%	{ \huge \sf  \textsc{Construções Geométricas em Lentes Delgadas (aproximação paraxial)} }\\[0.4cm] % \bfseries 
 	{ \large \bfseries Propriedades Elásticas e as Constantes de Elasticidade}\\
-%	{ \large \bfseries Procedimento Experimental}\\
 	\HRule \\%[0.5cm]
 
 \section{\sf Resumo do fundamento teórico do método utilizado}
@@ -96,7 +93,6 @@ Quando as forças exteriores aplicadas a um corpo sólido provocam pequenas defo
 
 Para uma barra prismática de comprimento $l$ e seção $A$ (altura $h$ e largura $w$) actuada por forças de intensidade $F$, normais às bases e uniformes em toda a seção, por exemplo de tração, vai observar-se um alongamento (“stretching”) $\Delta l$ proporcional ao esforço, como ilustrado esquematicamente na figura 1. Se o esforço fosse de compressão o elongamento seria $\Delta l<0$. 
 
-%	 \frac{2\,\Delta x_0}{T/2} c_{ar} = \frac{2\,\Delta x_0}{T/2} 
 
 \begin{minipage}[c]{0.6\textwidth}
 %\begin{figure}[!htb]  
@@ -115,7 +111,7 @@ Para uma barra prismática de comprimento $l$ e seção $A$ (altura $h$ e largur
 	\label{eq:vc}
 	 \frac{F}{A}  = Y  \frac{\Delta l}{l} 
 \end{equation}
-$Y$ é uma constante de elasticidade, módulo de Young ou de compressão (também representado por $E$) e que tem as dimensões de uma pressão (Pa no SI).
+$Y$ é uma constante de elasticidade, módulo de Young ou de compressão (também representado por $E$) e que tem as dimensões de uma pressão ($Pa$ no SI).
 \end{minipage}
 
 Alguns valores típicos para o módulo de Young são dados na tabela
@@ -134,7 +130,7 @@ Diamante  & 1220 \\
 \hline
 \end{tabular}
 
-Como consequência da peça alongar e não estar submetida a restrições laterais, nas direções transversais vai observar-se um encurtamento $\Delta h$ e $\Delta w$ que é proporcional a $\Delta l$ mas de sinal contrário tal que 
+Como consequência da peça alongar e não estar submetida a restrições laterais, nas direções transversais vai observar-se um encurtamento $\Delta h$ e $\Delta w$ que é proporcional a $\Delta l$ mas de sinal contrário, tal que:
 
 \begin{equation}
 	\label{eq:poisson}
@@ -175,7 +171,7 @@ tem as dimensões de uma pressão, não é independente de $Y$ e $\sigma$ e pode
 \end{equation}
 As forças de compressão ou tração produzem variações de volume sem rotação das partículas do material.
 
-Um meio é considerado anisótropo se as suas propriedades físicas dependem em cada ponto da direção considerada (é o caso dos meios cristalinos). Também os meios amorfos como os vidros, os plásticos, etc. quando são submetidos a esforços adquirem propriedades anisótropas. O caracter anisótropo do material pode ser posto em evidência, por exemplo, colocando-o entre dois polaroides cruzados. Se o material é isótropo a interposição no conjunto dos polaroides não altera a fraca intensidade luminosa, qualquer que seja a sua orientação, em contraste com o que se observa quando o material entre polaroides é anisótropo.
+Um meio é considerado anisótropo se as suas propriedades físicas dependem em cada ponto da direção considerada (é o caso dos meios cristalinos). Também os meios amorfos como os vidros, os plásticos, etc. quando são submetidos a esforços adquirem propriedades anisótropas. O carácter anisótropo do material pode ser posto em evidência, por exemplo, colocando-o entre dois polaroides cruzados. Se o material é isótropo a interposição no conjunto dos polaroides não altera a fraca intensidade luminosa, qualquer que seja a sua orientação, em contraste com o que se observa quando o material entre polaroides é anisótropo.
 
 No caso de um meio anisótropo, as elongações para o mesmo esforço mecânico dependem das direções e os diferentes coeficientes de proporcionalidade, i.e., os módulos de elasticidade são elementos do tensor de elasticidade. A caraterização destes materiais exige o conhecimento de um grande número de elementos do tensor ($81=3^4$, que se reduzem a 21 valores independentes).
 
@@ -237,12 +233,13 @@ Pode obter-se a expressão que substitui (\ref{eq:vL})  considerando um bloco qu
 \end{equation}
 porque pode mostrar-se facilmente atendendo a (\ref{eq:K}) e (\ref{eq:mu}) que  $Y'=K + 4/3\mu$.
 
-Os esforços tangenciais produzem ondas transversais que se propagam com velocidade $v_T$ graças aos movimentos harmónicos transversais das partículas ou rotações produzidas por um binário de forças. Estas ondas transversais podem vibrar numa determinada direção no plano transversal (fixa ou que segue uma lei de evolução) e são pois \emph{polarizáveis}, ao contrário das ondas longitudinais que não são polarizáveis.
+Os esforços tangenciais produzem ondas transversais que se propagam com velocidade $v_T$ graças aos movimentos harmónicos transversais das partículas ou rotações produzidas por um binário de forças. Estas ondas transversais podem vibrar numa determinada direção no plano transversal (fixa ou que segue uma lei de evolução).
+% e são pois \emph{polarizáveis}, ao contrário das ondas longitudinais que não são polarizáveis.
 \begin{equation}
 	\label{eq:vT}
 	 v_T = \sqrt{\frac{\mu}{\rho}}
 \end{equation}
-Para um corpo obtem-se 
+Para um corpo obtém-se:
 \begin{equation}
 	\label{eq:v_L_T}
 	\left(\frac{v_L}{v_T}\right)^2 =  \frac{2(1-\sigma)}{(1-2\sigma)} 
@@ -250,7 +247,7 @@ Para um corpo obtem-se
 que permite a partir da determinação experimental das velocidades $v_L$ e $v_T$ calcular o valor do coeficiente de Poisson $\sigma$. Verifica-se que $v_L$ é sempre superior a $v_T$  (a partir de (\ref{eq:v_L_T}) pode provar-se facilmente que $\sigma<1/2$).
 A determinação experimental destas velocidades permite calcular os valores das constantes de elasticidade $K$ e $\mu$, desde que se conheça o valor da massa volúmica do material.
 
-No caso de materiais anisótropos só um grande número de determinações permite calcular as constantes de elasticidade (componentes do tensor de elasticidade). Assim, para um paralelipípedo anisótropo quando se calculam as diferentes velocidades segundo as três direções só é fácil calcular o \emph{coeficiente de anisotropia} $c.a.$ que se obtem pela seguinte expressão
+No caso de materiais anisótropos só um grande número de determinações permite calcular as constantes de elasticidade (componentes do tensor de elasticidade). Assim, para um paralelipípedo anisótropo quando se calculam as diferentes velocidades segundo as três direções só é fácil calcular o \emph{coeficiente de anisotropia} $c.a.$ que se obtém pela seguinte expressão
 \begin{equation}
 	\label{eq:ca}
 	c.a.= \frac{v_{max}-v_{min}}{v_{max}}
@@ -260,7 +257,7 @@ No caso de materiais anisótropos só um grande número de determinações permi
 
 \begin{enumerate}
 \item Para a experiência do Pêndulo e supondo que o fio de Nylon tem um diâmetro de $1\,mm $, calcule a partir da expressão (\ref{eq:vc}), qual a variação de comprimento 
-do fio entre a posição mais alta e mais baixa da trajetória. Qual a variação máxima que esta aleração do comprimento provoca no período?
+do fio entre a posição mais alta e mais baixa da trajetória. Qual a variação máxima que esta alteração do comprimento provoca no período?
 \item Explique a partir das relações (\ref{eq:mu})  e  (\ref{eq:v_L_T})  porque não podem existir ondas transversais em liquídos e gases. Como se pode utilizar esta propriedade 
 na exploração de campos de petróleo?
 \item Considere uma camada de água, com velocidade de propagação $V_L=1450 \,m/s$, sobre uma camada de rocha granítica (Considere $K_{gra}=50\,GPa$, $\mu_{gra}=24\,GPa$ e \\
@@ -346,13 +343,13 @@ A força $ \ud F = \frac{\partial F }{\partial x} \ud x $   produz uma aceleraç
 	 \frac{\partial F }{\partial x} \ud x  =  \rho\,A \ud x \frac{\partial^2 \xi }{\partial t^2} \Rightarrow \frac{\partial F }{\partial x} = \rho\,A  \frac{\partial^2 \xi }{\partial t^2}
 \end{equation}
 
-Aplicando a derivada parcial em ordem a x à equação (\ref{eq:a4}) obtem-se
+Aplicando a derivada parcial em ordem a $x$ à equação (\ref{eq:a4}) obtém-se
 \begin{equation}
 	\label{eq:a6}
 	\frac{\partial F }{\partial x} = A \, Y \frac{\partial^2 \xi }{\partial x^2}
 \end{equation}	
 
-Combinando (\ref{eq:a5}) e (\ref{eq:a6}) obtem-se a equação 
+Combinando (\ref{eq:a5}) e (\ref{eq:a6}) obtemos a equação :
 \begin{equation}
 	\label{eq:a7}
 	\frac{\partial^2 \xi }{\partial x^2} - \frac{\rho}{Y} \frac{\partial^2 \xi }{\partial t^2} =0
