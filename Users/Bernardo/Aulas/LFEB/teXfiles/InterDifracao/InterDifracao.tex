@@ -95,11 +95,16 @@
 \section{\sf Introdução}
 \subsection{\sf Onda plana monocromática }
 
-O modelo da onda plana monocromática que se propaga na direção $\vec{s}$ descreve o campo  eletromagnético $\vec{E}$, $\vec{B}$ de acordo com\footnote{``Recordar''  a \emph{fórmula de Euler}: $e^{i \alpha} = cis(\alpha) = \cos(\alpha) + i \sin(\alpha)$}:
+Uma onda plana e luz pode ser estabelecida com uma lente convergente esférica e uma fonte luminosa pontual ou uma lente lente convergente cilíndrica 
+e uma fonte linear(e.g um filamento linear).  À escala do Laboratório a luz solar é também uma excelente aproximação da Onda Plana.
+Se a fonte de luz tiver apenas uma comprimento de onda (ou côr) ela é \emph{monocromática}, ou de frequência única e constante.
+O modelo da onda plana monocromática que se propaga numa direção $\vec{s}$, descreve o campo  eletromagnético $\vec{E}$, $\vec{B}$ de acordo com
+\footnote{A quantidade $e^{ i (\vec{k} \cdot \vec{r} -wt - \delta_0)}$ é apenas uma extensão matemática no conjunto complexo, $\mathbb{C}$,  que irá facilitar as contas de somar e, sobretudo, multiplicar. O campo Eléctrico físico é dado pela \emph{componente real} deste número complexo. Chamemos $\mathbb{E}$ à extensão Complexa do vetor  $\vec{E}$.}, 
+\footnote{``Recordar''  a \emph{fórmula de Euler}: $e^{i \alpha} = cis(\alpha) = \cos(\alpha) + i \sin(\alpha)$} :
 
 \begin{align}
-	\vec{E} &= \vec{E}_0 \cos(\vec{k} \cdot \vec{r} -wt -\delta_0) \label{eq:1}\\
-	&= \Re \{\vec{E}_0 e^{ i (\vec{k} \cdot \vec{r} -wt - \delta_0)}\} 
+	\vec{E}(\vec{r}, t) &= \vec{E}_0 \cos(\vec{k} \cdot \vec{r} -wt -\delta_0) \label{eq:1}\\
+	&=  \Re \{ \mathbb{E} \} = \vec{E}_0 \cdot \Re \{ e^{ i (\vec{k} \cdot \vec{r} -wt - \delta_0)}\} 
 \end{align}
 
 Em que, $\vec{k}$, é o número de onda ou vetor de propagação $\vec{k} =\frac{2 \pi}{\lambda}   \vec{s} $, $(\vec{k} \cdot \vec{r} -wt -\delta)$ é a fase da onda no ponto $\vec{r}$ e instante $t$ e 
@@ -111,34 +116,47 @@ Pode provar-se que:
 
 	\item $\vec{E}$ e $\vec{B}$ definem o plano de onda, que é portanto transversal à direçao de propagação, $\vec{s}$.
 
-	\item a densidade de energia elétrica $w_e= \frac{\varepsilon |\vec{E}|^2}{2}$ igual $w_m= \frac{ |\vec{B}|^2}{2\mu}$, $\varepsilon |\vec{E}|^2 = \frac{ |\vec{B}|^2}{2\mu}$, $\vec{B} = \sqrt{\varepsilon \mu} \vec{E}$ \\
-	como 
-	\begin{equation}
+\end{enumerate}
+
+
+\subsection{\sf Onda Esférica monocromática }
+A onda criada por uma fonte pontual que radia isotrópicamente em todas as direções é dada por:
+%Vamos supor que os campos que atingem o ponto $P$ são do tipo onda esférica (equação \label{eq:odesf}) 
+\begin{align}
+	\vec{E} &=  \frac{E_{0}}{r} \cdot \Re \{ e^{ i (k r -wt )}\} \cdot \vec{s}_r  \label{eq:odesf0}
+%	E_2 &= E_{F_2} \frac{1}{r_2} e^{ i (k r_2 -wt )} \label{eq:odesf1} 
+\end{align}
+A direção de propagação varia com a posição e é radial $\vec{s}_r = \vec{r}/r$. A amplitude varia com $\frac{1}{r}$ e o termo espacial na fase é $k r$ (e não $ \vec{k} \cdot \vec{r} $ como na onda plana). 
+
+\subsection{\sf Densidade de Energia na onda e Intensidade Luminosa}
+\begin{enumerate}
+\item A densidade de energia elétrica $w_e= \frac{\varepsilon |\vec{E}|^2}{2}$ é igual a
+$w_m= \frac{ |\vec{B}|^2}{2\mu}$, $\varepsilon |\vec{E}|^2 = \frac{ |\vec{B}|^2}{2\mu}$, $\vec{B} = \sqrt{\varepsilon \mu} \vec{E}$, e
+	 \begin{equation}
 		\vec{B} = \mu \vec{H} \to \vec{H}= \sqrt{\frac{ \varepsilon}{\mu}} \vec{E} 
 	\end{equation}
-
 	\item A transferência de energia que acompanha a propagação da onda é descrita pelo vetor de Poynting 
 	\begin{equation}
 		\vec{S} = \vec{E} \times \vec{H} = \sqrt{\frac{ \varepsilon}{\mu}} |\vec{E}|^2 \vec{s} 
 	\end{equation}
-	$ s$ é pois a direção em que se propaga a onda e também a energia.
+	$ \vec{s}$ é a direção em que se propaga a onda e a energia.
 	
-	O fluxo do vetor de Poynting representa a energia que na unidade de tempo atravessa a superfície fechada (que delimita um Volume) perpendicularmente a ela e porque a energia se conserva é igual à diminuição no tempo de energia no interior do volume considerado.
+	O fluxo do vetor de Poynting representa a energia que na unidade de tempo atravessa a superfície fechada (que delimita um Volume) perpendicularmente a ela. Porque a energia se conserva é igual à diminuição no tempo de energia no interior do Volume considerado.
 	O vetor de Poynting é assim a quantidade de energia que flui por unidade de tempo e por unidade de área (e perpendicularmente a ela) 
 	 
-	\item A intensidade luminosa ou radiância é calculada pelo valor médio (no tempo $\langle \, \rangle$) do módulo do vetor de Poynting. 
+	\item A intensidade luminosa ou radiância é calculada pelo valor médio (no tempo: “$\langle \, \rangle$”) do módulo do vetor de Poynting: 
 	\begin{equation}
-		I = \langle S \rangle = \sqrt{\frac{ \varepsilon}{\mu}} \langle E^2 \rangle \label{eq:5} 
+		I = \langle S \rangle = \sqrt{\frac{ \varepsilon}{\mu}} \langle |\vec{E}|^2 \rangle \label{eq:5} 
 	\end{equation}
 	A partir da equação (\ref{eq:1}) e sabendo-se que  $\langle (A \cos(wt) )^2  \rangle =\frac{1}{2} A^2$,  obtém-se 
 	\begin{equation}
-		\label{eq:6} I = \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} E_0^2 
+		\label{eq:6} I = \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} |\vec{E}|^2 
 	\end{equation}
 	e usando a representação complexa: 
 	\begin{equation}
-		\label{eq:7} I = \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}}  E\, E^* 
+		\label{eq:7} I = \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}}  \mathbb{E}\, \mathbb{E}^* 
 	\end{equation}
-	em que $E^*$ é o \emph{complexo conjugado} de $E$
+	em que $\mathbb{E}^*$ é o \emph{complexo conjugado} de $\mathbb{E}$, i.e. se $\mathbb{E} = \vec{E} \cdot e^{ \alpha} \to \mathbb{E}^* = \vec{E} \cdot e^{- \alpha}$.
 \end{enumerate}
 
 %***********************
@@ -149,20 +167,22 @@ Pode provar-se que:
 	\textwidth]{interf} \caption{Interferência produzida por duas fontes coerentes. As dimensões NÃO estão à escala. Na realidade temos de ter $D \gg a$. \label{fig:1}} 
 \end{figure}
 
+Se um feixe de luz incidir em duas fendas, então do lado direito é como se tivermos duas fontes pontuais situadas nas posições $F_1$ e $F_2$.
+
 Se distâncias $F F_1 = F F_2$ as amplitudes e as fases do campo $E$ em $F_1$ e $F_2$ são idênticas e as fontes são coerentes\footnote{De forma a que o atraso entre os dois raios não fosse maior que o \emph{tempo de coerência da fonte}}.
 %, i.e. desde que a diferença de fase entre os dois centros fosse bem definida e constante).
 %(mesmo se a distância de percurso não fosse a mesma continuariam coerente, se a distância de percurso não fosse excessiva
 
 Em qualquer ponto do alvo de projeção a soma é vetorial: 
 \begin{equation}
-	\label{eq:8} \vec{E}_{total} = \vec{E}_1 + \vec{E}_2  = \Re \{\vec{E}_1 e^{ i (\vec{k}_1 \cdot \vec{r_1} -wt )} + \vec{E}_2 e^{ i (\vec{k}_2 \cdot \vec{r_2} -wt )} \} 
+	\label{eq:8} \vec{E}_{total} = \vec{E}_1 + \vec{E}_2  = \Re \{ \mathbb{E}_1 + \mathbb{E}_2 \} 
 \end{equation}
 em que $\vec{E}_i$ é o campo elétrico devido à fonte $F_i$
 
 A intensidade (\ref{eq:7}) virá pois 
 \begin{align}
-	I &= \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \; \langle E_{total} E^*_{total} \rangle \nonumber \\
-	&= \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \left[ \langle E_1 E^*_1 + E_1 E^*_2 + E^*_1 E_2 + E_2 E^*_2 \rangle \right] \nonumber \\
+	I &= \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \; \langle \mathbb{E}_{total} \mathbb{E}^*_{total} \rangle \nonumber \\
+	&= \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \left[ \langle \mathbb{E}_1 \mathbb{E}^*_1 + \mathbb{E}_1 \mathbb{E}^*_2 + E^*_1 E_2 + E_2 E^*_2 \rangle \right] \nonumber \\
 	&= I_1 + I_2 +I_{12} 
 \end{align}
 
@@ -178,12 +198,14 @@ mas os dois termos são conjugados um do outro
 \begin{equation}
 	\label{eq:12} E_1 E^*_2 = (E^*_1 E_2)^* 
 \end{equation}
-Vamos supor que os campos que atingem o ponto $P$ são do tipo onda esférica, i.e. 
+
+Vamos supor que os campos que atingem o ponto $P$ são do tipo onda esférica (equação \ref{eq:odesf}) 
 \begin{align}
-	E_1 &= E_{F_1} \frac{1}{r_1} e^{ i (k r_1 -wt )} \label{eq:13}\\
-	E_2 &= E_{F_2} \frac{1}{r_2} e^{ i (k r_2 -wt )} \label{eq:14} 
+	E_1 &= E_{F_1} \frac{1}{r_1} e^{ i (k r_1 -wt )} \label{eq:odesf}\\
+	E_2 &= E_{F_2} \frac{1}{r_2} e^{ i (k r_2 -wt )} \label{eq:odesf1} 
 \end{align}
-as amplitudes variam com $\frac{1}{r}$ e o termo espacial na fase é $k r$ (e não $ \vec{k} \cdot \vec{r} $ como na onda plana). 
+%as amplitudes variam com $\frac{1}{r}$ e o termo espacial na fase é $k r$ (e não $ \vec{k} \cdot \vec{r} $ como na onda plana). 
+
 \begin{equation}
 	\label{eq:15} \text{ como } F F_1 = F F_1 \quad ; \quad E_{F_1} = E_{F_1} = E_{F_i} 
 \end{equation}
@@ -297,6 +319,13 @@ O integral virá pois igual a
 \begin{equation}
 	\label{eq:30} E_P = \left( \frac{E}{r} \right)_0 \; s \; e^{i(k r_0 -wt) } \;\frac{ \sin( \frac{k s}{2}\sin \theta)}{ \frac{k s}{2}\sin \theta} 
 \end{equation}
+
+\begin{figure}[htb]  \centering 
+	\includegraphics[width=0.7
+	\textwidth]{figura4.png} \caption{
+	Evolução da função $\left( \frac{\sin u}{u} \right)^2 $ (a preto). Para se visualizarem os máximos secundários apresenta-se a vermelho no mesmo gráfico com a escala de ordenadas ampliada de 10 vezes.
+A mancha central tem uma extensão (em $\sin \theta$) que é dupla das manchas laterais. \label{fig:4}} 
+\end{figure}
 
 A intensidade $I$ será pois
 \begin{equation}
@@ -581,12 +610,6 @@ Entre mínimos regularmente espaçados em $\sin \theta $ ocorrem máximos secund
 
 %A evolução da função $\left( \frac{\sin u}{u} \right)^2 $ apresenta-se na figura \ref{fig:4} (a preto). Para se visualizarem os máximos secundários %apresenta-se a vermelho no mesmo gráfico com a escala de ordenadas $10$ vezes superior.
 
-\begin{figure}[thbp]  \centering 
-	\includegraphics[width=0.8
-	\textwidth]{figura4.png} \caption{
-	Evolução da função $\left( \frac{\sin u}{u} \right)^2 $ (a preto). Para se visualizarem os máximos secundários apresenta-se a vermelho no mesmo gráfico com a escala de ordenadas ampliada de 10 vezes.
-A mancha central tem uma extensão (em $\sin \theta$) que é dupla das manchas laterais. \label{fig:4}} 
-\end{figure}
 
 %\newpage 
 As soluções da equação trigonométrica (\ref{eq:36}) que correspondem aos máximos secundários são calculados graficamente a partir do pontos de interseção de $\tan u$ com a reta $y=u$ (os Pontos $A$, $B$, $C$, $D$, etc.) que correspondem a valores $u$ menores mas próximos de $\frac{(2\,n +1)\pi}{2}$ com $n=1,\,2 \cdots$. 
