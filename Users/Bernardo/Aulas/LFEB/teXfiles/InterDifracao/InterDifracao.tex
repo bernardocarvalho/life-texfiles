@@ -100,7 +100,7 @@ Uma onda plana e luz pode ser estabelecida com uma lente convergente esférica e
 e uma fonte linear(e.g um filamento linear).  À escala do Laboratório a luz solar é também uma excelente aproximação da Onda Plana.
 Se a fonte de luz tiver apenas uma comprimento de onda (ou côr) ela é \emph{monocromática}, ou de frequência única e constante.
 O modelo da onda plana monocromática que se propaga numa direção $\vec{s}$, descreve o campo  eletromagnético $\vec{E}$, $\vec{B}$ de acordo com
-\footnote{A quantidade $e^{ i (\vec{k} \cdot \vec{r} -wt - \delta_0)}$ é apenas uma extensão matemática no conjunto complexo, $\mathbb{C}$,  que irá facilitar as contas de somar e, sobretudo, multiplicar. O campo Eléctrico físico é dado pela \emph{componente real} deste número complexo. Chamemos $\mathbb{E}$ à extensão Complexa do vetor  $\vec{E}$.}, 
+\footnote{A quantidade $e^{ i (\vec{k} \cdot \vec{r} -wt - \delta_0)}$ é apenas uma extensão matemática no conjunto complexo, $\mathbb{C}$,  que irá facilitar as contas de somar e, sobretudo, multiplicar. O campo Elétrico físico é dado pela \emph{componente real} deste número complexo. Chamemos $\mathbb{E}$ à extensão Complexa do vetor  $\vec{E}$.}, 
 \footnote{``Recordar''  a \emph{fórmula de Euler}: $e^{i \alpha} = cis(\alpha) = \cos(\alpha) + i \sin(\alpha)$} :
 
 \begin{align}
@@ -208,7 +208,7 @@ Para calcular vamos supor que os campos que atingem o ponto $P$ são do tipo ond
 %as amplitudes variam com $\frac{1}{r}$ e o termo espacial na fase é $k r$ (e não $ \vec{k} \cdot \vec{r} $ como na onda plana). 
 
 \begin{equation}
-	\label{eq:15} \text{ como } F F_1 = F F_1 \, \to \, \quad E_{F_1} = E_{F_1} = E_{F} 
+	\label{eq:15} \text{ como } F F_1 = F F_2 \, \to \, \quad E_{F_1} = E_{F_2} = E_{F} 
 \end{equation}
 Do esquema da fig. 1 pode concluir-se que 
 \begin{equation}
@@ -321,7 +321,7 @@ O integral virá pois igual a
 	\frac{2 \sin( \frac{k s}{2}\sin \theta)}{  k \sin \theta}= s \; \frac{ \sin( \frac{k s}{2}\sin \theta)}{ \frac{k s}{2}\sin \theta} 
 \end{equation*}
 \begin{equation}
-	\label{eq:30} E_P = \left( \frac{E}{r} \right)_0 \; s \; e^{i(k r_0 -wt) } \;\frac{ \sin( \frac{k s}{2}\sin \theta)}{ \frac{k s}{2}\sin \theta} 
+	\label{eq:30} E_P = \left( \frac{E}{r} \right)_{z=0} \; s  \;\frac{ \sin( \frac{k s}{2}\sin \theta)}{ \frac{k s}{2}\sin \theta}  \; e^{i(k r_0 -wt) }
 \end{equation}
 
 \begin{figure}[htb]  \centering 
@@ -331,12 +331,12 @@ O integral virá pois igual a
 A mancha central tem uma extensão (em $\sin \theta$) que é dupla das manchas laterais. \label{fig:4}} 
 \end{figure}
 
-A intensidade $I$ será pois
+A intensidade $I(\theta)$ será pois
 \begin{equation}
-	\label{eq:31} I = \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \; \left( \frac{E}{r} \right)_0^2 \; s^2 \; \left[ \frac{ \sin( \frac{k s}{2}\sin \theta)}{ \frac{k s}{2}\sin \theta} \right]^2 
+	\label{eq:31} I(\theta) = \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \; \left( \frac{E}{r} \right)_{z=0}^2 \; s^2 \; \left[ \frac{ \sin( \frac{k s}{2}\sin \theta)}{ \frac{k s}{2}\sin \theta} \right]^2 
 \end{equation}
 
-O último termo $\left[ \cdots \right] $  é do tipo $(\frac{\sin u}{u})^2 $ (Figura \ref{fig:4}) e tem zeros para $u = m \pi$ com $m \neq 0$. Tem um máximo principal para $m = 0$ e vale $1$. Assim o fator $I_0 \equiv \frac{1}{2} \sqrt{\frac{ \varepsilon}{\mu}} (\frac{E}{r })_0^2 s^2$ representa o valor de intensidade máxima que se vai observar no ponto $Q$ (figura \ref{fig:3})
+O último termo $\left[ \cdots \right] $  é do tipo $(\frac{\sin u}{u})^2 $ (Figura \ref{fig:4}) e tem zeros para $u = m \pi$ com $m \neq 0$. Tem um máximo principal para $m = 0$ e vale $1$. Assim o fator $I_0 \equiv \frac{1}{2} \sqrt{\frac{ \varepsilon}{\mu}} (\frac{E}{r })_{z=0}^2 s^2$ representa o valor de intensidade máxima que se vai observar no ponto $Q$ (figura \ref{fig:3})
 \begin{equation}
 	\label{eq:32} I = I_0 \cdot \underbrace{\left( \frac{\sin u}{u} \right)^2}_\text{Fator de forma de fenda} \text{, com } u\equiv \frac{k s}{2}\sin \theta 
 \end{equation}
@@ -348,7 +348,7 @@ Os zeros de $(\frac{\sin u}{u})^2 $ correspondem a
 \end{equation}
  ou seja:
 \begin{empheq}[box=\fcolorbox{blue!40!black!60}{yellow!20}]{equation}
-	\sin \theta = m \frac{\lambda}{s}  \label{eq:minF} 
+	\sin \theta = m \frac{\lambda}{s} \text{, com } m \text{ inteiro }\ne 0 \label{eq:minF} 
 \end{empheq}
 [Notar são mínimos laterais e não máximos como na equação \ref{eq:maxDF}]
 %\begin{equation}
@@ -359,7 +359,7 @@ Os zeros de $(\frac{\sin u}{u})^2 $ correspondem a
 $m= \pm 1 $ corresponde à posição do 1º mínimo que rodeia o máximo central e $\sin \theta_{m=1} = \frac{\lambda}{s}$\,.\\
  $\theta_1$ é o ângulo segundo o qual do centro da fenda se vê o 1º mínimo.
 
- Quanto  aos máximos da figura embora estejam situados naturalmente entre os vários mínimos, NÃO são dados, desta vez,   pela expressão do tipo (\ref{eq:23}). Como tal não os consideremos as posições exactas para este trabalho 
+ Quanto  aos máximos da figura embora estejam situados naturalmente entre os vários mínimos, NÃO são dados, desta vez,   pela expressão do tipo (\ref{eq:23}). Como tal não consideremos as suas posições exatas neste trabalho 
  (contudo ver apêndice \ref{sec:maxfenda}).
 % $\frac{k s}{2}\sin \theta = (2 m +1)\frac{\pi}{2} $ 
 
@@ -465,13 +465,15 @@ Assim para uma rede com um elevado número de linhas estes máximos secundários
 Se considerarmos o efeito de difração produzido por cada fenda de largura $s$ , (seção \ref{sec:fenda})  
 %\mbox{$ \big[ s \rightarrow \big( \frac{\sin u}{u}\big)^2$: \emph{fator de forma da fenda\;}\big]}   
 a intensidade deverá conter este fator, que \emph{modula} o termo de interferência de $N$ fendas.
-\begin{align}
+\begin{empheq}[box=\fcolorbox{blue!40!black!60}{yellow!20}]{align}
+%\begin{align}
 I_P(\theta) &= I_0 \cdot \underbrace{\left( \frac{\sin u}{u} \right)^2}_\text{Fator de forma de fenda}
-	\cdot  \underbrace{ \left( \frac{\sin N v}{N \sin  v} \right)^2 }_\text{Termo de interferência} \nonumber \\
+	\cdot  \underbrace{ \left( \frac{\sin N v}{N \sin  v} \right)^2 }_\text{Termo de interferência} \label{eq:DF_s}  \\
 	% \left( \frac{\sin N v}{N \sin  v}\right)^2  
 \text{ Onde } u &\equiv \frac{ k s}{2} \sin \theta =  \pi \frac{ s}{\lambda} \sin \theta , \quad \text{e} \quad
-v \equiv  \frac{ k a}{2} \sin \theta =  \pi \frac{a}{\lambda} \sin \theta 
-\end{align}
+v \equiv  \frac{ k a}{2} \sin \theta =  \pi \frac{a}{\lambda} \sin \theta \nonumber
+%\end{align}
+\end{empheq}
 
 %\underbrace{\left( \frac{\sin u}{u} \right)^2}_\text{Fator de forma de fenda}
 %\newpage
@@ -551,10 +553,11 @@ $\lambda$ produz uma variação angular $\Delta \theta$ que considerando a equa�
 \Delta \lambda = \frac{a \cos \theta}{m}  \Delta \theta 
 \end{align}
  
-Combinando (\ref{eq:52}) e (\ref{eq:50})  obtém-se para a \emph{resolução }$R$
-\begin{equation} \label{eq:53}
-R = \frac{\lambda}{\Delta \lambda} = m N
-\end{equation}
+Combinando (\ref{eq:52}) e (\ref{eq:50})  obtém-se para a \emph{resolução }$R$:
+\begin{empheq}[box=\fcolorbox{blue!40!black!60}{yellow!20}]{equation}
+	R = \frac{\lambda}{\Delta \lambda} = m N \label{eq:resolRede}
+\end{empheq}
+%\begin{equation}  \end{equation}
 
 que depende apenas da ordem \underline{m} de difração e do número, $N$, de linhas (ou fendas) na rede de difração iluminadas pelo feixe .
 
@@ -570,39 +573,38 @@ $150\,cm$ desta chapa que imagem irá observar? Justifique e faça um esboço à
 
 \subsection{\sf Material utilizado}
 \begin{enumerate}
-\item Caixa de Óptica equipada com calha graduada.
+\item Caixa de Ótica equipada com calha graduada.
 \item Slides com várias fendas, 
-\item Redes de difracção, filtros corados, suportes. 
+\item Redes de difração, filtros corados, suportes. 
 \item Laser de He-Ne de potência $\le 5\, mW$.  
 \item Detetor de intensidade luminosa linear tipo CCD e software de aquisição Caliens
 \end{enumerate}
 
-{\bf (Todas as figuras de difracção obtidas devem ser incluídas no relatório)}
+{\bf (Todas as figuras de difração obtidas devem ser incluídas no relatório)}
 
-\subsection{\sf Difracção por uma fenda}
+\subsection{\sf Difração por uma fenda}
 
 \begin{enumerate}
-\item Faça incidir numa das três fendas (A, B, C, respectivamente, 40, 80 e 160 µm) um 
+\item Faça incidir numa das três fendas (A, B, C, respetivamente, 40, 80 e 160 µm) um 
 feixe de luz monocromática proveniente de um laser de He-Ne ($\lambda=632.8\,nm$).  
 Coloque o laser e o alvo, onde vai observar a figura, a distâncias tais que possa usar 
 a aproximação de Fraunhofer (Justifique!). 
-\item Estime a largura da fenda a partir da figura de difracção obtida.  
+\item Estime a largura da fenda a partir da figura de difração obtida e da medição dos diversos mínimos (equação  \ref{eq:minF}).  
 Repita pelo menos para duas posições diferentes do 
 alvo.  
-\item Estime a precisão e a exactidão que obteve nas duas situações. 
-\item Difracção por um cabelo
-Repita  o  procedimento  do  ponto  anterior  usando  agora  um  cabelo  montado  num 
+\item Estime a precisão e a exatidão que obteve nas duas situações. 
+\item Difração por um cabelo: Repita  o  procedimento  do  ponto  anterior  usando  agora  um  cabelo  montado  num 
 suporte.  
 Estime a precisão obtida.  
-Compare  a  figuras  de  difracção  obtida  com  a  que  foi  registada  para  as  fendas  no 
+Compare  a  figuras  de  difração  obtida  com  a  que  foi  registada  para  as  fendas  no 
 ponto anterior, utilizando o \emph{Princípio de Babinet}.
 \end{enumerate}
 
-\subsection{\sf Difracção por uma rede de $N$ linhas}
+\subsection{\sf Difração por uma rede de $N$ linhas}
 \begin{enumerate}
 \item Faça incidir numa rede de Difração (de 80, 100 ou 600 linhas/mm) um 
 feixe de luz do laser de He-Ne, ou outro laser de estado sólido (e.g. apontador laser).
-\item A partir da medição dos máximos principais verifique a relação  (\ref{eq:maxRede})
+\item A partir da medição dos máximos principais verifique a relação  (\ref{eq:maxRede}).
 Estime a distância entre fendas e compare com o valor anunciado.
 \item Estime o número de fendas iluminadas e indique quantos máximos e mínimos secundários (não visíveis...) que existem 
 entre estes máximos principais.
@@ -610,18 +612,20 @@ entre estes máximos principais.
 \end{enumerate}
 
 
-\subsection{\sf Difracção por uma fenda dupla}
- 
-Faça incidir numa das três fendas duplas (D, E, F) um feixe de luz monocromática 
+\subsection{\sf Difração por uma fenda dupla}
+
+\begin{enumerate}
+\item Faça incidir numa das três fendas duplas (D, E, F) um feixe de luz monocromática 
 proveniente de um laser de He-Ne ($\lambda=632.8\,nm$).  
-Usando um detector CCD linear registe o perfil das intensidades com o programa instalado 
-no PC ao qual o detector está ligado. Conhecendo a largura de cada fenda ($s=40\, 
+\item Usando um detetor CCD linear registe o perfil das intensidades com o programa instalado 
+no PC ao qual o detetor está ligado. Conhecendo a largura de cada fenda ($s=40\, 
 \mu m$ para D e E e $80\,\mu m$ para F), a distância entre fendas ($a=125\,\mu m$ para D e 
 $250\,\mu m$  para  E  e  F) e a distância entre slide e alvo  simule  o  perfil  obtido  para  a  intensidade.  Guarde  o  ficheiro  das 
-intensidades  em  formato  texto  para  poder  simular  o  perfil  usando  a  equação  que 
-permite calcular a intensidade da figura de difracção, ajustando interactivamente os parametros $s$ e $a$. 
-Comente  o  que  observou  e  o  resultado  das  simulações  comparado  ao  perfil 
+intensidades  em  formato  texto  para  poder  simular  o  perfil  usando  a  equação (\ref{eq:DF_s}) que 
+permite calcular a intensidade da figura de difração, ajustando interativamente os parametros $s$ e $a$. 
+\item Comente  o  que  observou  e  o  resultado  das  simulações  comparado  ao  perfil 
 experimental. 
+\end{enumerate}
 
 \section{\sf Apêndice}
 \subsection{Máximos da figura de difração de uma fenda} \label{sec:maxfenda}
