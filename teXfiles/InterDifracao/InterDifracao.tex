@@ -9,6 +9,7 @@
 %
 \usepackage{ifxetex}% for XELATEX, or PDFlatex
 \usepackage{ifplatform} 
+\usepackage{empheq}
 %
 \ifxetex
 	\usepackage{polyglossia} \setmainlanguage{portuges}
@@ -164,7 +165,7 @@ $w_m= \frac{ |\vec{B}|^2}{2\mu}$, $\varepsilon |\vec{E}|^2 = \frac{ |\vec{B}|^2}
 \begin{figure}[h!tb]
 	\centering 
 	\includegraphics[width=0.8
-	\textwidth]{interf} \caption{Interferência produzida por duas fontes coerentes. As dimensões NÃO estão à escala. Na realidade temos de ter $D \gg a$. \label{fig:1}} 
+	\textwidth]{interf} \caption{Interferência produzida por duas fontes coerentes. As dimensões NÃO estão à escala, na realidade tem de se ter $D \gg a$. \label{fig:1}} 
 \end{figure}
 
 Se um feixe de luz incidir em duas fendas, então do lado direito é como se tivermos duas fontes pontuais situadas nas posições $F_1$ e $F_2$.
@@ -182,24 +183,24 @@ em que $\vec{E}_i$ é o campo elétrico devido à fonte $F_i$
 A intensidade (\ref{eq:7}) virá pois 
 \begin{align}
 	I &= \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \; \langle \mathbb{E}_{total} \mathbb{E}^*_{total} \rangle \nonumber \\
-	&= \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \left[ \langle \mathbb{E}_1 \mathbb{E}^*_1 + \mathbb{E}_1 \mathbb{E}^*_2 + E^*_1 E_2 + E_2 E^*_2 \rangle \right] \nonumber \\
+	&= \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \left[ \langle \mathbb{E}_1 \mathbb{E}^*_1 + \mathbb{E}_1 \mathbb{E}^*_2 + \mathbb{E}^*_1 \mathbb{E}_2 + \mathbb{E}_2 \mathbb{E}^*_2 \rangle \right] \nonumber \\
 	&= I_1 + I_2 +I_{12} 
 \end{align}
 
 em que 
 \begin{equation}
-	\label{eq:10} I_1 =\frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \;  \langle E_{1} E^*_{1} \rangle \quad \text{,} \quad \text{e} \quad  I_2 =\frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \; \langle E_2 E^*_2 \rangle
+	\label{eq:10} I_1 =\frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \;  \langle \mathbb{E}_{1} \mathbb{E}^*_{1} \rangle \quad \text{,} \quad \text{e} \quad  I_2 =\frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \; \langle \mathbb{E}_2 \mathbb{E}^*_2 \rangle
 \end{equation}
 A intensidade total difere da soma das intensidades no termo $I_{12} $, chamado termo de interferência 
 \begin{equation}
-	\label{eq:11} I_{12} =\frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \; \langle E_1 E^*_2 + E^*_1 E_2 \rangle 
+	\label{eq:11} I_{12} =\frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \; \langle \mathbb{E}_1 \mathbb{E}^*_2 + \mathbb{E}^*_1 \mathbb{E}_2 \rangle 
 \end{equation}
 mas os dois termos são conjugados um do outro 
 \begin{equation}
-	\label{eq:12} E_1 E^*_2 = (E^*_1 E_2)^* 
+	\label{eq:12} \mathbb{E}_1 \mathbb{E}^*_2 = (\mathbb{E}^*_1 \mathbb{E}_2)^* 
 \end{equation}
 
-Vamos supor que os campos que atingem o ponto $P$ são do tipo onda esférica (equação \ref{eq:odesf}) 
+Para calcular vamos supor que os campos que atingem o ponto $P$ são do tipo onda esférica (equação \ref{eq:odesf0}) 
 \begin{align}
 	E_1 &= E_{F_1} \frac{1}{r_1} e^{ i (k r_1 -wt )} \label{eq:odesf}\\
 	E_2 &= E_{F_2} \frac{1}{r_2} e^{ i (k r_2 -wt )} \label{eq:odesf1} 
@@ -207,23 +208,23 @@ Vamos supor que os campos que atingem o ponto $P$ são do tipo onda esférica (e
 %as amplitudes variam com $\frac{1}{r}$ e o termo espacial na fase é $k r$ (e não $ \vec{k} \cdot \vec{r} $ como na onda plana). 
 
 \begin{equation}
-	\label{eq:15} \text{ como } F F_1 = F F_1 \quad ; \quad E_{F_1} = E_{F_1} = E_{F_i} 
+	\label{eq:15} \text{ como } F F_1 = F F_1 \, \to \, \quad E_{F_1} = E_{F_1} = E_{F} 
 \end{equation}
 Do esquema da fig. 1 pode concluir-se que 
 \begin{equation}
 	\label{eq:16} r_2 \approx r_1 + a \sin \theta 
 \end{equation}
-a quantidade $ a \sin \theta $ tem um valor muito pequeno\footnote{Esta quantidade quando comparada com $ r_1$ \; $ \frac{a \sin \theta }{r_1 } \sim \frac{a}{r } \sim \frac{ 500 \times 10^{-6} }{2 } \sim 10^{-4}$},
-i.e. na amplitude dos campos em (\ref{eq:13}) e (\ref{eq:14}) $ r_1 \cong r_2 = r$. 
+a quantidade $ a \sin \theta $ tem um valor muito pequeno\footnote{Esta quantidade quando comparada com $ r_1$: \; $ \frac{a \sin \theta }{r_1 } \sim \frac{a}{r } \sim \frac{ 500 \times 10^{-6} }{2 } \sim 10^{-4}$},
+i.e. na amplitude dos campos em (\ref{eq:odesf}) e (\ref{eq:odesf1}) $ r_1 \cong r_2 = r$. 
 Mas a mesma aproximação não pode ser feita na fase, porque em 
 \begin{align}
-	k r_2 &= k r_1 +k a \sin \theta \quad \text{, e } \nonumber \\
+	k r_2 &= k r_1 +k a \sin \theta  \nonumber \\ %\,\text{, e }
 	k a \sin \theta &= \frac{ 2 \pi }{\lambda } a \sin \theta  \rightarrow \text{ varia entre } 0 \text{ e } \frac{ 2 \pi}{\lambda} a \sim 5 \cdot 10^{3} \text{, para }  \lambda \simeq 600\,nm  \nonumber 
 \end{align}
 produzindo variações muito sensíveis na fase. 
 \begin{align}
-	\label{eq:17} I_{12} &=\frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \left(E_{F_1} \cdot \frac{1}{r }\right)^2 \; \left[ \langle e^{ i (k r_1 -wt )} e^{ -i (k r_2 -wt ) } + \text{ conjugado} \rangle \right] \nonumber \\
-	&= \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \left(\frac{E_i}{r }\right)^2 \; \left[ \langle e^{ i k (r_1 - r_2) } + \text{ conjugado} \rangle \right] 
+	\label{eq:17} I_{12} &=\frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \left(E_{F} \cdot \frac{1}{r }\right)^2 \; \left[ \langle e^{ i (k r_1 -wt )} e^{ -i (k r_2 -wt ) } + \text{ conjugado} \rangle \right] \nonumber \\
+	&= \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \left(\frac{E_F}{r }\right)^2 \; \left[ \langle e^{ i k (r_1 - r_2) } + \text{ conjugado} \rangle \right] 
 \end{align}
 Atendendo à fórmula de Euler, o termo entre parêntesis retos  em (\ref{eq:17}) é 
 \begin{equation*}
@@ -231,15 +232,15 @@ Atendendo à fórmula de Euler, o termo entre parêntesis retos  em (\ref{eq:17}
 \end{equation*}
 com a hipótese ( \ref{eq:15}) 
 \begin{equation}
-	\label{eq:18} I_1= I_2 = \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} (\frac{E_i}{r })^2 
+	\label{eq:18} I_1= I_2 = \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} (\frac{E_F}{r })^2 
 \end{equation}
 \begin{align}
-	I_{12} &= 2 I_1 \cos ( k a \sin \theta ) \\
+	I_{12} &= 2 I_1 \cdot \cos ( k a \sin \theta ) \\
 	I_{total} &= 2 I_1 \left[ 1 + \cos ( k a \sin \theta ) \right ] 
 \end{align}
 mas $ \cos X = \cos^2 \frac{X}{2} - \sin^2 \frac{X}{2} = 2 \cos^2 \frac{X}{2} - 1$ ; $ \cos X +1 = 2 \cos^2 \frac{X}{2}$
 \begin{equation}
-	\label{eq:21} I_{total} = 4 I_1 \cos^2 (\frac{k a \sin \theta }{2} ) 
+	\label{eq:21} I_{total} = 4 I_1 \cdot  \cos^2 (\frac{k a \sin \theta }{2} ) 
 \end{equation}
 
 \begin{figure}[h!tb]  \centering 
@@ -248,31 +249,34 @@ mas $ \cos X = \cos^2 \frac{X}{2} - \sin^2 \frac{X}{2} = 2 \cos^2 \frac{X}{2} - 
 \end{figure}
 
 
-(Ver representação gráfica na fig. \ref{fig:2})
-A função da expressão (\ref{eq:21}) está representada à esquerda para uma fonte monocromática.
-Apresenta máximos para $ \cos^2 \frac{k a}{2} \sin \theta = 1 $, i.e
+Ver representação gráfica na fig. \ref{fig:2}. A função da expressão (\ref{eq:21}) está representada à esquerda para uma fonte monocromática.
+Apresenta máximos para: $ \cos^2 \left( \frac{k a}{2} \sin \theta \right)= 1 $, ou seja:
 \begin{align}
 	\text{ máximos para }\frac{k a}{2} \sin \theta &= m \pi \label{eq:22} \\
 	\text{ e mínimos para } \frac{k a}{2} \sin \theta &= (2m +1)\frac{\pi}{2} \label{eq:23} 
 \end{align}
 
-Os máximos de intensidade correspondem a 
-\begin{equation}
-	\label{eq:24} \sin \theta = \frac{m \lambda}{a} 
-\end{equation}
+Os máximos de intensidade correspondem a: 
+\begin{empheq}[box=\fcolorbox{blue!40!black!60}{yellow!20}]{equation}
+%\framebox[4cm][c]{
+%\begin{equation}
+	 \sin \theta = \frac{m \lambda}{a}  \label{eq:maxDF}
+%\end{equation}
+%}
+\end{empheq}
 
-São igualmente afastados em $\sin \theta$ e têm teoricamente a mesma intensidade, sendo o máximo de ordem zero observado no ponto central (C na figura \ref{fig:1} )
+São igualmente afastados no eixo  $\sin \theta$ e têm teoricamente a mesma intensidade, sendo o máximo de ordem zero observado no ponto central (C na figura \ref{fig:1} )
 
-$m$ é a ordem de interferência e corresponde ao número de comprimentos de onda (c.d.o.) de que diferem os percursos $r_1$ e $r_2$ no ponto considerado (por exemplo para $|m|=2$ diferem de $2\lambda$). 
+$m$ é a \emph{ordem de interferência} e corresponde ao número de comprimentos de onda (c.d.o.) de que diferem os percursos, $r_1$ e $r_2$, no ponto considerado (por exemplo para $|m|=2$,  $r_1$ e $r_2$ diferem de $2\lambda$). 
 
-A relação (\ref{eq:24}) varia linearmente com $\lambda$. Na figura \ref{fig:2} à direita, representa-se a figura de interferência para uma radiação policromática\footnote{$\lambda_{azul} = 400nm,\; \lambda_{verde} = 500nm,\; \lambda_{vermelho} = 600nm,\; a= 50\, \mu m$}, só na ordem zero há coincidência dos máximos. O $1^{\circ}$ máximo de ordem $1$ é irisado, para ordens elevadas a mistura de várias ordens dará um ``branco sujo''.
+Na relação (\ref{eq:maxDF}), $\sin \theta$  varia linearmente com $\lambda$. Na figura \ref{fig:2} à direita, representa-se a figura de interferência para uma radiação policromática\footnote{$\lambda_{azul} = 400nm,\; \lambda_{verde} = 500nm,\; \lambda_{vermelho} = 600nm,\; a= 50\, \mu m$}. Só na ordem zero há coincidência dos máximos. O $1^{\circ}$ máximo de ordem $1$ é \emph{irisado}. Para ordens elevadas a mistura de várias ordens dará um ``branco sujo''.
 
 %1\textdegree{}'
 
 %***********************
 \section{ \sf Difração por uma Fenda}
 \label{sec:fenda} 
-As primeiras interpretações das figuras de difração foram feitas por Huygens e Fresnel que supuseram que os pontos de um écran, com uma fenda iluminada por uma fonte luminosa $F$ constituem fontes secundárias que emitem ondas esféricas que interferem entre si. A dedução que se apresenta é válida quando a maior das distâncias $r$ entre $F$ e um ponto da fenda $O$ ou $OQ$ (sendo $Q$ um ponto do alvo de projeção) é tal que $\frac{r}{s} \gg \frac{s}{\lambda}$, em que $s$ é a largura da fenda e $\lambda$ o comprimento de onda emitido por $F$. Esta aproximação é conhecida como {\bf aproximação de Fraunhofer} e corresponde a considerar que $F$ emite uma onda que, quando atinge a fenda, é praticamente uma onda plana.
+As primeiras interpretações das figuras de difração foram feitas por Huygens e Fresnel que supuseram que os pontos de um écran, com uma fenda iluminada por uma fonte luminosa $F$, constituem fontes secundárias que emitem ondas esféricas que interferem entre si. A dedução que se apresenta é válida quando a maior das distâncias $r$ entre $F$ e um ponto da fenda $O$ ou $OQ$ (sendo $Q$ um ponto do alvo de projeção) é tal que $\frac{r}{s} \gg \frac{s}{\lambda}$, em que $s$ é a largura da fenda e $\lambda$ o comprimento de onda emitido por $F$. Esta aproximação é conhecida como {\bf aproximação de Fraunhofer} e corresponde a considerar que $F$ emite uma onda que, quando atinge a fenda, é praticamente uma onda plana.
 
 \begin{figure}[tb]  \centering 
 	\includegraphics[width=0.9\textwidth]{fenda} 
@@ -337,49 +341,56 @@ O último termo $\left[ \cdots \right] $  é do tipo $(\frac{\sin u}{u})^2 $ (Fi
 	\label{eq:32} I = I_0 \cdot \underbrace{\left( \frac{\sin u}{u} \right)^2}_\text{Fator de forma de fenda} \text{, com } u\equiv \frac{k s}{2}\sin \theta 
 \end{equation}
 
-\subsection{ \sf Mínimos da figura de difração}
-Os zeros de $(\frac{\sin u}{u})^2 $ correspondem a 
+\subsection{ \sf Mínimos da figura de difração de uma Fenda}
+Os zeros de $(\frac{\sin u}{u})^2 $ correspondem a  
 \begin{equation}
-	\label{eq:33} \frac{k s}{2}\sin \theta = m \pi \text{, com } m \ne 0 
+	\label{eq:33} \frac{k s}{2}\sin \theta = m \pi \text{, com } m \ne 0 \Rightarrow \frac{2 \pi}{\lambda} \frac{ s}{2} \sin \theta = m \pi
 \end{equation}
-\begin{equation}
-	\label{eq:34} \frac{2 \pi}{\lambda} \frac{ s}{2} \sin \theta = m \pi \Rightarrow \sin \theta = m \frac{\lambda}{s} 
-\end{equation}
-[Notar a dependência do comprimento de onda  $\lambda$ e da largura de fenda $s$ ]
+ ou seja:
+\begin{empheq}[box=\fcolorbox{blue!40!black!60}{yellow!20}]{equation}
+	\sin \theta = m \frac{\lambda}{s}  \label{eq:minF} 
+\end{empheq}
+[Notar são mínimos laterais e não máximos como na equação \ref{eq:maxDF}]
+%\begin{equation}
+%	\label{eq:34} \frac{2 \pi}{\lambda} \frac{ s}{2} \sin \theta = m \pi \Rightarrow \sin \theta = m \frac{\lambda}{s} 
+%\end{equation}
+
 
 $m= \pm 1 $ corresponde à posição do 1º mínimo que rodeia o máximo central e $\sin \theta_{m=1} = \frac{\lambda}{s}$\,.\\
  $\theta_1$ é o ângulo segundo o qual do centro da fenda se vê o 1º mínimo.
 
- Quanto  aos máximos da figura embora estejam situados naturalmente entre os vários mínimos, NÃO são dados, desta vez,  exactamente pela expressão do tipo (\ref{eq:23}). Como tal não os consideremos para este trabalho 
- (contudo ver apêndice \ref{sec:maxfenda} ).
+ Quanto  aos máximos da figura embora estejam situados naturalmente entre os vários mínimos, NÃO são dados, desta vez,   pela expressão do tipo (\ref{eq:23}). Como tal não os consideremos as posições exactas para este trabalho 
+ (contudo ver apêndice \ref{sec:maxfenda}).
 % $\frac{k s}{2}\sin \theta = (2 m +1)\frac{\pi}{2} $ 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %\pagebreak[4] 
-\section{\sf Difração por N Fendas de Largura \underline{$s$} \mbox{Afastadas} de \underline{$a$}}
+\section{\sf Difração por N Fendas de Largura \underline{$s$} \mbox{afastadas} de \underline{$a$}}
 
 \begin{figure}
 	[!tb]  \centering 
-	\includegraphics[width=0.8\textwidth]{Nfendas} \caption{\label{fig:6}} 
+	\includegraphics[width=0.8\textwidth]{Nfendas} \caption{Difração produzida por $N$ Fendas de Largura $s$ afastadas de $a$ \label{fig:Dif_N_s_a}} 
 \end{figure}
 
 \subsection{Primeiro, SEM considerar o efeito de largura da fenda, $s$}
 
-O campo elétrico $\vec{E}$ num ponto $P$ do alvo de projeção quando as $N$ fendas são iluminadas por uma fonte luminosa tal que os valores do campo elétrico $\vec{E}_0$ nas diferentes aberturas são os mesmos em amplitude e fase (aproximação de onda plana).
+Nesta aproximação considera-se que: $s\to 0$ (fontes pontuais).
+ 
+As $N$ fendas são iluminadas por uma fonte luminosa tal que os valores do campo elétrico $\vec{E}_0$ nas diferentes aberturas são os mesmos em amplitude e fase (aproximação de onda plana). O campo elétrico total $\vec{E}_P$ num ponto $P$ do alvo de projeção vem:   
 \begin{equation}
-	\label{eq:37} \vec{E}_P = \vec{E}_{P_1} + \vec{E}_{P_2} +\cdots +\vec{E}_{P_N} 
+	\label{eq:dif_soma} \vec{E}_P = \vec{E}_{P_1} + \vec{E}_{P_2} +\cdots +\vec{E}_{P_N} 
 \end{equation}
 %\newpage 
-em que $E_{P_i}$ representa a contribuição da fenda \underline{i} para o campo no ponto $P$. 
+em que $E_{P_i}$ representa a contribuição da fenda \underline{i} para o campo no ponto $P$ (ver Figura \ref{fig:Dif_N_s_a}). 
 \begin{align}
 	\label{eq:38} |\vec{E}_{P_1}| &= E_0 \frac{1}{r_1} e^{i(k r_1 -wt)} \nonumber \\
 	|\vec{E}_{P_2}| &= E_0 \frac{1}{r_2} e^{i(k r_2 -wt)} \qquad r_2 = r_1 - a \sin \theta \\
-	|\vec{E}_{P_i}| &= E_0 \frac{1}{r_i} e^{i(k r_i -wt)}\qquad r_i = r_1 - (i-1) a \sin \theta \nonumber 
+	|\vec{E}_{P_j}| &= E_0 \frac{1}{r_i} e^{i(k r_i -wt)}\qquad r_j = r_1 - (j-1) a \sin \theta \nonumber 
 \end{align}
 
-O termo $(i-1) a \sin \theta \ll r_1$ e pode desprezar-se na amplitude de $E_{P(1)}$ mas terá que ser considerado na fase.
+O termo $((j-1) a \sin \theta) \ll r_1$ e pode desprezar-se na amplitude de $E_{P_j}$ mas terá que ser considerado na fase. A soma (\ref{eq:dif_soma} ) é: 
 \begin{equation}
-	\label{eq:39} E_P = \frac{E_0}{r_1} \; e^{i(k r_1 -wt)} \left[ \underbrace{1 + e^{-i k a \sin \theta} + e^{-i k 2 a \sin \theta} + \cdots + e^{-i k (N-1) a \sin \theta}}_{\text{N termos} }\right]
+	\label{eq:39} E_{P} = \frac{E_0}{r_1} \; e^{i(k r_1 -wt)} \left[ \underbrace{1 + e^{-i k a \sin \theta} + e^{-i k 2 a \sin \theta} + \cdots + e^{-i k (N-1) a \sin \theta}}_{\text{N termos} }\right]
 \end{equation}
 
 Podemos reconhecer na expressão anterior uma soma de termos de uma progressão geométrica de razão $R = e^{-i k a \sin \theta}$, cuja soma 
@@ -440,16 +451,20 @@ Para $ v = m \pi$ temos
 Quando $v \rightarrow 0 \quad \lim (\cdots)^2  =  1$, %\\[5pt]
 e portanto o fator que multiplica o termo de interferência na expressão (\ref{eq:45}) é  $I_0$, a intensidade no centro da figura  de interferência.
 
-O termo de interferência terá uma série de Máximos Principais laterais $ v = \frac{k a }{2} \sin \theta = m \pi$. 
+O termo de interferência terá uma série de \emph{máximos principais} laterais $ v = \frac{k a }{2} \sin \theta = m \pi$, ou seja
 
-Como o termo de interferência tem $N$ no denominador, a intensidade dos máximos secundários diminui com o aumento de $N\,$ (Ver Apêndice \ref{sec:maxminNfendas}). 
+\begin{empheq}[box=\fcolorbox{blue!40!black!60}{yellow!20}]{equation}
+	 \sin \theta = \frac{m \lambda}{a}  \label{eq:maxRede}
+\end{empheq}
+
+Além destes máximos principais, haverá um série de $(N-1)$ \emph{mínimos secundários}  e   $(N-2)$ \emph{máximos secundários}.   Como o termo de interferência tem $N$ no denominador, a intensidade dos máximos secundários diminui com o aumento de $N\,$ (Ver Apêndice \ref{sec:maxminNfendas}). 
 Assim para uma rede com um elevado número de linhas estes máximos secundários são praticamente inobserváveis.
 
-\subsection{\sf Efeito da largura da fenda, $s$}
+\subsection{\sf Com o efeito da largura da fenda, $s$}
 
 Se considerarmos o efeito de difração produzido por cada fenda de largura $s$ , (seção \ref{sec:fenda})  
 %\mbox{$ \big[ s \rightarrow \big( \frac{\sin u}{u}\big)^2$: \emph{fator de forma da fenda\;}\big]}   
-a intensidade deverá conter este fator, que modula o termo de interferência de $N$ fendas.
+a intensidade deverá conter este fator, que \emph{modula} o termo de interferência de $N$ fendas.
 \begin{align}
 I_P(\theta) &= I_0 \cdot \underbrace{\left( \frac{\sin u}{u} \right)^2}_\text{Fator de forma de fenda}
 	\cdot  \underbrace{ \left( \frac{\sin N v}{N \sin  v} \right)^2 }_\text{Termo de interferência} \nonumber \\
@@ -569,13 +584,12 @@ $150\,cm$ desta chapa que imagem irá observar? Justifique e faça um esboço à
 \begin{enumerate}
 \item Faça incidir numa das três fendas (A, B, C, respectivamente, 40, 80 e 160 µm) um 
 feixe de luz monocromática proveniente de um laser de He-Ne ($\lambda=632.8\,nm$).  
-Coloque a rede e o alvo, onde vai observar a figura, a distâncias tais que possa usar 
-a aproximação de Fraunhofer(Justifique!). 
+Coloque o laser e o alvo, onde vai observar a figura, a distâncias tais que possa usar 
+a aproximação de Fraunhofer (Justifique!). 
+\item Estime a largura da fenda a partir da figura de difracção obtida.  
 Repita pelo menos para duas posições diferentes do 
 alvo.  
-Estime a largura da fenda a partir da figura de difracção obtida.  
-Estime a precisão e a exactidão que obteve nas duas situações. 
- 
+\item Estime a precisão e a exactidão que obteve nas duas situações. 
 \item Difracção por um cabelo
 Repita  o  procedimento  do  ponto  anterior  usando  agora  um  cabelo  montado  num 
 suporte.  
@@ -583,6 +597,18 @@ Estime a precisão obtida.
 Compare  a  figuras  de  difracção  obtida  com  a  que  foi  registada  para  as  fendas  no 
 ponto anterior, utilizando o \emph{Princípio de Babinet}.
 \end{enumerate}
+
+\subsection{\sf Difracção por uma rede de $N$ linhas}
+\begin{enumerate}
+\item Faça incidir numa rede de Difração (de 80, 100 ou 600 linhas/mm) um 
+feixe de luz do laser de He-Ne, ou outro laser de estado sólido (e.g. apontador laser).
+\item A partir da medição dos máximos principais verifique a relação  (\ref{eq:maxRede})
+Estime a distância entre fendas e compare com o valor anunciado.
+\item Estime o número de fendas iluminadas e indique quantos máximos e mínimos secundários (não visíveis...) que existem 
+entre estes máximos principais.
+\item Calcule a Resolução da rede nestas condições para a ordem $m=1$. 
+\end{enumerate}
+
 
 \subsection{\sf Difracção por uma fenda dupla}
  
