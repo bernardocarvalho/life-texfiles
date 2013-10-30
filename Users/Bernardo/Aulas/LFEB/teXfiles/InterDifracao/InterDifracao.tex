@@ -333,24 +333,32 @@ A mancha central tem uma extensão (em $\sin \theta$) que é dupla das manchas l
 
 A intensidade $I(\theta)$ será pois
 \begin{equation}
-	\label{eq:31} I(\theta) = \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \; \left( \frac{E}{r} \right)_{z=0}^2 \; s^2 \; \left[ \frac{ \sin( \frac{k s}{2}\sin \theta)}{ \frac{k s}{2}\sin \theta} \right]^2 
+	\label{eq:31} I(\theta) = \frac{1}{2}\sqrt{\frac{ \varepsilon}{\mu}} \; \left( \frac{E}{r} \right)_{z=0}^2 \; s^2 \; 
+%	\mathrm{sinc}^2(\frac{s}{\lambda}\sin \theta) \text{, com\footnote{sin e} } \mathrm{sinc}(x) \equiv \frac{\sin x}{x}  
+	\left[ \frac{ \sin( \frac{k s}{2}\sin \theta)}{ \frac{k s}{2}\sin \theta} \right]^2 
 \end{equation}
 
-O último termo $\left[ \cdots \right] $  é do tipo $(\frac{\sin u}{u})^2 $ (Figura \ref{fig:4}) e tem zeros para $u = m \pi$ com $m \neq 0$. Tem um máximo principal para $m = 0$ e vale $1$. Assim o fator $I_0 \equiv \frac{1}{2} \sqrt{\frac{ \varepsilon}{\mu}} (\frac{E}{r })_{z=0}^2 s^2$ representa o valor de intensidade máxima que se vai observar no ponto $Q$ (figura \ref{fig:3})
+O último termo $\left[ \cdots \right] $  é do tipo\footnote{Nota: A Função “sinc” normalizada é definida por: 
+$\mathrm{sinc}(x) \equiv \frac{\sin (\pi x)}{\pi x}$}
+ $\left(\mathrm{sinc}(x)\right)^2 = \left(\frac{\sin (\pi u)}{\pi u}\right)^2  $ (Figura \ref{fig:4}).
+% e tem zeros para $u = m$ inteiro, com $m \neq 0$. Tem um máximo principal para $m = 0$ e vale $\mathrm{sinc}^2(0)=1$. Assim o fator $I_0 \equiv \frac{1}{2} \sqrt{\frac{ \varepsilon}{\mu}} (\frac{E}{r })_{z=0}^2 s^2$ representa o valor de intensidade máxima que se vai observar no ponto $Q$ da figura \ref{fig:3}.
 \begin{equation}
-	\label{eq:32} I = I_0 \cdot \underbrace{\left( \frac{\sin u}{u} \right)^2}_\text{Fator de forma de fenda} \text{, com } u\equiv \frac{k s}{2}\sin \theta 
+%	\label{eq:32} I = I_0 \cdot \underbrace{\left( \frac{\sin u}{u} \right)^2}_\text{Fator de forma de fenda} \text{, com } u\equiv \frac{k s}{2}\sin \theta 
+	\label{eq:32} I(\theta) = I_0 \cdot \underbrace{ \mathrm{sinc}^2(u)}_\text{Fator de forma de fenda} \text{, com } u\equiv \frac{s}{\lambda} \sin \theta 
 \end{equation}
 
 \subsection{ \sf Mínimos da figura de difração de uma Fenda}
-Os zeros de $(\frac{\sin u}{u})^2 $ correspondem a  
+Os zeros de $\mathrm{sinc}^2(u) $ correspondem a: 
+%$(\frac{\sin u}{u})^2 $
 \begin{equation}
-	\label{eq:33} \frac{k s}{2}\sin \theta = m \pi \text{, com } m \ne 0 \Rightarrow \frac{2 \pi}{\lambda} \frac{ s}{2} \sin \theta = m \pi
+%	\label{eq:33} \frac{k s}{2}\sin \theta = m \pi \text{, com } m \ne 0 \Rightarrow \frac{2 \pi}{\lambda} \frac{ s}{2} \sin \theta = m \pi
+	\label{eq:33} u = m  \text{, com inteiro } m \ne 0 \Rightarrow \frac{s}{\lambda} \sin \theta = m 
 \end{equation}
  ou seja:
 \begin{empheq}[box=\fcolorbox{blue!40!black!60}{yellow!20}]{equation}
 	\sin \theta = m \frac{\lambda}{s} \text{, com } m \text{ inteiro }\ne 0 \label{eq:minF} 
 \end{empheq}
-[Notar são mínimos laterais e não máximos como na equação \ref{eq:maxDF}]
+[Notar que aqui são \emph{mínimos} laterais e não máximos como na equação \ref{eq:maxDF}]
 %\begin{equation}
 %	\label{eq:34} \frac{2 \pi}{\lambda} \frac{ s}{2} \sin \theta = m \pi \Rightarrow \sin \theta = m \frac{\lambda}{s} 
 %\end{equation}
@@ -667,7 +675,7 @@ E quantos mínimos?
 	m' =1, \cdots, N-1, N  \quad \rightarrow \quad \frac{m'}{N} = \underbrace{\frac{1}{N}, \cdots  \frac{N-1}{N}}_{N-1 \text{ valores } \ne \text{ inteiros}} , \frac{N}{N}
 \end{equation*}
 
-Difração por N Fendas de Largura s Afastadas de a
+Difração por $N$ Fendas de Largura $s$ Afastadas de $a$.
 Haverá  portanto $N-1$ mínimos entre os máximos principais. 
 \subsubsection{Máximos Secundários}
 Entre estes mínimos haverá naturalmente máximos secundários, um entre cada dois mínimos consecutivos sendo portanto $N-2$, cujas posições podem ser calculados por
