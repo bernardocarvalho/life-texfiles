@@ -1,0 +1,136 @@
+%%&program=xelatex
+%&encoding=UTF-8 Unicode
+% SVN keywords
+% $Author$
+% $Date$
+% $Revision$
+% $URL$
+\documentclass[a4paper,12pt]{article}  % Comments after  % are ignored
+%\usepackage{hyperref}                 % For creating hyperlinks in cross references
+%
+\usepackage{ifxetex}% for XELATEX, or PDFlatex
+\usepackage{ifplatform} 
+%
+\ifxetex
+	\usepackage{polyglossia} \setmainlanguage{portuges}
+	\usepackage{fontspec}
+	\ifwindows
+		\setmainfont[Ligatures=TeX]{Garamond}
+		\setsansfont[Ligatures=TeX]{Gill Sans MT}
+		\setmonofont{Consolas}
+%		\setmonofont[Scale=MatchLowercase]{Courier}
+	\fi
+	\iflinux
+		\setmainfont[Ligatures=TeX]{Linux Libertine O}
+		\setsansfont[Ligatures=TeX,Scale=MatchLowercase]{Linux Biolinum}
+		\setmonofont[Scale=MatchLowercase]{Courier}
+	\fi
+	\ifmacosx
+	% add settings
+	% Use xelatex -no-shell ...
+	\fi
+	\usepackage{xcolor,graphicx} 
+\else
+	\usepackage[portuguese]{babel}
+	%\usepackage[latin1]{inputenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphics}                 % Packages to allow inclusion of graphics
+	\usepackage{color}                    % For creating coloured text and background
+\fi
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\usepackage{amsmath,amssymb,amsfonts} % Typical maths resource packages
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{caption}
+
+
+\oddsidemargin 0cm
+\evensidemargin 0cm
+
+\pagestyle{myheadings}         % Option to put page headers
+                               % Needed \documentclass[a4paper,twoside]{article}
+\markboth{{\small \it  Laboratório de Física Experimental Básica}}
+{{\small\it MEFT - 1º Sem. 2014/2015} }
+
+\addtolength{\hoffset}{-0.5cm}
+\addtolength{\textwidth}{2.5cm}
+\addtolength{\topmargin}{-1.5cm}
+\addtolength{\textheight}{3cm}
+
+%\textwidth 15.5cm
+%\topmargin -1.5cm
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex  plus  0.5ex  minus  0.2ex}
+%\parindent 0.5cm
+%\textheight 25cm
+%\parskip 1mm
+
+
+% Math macros
+\newcommand{\ud}{\,\mathrm{d}} 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\author{Prof. Bernardo B. Carvalho} 
+
+%%%%, Bernardo Brotas Carvalho\\bernardo.carvalho@tecnico.ulisboa.pt} 
+\date{ Outubro 2014} 
+
+\begin{document} 
+
+	\includegraphics[width=0.2\textwidth]{../logo-ist}%\\[1cm]  %%  Logo_IST_color
+
+	\HRule \\[0.5cm]
+	{ \huge \sf  \textsc{Efeito fotoeléctrico}} \\[0.4cm] % \bfseries 
+%	{ \huge \sf  \textsc{Construções Geométricas em Lentes Delgadas (aproximação paraxial)} }\\[0.4cm] % \bfseries 
+	{ \large \bfseries Determinação da constante de Planck.}\\
+%	{ \large \bfseries Procedimento Experimental}\\
+	\HRule \\%[0.5cm]
+
+\section{\sf Princípio do método}
+Electrões podem ser emitidos da superfície de alguns metais, quando esta é iluminada com luz
+de comprimento de onda suficientemente curto (efeito fotoeléctrico). A energia cinética dos
+electrões emitidos (fotoelectrões) depende da frequência da luz incidente, mas não da sua
+intensidade (a intensidade só determina o número de fotoelectrões emitidos). Esta verificação
+experimental contraria os princípios da física clássica, e a sua explicação correcta só foi
+proposta em 1905 por Einstein. Einstein postulou que a luz era constituída por um fluxo de
+fotões, cada um com uma energia dependente da frequência,
+
+
+Nesse caso  (Figura \ref{fig:angulo}) o índice de refração, $n$, pode ser calculado simplesmente através da expressão seguinte: 
+
+\begin{equation}
+	\label{eq:energia}
+	E= h \mu
+\end{equation}
+
+~
+\newpage
+\subsection{\sf Questões a responder ANTES da sessão de Laboratório:}
+\begin{enumerate}
+\item Obtenha uma imagem típica da dispersão da luz Branca num prisma triangular. O índice de refração, $n(\lambda)$, é uma função crescente ou decrescente?
+\item Nessa figura de dispersão como faria para  identificar qual é a côr que está na posição de \emph{desvio mínimo}?
+\item Se na montagem de laboratório substituir a lampada de descarga por uma de incandescência que imagem obteria com o goniometro?. 
+\item O espectro de emissão do Hidrogéneo, na série de Balmer (transição $3 \to 2$) tem duas riscas no vermelho, respetivamente a $\lambda = 656.272\, nm$ e $\lambda = 656.2852\,nm$.
+Qual a Resolução mínima de um instrumento (Espectrómetro) capaz de distinguir estas duas linhas?. Supondo que tem um prisma com aresta de $10\,cm$, calcule o 
+o declive mínimo para $\left(\frac{\ud n}{\ud \lambda} \right)$?
+\end{enumerate}
+
+
+\section{\sf Protocolo Experimental}
+
+
+\begin{enumerate}
+\item Ligue  a  lâmpada  espetral  e  espere  10  a  15  minutos    até  que  se  estabeleça  o 
+equilíbrio térmico no seu interior. 
+
+\end{enumerate}
+
+%\newpage
+\section*{\sf Apêndice}
+
+
+
+\end{document} 
