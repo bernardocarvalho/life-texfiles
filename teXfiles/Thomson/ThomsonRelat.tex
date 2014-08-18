@@ -1,0 +1,306 @@
+%%&program=xelatex
+%&encoding=UTF-8 Unicode
+% SVN keywords
+% $Author: bernardo $
+% $Date: 2014-07-24 19:33:49 +0100 (Thu, 24 Jul 2014) $
+% $Revision: 6559 $
+% $U_aRL: http://metis.ipfn.ist.utl.pt/svn/cdaq/Users/Bernardo/Aulas/LFEB/teXfiles/Planck/Planck.tex $
+\documentclass[a4paper,12pt]{article}  % Comments after  % are ignored
+%\usepackage{hyperref}                 % For creating hyperlinks in cross references
+%
+\usepackage{ifxetex}% for XELATEX, or PDFlatex
+\usepackage{ifplatform} 
+%
+\ifxetex
+	\usepackage{polyglossia} \setmainlanguage{portuges}
+	\usepackage{fontspec}
+	\ifwindows
+		\setmainfont[Ligatures=TeX]{Garamond}
+		\setsansfont[Ligatures=TeX]{Gill Sans MT}
+		\setmonofont{Consolas}
+%		\setmonofont[Scale=MatchLowercase]{Courier}
+	\fi
+	\iflinux
+		\setmainfont[Ligatures=TeX]{Linux Libertine O}
+		\setsansfont[Ligatures=TeX,Scale=MatchLowercase]{Linux Biolinum}
+		\setmonofont[Scale=MatchLowercase]{Courier}
+	\fi
+	\ifmacosx
+	% add settings
+	% Use xelatex -no-shell ...
+	\fi
+	\usepackage{xcolor,graphicx} 
+\else
+	\usepackage[portuguese]{babel}
+	%\usepackage[latin1]{inputenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphics}                 % Packages to allow inclusion of graphics
+	\usepackage{color}                    % For creating coloured text and background
+\fi
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\usepackage{amsmath,amssymb,amsfonts} % Typical maths resource packages
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{caption}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,decorations.pathmorphing,intersections}
+
+\usepackage[font={small,sf},labelfont={bf},labelsep=endash]{caption}
+\usepackage{sansmath}
+
+\def\width{18}
+\def\hauteur{11}
+
+\oddsidemargin 0cm
+\evensidemargin 0cm
+
+\pagestyle{myheadings}         % Option to put page headers
+                               % Needed \documentclass[a4paper,twoside]{article}
+\markboth{{\small \it  Laboratório de Física Experimental Básica}}
+{{\small\it IST - MEFT -LFEB - 1º Sem. 2014/2015} }
+
+\addtolength{\hoffset}{-0.5cm}
+\addtolength{\textwidth}{2.5cm}
+\addtolength{\topmargin}{-1.5cm}
+\addtolength{\textheight}{3cm}
+
+%\textwidth 15.5cm
+%\topmargin -1.5cm
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex  plus  0.5ex  minus  0.2ex}
+%\parindent 0.5cm
+%\textheight 25cm
+%\parskip 1mm
+
+
+% Math macros
+\newcommand{\ud}{\,\mathrm{d}} 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\author{Prof. Bernardo B. Carvalho} 
+
+%%%%, Bernardo Brotas Carvalho\\bernardo.carvalho@tecnico.ulisboa.pt} 
+\date{ Outubro 2014} 
+
+\begin{document} 
+
+%	\includegraphics[width=0.2\textwidth]{../logo-ist}%\\[1cm]  %%  Logo_IST_color
+
+%	\HRule \\[0.5cm]
+%	{ \huge \sf  \textsc{Construções Geométricas em Lentes Delgadas (aproximação paraxial)} }\\[0.4cm] % \bfseries 
+%	{ \large \bfseries Determinação da constante de Planck.}\\
+
+%	{ \large \bfseries Procedimento Experimental}\\
+%	\HRule \\%[0.5cm]
+%TURNO:________ GRUPO:________ DATA: ___ \\
+%Número: _______ Nome: ________________ \\
+%Número: _______ Nome: ________________ \\
+{  \sf  \textsc{Relatório da Experiência de Thomson}} %[0.4cm] % \bfseries 
+Turno:\underline{\makebox[0.7cm][l]{~}} Grupo:\underline{\makebox[0.7cm][l]{~}} Data:\underline{\makebox[2cm][l]{~}}\\
+\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
+\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
+\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} 
+
+
+\section{\sf Questões a responder ANTES da sessão de Laboratório:}
+\begin{enumerate}
+\item Descreva por palavras suas quais os objectivos do Trabalho que irá realizar na sessão de Laboratório. Indique as expressões que irá utilizar para obter as grandezas experimentais, bem como as expressões para calcular as incertezas. Inclua esta parte também no Relatório. Este irá constituir o ÚNICO meio de consulta na Prova Individual.
+\item Desenhe um diagrama dos campos elétricos, magnéticos, da velocidade do eletrões e forças aplicadas nas diferentes zonas do TRC.
+\item Para uma diferença de potencial da Fonte $U_a$  de $4000 V$ calcule a velocidade dos eletrões na saída do ânodo ($q_e \simeq  −1.602×10^{−19}\, C$, $m_e\simeq 9.109×10^{−31}\, kg$). \\
+Justifica-se utilizar as equações de movimento relativistas?
+\item Aplicando uma corrente de $I= 1A$ nas as bobines de Helmoltz, calcule o campo $\vec{B}$ e a força magnética aplicada nos eletrões. Como se compara com o seu peso? 
+\item Escolha os 5 pares de coordenadas, $x,\, y$ na grelha  do tube TRC,  que irá utilizar na exp. de deflexão magnética de modo a obter os maiores valores possíveis de $R$, preenchendo as 4 primeiras colunas da Tabela~\ref{tab:Dados}.
+\end{enumerate}
+
+
+\section{\sf Relatório}
+\subsection{\sf DETERMINAÇÃO DE $q/m$ POR  DEFLEXÃO MAGNÉTICA}
+\subsubsection{\sf Montagem Experimental}
+Desenhe um diagrama da experiência. Inclua uma lista e legenda de Instrumentos.
+\begin{center}
+\framebox[18cm]{\rule{0pt}{6.5cm}}
+\end{center}
+
+
+%￼\newpage
+
+%\begin{figure}[!btp]
+%     \makebox[\textwidth]{\framebox[18cm]{\rule{0pt}{7cm}}}
+%     \caption{Montagem Experimental\label{montag}}
+%\end{figure}
+
+\subsubsection{\sf Dados Experimentais (Preencha as tabelas)}
+
+\begin{table}[!hbp]
+%\begin{center}
+	\centering
+	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $[V]$ \\
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\hline
+	y [cm]  & z [cm]  & $R$ [m] & $\delta R$ [m] & $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& $\delta I = \frac{| I_+ - I_-|}{2}$ [A]  \\
+	\hline
+	 &  &  &  & &  &  & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 \hline
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 \hline
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 \hline
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 \hline
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 \hline
+ 	\end{tabular}\\
+\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $[V]$ \\
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\hline
+	y [cm]  & z [cm]  & $R$ [m] & $\delta R$ [m] & $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& $\delta I = \frac{| I_+ - I_-|}{2}$ [A]  \\
+	\hline
+	 &  &  &  & &  &  & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 \hline
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 \hline
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 \hline
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 \hline
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 \hline
+ 	\end{tabular}\\
+\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $[V]$ \\
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\hline
+	y [cm]  & z [cm]  & $R$ [m] & $\delta R$ [m] & $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& $\delta I = \frac{| I_+ - I_-|}{2}$ [A]  \\
+	\hline
+	 &  &  &  & &  &  & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 \hline
+ 	\end{tabular}	 	
+	\caption{Dados da Experiência} 
+	\label{tab:Dados}
+\end{table}
+
+\subsubsection{\sf Cálculos}
+
+%\vspace{1cm}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	$B$ [T] & $\delta B$  [T] & $q/m$ [C/Kg] & $\delta q/m$ [C/Kg] \\
+	\hline
+	 &  &  &  \\
+	\hline
+	 &  &  &  \\
+	\hline
+	 &  &  &  \\
+	\hline
+	 &  &  &  \\
+	 \hline
+ 	\end{tabular}
+\end{center}
+
+
+\subsubsection{\sf Resultados}
+\noindent  $q/m =$~\underline{\makebox[1.5cm][r]{~}}$\pm$\underline{\makebox[1cm][r]{~}}(~~~)\\  
+
+\noindent  Desvio à Exatidão $=$~\underline{\makebox[1cm][r]{~}}(\%), 
+Incerteza relativa $=$~\underline{\makebox[1cm][r]{~}}($\%$) 
+￼
+\subsection{\sf DETERMINAÇÃO DE $q/m$ POR DEFLEXÃO\\ MAGNÉTICA E ELÉTRICA QUASE COMPENSADA }
+
+\subsubsection{\sf Dados Experimentais e Cálculos}
+
+\begin{itemize}
+\item Preencha as tabelas seguintes:
+\end{itemize}
+\begin{table}[!hbp]
+%\begin{center}
+	\centering
+	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $[V]$ \\
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\hline
+	 $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& $\delta I = \frac{| I_+ - I_-|}{2}$ [A] & $B$ [T] & $\delta B$  [T] & $q/m$ [C/Kg] & $\delta q/m$ [C/Kg] \\
+	\hline
+	 &  &  & &  &  & & \\
+	 \hline
+ 	\end{tabular}\\[10pt]
+	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $[V]$ \\
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\hline
+	 $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& $\delta I = \frac{| I_+ - I_-|}{2}$ [A] & $B$ [T] & $\delta B$  [T] & $q/m$ [C/Kg] & $\delta q/m$ [C/Kg] \\
+	\hline
+	 &  &  & &  &  & & \\
+	 \hline
+ 	\end{tabular}\\[10pt]
+	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $[V]$ \\
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\hline
+	 $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& $\delta I = \frac{| I_+ - I_-|}{2}$ [A] & $B$ [T] & $\delta B$  [T] & $q/m$ [C/Kg] & $\delta q/m$ [C/Kg] \\
+	\hline
+	 &  &  & &  &  & & \\
+	 \hline
+ 	\end{tabular}
+	
+	\caption{Dados da Experiência 2} 
+	\label{tab:Dados2}
+\end{table}
+
+\subsubsection{\sf Resultados}
+\noindent  $q/m =$~\underline{\makebox[1.5cm][r]{~}}$\pm$\underline{\makebox[1cm][r]{~}}(~~~)\\
+
+
+\noindent  Desvio à Exatidão $=$~\underline{\makebox[1cm][r]{~}}(\%), 
+Incerteza relativa $=$~\underline{\makebox[1cm][r]{~}}($\%$) 
+
+
+\subsection{\sf Análise e comparação dos 2 métodos, Conclusões e Comentários Finais}
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[17cm][r]{~}} \\
+%\begin{center}
+%     \makebox[\textwidth]{\framebox[18cm]{\rule{0pt}{5cm}}}
+%     \caption{Montagem Experimental\label{montag}}
+%\end{center}
+
+
+
+%\newpage
+%\section*{\sf Apêndice}
+
+
+
+\end{document} 
