@@ -1,0 +1,212 @@
+%%&program=xelatex
+%&encoding=UTF-8 Unicode
+% SVN keywords
+% $Author: bernardo $
+% $Date: 2014-07-24 19:33:49 +0100 (Thu, 24 Jul 2014) $
+% $Revision: 6559 $
+% $URL: http://metis.ipfn.ist.utl.pt/svn/cdaq/Users/Bernardo/Aulas/LFEB/teXfiles/Planck/Planck.tex $
+\documentclass[a4paper,12pt]{article}  % Comments after  % are ignored
+%\usepackage{hyperref}                 % For creating hyperlinks in cross references
+%
+\usepackage{ifxetex}% for XELATEX, or PDFlatex
+\usepackage{ifplatform} 
+%
+\ifxetex
+	\usepackage{polyglossia} \setmainlanguage{portuges}
+	\usepackage{fontspec}
+	\ifwindows
+		\setmainfont[Ligatures=TeX]{Garamond}
+		\setsansfont[Ligatures=TeX]{Gill Sans MT}
+		\setmonofont{Consolas}
+%		\setmonofont[Scale=MatchLowercase]{Courier}
+	\fi
+	\iflinux
+		\setmainfont[Ligatures=TeX]{Linux Libertine O}
+		\setsansfont[Ligatures=TeX,Scale=MatchLowercase]{Linux Biolinum}
+		\setmonofont[Scale=MatchLowercase]{Courier}
+	\fi
+	\ifmacosx
+	% add settings
+	% Use xelatex -no-shell ...
+	\fi
+	\usepackage{xcolor,graphicx} 
+\else
+	\usepackage[portuguese]{babel}
+	%\usepackage[latin1]{inputenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphics}                 % Packages to allow inclusion of graphics
+	\usepackage{color}                    % For creating coloured text and background
+\fi
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\usepackage{amsmath,amssymb,amsfonts} % Typical maths resource packages
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{caption}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,decorations.pathmorphing,intersections}
+
+\usepackage[font={small,sf},labelfont={bf},labelsep=endash]{caption}
+\usepackage{sansmath}
+
+\def\width{18}
+\def\hauteur{11}
+
+\oddsidemargin 0cm
+\evensidemargin 0cm
+
+\pagestyle{myheadings}         % Option to put page headers
+                               % Needed \documentclass[a4paper,twoside]{article}
+\markboth{{\small \it  Laboratório de Física Experimental Básica}}
+{{\small\it IST - MEFT -LFEB - 1º Sem. 2014/2015} }
+
+\addtolength{\hoffset}{-0.5cm}
+\addtolength{\textwidth}{2.5cm}
+\addtolength{\topmargin}{-1.5cm}
+\addtolength{\textheight}{3cm}
+
+%\textwidth 15.5cm
+%\topmargin -1.5cm
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex  plus  0.5ex  minus  0.2ex}
+%\parindent 0.5cm
+%\textheight 25cm
+%\parskip 1mm
+
+
+% Math macros
+\newcommand{\ud}{\,\mathrm{d}} 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\author{Prof. Bernardo B. Carvalho} 
+
+%%%%, Bernardo Brotas Carvalho\\bernardo.carvalho@tecnico.ulisboa.pt} 
+\date{ Outubro 2014} 
+
+\begin{document} 
+
+%	\includegraphics[width=0.2\textwidth]{../logo-ist}%\\[1cm]  %%  Logo_IST_color
+
+%	\HRule \\[0.5cm]
+%	{ \huge \sf  \textsc{Construções Geométricas em Lentes Delgadas (aproximação paraxial)} }\\[0.4cm] % \bfseries 
+%	{ \large \bfseries Determinação da constante de Planck.}\\
+
+%	{ \large \bfseries Procedimento Experimental}\\
+%	\HRule \\%[0.5cm]
+%TURNO:________ GRUPO:________ DATA: ___ \\
+%Número: _______ Nome: ________________ \\
+%Número: _______ Nome: ________________ \\
+{  \sf  Relatório do Efeito fotoeléctrico.} %[0.4cm] % \bfseries 
+Turno:\underline{\makebox[0.7cm][l]{~}} Grupo:\underline{\makebox[0.7cm][l]{~}} Data:\underline{\makebox[2cm][l]{~}}\\
+\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
+\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
+\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} 
+
+
+\section{\sf Questões a responder ANTES da sessão de Laboratório:}
+\begin{enumerate}
+\item Descreva por palavras suas quais os objectivos do Trabalho que irá realizar na sessão de Laboratório (uma folha A4). 
+Indique as expressões que irá utilizar para obter as grandezas experimentais, bem como as expressões para calcular as incertezas. Inclua esta parte também no Relatório. Este irá constituir o ÚNICO meio de consulta na Prova Individual.
+
+\item Para uma gota de chuva de diâmetro $R = 250\,\mu m$\footnote{Para gotas muito maiores a Lei de Stokes deixa de ser válida, pois a força de atrito passa a ser proporcional ao \emph{quadrado} da velocidade.}, $\rho_{H_2 O} = 1000 \, kg/m^{3}$, calcule a sua velocidade limite, a partir da espressão (\ref{eq:vlimit3}). Calcule o tempo característico, $\tau=m/k\,\eta_{ar}$, semelhante ao tempo necessário para alcançar a velocidade limite.
+\item Qual a carga que a Terra teria de ter para que uma gota de óleo de $R = 10\,\mu m$, carregada com uma carga elementar positiva flutuar na atmosfera?
+\item Pode o campo elétrico provocado pelas placas da motagem utilizada no laboratório ser considerado \emph{constante}?
+\end{enumerate}
+
+
+\section{\sf Relatório}
+\subsection{\sf Montagem Experimental}
+Desenhe um diagrama da experiência marcando as posições de cada componente e a posição de cada risca. Inclua uma lista e legenda de Instrumentos.
+
+\begin{center}
+\framebox[18cm]{\rule{0pt}{6.5cm}}
+\end{center}
+
+\subsection{\sf Dados Experimentais}
+
+ Execute as Medições e preencha a tabela seguinte:
+
+\noindent  Distância Percorrida $=$~\underline{\makebox[1cm][r]{~}}(m), 
+
+\begin{center}
+	%\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	Gôta \#  & $U_{paragem}$ [V] & Tempo [s] & $Veloc.$  [m/s]& $\overline{Veloc.}$ [m/s]	& $\delta Veloc.$ [m/s]  \\
+	\hline
+	  &  &  & &  & \\ \cline{2-4}
+	1 &  & & &  & \\ \cline{2-4}
+	  &  &  & &  & \\  \hline
+	  &  &  & &  & \\ \cline{2-4}
+	2 &  & & &  & \\ \cline{2-4}
+	  &  &  & &  & \\ \hline
+	  &  &  & &  & \\ \cline{2-4}
+	3 &  & & &  & \\ \cline{2-4}
+	  &  &  & &  & \\ \hline
+ 	\end{tabular}
+\end{center}
+
+\subsubsection{\sf Cálculos}
+
+%\vspace{1cm}
+\begin{center}
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+	\hline
+	Gôta \#  & $R$ [$m$] & $\delta R$  [$\mu m$] & $q$ [C] & $\delta q$ [C] & $q_{corrig.}$ [C] & $\delta q_{corrig.}$ [C] \\ \hline
+	 1 & &  &  & &  &  \\ \hline
+	 2 & &  &  & &  & \\ \hline
+	 3 & &  &  & &  & \\ \hline
+	 4 & &  &  & &  & \\ \hline
+ 	\end{tabular}
+\end{center}
+
+Para as gotas de carga mais baixa marque na escala abaixo os respectivos valores e as incertezas
+\begin{center}
+  \sansmath
+    \begin{tikzpicture}[scale=0.5,font=\sffamily]
+ 	%axis
+	\draw (0,0) -- coordinate (x axis mid) (30,0);
+%    \draw (0,0) -- coordinate (y axis mid) (0,1.7);
+	%labels      
+	\node[below=0.8cm] at (x axis mid) {$q_{gota} [10^{-19} C] $ };
+    	%ticks
+    	\foreach \x in {1,3,...,17}
+     		\draw (\x,1pt) -- (\x,-3pt) node[anchor=north] {\x};
+    	\foreach \x in {0,2,...,16}
+     		\draw (\x,1pt) -- (\x,-3pt);
+    \end{tikzpicture}
+\end{center}
+
+ A partir dos resultados obtidos e atendendo
+aos erros experimentais é possível ou não concluir sobre a quantificação da carga elétrica?
+
+%\noindent  Desvio à Exatidão $=$~\underline{\makebox[1cm][r]{~}}(\%), 
+%Incerteza relativa $=$~\underline{\makebox[1cm][r]{~}}($\%$) 
+
+\subsection{\sf Análise, Conclusões e Comentários}
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+
+
+
+
+%\newpage
+
+\end{document} 
