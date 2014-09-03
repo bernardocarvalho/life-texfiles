@@ -19,6 +19,7 @@
 		\setsansfont[Ligatures=TeX]{Gill Sans MT}
 		\setmonofont{Consolas}
 %		\setmonofont[Scale=MatchLowercase]{Courier}
+		\setmonofont[Scale=0.95]{Courier}
 	\fi
 	\iflinux
 		\setmainfont[Ligatures=TeX]{Linux Libertine O}
@@ -99,7 +100,7 @@
 %TURNO:________ GRUPO:________ DATA: ___ \\
 %Número: _______ Nome: ________________ \\
 %Número: _______ Nome: ________________ \\
-{  \sf  \textsc{Relatório da Experiência de Thomson}} %[0.4cm] % \bfseries 
+{  \sf  Relatório da Experiência de Thomson} %[0.4cm] % \bfseries 
 Turno:\underline{\makebox[0.7cm][l]{~}} Grupo:\underline{\makebox[0.7cm][l]{~}} Data:\underline{\makebox[2cm][l]{~}}\\
 \noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
 \noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
@@ -139,9 +140,38 @@ Desenhe um diagrama da experiência. Inclua uma lista e legenda de Instrumentos.
 %\begin{center}
 	\centering
 	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $[V]$ \\
+
+	\renewcommand{\arraystretch}{0.6}
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 	\hline
-	y [cm]  & z [cm]  & $R$ [m] & $\delta R$ [m] & $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& $\delta I = \frac{| I_+ - I_-|}{2}$ [A]  \\
+	y [cm]  & z [cm]  & $R$ [m] & $\delta R$ [m] & $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& {\tiny $\delta I = \frac{| I_+ - I_-|}{2}$ [A] } \\
+	\hline
+	 &  &  &  & &  &  & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 \hline
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 \hline
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 \hline
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 \hline
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-6}
+	 \hline
+ 	\end{tabular}
+	
+\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $[V]$ \\
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\hline
+	y [cm]  & z [cm]  & $R$ [m] & $\delta R$ [m] & $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& {\tiny  $\delta I = \frac{| I_+ - I_-|}{2}$ } [A]  \\
 	\hline
 	 &  &  &  & &  &  & \\ \cline{5-6}
 	 &  &  &  & &  & & \\ \cline{5-6}
@@ -167,7 +197,7 @@ Desenhe um diagrama da experiência. Inclua uma lista e legenda de Instrumentos.
 \noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $[V]$ \\
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 	\hline
-	y [cm]  & z [cm]  & $R$ [m] & $\delta R$ [m] & $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& $\delta I = \frac{| I_+ - I_-|}{2}$ [A]  \\
+	y [cm]  & z [cm]  & $R$ [m] & $\delta R$ [m] & $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& {\tiny $\delta I = \frac{| I_+ - I_-|}{2}$ [A] } \\
 	\hline
 	 &  &  &  & &  &  & \\ \cline{5-6}
 	 &  &  &  & &  & & \\ \cline{5-6}
@@ -186,21 +216,11 @@ Desenhe um diagrama da experiência. Inclua uma lista e legenda de Instrumentos.
 	 &  &  &  & &  & & \\ \cline{5-6}
 	 \hline
 	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 \hline
- 	\end{tabular}\\
-\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $[V]$ \\
-	\begin{tabular}{|c|c|c|c|c|c|c|c|}
-	\hline
-	y [cm]  & z [cm]  & $R$ [m] & $\delta R$ [m] & $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& $\delta I = \frac{| I_+ - I_-|}{2}$ [A]  \\
-	\hline
-	 &  &  &  & &  &  & \\ \cline{5-6}
 	 &  &  &  & &  & & \\ \cline{5-6}
 	 &  &  &  & &  & & \\ \cline{5-6}
 	 \hline
  	\end{tabular}	 	
-	\caption{Dados da Experiência} 
+	\caption{Dados da Experiência de Deflexão Magnética} 
 	\label{tab:Dados}
 \end{table}
 
@@ -229,7 +249,7 @@ Desenhe um diagrama da experiência. Inclua uma lista e legenda de Instrumentos.
 
 \noindent  Desvio à Exatidão $=$~\underline{\makebox[1cm][r]{~}}(\%), 
 Incerteza relativa $=$~\underline{\makebox[1cm][r]{~}}($\%$) 
-￼
+
 \subsection{\sf DETERMINAÇÃO DE $q/m$ POR DEFLEXÃO\\ MAGNÉTICA E ELÉTRICA QUASE COMPENSADA }
 
 \subsubsection{\sf Dados Experimentais e Cálculos}
@@ -276,8 +296,13 @@ Incerteza relativa $=$~\underline{\makebox[1cm][r]{~}}($\%$)
 \noindent  Desvio à Exatidão $=$~\underline{\makebox[1cm][r]{~}}(\%), 
 Incerteza relativa $=$~\underline{\makebox[1cm][r]{~}}($\%$) 
 
+\subsubsection{\sf Trajetória não compensada}
+Faça um esboço da trajectória observada, indicando os vetores forças bem como as condições experimentais.
+\begin{center}
+\framebox[18cm]{\rule{0pt}{6.5cm}}
+\end{center}
 
-\subsection{\sf Análise e comparação dos 2 métodos, Conclusões e Comentários Finais}
+\subsection{\sf Análise e comparação dos dois métodos. Conclusões e Comentários Finais}
 \noindent\underline{\makebox[\textwidth][r]{~}} \\
 \noindent\underline{\makebox[\textwidth][r]{~}} \\
 \noindent\underline{\makebox[\textwidth][r]{~}} \\

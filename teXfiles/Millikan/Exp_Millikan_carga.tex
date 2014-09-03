@@ -17,7 +17,8 @@
 	\ifwindows
 		\setmainfont[Ligatures=TeX]{Garamond}
 		\setsansfont[Ligatures=TeX]{Gill Sans MT}
-		\setmonofont[Scale=MatchLowercase]{Courier}
+		\setmonofont{Consolas}
+%		\setmonofont[Scale=MatchLowercase]{Courier}
 	\fi
 	\iflinux
 		\setmainfont[Ligatures=TeX]{Linux Libertine O}
@@ -48,7 +49,7 @@
 \pagestyle{myheadings}         % Option to put page headers
                                % Needed \documentclass[a4paper,twoside]{article}
 \markboth{{\small \sf  Laboratório de Física Experimental Básica}}
-{{\small\it MEFT - 2013/2014} }
+{{\small\it MEFT - 2014/2015} }
 
 \textwidth 15.5cm
 \topmargin -1cm
@@ -91,7 +92,7 @@ condutor. (Experiência de Millikan)}\\
 %\twocolumn
 %\end{multicols}
 
-\begin{multicols}{2}
+%\begin{multicols}{2}
 
 \section{\sf OBJECTIVO DO TRABALHO}
 Pretende-se com este trabalho determinar a carga elétrica de pequenas gotas de óleo, tendo como objectivo final mostrar que a carga elétrica não aparece com uma quantidade qualquer, mas sempre como um múltiplo de uma unidade fundamental que é a carga do protão ou do eletrão. Deste modo um corpo eletrizado apresenta um excesso de carga de um dos sinais, mas sempre de valor múltiplo da carga elementar $q_{p,e}=\pm 1.602176565(35)\cdot 10^{-19}\,C$.
@@ -147,7 +148,7 @@ o que poderá ser facilmente constatado pela resolução da equação (\ref{eq:m
 
 à qual corresponde à seguinte representação gráfica.
 
-\end{multicols}
+%\end{multicols}
 
 \begin{figure*}
 	[tb]  \centering 
@@ -155,7 +156,7 @@ o que poderá ser facilmente constatado pela resolução da equação (\ref{eq:m
 	\caption{ Evolução da velocidade de um corpo em queda livre sujeito a uma força de atrito. \label{fig:vLim}} 
 \end{figure*}
 
-\begin{multicols}{2}
+%\begin{multicols}{2}
 
 e quando $t \to \infty :\; v(t) \to v_L = \frac{m\,g}{k  \, \eta} $
 
@@ -189,7 +190,7 @@ em que $\rho$  e $\rho_f$ são as massas específicas do corpo e do fluido.
 
 %
 
-\end{multicols}
+%\end{multicols}
 
 \begin{figure}
 	[tb]  \centering 
@@ -197,49 +198,49 @@ em que $\rho$  e $\rho_f$ são as massas específicas do corpo e do fluido.
 	\caption{Equilíbrio de forças elétrica e gravítica \label{fig:f_equil}} 
 \end{figure}
 
-\begin{multicols}{2}
+%\begin{multicols}{2}
 
 \subsection{\sf Equilíbrio dum corpo carregado eletricamente, imerso num fluido através de um campo eletrico vertical.}
 
-Seja o esquema representado na figura \ref{fig:f_equil}, em que entre duas placas condutoras paralelas se encontra um fluido não condutor. Aplica-se uma diferença de potencial $\Delta V = V_1 -V_1 > 0$ com a polaridade indicada na figura. Esta diferença de potencial criará um campo elétrico de baixo para cima. No caso de entre as duas placas se encontrar uma partícula de massa, $m$, e de carga, $q$, positiva\footnote{No caso da partícula estar carregada negativamente obteríamos o mesmo resultado invertendo o sentido do campo elétrico.} esta ficará sujeita a uma força elétrica que contrariará a sua queda.
+Seja o esquema representado na figura \ref{fig:f_equil}, em que entre duas placas condutoras paralelas se encontra um fluido não condutor. Aplica-se uma diferença de potencial $U = V_1 -V_1 > 0$ com a polaridade indicada na figura. Esta diferença de potencial criará um campo elétrico de baixo para cima. No caso de entre as duas placas se encontrar uma partícula de massa, $m$, e de carga, $q$, positiva\footnote{No caso da partícula estar carregada negativamente obteríamos o mesmo resultado invertendo o sentido do campo elétrico.} esta ficará sujeita a uma força elétrica que contrariará a sua queda.
 
 No caso de entre as placas se poder considerar o campo elétrico, $\vec{E}$, como uniforme, o seu módulo será dado por:
 
 
 \begin{equation*}
-	E = \frac{\Delta\, V}{d}
+	E = \frac{U}{d}
 \end{equation*}
 sendo $d$ a distância entre as placas. O módulo da força elétrica que atua a partícula será então  dado por: 
 
 \begin{equation*}
-	F = |q| \frac{\Delta V}{d}
+	F = |q| \frac{U}{d}
 \end{equation*}
 
 Deste modo a queda da partícula será agora contrariada, pela força de atrito e pela força elétrica. A equação (\ref{eq:mov2}) passa a escrever-se:
 
 \begin{equation}
 	\label{eq:mov3}
-	m\,a = (m - m_f)\,g  - q \frac{\Delta\, V}{d} - k  \, \eta_{ar} \, v
+	m\,a = (m - m_f)\,g  - q \frac{U}{d} - k  \, \eta_{ar} \, v
 \end{equation}
 
-Variando a diferença de potencial(ddp), $\Delta V$, pode-se estabelecer o equilíbrio entre o peso da partícula e a força elétrica, conseguindo-se a sua paragem entre as placas. Nesse caso será $a=0$ e $v=0$ e tem-se:
+Variando a diferença de potencial(ddp), $U$, pode-se estabelecer o equilíbrio entre o peso da partícula e a força elétrica, conseguindo-se a sua paragem entre as placas. Nesse caso será $a=0$ e $v=0$ e tem-se:
 
 \begin{equation}
 	\label{eq:equil}
-	0 = (m - m_f)\,g  - q \frac{\Delta\, V}{d} 
+	0 = (m - m_f)\,g  - q \frac{U}{d} 
 \end{equation}
 
 Substituindo em (\ref{eq:equil}) $(m - m_f)\,g$   pela equação (\ref{eq:vlimit2}) obtemos:
 
 \begin{equation*}
-	v_L\, k\, \eta_{ar} = q \frac{\Delta\, V}{d}
+	v_L\, k\, \eta_{ar} = q \frac{U}{d}
 \end{equation*}
 
 E entrando também com (\ref{eq:coef_atrito}) no caso de a partícula ser esférica, obtemos:
 
 \begin{equation}
 	\label{eq:carga}
-	q = \frac{6 \pi \, R \, \eta_{ar} \, d\, v_L}{\Delta V}  
+	q = \frac{6 \pi \, R \, \eta_{ar} \, d\, v_L}{U}  
 \end{equation}
 
 Onde
@@ -280,12 +281,7 @@ O valor corrigido $q_c$ pode ser determinado afetando o valor experimental $q$ p
 \newpage
 \section{\sf Procedimento Experimental}
 
-\subsection{\sf Questões a responder ANTES da sessão de Laboratório:}
-\begin{enumerate}
-\item Para uma gota de chuva de diâmetro $R = 250\,\mu m$\footnote{Para gotas muito maiores a Lei de Stokes deixa de ser válida, pois a força de atrito passa a ser proporcional ao \emph{quadrado} da velocidade.}, $\rho_{H_2 O} = 1000 \, kg/m^{3}$, calcule a sua velocidade limite, a partir da espressão (\ref{eq:vlimit3}). Calcule o tempo característico, $\tau=m/k\,\eta_{ar}$, semelhante ao tempo necessário para alcançar a velocidade limite.
-\item Qual a carga que a Terra teria de ter para que uma gota de óleo de $R = 10\,\mu m$, carregada com uma carga elementar positiva flutuar na atmosfera?
-\item Pode o campo elétrico provocado pelas placas da motagem utilizada no laboratório ser considerado \emph{constante}?
-\end{enumerate}
+
 
 \subsection{\sf Material utilizado}
 
@@ -322,9 +318,8 @@ que a gotícula se move com a velocidade limite.
 \item   Compare os valores das cargas média das gotas de menor carga  e a sua incerteza com o valor  tabelado da carga do eletrão. Discuta os resultados.
 \end{enumerate}
 
-Critique a precisão dos resultados obtidos. A partir dos resultados obtidos e atendendo
-aos erros experimentais é possível, ou não, concluir sobre a quantificação da carga elétrica?
 
-\end{multicols}
+
+%\end{multicols}
 
 \end{document} 
