@@ -9,9 +9,6 @@
 %\usepackage{hyperref}                 % For creating hyperlinks in cross references
 %\documentclass[a4paper,12pt]{article} 
 %
-%\usepackage{yhmath}
-%\pdfmapfile{yhmath.map} %without this pk-fonts are used
-
 
 \usepackage{ifxetex}% for XELATEX, or PDFlatex
 \usepackage{ifplatform} 
@@ -22,7 +19,8 @@
 \ifwindows
 \setmainfont[Ligatures=TeX]{Garamond}
 \setsansfont[Ligatures=TeX]{Gill Sans MT}
-\setmonofont[Scale=MatchLowercase]{Courier}
+	\setmonofont[Scale=0.95]{Courier}
+	%\setmonofont[Scale=MatchLowercase]{Courier}	
 \fi
 \iflinux
 \setmainfont[Ligatures=TeX]{Linux Libertine O}
@@ -50,7 +48,7 @@
 
 \pagestyle{myheadings}         % Option to put page headers
                                % Needed \documentclass[a4paper,twoside]{article}
-\markboth{{\small\it MEFT - 2013/2014}}
+\markboth{{\small\it MEFT - 2014/2015}}
 {{\small\it Laboratório de Física Experimental Básica}}
 
 \textwidth 15.5cm
@@ -81,14 +79,14 @@
 \author{Prof. Bernardo B. Carvalho} 
 
 %, Bernardo Brotas Carvalho\\bernardo@ipfn.ist.utl.pt} 
-\date{ Setembro 2012} 
+\date{ Setembro 2014} 
 
 \begin{document} 
 
 %	\begin{center}
 %	\textsc{\large Laboratório de Física Experimental Básica - MEFT - 2012/2013 }\\%[0.5cm]
 %	\end{center}
-\includegraphics[width=0.2\textwidth]{./logo-ist}%\\[1cm]  %%  Logo_IST_color
+\includegraphics[width=0.2\textwidth]{../logo-ist}%\\[1cm]  %%  Logo_IST_color
 	
 	\HRule \\[0.5cm]
 	{ \huge   \bfseries \textsc{ Pêndulo Gravítico } }\\[0.4cm]
@@ -114,10 +112,18 @@
 
 \section{\sf Movimento Harmónico Simples}
 
-O Pêndulo Gravítico é um exemplo simples do modelo  matemático, o ``Oscilador Harmónico'' (OH), de essencial importância e  vastíssima utilização em quase todos o ramos da Física, bem como muitas áreas de Engenharia. Neste modelo, um sistema físico arbitrário encontra-se inicialmente parado na vizinhança de uma posição de equilíbrio, mínimo da sua Energia Potencial  ($E_P$). Fora deste mínimo surge sempre uma força de índole conservativa, sempre direcionada de forma a repor o equilíbrio. 
-Quando as forças exteriores que mantêm a posição inicial deixam de actuar o sistema adquire movimento, 
+O Pêndulo Gravítico é um exemplo simples do modelo  matemático, o ``Oscilador Harmónico'' (OH), 
+de essencial importância e  vastíssima utilização em quase todos o ramos da Física,
+ bem como muitas áreas de Engenharia. 
+ Neste modelo, um sistema físico arbitrário encontra-se na vizinhança de uma posição 
+ de equilíbrio, onde há um mínimo local ou absoluto da sua Energia Potencial  ($E_P$). 
+Ao distanciar-se deste mínimo, por uma perturbação ou outra qualquer força externa inicial, 
+surge então uma força de índole conservativa, sempre direcionada de forma a repor o equilíbrio. 
+Quando as forças exteriores deixam de actuar o sistema adquire movimento, 
 transferindo-se a $E_P$ para Energia Cinética ($E_C$). 
-Ao atingir a posição de equilíbrio e por inércia o movimento prossegue até se alcançar um novo máximo simétrico. Na ausência de forças dissipativas, o sistema regressa  ao ponto de partida e o ciclo repete-se infinitamente, com período $T_0$ constante (``Oscilador Livre''). Na presença de atrito a energia total deixa de ser constante e irá dissipar-se, diminuindo a amplitude do movimento, até desaparecer (``Oscilador Amortecido'').
+Ao atingir a posição de equilíbrio e por inércia o movimento prossegue até se alcançar um 
+novo máximo simétrico. 
+Na ausência de forças dissipativas, o sistema regressa  ao ponto de partida e o ciclo repete-se infinitamente, com período $T_0$ constante (``Oscilador Livre''). Na presença de atrito a energia total deixa de ser constante e irá dissipar-se, diminuindo a amplitude do movimento, até desaparecer (``Oscilador Amortecido'').
 % \begin{figure}
 	% [t!bp]  \centering 
 	% \includegraphics[width=0.45	\textwidth]{cucu} 
@@ -126,13 +132,16 @@ Ao atingir a posição de equilíbrio e por inércia o movimento prossegue até 
 
 %, no caso de Mecânica uma massa,
 \subsection{\sf Sistema Massa-mola}
-O exemplo de modelo OH mecânico mais simples  consiste num sistema de uma massa que se move na horizontal e sem atrito,  presa a uma mola  que é fixada na sua outra extremidade (Figura \ref{fig:2}). Caso a massa se deslocar da posição de equilíbrio ($x =0$), a Energia Potencial Elástica aumenta e mola irá exercer uma força de sinal contrário à deslocação $\Delta x = x - x_0 = x$. No modelo ideal da mola \emph{linear}  a força tem  módulo proporcional (com constante $k_{mola}$) ao deslocamento $x$ 
+O exemplo de modelo OH mecânico mais simples  consiste num sistema de uma massa que se 
+move na horizontal e sem atrito,  presa a uma mola  que é fixada na sua outra extremidade (Figura \ref{fig:2}). 
+Caso a massa se deslocar da posição de equilíbrio ($x =0$), a Energia Potencial Elástica aumenta e mola irá exercer uma força de sinal contrário à deslocação, $\Delta x \equiv x - x_0 = x$.
+ No modelo ideal da mola \emph{linear}  a força tem  módulo proporcional (com constante $k_{mola}$) ao deslocamento $x$ 
 
 \begin{equation}
 F_{mola} = - k_{mola} \, x \qquad 
 \end{equation}
 
-A partir da segunda equação de Newton $F=m a$ e sabendo que $ a = \ddot{x}= \frac{d^2 x}{dt^2}$ é possível chegar facilmente  à equação de movimento do sistema Massa-Mola (equação diferencial de 2º grau)
+A partir da segunda equação de Newton, $F=m a$, e sabendo que $ a = \ddot{x}= \frac{d^2 x}{dt^2}$, é possível chegar facilmente  à equação de movimento do sistema Massa-Mola (equação diferencial de 2º grau)
 
 \begin{equation}
 	\label{eq:1} 
@@ -144,10 +153,10 @@ Pode-se verificar em poucos passos que a seguinte função temporal periódica �
 
 \begin{equation}
 	\label{eq:solu_mola}
-x(t) = A_0 \sin(w_0 \, t + \phi_0) \text{, com } w_0 = \sqrt{\frac{k_{mola}}{m}}
+x(t) = c_1 \cos(w_0 \, t) + c_2 \sin(w_0 \, t) = A_0 \sin(w_0 \, t + \phi_0) \text{, com } w_0 = \sqrt{\frac{k_{mola}}{m}}
 \end{equation}
 
-Com $ A_0 $ (Amplitude) e $\phi_0$ (fase) constantes, dependentes da condições iniciais. Finalmente $w_0$ é a frequência angular de ressonância que, tal como o período, depende apenas da massa e de $k_{mola}$:
+Com $ A_0 $ (Amplitude) e $\phi_0$ (fase) constantes, dependentes da condições iniciais. Finalmente $w_0$ é a frequência angular de ressonância que, inversa do período, depende apenas da massa, $m$ e de $k_{mola}$:
 %, $\frac{2 \pi}{T}$,
 
 \begin{equation}
@@ -155,7 +164,7 @@ Com $ A_0 $ (Amplitude) e $\phi_0$ (fase) constantes, dependentes da condições
 T_0 = \frac{2 \pi}{w_0} = 2\pi\; \sqrt{\frac{m}{k_{mola}}}	
 \end{equation}
 
-Assim, a solução para a posição ( e também para a velocidade, desfasada de $\pi/2$), é uma função sinusoidal (harmónica).
+Assim, a solução para a posição, $x(t)$ ( e também para a velocidade \footnote{desfasada de $\pi/2$} $v(t)$), é uma função sinusoidal (harmónica).
 
 \begin{figure}
 	[!tbp] \centering 
@@ -187,7 +196,7 @@ E a equação diferencial de movimento
 %l \,\frac{d^2 x}{dt^2} = \frac{k_{mola}}{m} x
 \end{align}
 
-Esta equação não tem uma resolução analítica simples, mas através do método  da \emph{linearização} (o ``suspeito do costume''  em Física), utiliza-se a aproximação $ \sin(\theta) \simeq \theta$ , para  $\theta_0 \le 0.08\,rad$ (aqui  os ângulos têm de ser medido em radianos!\footnote{ por exemplo: $\sin(5 ^{\circ}) = \sin(0.08726... \, \text{rad}) = 0.08715... $}).
+Esta equação não tem uma resolução analítica simples, mas através do método  da \emph{linearização} (o ``canivete suíço'' dos Físicos), utiliza-se a aproximação $ \sin(\theta) \simeq \theta$ , para  $\theta_0 \le 0.08\,rad$ (aqui  os ângulos têm de ser medido em radianos!\footnote{ por exemplo: $\sin(5 ^{\circ}) = \sin(0.08726... \, \text{rad}) = 0.08715... $}).
 Com esta aproximação ficamos com 
 
 \begin{equation}
@@ -212,8 +221,14 @@ T_0 = \frac{2 \pi}{w_0} = 2\pi\; \sqrt{\frac{l}{g}} \text{, para }	\quad \theta_
 \end{equation}
 %\simeq
 
-Sabendo-se que já existiam pêndulos  desde a Antiguidade foi o génio  Galileo Galilei, que no início do séc. XVII os estudou detalhadamente, chegando relação (\ref{eq:period_pend}), sendo a partir daí 
-estes dispositivos sistemáticamente utilizados para medir o tempo.
+Sabendo-se que já existiam pêndulos  desde a Antiguidade, foi o génio  Galileo Galilei, que no início do séc. XVII os estudou detalhadamente, chegando relação (\ref{eq:period_pend}).
+A partir dessa altura
+estes dispositivos foram sistemáticamente utilizados para medir o tempo, sendo a base 
+de quase todos os relógios de precisão, com maior ou menor complexidades.
+Actualmente apenas os relógios de Luxo usam uma variação do pêndulo, embora não seja gravitico.
+(apenas a parte de geração energia, no relógios automático é gravítica. 
+O único relógio ainda certificado para usar na Lua,
+é um Omega de corda ... manual)
 
 A resolução analítica (infelizmente bastante complexa) da equação 	(\ref{eq:5})  tem como solução para o período uma série  infinita de potências de $\theta_0$. 
 Naturalmente, permite verificar que na aproximação $\theta_0 \ll 1$ a equação \ref{eq:period_pend} continua válida.
@@ -303,7 +318,8 @@ Compare o valor final de $g_{exp}$ obtido com o valor tabelado $g_{tab}$ e estim
 	 $\bullet$ Verifique experimentalmente que para grandes ângulos iniciais, o período do pêndulo varia. Aumenta ou diminue?\\
 %	 Para que valores de $\theta_0$ o valor calculado de $g_{exp}$ se afasta de $\overline{g_{exp}}$ com desvio de $0.05$ ?\\
 	 $\bullet$ Tente estimar a energia  devido ao atrito que se perde em cada ciclo (em percentagem).\\
-	 $\bullet$ Qual o comprimento do pêndulo para construir um relógio pendular com período de 1 s? E se for na Lua?.
+	 $\bullet$ Qual o comprimento do pêndulo para construir um relógio pendular com período de $1\,s$? 
+	 E se for na Lua?.
 \end{flushleft} 
 
  
