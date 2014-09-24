@@ -99,8 +99,8 @@
 %TURNO:________ GRUPO:________ DATA: ___ \\
 %Número: _______ Nome: ________________ \\
 %Número: _______ Nome: ________________ \\
-{  \sf  Relatório do Efeito fotoeléctrico.} %[0.4cm] % \bfseries 
-Turno:\underline{\makebox[0.7cm][l]{~}} Grupo:\underline{\makebox[0.7cm][l]{~}} Data:\underline{\makebox[2cm][l]{~}}\\
+{  \sf  Relatório da Exp. de Millikan.} %[0.4cm] % \bfseries 
+Turno:\underline{\makebox[2cm][l]{~}} Grupo:\underline{\makebox[1cm][l]{~}} Data:\underline{\makebox[2cm][l]{~}}\\
 \noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
 \noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
 \noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} 
@@ -111,15 +111,19 @@ Turno:\underline{\makebox[0.7cm][l]{~}} Grupo:\underline{\makebox[0.7cm][l]{~}} 
 \item Descreva por palavras suas quais os objectivos do Trabalho que irá realizar na sessão de Laboratório (uma folha A4). 
 Indique as expressões que irá utilizar para obter as grandezas experimentais, bem como as expressões para calcular as incertezas. Inclua esta parte também no Relatório. Este irá constituir o ÚNICO meio de consulta na Prova Individual.
 
-\item Para uma gota de chuva de diâmetro $R = 250\,\mu m$\footnote{Para gotas muito maiores a Lei de Stokes deixa de ser válida, pois a força de atrito passa a ser proporcional ao \emph{quadrado} da velocidade.}, $\rho_{H_2 O} = 1000 \, kg/m^{3}$, calcule a sua velocidade limite, a partir da espressão (\ref{eq:vlimit3}). Calcule o tempo característico, $\tau=m/k\,\eta_{ar}$, semelhante ao tempo necessário para alcançar a velocidade limite.
+\item Para uma gota de chuva de diâmetro $R = 250\,\mu m$\footnote{Para gotas muito maiores a Lei de Stokes deixa de ser válida, pois a força de atrito passa a ser proporcional ao \emph{quadrado} da velocidade.}, $\rho_{H_2 O} = 1000 \, kg/m^{3}$, calcule a sua velocidade limite, a partir da espressão (4) do Guia. 
+%\ref{eq:vlimit3}
+Calcule o tempo característico, $\tau=m/k\,\eta_{ar}$, semelhante ao tempo necessário para alcançar a velocidade limite.
 \item Qual a carga que a Terra teria de ter para que uma gota de óleo de $R = 10\,\mu m$, carregada com uma carga elementar positiva flutuar na atmosfera?
-\item Pode o campo elétrico provocado pelas placas da motagem utilizada no laboratório ser considerado \emph{constante}?
+\item Nas condições  normais de temperatura e pressão (PTN) o volume molar do ar é $V_{mol}=22.41 L / mol^{-1}$. Calcule a distância média das moléculas do ar e guarde o valor para discussão final sobre o ponto $2.3.2$ do Guia.
+%$3.3 n m$ 
+%\item Pode o campo elétrico provocado pelas %placas da motagem utilizada no laboratório ser %considerado \emph{constante}?
 \end{enumerate}
 
 
 \section{\sf Relatório}
 \subsection{\sf Montagem Experimental}
-Desenhe um diagrama da experiência marcando as posições de cada componente e a posição de cada risca. Inclua uma lista e legenda de Instrumentos.
+Desenhe um diagrama da experiência, bem como um esboço da imagem que observa ao microscópio. Inclua uma lista e legenda de Instrumentos.
 
 \begin{center}
 \framebox[18cm]{\rule{0pt}{6.5cm}}
@@ -129,7 +133,7 @@ Desenhe um diagrama da experiência marcando as posições de cada componente e 
 
  Execute as Medições e preencha a tabela seguinte:
 
-\noindent  Distância Percorrida $=$~\underline{\makebox[1cm][r]{~}}(m), 
+\noindent  Distância Percorrida pelas gotas $=$~\underline{\makebox[1cm][r]{~}}(div) $=$~\underline{\makebox[1cm][r]{~}}(m) , 
 
 \begin{center}
 	%\centering
@@ -156,7 +160,7 @@ Desenhe um diagrama da experiência marcando as posições de cada componente e 
 	\renewcommand{\arraystretch}{1.5}
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 	\hline
-	Gôta \#  & $R$ [$m$] & $\delta R$  [$\mu m$] & $q$ [C] & $\delta q$ [C] & $q_{corrig.}$ [C] & $\delta q_{corrig.}$ [C] \\ \hline
+	Gôta \#  & $R$ [$\mu m$] & $\delta R$  [$\mu m$] & $q$ [C] & $\delta q$ [C] & $q_{corrig.}$ [C] & $\delta q_{corrig.}$ [C] \\ \hline
 	 1 & &  &  & &  &  \\ \hline
 	 2 & &  &  & &  & \\ \hline
 	 3 & &  &  & &  & \\ \hline
@@ -164,7 +168,7 @@ Desenhe um diagrama da experiência marcando as posições de cada componente e 
  	\end{tabular}
 \end{center}
 
-Para as gotas de carga mais baixa marque na escala abaixo os respectivos valores e as incertezas
+Para as gotas de menor carga marque na escala abaixo os respectivos valores e as incertezas. Se necessário altere os valores das marcas. 
 \begin{center}
   \sansmath
     \begin{tikzpicture}[scale=0.5,font=\sffamily]
@@ -172,11 +176,13 @@ Para as gotas de carga mais baixa marque na escala abaixo os respectivos valores
 	\draw (0,0) -- coordinate (x axis mid) (30,0);
 %    \draw (0,0) -- coordinate (y axis mid) (0,1.7);
 	%labels      
-	\node[below=0.8cm] at (x axis mid) {$q_{gota} [10^{-19} C] $ };
+	\node[below=0.8cm] at (x axis mid) {$|q_{gota}| [10^{-19} C] $ };
     	%ticks
     	\foreach \x in {1,3,...,17}
      		\draw (\x,1pt) -- (\x,-3pt) node[anchor=north] {\x};
-    	\foreach \x in {0,2,...,16}
+    	\foreach \x in {19,21,...,27}
+     		\draw (\x,1pt) -- (\x,-3pt);
+    	\foreach \x in {0,2,...,26}
      		\draw (\x,1pt) -- (\x,-3pt);
     \end{tikzpicture}
 \end{center}
