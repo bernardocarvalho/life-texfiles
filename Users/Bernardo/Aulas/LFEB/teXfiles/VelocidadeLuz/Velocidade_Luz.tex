@@ -48,7 +48,7 @@
 \pagestyle{myheadings}         % Option to put page headers
                                % Needed \documentclass[a4paper,twoside]{article}
 \markboth{{\small \it  Laboratório de Física Experimental Básica}}
-{{\small\it MEFT - LFEB 1º Sem. 2013/2014} }
+{{\small\it MEFT - LFEB 1º Sem. 2014/2015} }
 
 \addtolength{\hoffset}{-0.5cm}
 \addtolength{\textwidth}{2.5cm}
@@ -86,14 +86,14 @@
 
 \section{\sf Introdução}
 Em muitas das experiências descritas na literatura para
-determinacão da velocidade da luz tem-se utilizado feixes luminosos
+determinacão da velocidade da luz foram utilizados feixes luminosos
 pulsados (ou modulados), que percorrem determinados trajetos de maior ou menor
 comprimento (Fig. \ref{fig:Fizeau}). 
 No presente trabalho utiliza-se como fonte luminosa um díodo que
 emite radiação eletromagnética visível com um comprimento de onda na
 zona do vermelho. A tensão aplicada ao díodo emissor é alternada
-sinusoidal de frequência $f=50\,MHz$ verificando-se assim que a intensidade sinal luminoso
-que este emite é Modulado em Amplitute(AM), naquela frequência. 
+sinusoidal de frequência $f_{mod}=50\,MHz$ e  assim a intensidade sinal luminoso
+ emitido é \emph{Modulado em Amplitute} (AM), naquela frequência. 
 
 \begin{equation*}
 	\label{eq:f_am}
@@ -132,7 +132,7 @@ mesma\footnote{Na realidade são sinais \emph{coerentes}, pois provêm da mesma 
 
 Sendo $A_x(t)$ o sinal de intensidade captado no emissor,  $A_{x0}$ a sua amplitude máxima,  $A_y(t)$ o sinal
 proveniente do recetor, $A_{y0}$ a sua amplitude máxima e $\delta$ a desfasagem entre os dois
-sınais. O angulo $\delta$ irá variar com a trajecto do raio luminoso.  A elipse pode degenerar em retas quando os dois sinais estiverem
+sinais. O ângulo $\delta$ irá variar com a trajecto do raio luminoso.  A elipse pode degenerar em retas quando os dois sinais estiverem
 em fase, $\delta = 2n\,\pi$ (nos quadrantes ímpares)  ou em oposição de fase, $\delta = (2n+1)\,\pi$ (nos quadrantes pares). 
 
 \subsection{\sf Velocidade da Luz no ar}
@@ -199,10 +199,11 @@ luz, em  mais dois meios materiais, a resina acrílica e a água.
 
 \subsubsection{\sf Questões a responder ANTES da sessão de Laboratório:}
 \begin{enumerate}
-\item A luz emitida pelo diodo tem um comprimento de onda de $\lambda \approx 600 \, nm$. Calcule $f_{luz}$.
-\item Explique porque razão a luz utilizada nas experiência tem de ter a intensidade variável, tal como na experiência da Velocidade do Som.
-\item Uma montagem desenvolvida no IST utiliza um diodo laser de longo alcance. No entanto apenas se consegue modular a $f=1\, MHz$. Calcule a distância
-dos espelhos necessária para se obter o mesmo efeito de oposição de fase.
+\item A luz emitida pelo díodo tem um comprimento de onda de $\lambda \approx 600 \, nm$. Calcule $f_{luz}$ e compare com a frequência da amplitude.
+\item Explique porque razão nesta experiência a luz utilizada  tem de ter a intensidade variável.
+%, tal como na experiência da Velocidade do Som.
+\item Uma outra montagem desenvolvida no IST utiliza um díodo laser de longo alcance. No entanto apenas se consegue modular a $f_{mod}=1\, MHz$. Calcule a distância
+dos espelhos necessária para se obter o efeito de oposição de fase entre a amplitude do sinal emitido e o recebido.
 \end{enumerate}
 
 \newpage
@@ -212,30 +213,31 @@ dos espelhos necessária para se obter o mesmo efeito de oposição de fase.
 \begin{enumerate}
 \setlength{\itemsep}{0mm}
 \item Unidade de emissão de luz (díodo emissor) e de recepção (díodo receptor)
-(amplitude modulada por um sinal de frequência $50\,MHz$)
-\item Duas lentes plano-cilindrícas
-\item Conjunto de dois espelhos planos para inversão do sentido de propagação da luz 
-\item Calha graduada  
-\item Bloco de vidro acrílico transparente 
+(amplitude modulada por um sinal de frequência $50\,MHz$).
+\item Duas lentes plano-cilíndricas.
+\item Conjunto de dois espelhos planos para inversão do sentido de propagação da luz.
+\item Calha graduada.  
+\item Bloco de vidro acrílico transparente.
 \item Dois tubos com cerca de 1 metro de comprimento para conter água ou ar. 
-\item Osciloscópio de dois canais a funcionar em modo “XY”
+\item Osciloscópio de dois canais a funcionar em modo “XY”.
 \end{enumerate}
 
 \subsection{\sf Procedimento Experimental}
 \subsubsection{\sf Regulação da montagem}
  
-Comece por verificar se a montagem está regulada. Teste a evolução da forma da mancha 
-luminosa ao longo do percurso óptico usando um alvo difusor (por exemplo, papel vegetal) e 
-verifique que está centrada com a lente receptora e com o orifício que permite iluminar o 
-díodo receptor. Ajuste os parafusos dos espelhos de forma a maximizar a amplitude do sinal 
+Comece por verificar se a montagem ótica está devidamente alinhada. Teste a evolução da forma da mancha 
+luminosa ao longo do percurso óptico usando um alvo difusor (por exemplo, papel vegetal). 
+Verifique que a mancha está centrada com  orifício que permite iluminar o 
+díodo receptor. Coloque a lente no lado do díodo receptor.
+Ajuste os parafusos dos espelhos de forma a maximizar a amplitude do sinal 
 recebido.
-Coloque os espelhos na posição de zero da escala e, rodando o botão que modifica 
-continuamente a diferença de fase entre os dois sinais, obtenha uma reta dos quadrantes pares. 
+Coloque os espelhos na posição zero da escala e, rodando o botão que modifica 
+continuamente a diferença de fase entre os dois sinais, obtenha uma reta dos quadrantes ímpares. 
 
 \subsubsection{\sf Velocidade de propagação da luz no ar}
 Desloque os espelhos sobre a calha e observe a modificação da figura no ecrã do 
 osciloscópio, em particular, nas posições que correspondem aos sinais recebidos estarem 
-desfasados de π/2 (quadratura) e em oposição de fase. Para esta última situação registe a 
+desfasados de $\pi/2$ (quadratura) e em oposição de fase. Para esta última situação registe a 
 posição dos espelhos e o intervalo, $e_z$,  para o qual os sinais parecem estar ainda em 
 oposição de fase. Repita a medida pelo menos duas vezes (cada observador). 
 Calcule a velocidade de propagação da luz no ar, a sua incerteza e o desvios à exatidão\footnote{O valor $c_{ar}$ é muito próximo de $c_{vacuo} = 299 792 458\,m/s$, que é uma constante exacta do Sistema Internacional de Medidas. O índice de refração do ar para a luz visível é $n_{ar}=1.000293$}. 
@@ -249,11 +251,11 @@ duas vezes (cada observador).
 Calcule o índice de refração obtido para o vidro acrílico, $n_{vidro}$, pela expressão (\ref{eq:n_bloco}),  e a sua incerteza. Calcule o valor da velocidade.
 
 \subsubsection{\sf Velocidade de propagação da luz na água}
-Verifique de novo que no zero da escala os sinais estão em fase. Coloque o tubo vazio de 
+Verifique de novo que no zero da escala do espaço os sinais estão em fase. Coloque o tubo vazio de 
 água nos suportes de modo que o feixe incidente entre perpendicularmente às faces.
 Registe a posição dos espelhos que produz um sinal em oposição de fase com o incidente. 
 Repita estas medidas para o tubo cheio de água. 
 Calcule o valor da índice de refração obtida para a água $n_{agua}$, a sua incerteza e os desvio à exatidão\footnote{O valor tabelado é $n_{agua}=1.3330$}. 
-Comente criticamente a precisão do valor da velocidade de propagação da luz obtida nos 
+Comente a precisão do valor da velocidade de propagação da luz obtida nos 
 diferentes meios.
 \end{document} 
