@@ -17,7 +17,7 @@
 	\ifwindows
 		\setmainfont[Ligatures=TeX]{Garamond}
 		\setsansfont[Ligatures=TeX]{Gill Sans MT}
-		\setmonofont[Scale=MatchLowercase]{Courier}
+		\setmonofont[Scale=0.95]{Courier}
 	\fi
 	\iflinux
 		\setmainfont[Ligatures=TeX]{Linux Libertine O}
@@ -52,7 +52,7 @@
 \pagestyle{myheadings}         % Option to put page headers
                                % Needed \documentclass[a4paper,twoside]{article}
 \markboth{{\small \it  Laboratório de Física Experimental Básica}}
-{{\small\it MEFT - 1º Sem. 2013/2014} }
+{{\small\it MEFT - 1º Sem. 2014/2015} }
 
 \addtolength{\hoffset}{-0.5cm}
 \addtolength{\textwidth}{2.5cm}
@@ -84,7 +84,7 @@
 	\HRule \\[0.5cm]
 	{ \huge \sf  \textsc{Indice de Refração do vidro de um Prisma pelo método  do Desvio Mínimo.}} \\[0.4cm] % \bfseries 
 %	{ \huge \sf  \textsc{Construções Geométricas em Lentes Delgadas (aproximação paraxial)} }\\[0.4cm] % \bfseries 
-	{ \large \bfseries Poder Dispersivo do Vidro. Poder de Resolução.}\\
+	{ \large \bfseries Poder Dispersivo e Poder de Resolução do Vidro.}\\
 %	{ \large \bfseries Procedimento Experimental}\\
 	\HRule \\%[0.5cm]
 
@@ -111,8 +111,10 @@ No caso de um prisma obtém-se para $R$ a seguinte expressão (ver Apêndice), s
 
 em que $l$ é o \emph{maior percurso} do feixe luminoso no interior do prisma.
 
-Uma \emph{rede de difração} (ver apontamentos da Aula Teórica  “Interferência e Difração”) permite também observar separadamente dois comprimentos de onda muito próximos.
-Mas para uma rede de difração linear a resolução além de variar com o comprimento de onda depende da \emph{ordem de difração}, $m$
+Uma \emph{rede de difração}
+% (ver apontamentos da Aula Teórica  “Interferência e Difração”)
+permite também observar separadamente dois comprimentos de onda muito próximos.
+No entanto para uma rede de difração linear a resolução além de variar com o comprimento de onda depende da \emph{ordem de difração}, $m$
  \begin{equation}
 	\label{eq:resoludrifa}
 	R_\lambda = m\,N 
@@ -167,47 +169,41 @@ Todas as lâmpadas espetrais emitem no ultravioleta que é nocivo para a pele e 
 \newpage
 \subsection{\sf Questões a responder ANTES da sessão de Laboratório:}
 \begin{enumerate}
-\item Obtenha uma imagem típica da dispersão da luz Branca num prisma triangular. O índice de refração, $n(\lambda)$, é uma função crescente ou decrescente?
-\item Nessa figura de dispersão como faria para  identificar qual é a côr que está na posição de \emph{desvio mínimo}?
-\item Se na montagem de laboratório substituir a lampada de descarga por uma de incandescência que imagem obteria com o goniometro?. 
-\item O espectro de emissão do Hidrogéneo, na série de Balmer (transição $3 \to 2$) tem duas riscas no vermelho, respetivamente a $\lambda = 656.272\, nm$ e $\lambda = 656.2852\,nm$.
-Qual a Resolução mínima de um instrumento (Espectrómetro) capaz de distinguir estas duas linhas?. Supondo que tem um prisma com aresta de $10\,cm$, calcule o 
-o declive mínimo para $\left(\frac{\ud n}{\ud \lambda} \right)$?
+\item Descreva quais os objectivos do Trabalho que irá realizar na sessão de Laboratório. Indique as expressões que irá utilizar para obter as grandezas experimentais, bem como as expressões para calcular as incertezas. Inclua esta parte também no Relatório Impresso. Este irá constituir o ÚNICO meio de consulta na Prova Individual.
+\item Obtenha uma imagem típica da dispersão da Luz Branca num prisma triangular. A partir dessa figura pode concluir que índice de refração, $n(\lambda)$, é uma função crescente ou decrescente?
+\item Nessa figura de dispersão como pode identificar qual é a côr que está na posição de \emph{desvio mínimo}?
+\item Se na montagem de laboratório substituir a lâmpada de descarga pela luz Solar que imagem observaria na luneta do goniómetro?. 
+\item O espectro de emissão do Hidrogéneo, na série de Balmer (transição eletrónica de nível $3 \to 2$) tem duas riscas no c.d.o. vermelho, respetivamente a $\lambda = 656.272\, nm$ e $\lambda = 656.2852\,nm$.
+Qual a Resolução mínima de um Instrumento (Espectrómetro) capaz de distinguir estas duas linhas?. Supondo que tem um prisma com aresta de $10\,cm$, calcule o 
+o valor absoluto mínimo para $\left(\frac{\ud n}{\ud \lambda} \right)$?
 \end{enumerate}
 
 
 \section{\sf Protocolo Experimental}
 
-
-
 \begin{enumerate}
 \item Ligue  a  lâmpada  espetral  e  espere  10  a  15  minutos    até  que  se  estabeleça  o 
 equilíbrio térmico no seu interior. 
-\item Enquanto espera começe por regular a ocular da luneta do goniómetro. Para isso deve ver nitidamente com um 
-olho  os fios do retículo e simultaneamente com o outro olho, ver um objeto no exterior da luneta afastado a cerca de 
-$30\,cm$.  
-\item Para  regular  a  objetiva,  observe  agora  um  objeto  no  “infinito” (no  laboratório 
-escolha  um objeto  mais  afastado possível)  atuando  sobre  o  parafuso  da  luneta.  Regule  de  modo  a 
-observar o objeto e o retículo bem focado e sem paralaxe. 
-\item Coloque  a  luneta  alinhada de frente  do  colimador  e  regule  parafuso  do 
-colimador de modo a observar a fenda focada quando iluminada pela lâmpada espetral. 
+\item Enquanto espera comece por regular a ótica (luneta/objectiva) do goniómetro:
+\begin{itemize}
+\item  Primeiro olhando simultaneamente com um 
+olho pela luneta  e  com o outro olho um objeto no exterior afastado a cerca de $30\,cm$,  deve focar retículo mexendo apenas na ocular.  
+\item Para  regular  a  objetiva,  observe  agora pela luneta um  objeto  no  “infinito” (no  laboratório 
+escolha  um objeto  mais  afastado possível).  Regule  o  parafuso de  modo  a 
+observar ambos o objeto e o retículo bem focados e sem paralaxe. 
+\item Coloque  a  luneta  alinhada de frente  do  colimador  e  regule  parafuso  do colimador de modo a observar a fenda iluminada bem focada. 
+\end{itemize}
 \item Verifique o nivelamento horizontal do goniómetro e da plataforma onde vai colocar o prisma com a ajuda de um nível de bolha. 
-\item Observe a reflexão em cada face que define o ângulo do prisma e registe a posição angular 
-correspondente a essas reflexões. Cada observador deve fazer três determinações usando o 
-parafuso  micrométrico e centrando  a  imagem  da  fenda  com  o retículo  por  aproximação  à 
-direita e à esquerda. 
-\item  Observe  a  transmissão  do  feixe  através  do  prisma  com  o  feixe  incidente  numa  das  faces 
-(envolvendo  o  ângulo  que  utilizou  no  ponto  anterior).  Deve  observar  agora  uma  série  de 
-imagens da fenda, uma por cada côr, i.e comprimento de onda incidente.
-\item Escolha uma dessas imagens e rodando o prisma obtenha um conjunto de valores que permita fazer um gráfico do ângulo de desvio, $\delta$, 
-versus o ângulo de rotação do prisma (que por sua vez varia o ângulo de incidência, $i$). Verifique de existe de facto um mínimo.  
-\item  Em seguida para cada côr, tem de rodar o prisma para que se obtenha a posição de desvio mínimo. Pode agora procurar finamente a posição de desvio mínimo 
-com  o auxílio  do  parafuso  micrométrico  associado  à  plataforma  e  em  seguida,  com  o 
-parafuso micrométrico associado à luneta, centrar a imagem no retículo. Faça pelo menos 
-duas determinações de $\delta_{min}$ para cada cor. Repita este procedimento para a outra face do prisma. 
-\item Conhecidos  os  valores  dos  comprimentos  de  onda  incidente, represente  graficamente  o 
-índice de refração em função do comprimento de onda. Ajuste uma função polinomial à 
-curva obtida. Através da 1ª derivada desta função, calcule o poder dispersivo do vidro para o comprimento de onda médio $\lambda$ das 
+\item Coloque o prisma na posição da Figura 1 e observe com a luneta as reflexões nas duas faces transparentes do prisma.  Cada observador deve fazer três determinações usando o parafuso  micrométrico e centrando  a  imagem  da  fenda  com  o retículo. Registe a posição angular de cada uma, com o nónio da escala.
+\item  Observe agora  a  transmissão  das várias côres  através  do  prisma  com  o  feixe  incidente  numa  das  faces, na posiçao da Figura 4.  Deve  observar   uma  série  de 
+imagens da fenda, uma por cada côr (i.e. comprimento de onda incidente).
+\item Escolha uma dessas côres. Rodando o prisma obtenha um conjunto de valores que permita fazer um gráfico do ângulo de desvio, $\delta$, 
+em função do ângulo de rotação do prisma (que por sua vez faz variar o ângulo de incidência, $i$). Verifique que existe de facto um mínimo no angulo de desvio.  
+\item  Em seguida \emph{para cada côr}, para medir o desvio mínimo , tem previamente de se rodar o prisma para posição correspondente. Pode finalmente medir os ângulos de desvio à esquerda e direita, 
+com  o auxílio  do  parafuso  micrométrico  associado  à  plataforma.  De seguida,  com  o 
+parafuso micrométrico associado à luneta, centrar no retículo a imagem da fenda de côe. Cada observador deve efectuar as suas medidas. Repita este procedimento para a outra face do prisma. 
+\item Calcule os desvio mínimos e identificando  valores  dos  comprimentos  de  onda  incidente, represente  graficamente  o 
+índice de refração em função de $\lambda$. Ajuste uma função polinomial à curva obtida. Através da 1ª derivada desta função, calcule o poder dispersivo do vidro para o comprimento de onda médio $\lambda$ das 
 duas riscas amarelas do sódio ($\lambda \approx 589\,nm$). 
 \item Faça uma estimativa da maior distância percorrida pelo feixe luminoso no prisma e calcule 
 aproximadamente  o  poder  de  resolução  do  prisma  para  o  $\lambda$ referido  no  ponto  anterior. 
@@ -261,7 +257,7 @@ o que permite obter
 	\delta   =    i_1  +  t_2  - \alpha 
 \end{equation}
 
-Estes ângulos satisfazem à lei de Snell-Descartes da transmissão
+Estes ângulos satisfazem à lei de Snell-Descartes da transmissão.
 
  \begin{equation}
 	\label{eq:snell}
@@ -421,15 +417,15 @@ Assim uma pequena variação de comprimento de onda $\Delta \lambda$ produz uma 
 	\Delta \delta =  \frac{\ud n}{\ud \lambda} \frac{l}{l_2} \Delta \lambda 
 \end{equation}
 
-O critério de Rayleigh para que dois comprimentos de onda estejam resolvidos, ie possam ser detetados separadamente, é que o máximo de intensidade de um deles coincida com o mínimo de intensidade do outro (Figura \ref{fig:gauss})
+O critério de Rayleigh para que dois comprimentos de onda estejam resolvidos, ie possam ser detetados separadamente, é que o máximo de intensidade (de ordem $n \ge 1$) de um deles coincida com o mínimo de intensidade do outro (Figura \ref{fig:gauss})
 
 \begin{figure}[ht]  \centering 
 	\includegraphics[width=0.6\textwidth]{gauss}
 	\caption{Critério de Rayleigh da resolução de duas riscas espetrais (a vermelho a soma da intensidade das riscas. \label{fig:gauss}} 
 \end{figure}
 
-Ver-se-á no trabalho de Difração que o primeiro mínimo de intensidade da figura de difração de uma fenda de largura $l_2$ dista angularmente do máximo principal de  $\sin \theta = \lambda/l_2$.
-Para dois comprimentos de onda muito próximos $\sin  \theta \approx \theta $ que neste caso é o desvio angular $\Delta \delta$. Assim $\Delta \delta= \lambda / l_2$ e obtém-se para a resolução do prisma: 
+Pelas leis de Difração o primeiro mínimo de intensidade da figura de difração de uma fenda de largura $l_2$ dista angularmente do máximo principal de:  $\sin \theta = \lambda/l_2$.
+Para dois comprimentos de onda muito próximos, $\sin  \theta \approx \theta $, que neste caso é o desvio angular $\Delta \delta$. Assim $\Delta \delta= \lambda / l_2$ e obtém-se para a resolução do prisma: 
 
 ~\begin{equation}
 	\label{eq:resolup}
