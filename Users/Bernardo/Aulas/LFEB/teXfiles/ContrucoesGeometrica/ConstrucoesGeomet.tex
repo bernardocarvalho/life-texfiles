@@ -28,6 +28,9 @@
 	\ifmacosx
 	% add settings
 	% Use xelatex -no-shell ...
+		\setmainfont[Ligatures=TeX]{Garamond}
+		\setsansfont[Ligatures=TeX]{Helvetica}
+		\setmonofont{Consolas}
 	\fi
 	\usepackage{xcolor,graphicx} 
 \else
@@ -42,6 +45,10 @@
 \usepackage{enumitem}
 \setlist{nolistsep}
 
+\usepackage{tikz}
+%\usetikzlibrary{calc,arrows,decorations.pathmorphing,intersections}
+
+
 \usepackage{amsmath,amssymb,amsfonts} % Typical maths resource packages
 \usepackage[retainorgcmds]{IEEEtrantools}
 
@@ -51,7 +58,7 @@
 \pagestyle{myheadings}         % Option to put page headers
                                % Needed \documentclass[a4paper,twoside]{article}
 \markboth{{\small \it  Laboratório de Física Experimental Básica}}
-{{\small\it MEFT - 1º Sem. 2013/2014} }
+{{\small\it MEFT - 1º Sem. 2014/2015} }
 
 \addtolength{\hoffset}{-0.5cm}
 \addtolength{\textwidth}{2.5cm}
@@ -288,7 +295,7 @@ A imagem é \textbf{real} e \textbf{direita}
 
 \subsection{\sf Associação de Lentes delgadas}
 
-Para duas lentes delgadas de distâncias focais $f_1$ e $f_2$ afastadas de $D$ pode calcular-se a distância focal equivalente do conjunto através de 
+Para duas lentes delgadas de distâncias focais $f_1$ e $f_2$ afastadas de $D$ (para $D << f_1,f_2$) pode calcular-se a distância focal equivalente do conjunto através de: 
 
  \begin{equation}
 	\label{eq:assoclentes}
@@ -361,69 +368,91 @@ Em qualquer destas situações pode sempre calcular-se $f_2 < 0$ usando o conjun
 %	\caption{. \label{fig:ConverDiverg_III}} 
 %\end{figure}
 
-\subsubsection{\sf Questões a responder ANTES da sessão de Laboratório:}
+
+
+\newpage
+\section{\sf Protocolo Experimental}
+
+\subsection{\sf Questões a responder ANTES da sessão de Laboratório:}
 \begin{enumerate}
+\item Descreva por palavras suas quais os objectivos do Trabalho que irá realizar na sessão de Laboratório (uma folha A4). Indique as expressões que irá utilizar para obter as grandezas experimentais, bem como as expressões para calcular as incertezas. Inclua esta parte também no Relatório. Este irá constituir o ÚNICO meio de consulta na Prova Individual.
+	
 \item Utilizando uns óculos graduados (se não usar, peça a um colega), obtenha e registe a sua graduação. Calcule a distância focal, $f=1/Dioptrias$ (para miopia são lentes divergentes, para hipermetropia são convergentes. Ignore  a correção do astigmatismo).
 \item Classifique as imagens visualizadas através das lentes, i.e: Reais/Virtuais, Direitas/Invertidas, Ampliadas/Reduzidas, Posição da Imagem relativa aos objetos.
 \item Para uma lente de $-2.5$ Dioptrias calcule a posicão da imagem para um objeto a 40 cm da lente. A que distância está do objeto?
 \item Para uma lente convergente (óculos ou uma lupa) em que condições obtém uma imagem virtual: a) direita; b) invertida?
 \end{enumerate}
 
-\newpage
-\section{\sf Protocolo Experimental}
 \subsection{\sf Material utilizado}
 Caixa de Óptica equipada com calha graduada, lentes convergentes e divergente, semi-cilindro de 
-vidro acrílico, diafragmas, polaroides, suportes. Fonte luminosa com lâmpada de incandescência. 
+vidro acrílico, diafragmas, polaroides, suportes. 
+Fonte luminosa com lâmpada de incandescência linear. 
 
 \subsection{\sf Procedimento Experimental}
-\subsubsection{\sf   Distância focal de uma lente convergente ( $f  ≈  75\, mm$ ) }
- 
-a)  Utilizando  a  fonte  luminosa  obtenha  um  feixe  de  luz  branca  de  raios  paralelos.
-Determine  a  distância  focal  da  lente.  Repita  a  experiência  duas  vezes,  colocando  a  lente 
-noutra posição relativamente à fonte de raios paralelos. 
-b) Com a mesma lente e utilizando um feixe luminoso divergente faça uma montagem que 
-lhe permita, utilizando a equação dos focos conjugados, calcular a distância focal da lente. 
-Determine a ampliação linear obtida produzida pelo sistema. Compare-a com a que podia 
-calcular. 
-Repita a experiência duas vezes, colocando a lente noutra posição relativamente ao objeto. 
-Verifique  se  a  ampliação  experimental  obtida  para  um  objeto  vertical  ou  horizontal  é  a 
-mesma.  
-Compare o valor da distância focal com o obtido em a) e estime a precisão envolvida em 
-cada um dos métodos que utilizou. 
-
-\subsubsection{\sf   Distância focal de uma lente divergente ( $f  ≈  -150\, mm$ ) }
-Associe  no  mesmo  suporte  a  lente  divergente  com  uma  convergente  de  forma  que  o 
-conjunto se comporte como um sistema convergente, por exemplo com a lente convergente 
-usada em 1. Repita a montagem usada em 1b. 
-
-Repita a experiência (pelo menos uma vez), colocando o conjunto das lentes noutra posição 
-relativamente ao objeto. 
-A  partir  das  distâncias  do  objeto  e  da  imagem  a  cada  uma  des  lentes  mais  próximas, 
-conhecidas  a  distância  focal  da  lente  convergente  e  a  distância  entre  lentes,  calcule  a 
-distância focal da lente divergente. 
 
 \subsubsection{\sf  Índice de refracção dum vidro acrílico }
 
-Faça  incidir  luz  branca  na  superfície  plana  do  semi-cilindro  de  vidro  acrílico.  Observe  a 
-reflexão e a transmissão de modo a produzir a reflexão, relativamente ao feixe incidente, à 
-direita  e  depois  à  esquerda.  Faça  medições  pelo  menos  para  cinco  valores  diferentes  do 
-ângulo de incidência. Determine graficamente o índice de refracção do vidro acrílico.  
-Repita  as  medidas  e  a  análise  dos  resultados  fazendo  agora  a  incidência  na  superfície 
-cilíndrica. Conclua sobre o índice de refracção do vidro acrílico a partir dos dois conjuntos 
-de medidas. 
-Estime o valor do índice de refracção a partir do ângulo limite de reflexão total. 
-Compare a precisão dos diferentes valores obtidos para o índice de refracção. 
-
+\begin{enumerate}
+\item Utilizando a  fonte  luminosa  obtenha  um  feixe  de  luz  branca  de  raios  paralelos. Que tipo de lente necessita?
+\item Com os diafragmas obtenha um feixe de luz estreito ($\approx 1\,mm$), alinhado com o eixo do Transferidor.
+\item Faça  incidir  luz  branca  na  superfície  plana  do  semi-cilindro  de  vidro  acrílico.  Observe  e obtenha os ângulos de 
+reflexão e a transmissão para vários ângulos do feixe incidente, à 
+esquerda e à direita.  Faça  medições  pelo  menos  para  nove  valores  diferentes  do 
+ângulo de incidência.
+\item  Determine a) \emph{a partir do gráfico}, e b) por ajuste, o índice de refracção do vidro acrílico.  
+\item Repita  as  medidas  e  a  análise  dos  resultados  fazendo  agora  a  incidência  na  superfície cilíndrica. 
+\item  Compare o índice de refracção do vidro acrílico a partir da incidência nas duas faces. 
+\item Estime também o valor do índice de refracção a partir do ângulo limite de reflexão total. 
+\item  Compare a precisão dos diferentes valores obtidos de $n_{vidro}$. 
+\end{enumerate}
+	
 \subsubsection{\sf Polarização da luz. Ângulo de Brewster}
-Observe o efeito de interposição de dois polaroides paralelos ou cruzados no percurso de 
-um feixe luminoso. 
-Usando a mesma montagem do ponto 3, polarize o feixe incidente paralelamente ao plano
-de incidência e observe experimentalmente para valores do ângulo de incidência próximos 
-do  ângulo  de  Brewster  (que  pode  calcular  a  partir  dos  resultados  que  obteve)  o  intervalo 
-angular em que há praticamente extinção do feixe refletido. Observe a intensidade do feixe 
-transmitido. 
+Observe o efeito de interposição de dois polaroides paralelos ou cruzados no percurso de um feixe luminoso. 
+Usando a mesma montagem do ponto anterior, polarize o feixe  paralelamente ao plano
+de incidência. Para valores do ângulo de incidência próximos 
+do  ângulo  de  Brewster  (que  pode  calcular  a  partir  dos  indice de refração) obtenha   o  intervalo 
+angular em que extingue praticamente  do feixe refletido. 
 
-\subsubsection{\sf Montagens Ópticas}
-Com duas lentes convergente tente obter um telescópio (objetos distantes) e um miscroscópio simples. Desenhe a montagem, as distancias utilizadas e a Ampliação obtida.
-É possível ter a Imagem final na posição do Objeto?
+\subsubsection{\sf   Distância focal de uma lente convergente ( $f  \approx 75\, mm$ ) }
+ 
+\begin{enumerate}
+\item Obtenha  um  feixe  de  luz  branca  de  raios  paralelos.
+Determine  a  distância  focal (d.f.)  da  lente pelo método direto.  Repita  a  experiência  duas  vezes,  colocando  a  lente 
+noutra posição relativamente à lente de raios paralelos. 
+\item Coloque o \emph{objeto} com mira no suporte da calha, iluminado-o diretamente com a fonte luminosa. Coloque a mesma lente convergente a uma distância $150\,mm < d_O < 75 \,mm$ do objeto.
+
+\item Com o ecrân plano procure a posição correta para obter uma \emph{imagem} focada.
+Utilizando a equação dos focos conjugados, calcule de novo a d.f. da lente. 
+\item Na folha quadriculada em anexo desenhe um diagrama com o eixo ótico, o objeto e a lente convergente. Utilizando as aproximações paraxial e das lentes delgadas desenhe a construção geométrica e obtenha a posição da imagem e a respetiva ampliação.
+
+\item Medindo agora a imagem determine a ampliação linear. Compare-a com a que podia  calcular pelas distância $d_O$  e $d_I$. 
+\item Repita a experiência duas vezes, colocando a lente noutras posições relativamente ao objeto.  
+\item Compare o valor da distância focal com o obtido em a) e estime a precisão envolvida em 
+cada um dos métodos que utilizou. 
+\end{enumerate}
+	
+\subsubsection{\sf   Distância focal de uma lente divergente ( $f  \approx   -150\, mm$ ) }
+\begin{enumerate}
+\item Associe  no  mesmo  suporte  a  lente  divergente  com  uma  convergente ($f  \approx 75\, mm$) de  forma  que  o 
+conjunto se comporte como um sistema convergente.
+\item Repita a montagem com objecto e a sua imagem real. 
+\item Conhecidas  a  distância  focal  da  lente  convergente  e  a  distância  entre  lentes, $D$, calcule  a 
+distância focal da lente divergente a partir de $d_O$  e $d_I$. 
+\item Repita a experiência (pelo menos uma vez), colocando o conjunto das lentes noutra posição 
+relativamente ao objeto. 
+
+
+\end{enumerate}
+	
+\newpage
+\def\width{18}
+\def\hauteur{25}
+\begin{tikzpicture}[x=1cm, y=1cm, semitransparent]
+\draw[step=1mm, line width=0.1mm, black!30!white] (0,0) grid (\width,\hauteur);
+\draw[step=5mm, line width=0.2mm, black!40!white] (0,0) grid (\width,\hauteur);
+\draw[step=5cm, line width=0.5mm, black!50!white] (0,0) grid (\width,\hauteur);
+\draw[step=1cm, line width=0.3mm, black!90!white] (0,0) grid (\width,\hauteur);
+\end{tikzpicture}
+
+
 \end{document} 
