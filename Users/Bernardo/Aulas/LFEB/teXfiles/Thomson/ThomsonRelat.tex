@@ -29,6 +29,9 @@
 	\ifmacosx
 	% add settings
 	% Use xelatex -no-shell ...
+		\setmainfont[Ligatures=TeX]{Garamond}
+		\setsansfont[Ligatures=TeX]{Helvetica}
+		\setmonofont{Consolas}
 	\fi
 	\usepackage{xcolor,graphicx} 
 \else
@@ -139,9 +142,9 @@ Desenhe um diagrama da experiência. Inclua uma lista e legenda de Instrumentos.
 \begin{table}[!hbp]
 %\begin{center}
 	\centering
-	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $[V]$ \\
+	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$  	\underline{\makebox[1cm][r]{~}} $[V]$ \\
 
-	\renewcommand{\arraystretch}{0.6}
+	\renewcommand{\arraystretch}{0.75}
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 	\hline
 	y [cm]  & z [cm]  & $R$ [m] & $\delta R$ [m] & $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& {\tiny $\delta I = \frac{| I_+ - I_-|}{2}$ [A] } \\
@@ -224,6 +227,7 @@ Desenhe um diagrama da experiência. Inclua uma lista e legenda de Instrumentos.
 	\label{tab:Dados}
 \end{table}
 
+
 \subsubsection{\sf Cálculos}
 
 %\vspace{1cm}
@@ -239,7 +243,31 @@ Desenhe um diagrama da experiência. Inclua uma lista e legenda de Instrumentos.
 	 &  &  &  \\
 	\hline
 	 &  &  &  \\
-	 \hline
+	\hline
+	 &  &  &  \\
+	 \hline \hline
+	\hline
+	 &  &  &  \\
+	\hline
+	 &  &  &  \\
+	\hline
+	 &  &  &  \\
+	\hline
+	 &  &  &  \\
+	\hline
+	 &  &  &  \\
+	 \hline \hline
+	\hline
+	 &  &  &  \\
+	\hline
+	 &  &  &  \\
+	\hline
+	 &  &  &  \\
+	\hline
+	 &  &  &  \\
+	\hline
+	 &  &  &  \\
+	 \hline 
  	\end{tabular}
 \end{center}
 
@@ -296,7 +324,7 @@ Incerteza relativa $=$~\underline{\makebox[1cm][r]{~}}($\%$)
 \noindent  Desvio à Exatidão $=$~\underline{\makebox[1cm][r]{~}}(\%), 
 Incerteza relativa $=$~\underline{\makebox[1cm][r]{~}}($\%$) 
 
-\newpage
+
 
 \subsubsection{\sf Trajetória não compensada}
 Faça um esboço da trajectória observada, indicando os vetores das forças em jogo, bem como as condições experimentais.
