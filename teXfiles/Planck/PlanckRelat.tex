@@ -28,6 +28,9 @@
 	\ifmacosx
 	% add settings
 	% Use xelatex -no-shell ...
+		\setmainfont[Ligatures=TeX]{Garamond}
+		\setsansfont[Ligatures=TeX]{Helvetica}
+		\setmonofont{Consolas}
 	\fi
 	\usepackage{xcolor,graphicx} 
 \else
@@ -53,7 +56,7 @@
 \usepackage{sansmath}
 
 \def\width{18}
-\def\hauteur{11}
+\def\hauteur{14}
 
 \oddsidemargin 0cm
 \evensidemargin 0cm
@@ -99,8 +102,8 @@
 %TURNO:________ GRUPO:________ DATA: ___ \\
 %Número: _______ Nome: ________________ \\
 %Número: _______ Nome: ________________ \\
-{  \sf  Relatório do Efeito fotoeléctrico.} %[0.4cm] % \bfseries 
-Turno:\underline{\makebox[0.7cm][l]{~}} Grupo:\underline{\makebox[0.7cm][l]{~}} Data:\underline{\makebox[2cm][l]{~}}\\
+{  \sf \Large Relatório do Efeito fotoeléctrico.} %[0.4cm] % \bfseries 
+Turno:\underline{\makebox[1.5cm][l]{~}} Grupo:\underline{\makebox[0.7cm][l]{~}} Data:\underline{\makebox[1.5 cm][l]{~}}\\
 \noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
 \noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
 \noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} 
@@ -112,7 +115,7 @@ Turno:\underline{\makebox[0.7cm][l]{~}} Grupo:\underline{\makebox[0.7cm][l]{~}} 
 
 \item A lâmpada de Mercúrio têm um espectro contínuo ou discreto?
 \item A luz ao passar pela rede de Difração tem os máximos de intensidade segundo os ângulos dados pela expressão $\sin(\theta) = m \frac{\lambda}{a}$, em que $a$ é distância entre as linhas da rede e $m$ é a Ordem de Difração ($m=0,1,2,\ldots$). Como poderá estimar no laboratório o valor de $a$?
-\item Assumindo que a rede tem $600\,linhas/mm$, obtenha uma tabela de ângulos de difração para três ordens e para todas as cores da Tabela 1 do Guia.
+\item Assumindo que a rede tem $610\,linhas/mm$, obtenha uma tabela de ângulos de difração para três ordens e para todas as cores da Tabela 1 do Guia.
 \item Poderá haver sobreposição da linha UV (não visível) com as linhas Amarelo/Verde? Que consequências pode ter e como as poderá evitar?
 
 \end{enumerate}
@@ -142,7 +145,8 @@ Desenhe um diagrama da experiência marcando as posições de cada componente e 
 	%\centering
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 	\hline
-	Côr  & $V_s$ [V] & $\overline{V_s}$ [V]	& $\delta V_s$ [V] & Tempo [s] & Tempo Filtro 1[s] & Tempo Filtro 2 [s]\\
+	Côr  & $V_s$ [V] & $\overline{V_s}$ [V]	& $\delta V_s$ [V] & Tempo [s] & Tempo com  & Tempo com\\
+	  & & & &  & Filtro Int. 1 [s] & Filtro Int. 2 [s]\\
 	\hline
 	 &  &  &  &  &  & \\ \cline{2-2}
 	Amarelo &  & & &  & &  \\ \cline{2-2}
@@ -158,6 +162,10 @@ Desenhe um diagrama da experiência marcando as posições de cada componente e 
 	\hline
 	 &  &  &  &  &  & \\ \cline{2-2}
 	Violeta & & & &  & & \\ \cline{2-2}
+	 &  &  &  &  &  & \\ 
+	\hline
+	 &  &  &  &  &  & \\ \cline{2-2}
+	U.V. & & & &  & & \\ \cline{2-2}
 	 &  &  &  &  &  & \\ 
 	\hline
 %	Azul & 687.858  & 435.835 \\
@@ -212,6 +220,7 @@ Incerteza relativa $=$~\underline{\makebox[1cm][r]{~}}($\%$)
 \noindent\underline{\makebox[\textwidth][r]{~}} \\
 \noindent\underline{\makebox[\textwidth][r]{~}} 
 
+\newpage
 
 \subsection{\sf Análise, Conclusões e Comentários}
 \noindent\underline{\makebox[\textwidth][r]{~}} \\
