@@ -17,7 +17,8 @@
 	\ifwindows
 		\setmainfont[Ligatures=TeX]{Garamond}
 		\setsansfont[Ligatures=TeX]{Gill Sans MT}
-		\setmonofont[Scale=MatchLowercase]{Courier}
+		\setmonofont{Consolas}		
+%		\setmonofont[Scale=MatchLowercase]{Courier}
 	\fi
 	\iflinux
 		\setmainfont[Ligatures=TeX]{Linux Libertine O}
@@ -27,6 +28,9 @@
 	\ifmacosx
 	% add settings
 	% Use xelatex -no-shell ...
+		\setmainfont[Ligatures=TeX]{Garamond}
+		\setsansfont[Ligatures=TeX]{Helvetica}
+		\setmonofont{Consolas}
 	\fi
 	\usepackage{xcolor,graphicx} 
 \else
@@ -78,8 +82,8 @@
 	\includegraphics[width=0.2\textwidth]{../logo-ist}%\\[1cm]  %%  Logo_IST_color
 
 	\HRule \\[0.5cm]
-	{ \huge \sf  \textsc{Velocidade da Luz} }\\[0.4cm] % \bfseries 
-%	{ \large \bfseries Determinação Experimental da Carga $q$ do Eletrão }\\
+	{ \huge \sf  \textsc{Medição da Velocidade da Luz} }\\[0.4cm] % \bfseries 
+	{ \large \bfseries em diferentes Materiais homogéneos e isotrópicos}\\
 %	{ \large \bfseries Procedimento Experimental}\\
 	\HRule \\%[0.5cm]
 
@@ -199,11 +203,12 @@ luz, em  mais dois meios materiais, a resina acrílica e a água.
 
 \subsubsection{\sf Questões a responder ANTES da sessão de Laboratório:}
 \begin{enumerate}
-\item A luz emitida pelo díodo tem um comprimento de onda de $\lambda \approx 600 \, nm$. Calcule $f_{luz}$ e compare com a frequência da amplitude.
+\item Descreva por palavras suas quais os objectivos do Trabalho que irá realizar na sessão de Laboratório (uma folha A4). Indique as expressões que irá utilizar para obter as grandezas experimentais, bem como as expressões para calcular as incertezas. Inclua esta parte também no Relatório. Este irá constituir o ÚNICO meio de consulta na Prova Individual.
+\item A luz emitida pelo díodo vermelho tem um comprimento de onda de $\lambda \approx 600 \, nm$. Calcule $f_{luz}$ e compare com a frequência da modulação da amplitude.
 \item Explique porque razão nesta experiência a luz utilizada  tem de ter a intensidade variável.
 %, tal como na experiência da Velocidade do Som.
-\item Uma outra montagem desenvolvida no IST utiliza um díodo laser de longo alcance. No entanto apenas se consegue modular a $f_{mod}=1\, MHz$. Calcule a distância
-dos espelhos necessária para se obter o efeito de oposição de fase entre a amplitude do sinal emitido e o recebido.
+\item Uma outra montagem desenvolvida no IST utiliza um díodo laser de longo alcance. No entanto o máximo que se consegue modular a amplitude é, $f_{mod}=1\, MHz$. Calcule a distância
+dos espelhos necessária para se obter o efeito de oposição de fase entre a amplitude dos sinais emitido e o recebido.
 \end{enumerate}
 
 \newpage
