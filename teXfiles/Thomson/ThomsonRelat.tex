@@ -65,7 +65,7 @@
 \pagestyle{myheadings}         % Option to put page headers
                                % Needed \documentclass[a4paper,twoside]{article}
 \markboth{{\small \it  Laboratório de Física Experimental Básica}}
-{{\small\it IST - MEFT -LFEB - 1º Sem. 2014/2015} }
+{{\small\it IST - MEFT -LFEB - 1º Sem. 2015/2016} }
 
 \addtolength{\hoffset}{-0.5cm}
 \addtolength{\textwidth}{2.5cm}
@@ -88,7 +88,7 @@
 \author{Prof. Bernardo B. Carvalho} 
 
 %%%%, Bernardo Brotas Carvalho\\bernardo.carvalho@tecnico.ulisboa.pt} 
-\date{ Outubro 2014} 
+\date{ Outubro 2015} 
 
 \begin{document} 
 
@@ -110,24 +110,37 @@ Turno:\underline{\makebox[1.5cm][l]{~}} Grupo:\underline{\makebox[1.5cm][l]{~}} 
 \noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} 
 
 
-\section{\sf Questões a responder ANTES da sessão de Laboratório:}
+\section{\sf Trabalho preparatório a realizar ANTES da sessão de Laboratório:}
 \begin{enumerate}
-\item Descreva por palavras suas quais os objectivos do Trabalho que irá realizar na sessão de Laboratório. Indique as expressões que irá utilizar para obter as grandezas experimentais, bem como as expressões para calcular as incertezas. Inclua esta parte também no Relatório. Este irá constituir o ÚNICO meio de consulta na Prova Individual.
+\item Descreva quais os objectivos do Trabalho que irá realizar na sessão de Laboratório. 
 \item Desenhe um diagrama dos campos elétricos, magnéticos, da velocidade do eletrões e forças aplicadas nas diferentes zonas do TRC.
-\item Para uma diferença de potencial entre o cátodo e ânodo, $U_a$  de $4000 V$, calcule a velocidade dos eletrões na saída do ânodo ($q_e \simeq  −1.602×10^{−19}\, C$, $m_e\simeq 9.109×10^{−31}\, kg$). \\
-Justifica-se utilizar as equações de movimento relativistas?
-\item Aplicando uma corrente de $I= 1A$ nas as bobines de Helmoltz, calcule o campo $\vec{B}$ e a força magnética aplicada nos eletrões. Como se compara com o seu peso? 
-\item Escolha os 5 pares de coordenadas, $x,\, y$ na grelha  do tube TRC,  que irá utilizar na exp. de deflexão magnética de modo a obter os maiores valores possíveis de $R$, preenchendo as 4 primeiras colunas da Tabela~\ref{tab:Dados}.
+\item Escolha os 5 pares de coordenadas, $(y,\, \pm z)$, na grelha do tubo TRC que irá utilizar nos ensaios de deflexão magnética, de modo a obter os maiores valores  de $R$ possíveis. Preencha as 4 primeiras colunas da Seção\ref{sec:dados}.
 \end{enumerate}
+
+\subsection{\sf Objectivos do Trabalho}
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+
+\subsubsection{\sf Equações }
+Escreva no seguinte quadro todas as equações necessárias para calcular as grandezas bem com as suas incertezas.
+\begin{center}
+\framebox[13cm]{\rule{0pt}{6.5cm}}
+\end{center}
 
 
 \section{\sf Relatório}
 \subsection{\sf DETERMINAÇÃO DE $q/m$ POR  DEFLEXÃO MAGNÉTICA}
 \subsubsection{\sf Montagem Experimental}
-Desenhe um diagrama da experiência. Inclua uma lista e legenda de Instrumentos.
+Desenhe um diagrama da experiência. Inclua uma lista e legenda dos Instrumentos e a sua resolução e incerteza.
 \begin{center}
 \framebox[18cm]{\rule{0pt}{6.5cm}}
 \end{center}
+
 
 
 %￼\newpage
@@ -137,143 +150,136 @@ Desenhe um diagrama da experiência. Inclua uma lista e legenda de Instrumentos.
 %     \caption{Montagem Experimental\label{montag}}
 %\end{figure}
 
-\subsubsection{\sf Dados Experimentais (Preencha as tabelas)}
+\subsubsection{\sf Medidas Experimentais e Cálculos Intermédios } \label{sec:dados}
+Preencha as seguintes tabelas indicando  apenas os algarismos significativos. Poderá em alternativa utilizar folhas de cálculo, com o mesmo formato (apresentando-as em anexo) mas terá de peencher as colunas 1, 2, 3, 4 das tabelas seguintes e as colunas 1 e 6 das secção \ref{sec:calc}. Em qualquer dos casos terá que verificar as contas com auxílio calculadora, para um dos ensaios e na presença do docente.
 
-\begin{table}[!hbp]
-%\begin{center}
-	\centering
-	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$  	\underline{\makebox[1cm][r]{~}} $[V]$ \\
+\begin{center}
+	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $V$ ,  $\quad \delta U_a=$	\underline{\makebox[1cm][r]{~}} $V$, $\quad \delta (y,z)=$ \underline{\makebox[1cm][r]{~}} mm  \\
 
 	\renewcommand{\arraystretch}{0.75}
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 	\hline
-	y [cm]  & z [cm]  & $R$ [m] & $\delta R$ [m] & $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& {\tiny $\delta I = \frac{| I_+ - I_-|}{2}$ [A] } \\
+	y [cm]  & $z_+/z_-$ [cm]  & $R$ [m] & $\delta R$ [m] & $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$   {\tiny $ = \frac{| I_+ + I_-|}{2}$ [mA] } & {\tiny $\delta I = \frac{| I_+ - I_-|}{2}$ [mA] } \\
 	\hline
-	 &  &  &  & &  &  & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  &  & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
 	 \hline
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
 	 \hline
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
 	 \hline
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
 	 \hline
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
 	 \hline
  	\end{tabular}
 	
-\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $[V]$ \\
+	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}}  $V$  %$\pm$  	\underline{\makebox[1cm][r]{~}}
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 	\hline
-	y [cm]  & z [cm]  & $R$ [m] & $\delta R$ [m] & $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& {\tiny  $\delta I = \frac{| I_+ - I_-|}{2}$ } [A]  \\
+	y [cm]  & $+z/-z$ [cm]  & $R$ [m] & $\delta R$ [m] & $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$   {\tiny $\frac{| I_+ + I_-|}{2}$ [A] } & {\tiny $\delta I = \frac{| I_+ - I_-|}{2}$ [A] } \\
 	\hline
-	 &  &  &  & &  &  & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  &  & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
 	 \hline
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
 	 \hline
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
 	 \hline
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
 	 \hline
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
 	 \hline
- 	\end{tabular}\\
-\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $[V]$ \\
+ 	\end{tabular}
+	
+	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $V$ 
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 	\hline
-	y [cm]  & z [cm]  & $R$ [m] & $\delta R$ [m] & $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& {\tiny $\delta I = \frac{| I_+ - I_-|}{2}$ [A] } \\
+	y [cm]  & $\pm z$ [cm]  & $R$ [m] & $\delta R$ [m] & $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$   {\tiny $\frac{| I_+ + I_-|}{2}$ [A] } & {\tiny $\delta I = \frac{| I_+ - I_-|}{2}$ [A] } \\
 	\hline
-	 &  &  &  & &  &  & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  &  & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
 	 \hline
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
 	 \hline
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
 	 \hline
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
 	 \hline
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
-	 &  &  &  & &  & & \\ \cline{5-6}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
+	 &  &  &  & &  & & \\ \cline{5-8}
 	 \hline
- 	\end{tabular}	 	
-	\caption{Dados da Experiência de Deflexão Magnética} 
-	\label{tab:Dados}
-\end{table}
+ 	\end{tabular}	
+\end{center}
+
+%\begin{table}[!hbp]
+%\begin{center}
+%	\centering
+%	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$  	\underline{\makebox[1cm][r]{~}} $V$ \\
+
+%	\caption{Dados da Experiência de Deflexão Magnética} 
+%	\label{tab:Dados}
+%\end{table}
 
 
-\subsubsection{\sf Cálculos}
-
+\subsubsection{\sf Cálculos de $q/m$}
+\label{sec:calc}
 %\vspace{1cm}
 \begin{center}
-	\begin{tabular}{|c|c|c|c|}
-	\hline
-	$B$ [T] & $\delta B$  [T] & $q/m$ [C/Kg] & $\delta q/m$ [C/Kg] \\
-	\hline
-	 &  &  &  \\
-	\hline
-	 &  &  &  \\
-	\hline
-	 &  &  &  \\
-	\hline
-	 &  &  &  \\
-	\hline
-	 &  &  &  \\
+	\begin{tabular}{l|c|c|c|c|c|c|}
+	\cline{2-7}
+	 & $\overline{I}\quad \pm$ [A] &  $B$ [mT] & $\delta B$  [mT] & $q/m$ [C/kg] & $\delta q/m$ [C/kg] & $\overline{q/m}\quad \pm \quad [\quad C/kg]$\\ \cline{2-7}
+	 &&&&&&   \\ \cline{2-6}
+	 &&&&&& \\ \cline{2-6}
+	 $U_a=$ \underline{\makebox[1.2cm][r]{~}}$V$   &&&&&&  \\ \cline{2-6}
+	 &&&&&& \\ \cline{2-6}
+	 &&&&&& \\ \hline \hline
+	  
+	 &&&&&& \\ \cline{2-6}
+	 &&&&&& \\ \cline{2-6}
+	$U_a=$ \underline{\makebox[1.2cm][r]{~}}$V$  &&&&&& \\
+	\cline{2-6}
+	 &&&&&& \\ \cline{2-6}
+	 &&&&&& \\
 	 \hline \hline
-	\hline
-	 &  &  &  \\
-	\hline
-	 &  &  &  \\
-	\hline
-	 &  &  &  \\
-	\hline
-	 &  &  &  \\
-	\hline
-	 &  &  &  \\
-	 \hline \hline
-	\hline
-	 &  &  &  \\
-	\hline
-	 &  &  &  \\
-	\hline
-	 &  &  &  \\
-	\hline
-	 &  &  &  \\
-	\hline
-	 &  &  &  \\
-	 \hline 
+	 &&&&&& \\ \cline{2-6}
+	 &&&&&& \\ \cline{2-6}
+	 $U_a=$ \underline{\makebox[1.2cm][r]{~}}$V$  &&&&&& \\ \cline{2-6}
+	 &&&&&& \\ \cline{2-6}
+	 &&&&&& \\
+	 \cline{2-7} 
  	\end{tabular}
 \end{center}
 
 
-\subsubsection{\sf Resultados}
-\noindent  $q/m =$~\underline{\makebox[1.5cm][r]{~}}$\pm$\underline{\makebox[1cm][r]{~}}(~~~)\\  
+\subsubsection{\sf Resultados Finais. Explique os critérios que utilizou para obter as incertezas.}
+\noindent  $q/m =$~(\underline{\makebox[1.5cm][r]{~}}$\pm$\underline{\makebox[1cm][r]{~}})$\times 10^{+} \;\;C/kg  $\\  
 
 \noindent  Desvio à Exatidão $=$~\underline{\makebox[1cm][r]{~}}(\%), 
 Incerteza relativa $=$~\underline{\makebox[1cm][r]{~}}($\%$) 
@@ -282,32 +288,35 @@ Incerteza relativa $=$~\underline{\makebox[1cm][r]{~}}($\%$)
 
 \subsubsection{\sf Dados Experimentais e Cálculos}
 
-\begin{itemize}
-\item Preencha as tabelas seguintes:
-\end{itemize}
+%\begin{itemize}
+%\item Preencha as tabelas seguintes:
+%\end{itemize}
 \begin{table}[!hbp]
 %\begin{center}
 	\centering
-	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $[V]$ \\
+%	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $V$ \\ %$\pm$ \underline{\makebox[1cm][r]{~}} 
+	\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	 $U_a [V]$ & $I_{max}$ [mA] & $I_{min}$ [mA] & $\overline{I} \quad \pm \quad[mA]$ & $B \quad \pm \quad [mT]$   & $q/m \quad \pm \quad [C/kg] $ \\
+	\hline
+	 & &  &  & &   \\
+ 	\hline
+ 	 & &  &  & &   \\
+	 \hline
+	 
+ 	\end{tabular}\\[10pt]
+	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $V$ \\
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 	\hline
-	 $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& $\delta I = \frac{| I_+ - I_-|}{2}$ [A] & $B$ [T] & $\delta B$  [T] & $q/m$ [C/Kg] & $\delta q/m$ [C/Kg] \\
+	 $I_{max}$ [mA] & $I_{min}$ [mA] & $\overline{I}$ [A]	& $\delta I = \frac{| I_{max} - I_{min}|}{2}$ [A] & $B$ [T] & $\delta B$  [T] & $q/m$ [C/kg] & $\delta q/m$ [C/kg] \\
 	\hline
 	 &  &  & &  &  & & \\
 	 \hline
  	\end{tabular}\\[10pt]
-	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $[V]$ \\
+	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $V$ \\
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 	\hline
-	 $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& $\delta I = \frac{| I_+ - I_-|}{2}$ [A] & $B$ [T] & $\delta B$  [T] & $q/m$ [C/Kg] & $\delta q/m$ [C/Kg] \\
-	\hline
-	 &  &  & &  &  & & \\
-	 \hline
- 	\end{tabular}\\[10pt]
-	\noindent	$U_a =$ \underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} $[V]$ \\
-	\begin{tabular}{|c|c|c|c|c|c|c|c|}
-	\hline
-	 $I_+$ [mA] & $I_-$ [mA] & $\overline{I}$ [A]	& $\delta I = \frac{| I_+ - I_-|}{2}$ [A] & $B$ [T] & $\delta B$  [T] & $q/m$ [C/Kg] & $\delta q/m$ [C/Kg] \\
+	 $I_{max}$ [mA] & $I_{min}$ [mA] & $\overline{I}$ [A]	& $\delta I = \frac{| I_{max} - I_{min}|}{2}$ [A] & $B$ [T] & $\delta B$  [T] & $q/m$ [C/kg] & $\delta q/m$ [C/kg] \\
 	\hline
 	 &  &  & &  &  & & \\
 	 \hline
@@ -318,16 +327,15 @@ Incerteza relativa $=$~\underline{\makebox[1cm][r]{~}}($\%$)
 \end{table}
 
 \subsubsection{\sf Resultados}
-\noindent  $q/m =$~\underline{\makebox[1.5cm][r]{~}}$\pm$\underline{\makebox[1cm][r]{~}}(~~~)\\
+\noindent  $q/m =$~(\underline{\makebox[1.5cm][r]{~}}$\pm$\underline{\makebox[1cm][r]{~}})$\times 10^{+} \;\;C/kg  $\\  
 
 
 \noindent  Desvio à Exatidão $=$~\underline{\makebox[1cm][r]{~}}(\%), 
 Incerteza relativa $=$~\underline{\makebox[1cm][r]{~}}($\%$) 
 
 
-
-\subsubsection{\sf Trajetória não compensada}
-Faça um esboço da trajectória observada, indicando os vetores das forças em jogo, bem como as condições experimentais.
+\subsection{\sf Trajetória não compensada}
+Aumente agora o campo $B$ (com $I<= 3\; A$) de forma a visualisar uma trajetória não compensada.  Faça um esboço da curva observada, indicando os vetores das forças em jogo (com uma estimativa do seu valor em $N$), bem como as condições experimentais. Comente a figura obtida.
 \begin{center}
 \framebox[18cm]{\rule{0pt}{6.5cm}}
 \end{center}
