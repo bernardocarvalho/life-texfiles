@@ -6,7 +6,6 @@
 % $Revision$
 % $URL$
 \documentclass[a4paper,twoside,12pt]{article}      % Comments after  % are ignored
-%\usepackage{hyperref}                 % For creating hyperlinks in cross references
 %\documentclass[a4paper,12pt]{article} 
 %
 
@@ -48,7 +47,7 @@
 
 \pagestyle{myheadings}         % Option to put page headers
                                % Needed \documentclass[a4paper,twoside]{article}
-\markboth{{\small\it MEFT - 2014/2015}}
+\markboth{{\small\it MEFT - 2015/2016}}
 {{\small\it Laboratório de Física Experimental Básica}}
 
 \textwidth 15.5cm
@@ -81,6 +80,9 @@
 %, Bernardo Brotas Carvalho\\bernardo@ipfn.ist.utl.pt} 
 \date{ Setembro 2014} 
 
+%\usepackage{hyperref}                 % For creating hyperlinks in cross references
+\usepackage[xetex,bookmarks=true,colorlinks=true]{hyperref}
+
 \begin{document} 
 
 %	\begin{center}
@@ -112,18 +114,18 @@
 
 \section{\sf Movimento Harmónico Simples}
 
-O Pêndulo Gravítico é um exemplo simples do modelo  matemático, o ``Oscilador Harmónico'' (OH), 
+O Pêndulo Gravítico é um exemplo simples de um modelo  matemático, o ``Oscilador Harmónico'' (OH), 
 de essencial importância e  vastíssima utilização em quase todos o ramos da Física,
  bem como muitas áreas de Engenharia. 
  Neste modelo, um sistema físico arbitrário encontra-se na vizinhança de uma posição 
- de equilíbrio, onde há um mínimo local ou absoluto da sua Energia Potencial  ($E_P$). 
-Ao distanciar-se deste mínimo, por uma perturbação ou outra qualquer força externa inicial, 
-surge então uma força de índole conservativa, sempre direcionada de forma a repor o equilíbrio. 
+ de equilíbrio, onde há um mínimo (local ou absoluto) da sua Energia Potencial ($E_V$), de origem gravítica, elástica, eletrostática ou outra. 
+Ao distanciar-se deste mínimo, por uma perturbação ou qualquer outra força externa, 
+surge então uma força de índole conservativa sempre direcionada de forma a repor o equilíbrio. 
 Quando as forças exteriores deixam de actuar o sistema adquire movimento, 
-transferindo-se a $E_P$ para Energia Cinética ($E_C$). 
-Ao atingir a posição de equilíbrio e por inércia o movimento prossegue até se alcançar um 
-novo máximo simétrico. 
-Na ausência de forças dissipativas, o sistema regressa  ao ponto de partida e o ciclo repete-se infinitamente, com período $T_0$ constante (``Oscilador Livre''). Na presença de atrito a energia total deixa de ser constante e irá dissipar-se, diminuindo a amplitude do movimento, até desaparecer (``Oscilador Amortecido'').
+transferindo-se a $E_V$ para Energia Cinética ($E_\kappa$). 
+Ao retomar a posição de equilíbrio  o movimento  prossegue por inércia  até se alcançar um 
+novo máximo, normalmente simétrico ao ponto inicial. 
+Na ausência de atrito, o sistema regressa  ao ponto de partida e o ciclo repete-se infinitamente, com período $T_0$ constante (``Oscilador Livre''). Contudo, na presença de  forças dissipativas a energia total deixa de ser constante e irá dissipar-se, diminuindo a amplitude do movimento, até desaparecer (``Oscilador Amortecido'').
 % \begin{figure}
 	% [t!bp]  \centering 
 	% \includegraphics[width=0.45	\textwidth]{cucu} 
@@ -133,9 +135,9 @@ Na ausência de forças dissipativas, o sistema regressa  ao ponto de partida e 
 %, no caso de Mecânica uma massa,
 \subsection{\sf Sistema Massa-mola}
 O exemplo de modelo OH mecânico mais simples  consiste num sistema de uma massa que se 
-move na horizontal e sem atrito,  presa a uma mola  que é fixada na sua outra extremidade (Figura \ref{fig:2}). 
-Caso a massa se deslocar da posição de equilíbrio ($x =0$), a Energia Potencial Elástica aumenta e mola irá exercer uma força de sinal contrário à deslocação, $\Delta x \equiv x - x_0 = x$.
- No modelo ideal da mola \emph{linear}  a força tem  módulo proporcional (com constante $k_{mola}$) ao deslocamento $x$ 
+move na horizontal e sem atrito,  presa a uma mola  que é presa na sua outra extremidade a um ponto fixo.(Figura \ref{fig:2}). 
+Caso a massa se deslocar da posição de equilíbrio ($x =x_0$), a Energia Potencial Elástica aumenta e mola irá exercer uma força de sinal contrário à deslocação, $\Delta x \equiv x - x_0$. Por facilidade faz-se $ x_0= 0$ e portanto  $x=\Delta x$.
+No modelo idealizado da mola \emph{linear} a força é sempre proporcional (com a constante $k_{mola}$) ao deslocamento $x$. 
 
 \begin{equation}
 F_{mola} = - k_{mola} \, x \qquad 
@@ -149,14 +151,14 @@ A partir da segunda equação de Newton, $F=m a$, e sabendo que $ a = \ddot{x}= 
 \end{equation}
 
 %\Rightarrow
-Pode-se verificar em poucos passos que a seguinte função temporal periódica é solução da equação (\ref{eq:1}).
+Pode-se verificar com alguma algebra que a seguinte função  periódica é solução da equação (\ref{eq:1}).
 
 \begin{equation}
 	\label{eq:solu_mola}
 x(t) = c_1 \cos(w_0 \, t) + c_2 \sin(w_0 \, t) = A_0 \sin(w_0 \, t + \phi_0) \text{, com } w_0 = \sqrt{\frac{k_{mola}}{m}}
 \end{equation}
 
-Com $ A_0 $ (Amplitude) e $\phi_0$ (fase) constantes, dependentes da condições iniciais. Finalmente $w_0$ é a frequência angular de ressonância que, inversa do período, depende apenas da massa, $m$ e de $k_{mola}$:
+Com $ A_0 $ (Amplitude) e $\phi_0$ (fase) constantes que dependem, é claro  das condições iniciais. Finalmente $w_0$ é a frequência angular de ressonância que, inversa do período, depende apenas da massa, $m$ e de $k_{mola}$:
 %, $\frac{2 \pi}{T}$,
 
 \begin{equation}
@@ -169,11 +171,11 @@ Assim, a solução para a posição, $x(t)$ ( e também para a velocidade \footn
 \begin{figure}
 	[!tbp] \centering 
 	\includegraphics[width=0.5	\textwidth]{simple_harmonic_oscillator} 
-	\caption{Oscilador Harmônico Simples \emph{Massa-Mola}.  \label{fig:2}} 
+	\caption{Oscilador Harmônico Simples tipo \emph{Massa-Mola}. No gráfico superior está representada a enrgia  potencial ($V$), a energia cinética ($K$) e a energia total.  \label{fig:2}} 
 \end{figure}
 
 \subsection{\sf Pêndulo gravítico}
-O Pêndulo gravítico é também um sistema que pode ter como  modelo o ``Oscilador Harmónico'' e que consiste numa massa pontual suspensa\footnote{No Latim \emph{pendulus}} a partir de um fio virtualmente sem massa e comprimento $l$ fixo, que pode rodar em torno de um ponto (o ``pivôt"). Quando a massa se desvia da posição central, a força gravítica aplicada em $m$ (o peso $F_g = m \, g $) adquire uma componente na direcção de movimento (tangente à trajectória circular) e que tende a restabelecer o equilíbrio (Figura \ref{fig:3}). 
+O Pêndulo gravítico  consiste na sua forma idealizada numa massa pontual suspensa\footnote{No Latim \emph{pendulus}} a partir de um fio comprimento $l$ fixo (inextensível) e virtualmente sem massa, que pode rodar em torno de um ponto (o ``pivôt"). Quando a massa se desvia da posição central, a força gravítica aplicada em $m$ (o peso $F_g = m \, g $) adquire uma componente na direcção de movimento (tangente à trajectória circular) e que tende a restabelecer o equilíbrio (Figura \ref{fig:3}). 
 
 \begin{figure}
 	[!htbp] \centering 
@@ -197,7 +199,7 @@ E a equação diferencial de movimento
 \end{align}
 
 Esta equação não tem uma resolução analítica simples, mas através do método  da \emph{linearização} (o ``canivete suíço'' dos Físicos), utiliza-se a aproximação $ \sin(\theta) \simeq \theta$ , para  $\theta_0 \le 0.08\,rad$ (aqui  os ângulos têm de ser medido em radianos!\footnote{ por exemplo: $\sin(5 ^{\circ}) = \sin(0.08726... \, \text{rad}) = 0.08715... $}).
-Com esta aproximação ficamos com 
+Com esta aproximação regressamos ao nosso modelo do ``Oscilador Harmónico'' e ficamos com 
 
 \begin{equation}
 	\label{eq:6} 
@@ -212,7 +214,7 @@ Cuja solução matemática é exacta e semelhante à expressão (\ref{eq:solu_mo
 \end{equation}
 
 O que é interessante neste modelo é que o efeito da \emph{massa gravítica } anula o da \emph{massa inercial } e o período do pêndulo fica a  depender apenas do comprimento $l$  e do valor da aceleração da Gravidade $g$  local 
-\footnote{à superfície da Terra e à latitude de Lisboa: $g\approx 9.800\,m s^{-2}$. Consultar também o Projecto ``Pêndulo Mundial'', baseado no e-lab do IST: http://www.elab.ist.utl.pt/}
+\footnote{à superfície da Terra e à latitude de Lisboa: $g\approx 9.80\,m s^{-2}$. Consultar também o Projecto ``Pêndulo Mundial'', baseado no e-lab do IST: http://www.elab.ist.utl.pt}
 %à superfície da Terra $g\approx 9.81\,m s^{-2}$ e $g/\pi^2 \approx 0.994 \,m s^{-2}$}
 
 \begin{equation}
@@ -223,20 +225,13 @@ T_0 = \frac{2 \pi}{w_0} = 2\pi\; \sqrt{\frac{l}{g}} \text{, para }	\quad \theta_
 
 Sabendo-se que já existiam pêndulos  desde a Antiguidade, foi o génio  Galileo Galilei, que no início do séc. XVII os estudou detalhadamente, chegando relação (\ref{eq:period_pend}).
 A partir dessa altura
-estes dispositivos foram sistemáticamente utilizados para medir o tempo, sendo a base 
-de quase todos os relógios de precisão, com maior ou menor complexidades.
-Actualmente apenas os relógios de Luxo usam uma variação do pêndulo, embora não seja gravitico.
-(apenas a parte de geração energia, no relógios automático é gravítica. 
-O único relógio ainda certificado para usar na Lua,
-é um Omega de corda ... manual)
+estes dispositivos foram sistemáticamente utilizados para medir o tempo (e consequentemente a latitude), sendo a base 
+de quase todos os relógios de precisão até meados do século passado, com maior ou menor complexidade.
+Actualmente apenas os relógios decorativos ou de luxo usam  variações do pêndulo\footnote{Mas ainda são úteis para se fazer ciência: ver por exemplo a revista \href{http://www.nature.com/articles/srep11548}{Nature} de Julho de 2015, http://www.nature.com/articles/srep11548}.
+%(apenas a parte de geração energia, no relógios automático é gravítica. 
+%O único relógio ainda certificado para usar na Lua,
+%é um Omega de corda ... manual)
 
-A resolução analítica (infelizmente bastante complexa) da equação 	(\ref{eq:5})  tem como solução para o período uma série  infinita de potências de $\theta_0$. 
-Naturalmente, permite verificar que na aproximação $\theta_0 \ll 1$ a equação \ref{eq:period_pend} continua válida.
-\begin{equation}
-	\label{eq:period_pend_exa}
-T_0 =  2\pi\, \sqrt{\frac{l}{g}} \left(1 + \frac{1}{16} \theta_0^{2} + \frac{11}{3072} \theta_0^{4} +
- \frac{737280}{3072} \theta_0^{6} + \frac{22931}{1321205760} \theta_0^{8} + \cdots \right)
-\end{equation}
 
 Até aqui desprezámos o atrito do ar no movimento do pêndulo. Ao introduzir esta contribuição, com a aproximação de atrito cinético 
 proporcional à velocidade, a  equação	(\ref{eq:6}) muda para
@@ -258,6 +253,14 @@ Com $ \zeta = \frac{\lambda}{2\, m} \sqrt{\frac{l}{g}}  $
 O factor  $ \zeta $ também se pode relacionar com o factor de amortecimento $Q$ \footnote{Os Engenheiros chamam de factor de Qualidade} 
 \begin{equation}
 Q = 2 \pi \times \frac{\text{Energia do Pêndulo}}{\text{Energia perdida num ciclo}}
+\end{equation}
+
+Nota Final: A resolução analítica (infelizmente bastante complexa) da equação 	(\ref{eq:5})  tem como solução para o período uma série  infinita de potências de $\theta_0$. 
+Naturalmente, permite verificar imediatamente que na aproximação $\theta_0 \ll 1$ a equação \ref{eq:period_pend} continua válida.
+\begin{equation}
+	\label{eq:period_pend_exa}
+T_0 =  2\pi\, \sqrt{\frac{l}{g}} \left(1 + \frac{1}{16} \theta_0^{2} + \frac{11}{3072} \theta_0^{4} +
+ \frac{737280}{3072} \theta_0^{6} + \frac{22931}{1321205760} \theta_0^{8} + \cdots \right)
 \end{equation}
 
 \newpage
