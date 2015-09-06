@@ -1,0 +1,242 @@
+%%&program=xelatex
+%&encoding=UTF-8 Unicode
+% SVN keywords
+% $Author: bernardo $
+% $Date: 2014-07-24 19:33:49 +0100 (Thu, 24 Jul 2014) $
+% $Revision: 6559 $
+% $URL: http://metis.ipfn.ist.utl.pt/svn/cdaq/Users/Bernardo/Aulas/LFEB/teXfiles/Planck/Planck.tex $
+\documentclass[a4paper,12pt]{article}  % Comments after  % are ignored
+%\usepackage{hyperref}                 % For creating hyperlinks in cross references
+%
+\usepackage{ifxetex}% for XELATEX, or PDFlatex
+\usepackage{ifplatform} 
+%
+\ifxetex
+	\usepackage{polyglossia} \setmainlanguage{portuges}
+	\usepackage{fontspec}
+	\ifwindows
+		\setmainfont[Ligatures=TeX]{Garamond}
+		\setsansfont[Ligatures=TeX]{Gill Sans MT}
+		\setmonofont{Consolas}
+%		\setmonofont[Scale=MatchLowercase]{Courier}
+	\fi
+	\iflinux
+		\setmainfont[Ligatures=TeX]{Linux Libertine O}
+		\setsansfont[Ligatures=TeX,Scale=MatchLowercase]{Linux Biolinum}
+		\setmonofont[Scale=MatchLowercase]{Courier}
+	\fi
+	\ifmacosx
+	% add settings
+	% Use xelatex -no-shell ...
+	\fi
+	\usepackage{xcolor,graphicx} 
+\else
+	\usepackage[portuguese]{babel}
+	%\usepackage[latin1]{inputenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphics}                 % Packages to allow inclusion of graphics
+	\usepackage{color}                    % For creating coloured text and background
+\fi
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\usepackage{amsmath,amssymb,amsfonts} % Typical maths resource packages
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{caption}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,decorations.pathmorphing,intersections}
+
+\usepackage[font={small,sf},labelfont={bf},labelsep=endash]{caption}
+\usepackage{sansmath}
+
+\def\width{18}
+\def\hauteur{11}
+
+\oddsidemargin 0cm
+\evensidemargin 0cm
+
+\pagestyle{myheadings}         % Option to put page headers
+                               % Needed \documentclass[a4paper,twoside]{article}
+\markboth{{\small \it  Laboratório de Física Experimental Básica}}
+{{\small\it IST - MEFT -LFEB - 1º Sem. 2015/2016} }
+
+\addtolength{\hoffset}{-0.5cm}
+\addtolength{\textwidth}{2.5cm}
+\addtolength{\topmargin}{-1.5cm}
+\addtolength{\textheight}{3cm}
+
+%\textwidth 15.5cm
+%\topmargin -1.5cm
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex  plus  0.5ex  minus  0.2ex}
+%\parindent 0.5cm
+%\textheight 25cm
+%\parskip 1mm
+
+
+% Math macros
+\newcommand{\ud}{\,\mathrm{d}} 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\author{Prof. Bernardo B. Carvalho} 
+
+%%%%, Bernardo Brotas Carvalho\\bernardo.carvalho@tecnico.ulisboa.pt} 
+\date{ Setembro 2015} 
+
+\begin{document} 
+
+%	\includegraphics[width=0.2\textwidth]{../logo-ist}%\\[1cm]  %%  Logo_IST_color
+
+%	\HRule \\[0.5cm]
+%	{ \huge \sf  \textsc{Construções Geométricas em Lentes Delgadas (aproximação paraxial)} }\\[0.4cm] % \bfseries 
+%	{ \large \bfseries Determinação da constante de Planck.}\\
+
+%	{ \large \bfseries Procedimento Experimental}\\
+%	\HRule \\%[0.5cm]
+%TURNO:________ GRUPO:________ DATA: ___ \\
+%Número: _______ Nome: ________________ \\
+%Número: _______ Nome: ________________ \\
+{  \sf  Relatório da Exp. de Velocidade da Luz} %[0.4cm] % \bfseries 
+Turno:\underline{\makebox[2cm][l]{~}} Grupo:\underline{\makebox[1cm][l]{~}} Data:\underline{\makebox[2cm][l]{~}}\\
+\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
+\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
+\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} 
+
+
+\section{\sf Trabalho preparatório a realizar  ANTES da sessão de Laboratório:}
+\begin{enumerate}
+\item Descreva por palavras suas quais os objectivos do Trabalho que irá realizar na sessão de Laboratório.
+
+%\subsubsection{\sf Questões a responder ANTES da sessão de Laboratório:}
+%\begin{enumerate}
+\item Descreva por palavras suas quais os objectivos do Trabalho que irá realizar na sessão de Laboratório.
+% (uma folha A4). Indique as expressões que irá utilizar para obter as grandezas experimentais, bem como as expressões para calcular as incertezas. Inclua esta parte também no Relatório. Este irá constituir o ÚNICO meio de consulta na Prova Individual.
+%\item A luz emitida pelo díodo vermelho tem um comprimento de onda de $\lambda \approx 600 \, nm$. Calcule $f_{luz}$ e compare com a frequência da modulação da amplitude.
+%\item Explique porque razão nesta experiência a luz utilizada  tem de ter a intensidade variável.
+%, tal como na experiência da Velocidade do Som.
+%\item Uma outra montagem desenvolvida no IST utiliza um díodo laser de longo alcance. No entanto o máximo que se consegue modular a amplitude é, $f_{mod}=1\, MHz$. Calcule a distância
+%dos espelhos necessária para se obter o efeito de oposição de fase entre a amplitude dos sinais emitido e o recebido.
+\end{enumerate}
+
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+
+% (uma folha A4). 
+%Indique as expressões que irá utilizar para obter as grandezas experimentais, bem como as expressões para calcular as incertezas. Inclua esta parte também no Relatório. Este irá constituir o ÚNICO meio de consulta na Prova Individual.
+
+
+
+\subsubsection{\sf Equações }
+Escreva no seguinte quadro todas as equações necessárias para calcular as grandezas bem com as suas incertezas.
+\begin{center}
+\framebox[15cm]{\rule{0pt}{6.5cm}}
+\end{center}
+
+
+\section{\sf Relatório}
+\subsection{\sf Montagem Experimental}
+Desenhe um diagrama da experiência, bem como um esboço das imagen que observa no osciloscópio. Inclua uma lista com a Legenda de Instrumentos.
+
+\begin{center}
+\framebox[18cm]{\rule{0pt}{6.5cm}}
+\end{center}
+
+\subsection{\sf Velocidade de propagação da luz no ar}%\label{sec:dados}
+\subsubsection{\sf Dados Experimentais}\label{sec:dados}
+Preencha as seguintes tabelas indicando  apenas os algarismos significativos. 
+%Poderá em alternativa utilizar folhas de cálculo, com o mesmo formato (apresentando-as em anexo) mas terá de peencher as colunas 2, 3, 5 e 6 da tabela seguintes e as colunas 6 e 7 das secção \ref{sec:calc}. 
+Terá que verificar as contas com auxílio calculadora, para um dos ensaios e na presença do docente.
+
+%Execute as Medições e preencha a tabela seguinte :
+
+\noindent  Fequência de modulação $=$~\underline{\makebox[1cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} MHz %$=$~\underline{\makebox[cm][r]{~}} m , 
+
+\begin{center}
+	%\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	 $z_{opos}$  [m]   &  Incert. $e_{z_{opos}}$  [m] & Percurso $L$ [m] & $c_{ar}$  [m/s]& $\overline{c_{ar}}$ [m/s]	& $n_{ar}$ \\
+	\hline \hline
+	  &  & $ \quad \pm $ & $ \quad \pm \quad $ &  & \\ \cline{1-4}
+	  &  & $ \quad \pm $ & $ \quad \pm \quad$ & $ \quad \pm \quad$  & $ \quad \pm \quad$ \\ \cline{1-4}
+	  &  & $ \quad \pm $ & $ \quad \pm \quad $ &  & \\ \hline
+			\end{tabular}
+\end{center}
+
+\noindent Desvio à exactidão de $\overline{c_{ar}} =$~\underline{\makebox[1cm][r]{~}} \%, 
+ Incerteza relativa  ~\underline{\makebox[1cm][r]{~}} \%
+
+%\vspace{4cm}
+
+\subsubsection{\sf Velocidade da Luz no vidro acrílico}\label{sec:dados_ar}
+
+\noindent Comprimento do bloco de vidro $=$~\underline{\makebox[1cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} m  
+
+\begin{center}
+	%\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	 $z_{1}$  [m]   &  Incert. $e_{z_{1}}$  [m] & Percurso $L$ [m] & $n_{vidro}$  & $\overline{n_{vidro}}$ & $c_{vidro}$ [m/s]\\
+	\hline \hline
+	  &  & $ \quad \pm $ & $ \quad \pm \quad $ &  & \\ \cline{1-4}
+	  &  & $ \quad \pm $ & $ \quad \pm \quad$ & $ \quad \pm \quad$  & $ \quad \pm \quad$ \\ \cline{1-4}
+	  &  & $ \quad \pm $ & $ \quad \pm \quad $ &  & \\ \hline
+			\end{tabular}
+\end{center}
+
+\subsubsection{\sf Velocidade da Luz no vidro acrílico}\label{sec:dados_ar}
+
+\noindent Comprimento interno do tubo $=$~\underline{\makebox[1cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} m  
+
+\begin{center}
+	%\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	 $z_{0_{ar}}$  [m]   &  $z_{1_{agua}}$  [m] & $2\,(\Delta z_0- \Delta z_1 )$ [m] & $n_{agua}$  & $\overline{n_{agua}}$ & $c_{agua}$ [m/s]\\
+	\hline \hline
+	 $ \quad \pm \quad $  & $ \quad \pm \quad $  & $ \quad \pm $ & $ \quad \pm \quad $ &  & \\ \cline{1-4}
+	  $ \quad \pm \quad $& $ \quad \pm \quad $ & $ \quad \pm $ & $ \quad \pm \quad$ & $ \quad \pm \quad$  & $ \quad \pm \quad$ \\ \cline{1-4}
+	  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm $ & $ \quad \pm \quad $ &  & \\ \hline
+			\end{tabular}
+\end{center}
+
+\noindent Desvio à exactidão de $\overline{n_{agua}} =$~\underline{\makebox[1cm][r]{~}} \%, 
+ Incerteza relativa ~\underline{\makebox[1cm][r]{~}} \%
+%$\pm$ \underline{\makebox[1cm][r]{~}} m  
+
+
+
+%\noindent  Desvio à Exatidão $=$~\underline{\makebox[1cm][r]{~}}(\%), 
+%Incerteza relativa $=$~\underline{\makebox[1cm][r]{~}}($\%$) 
+
+\subsection{\sf Análise, Conclusões e Comentários}
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+
+
+
+
+%\newpage
+
+\end{document} 
