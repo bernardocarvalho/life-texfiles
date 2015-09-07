@@ -99,7 +99,7 @@
 %TURNO:________ GRUPO:________ DATA: ___ \\
 %Número: _______ Nome: ________________ \\
 %Número: _______ Nome: ________________ \\
-{  \sf  Relatório da Exp. de Velocidade da Luz} %[0.4cm] % \bfseries 
+{  \sf  Relatório da Exp. Propagação de Ondas Mecânicas P \& S} %[0.4cm] % \bfseries 
 Turno:\underline{\makebox[2cm][l]{~}} Grupo:\underline{\makebox[1cm][l]{~}} Data:\underline{\makebox[2cm][l]{~}}\\
 \noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
 \noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
@@ -142,13 +142,13 @@ Escreva no seguinte quadro todas as equações necessárias para calcular as gra
 
 \section{\sf Relatório}
 \subsection{\sf Montagem Experimental}
-Desenhe um diagrama da experiência, bem como um esboço das imagen que observa no osciloscópio. Inclua uma lista com a Legenda de Instrumentos.
+Desenhe um diagrama da experiência, bem como um esboço das imagem que observa no osciloscópio. Inclua uma lista com a Legenda de Instrumentos.
 
 \begin{center}
 \framebox[18cm]{\rule{0pt}{6.5cm}}
 \end{center}
 
-\subsection{\sf Velocidade de propagação da luz no ar}%\label{sec:dados}
+\subsection{\sf Velocidade de propagação em meios isótropos}%\label{sec:dados}
 %\subsubsection{\sf Dados Experimentais}\label{sec:dados}
 Preencha as seguintes tabelas indicando  apenas os algarismos significativos. 
 %Poderá em alternativa utilizar folhas de cálculo, com o mesmo formato (apresentando-as em anexo) mas terá de peencher as colunas 2, 3, 5 e 6 da tabela seguintes e as colunas 6 e 7 das secção \ref{sec:calc}. 
@@ -156,60 +156,98 @@ Terá que verificar as contas com auxílio calculadora, para um dos ensaios e na
 
 %Execute as Medições e preencha a tabela seguinte :
 
-\noindent  Fequência de modulação $=$~\underline{\makebox[1cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} MHz %$=$~\underline{\makebox[cm][r]{~}} m , 
+%\noindent  Amostra 1$=$~\underline{\makebox[2cm][r]{~}}, 
+%Dimensões: $L_x=$~\underline{\makebox[2cm][r]{~}}
+%$\pm$ \underline{\makebox[1cm][r]{~}} m, 
+%$L_y=$~\underline{\makebox[2cm][r]{~}}
+%$\pm$ \underline{\makebox[1cm][r]{~}} m 
+
+Dimensões e densidades
+\begin{center}
+	%\centering
+	\begin{tabular}{|l|c|c|c|c|c|c|c|}
+	\hline
+	 Amostra \# & Material  &  $L_x$ [m]  &   $L_y$ [m]  &  $L_z$ [m]  & $Vol$ [$m^3$]  & Massa [$kg$] & $\rho$ [$kg/m^3$] \\
+	\hline \hline
+	  1   &   & $ \quad \pm \quad $ &  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
+	  2   &   & $ \quad \pm \quad $ &  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
+				\end{tabular}
+\end{center}
+
+%$=$~\underline{\makebox[cm][r]{~}} m , 
+
+Tempos e velocidades:
+\begin{center}
+	%\centering
+	\begin{tabular}{|l|c|c|c|c|c|	}
+	\hline
+	  Amostra \# &   $t_x$ [ms]  &   $t_y$ [ms]  &   $v_x$ [m/s] & $v_y$ [m/s] &  
+	  $\overline{v} $ [m/s]	\\
+	\hline \hline
+	  1 - Onda P   & $ \quad \pm \quad $  & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
+	  1 - Onda S   & $ \quad \pm \quad $  & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
+	  2 - Onda P   & $ \quad \pm \quad $  & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
+	  2 - Onda S   & $ \quad \pm \quad $  & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
+ 	\end{tabular}
+\end{center}
+
+
+\subsubsection{\sf Cálculos de constantes elásticas}%\label{sec:dados}
 
 \begin{center}
 	%\centering
-	\begin{tabular}{|c|c|c|c|c|c|}
+	\begin{tabular}{|l|c|c|c|c|c|c|}
 	\hline
-	 $z_{opos}$  [m]   &  Incert. $e_{z_{opos}}$  [m] & Percurso $L$ [m] & $c_{ar}$  [m/s]& $\overline{c_{ar}}$ [m/s]	& $n_{ar}$ \\
+	  Amostra \# &   $v_L$ [m/s]  &   $\mu$ [GPa]  &  $v_T$ [m/s] & $K$ [GPa] & $v_L/v_T$  &  $\sigma$  	\\
 	\hline \hline
-	  &  & $ \quad \pm $ & $ \quad \pm \quad $ &  & \\ \cline{1-4}
-	  &  & $ \quad \pm $ & $ \quad \pm \quad$ & $ \quad \pm \quad$  & $ \quad \pm \quad$ \\ \cline{1-4}
-	  &  & $ \quad \pm $ & $ \quad \pm \quad $ &  & \\ \hline
-			\end{tabular}
+	  1   & $ \quad \pm \quad $ &  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \qquad \pm \qquad $ \\ \hline
+ 	  2   & $ \quad \pm \quad $ &  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \qquad \pm \qquad $ \\ \hline
+ 	\end{tabular}
 \end{center}
 
-\noindent Desvio à exactidão de $\overline{c_{ar}} =$~\underline{\makebox[1cm][r]{~}} \%, 
- Incerteza relativa  ~\underline{\makebox[1cm][r]{~}} \%
+%\noindent Desvio à exactidão de $\overline{c_{ar}} =$~\underline{\makebox[1cm][r]{~}} \%, 
+Incerteza relativa de $\mu=$ ~\underline{\makebox[1cm][r]{~}} \%
 
 %\vspace{4cm}
+\subsection{\sf Velocidade de propagação e meio anisótropo}%\label{sec:dados}
 
-\subsubsection{\sf Velocidade da Luz no vidro acrílico}\label{sec:dados_ar}
+Dimensões e densidades
+\begin{center}
+	%\centering
+	\begin{tabular}{|l|c|c|c|c|c|c|c|}
+	\hline
+	 Amostra \# & Material  &  $L_x$ [m]  &   $L_y$ [m]  &  $L_z$ [m]  & $Vol$ [$m^3$]  & Massa [$kg$] & $\rho$ [$kg/m^3$] \\
+	\hline \hline
+	  3   &   & $ \quad \pm \quad $ &  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
+	\end{tabular}
+\end{center}
 
-\noindent Comprimento do bloco de vidro $=$~\underline{\makebox[1cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} m  
+Tempos e velocidades:
+\begin{center}
+	%\centering
+	\begin{tabular}{|l|c|c|c|c|c|}
+	\hline
+	  Amostra \# &   $t_x$ [ms]  &   $t_y$ [ms]  &  $v_x$ [m/s] & $v_y$ [m/s]  & 
+	   $v_{max}-v_{min}$ [m/s]	\\
+	\hline \hline
+	 3 - Onda P   & $ \quad \pm \quad $ &  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $\quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
+	 3 - Onda S   & $ \quad \pm \quad $ &  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $\quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
+ 	\end{tabular}
+\end{center}
+
+\subsubsection{\sf Cálculos de constantes elásticas}%\label{sec:dados}
 
 \begin{center}
 	%\centering
-	\begin{tabular}{|c|c|c|c|c|c|}
+	\begin{tabular}{|l|c|c|c|c|c|}
 	\hline
-	 $z_{1}$  [m]   &  Incert. $e_{z_{1}}$  [m] & Percurso $L$ [m] & $n_{vidro}$  & $\overline{n_{vidro}}$ & $c_{vidro}$ [m/s]\\
+	  Amostra \# &   $v_{L_x}$ [m/s]  &   $\mu_x$ [GPa]  &  $v_{T_x}$ [m/s] & $K_x$ [GPa] & $c.a.$   	\\
 	\hline \hline
-	  &  & $ \quad \pm $ & $ \quad \pm \quad $ &  & \\ \cline{1-4}
-	  &  & $ \quad \pm $ & $ \quad \pm \quad$ & $ \quad \pm \quad$  & $ \quad \pm \quad$ \\ \cline{1-4}
-	  &  & $ \quad \pm $ & $ \quad \pm \quad $ &  & \\ \hline
-			\end{tabular}
+	  3   & $ \quad \pm \quad $ &  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \qquad \pm \qquad $ \\ \hline
+ 	\end{tabular}
 \end{center}
-
-\subsubsection{\sf Velocidade da Luz no vidro acrílico}\label{sec:dados_vid}
-
-\noindent Comprimento interno do tubo $=$~\underline{\makebox[1cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}} m  
-
-\begin{center}
-	%\centering
-	\begin{tabular}{|c|c|c|c|c|c|}
-	\hline
-	 $z_{0_{ar}}$  [m]   &  $z_{1_{agua}}$  [m] & $2\,(\Delta z_0- \Delta z_1 )$ [m] & $n_{agua}$  & $\overline{n_{agua}}$ & $c_{agua}$ [m/s]\\
-	\hline \hline
-	 $ \quad \pm \quad $  & $ \quad \pm \quad $  & $ \quad \pm $ & $ \quad \pm \quad $ &  & \\ \cline{1-4}
-	  $ \quad \pm \quad $& $ \quad \pm \quad $ & $ \quad \pm $ & $ \quad \pm \quad$ & $ \quad \pm \quad$  & $ \quad \pm \quad$ \\ \cline{1-4}
-	  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm $ & $ \quad \pm \quad $ &  & \\ \hline
-			\end{tabular}
-\end{center}
-
-\noindent Desvio à exactidão de $\overline{n_{agua}} =$~\underline{\makebox[1cm][r]{~}} \%, 
- Incerteza relativa ~\underline{\makebox[1cm][r]{~}} \%
-%$\pm$ \underline{\makebox[1cm][r]{~}} m  
+%\noindent Desvio à exactidão de $\overline{c_{ar}} =$~\underline{\makebox[1cm][r]{~}} \%, 
+Incerteza relativa de $K_x=$ ~\underline{\makebox[1cm][r]{~}} \%
 
 
 
