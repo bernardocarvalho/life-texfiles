@@ -16,7 +16,7 @@
 	\usepackage{fontspec}
 	\ifwindows
 		\setmainfont[Ligatures=TeX]{Garamond}
-		\setsansfont[Ligatures=TeX]{Gill Sans MT}
+		\setsansfont[Ligatures=TeX]{Calibri}
 		\setmonofont{Consolas}
 %		\setmonofont[Scale=MatchLowercase]{Courier}
 	\fi
@@ -43,7 +43,7 @@
 \setlist{nolistsep}
 
 \usepackage{amsmath,amssymb,amsfonts} % Typical maths resource packages
-\usepackage[retainorgcmds]{IEEEtrantools}
+%\usepackage[retainorgcmds]{IEEEtrantools}
 \usepackage{caption}
 
 \usepackage{tikz}
@@ -148,11 +148,34 @@ Desenhe um diagrama da experiência, bem como um esboço das imagem que observa 
 \framebox[18cm]{\rule{0pt}{6.5cm}}
 \end{center}
 
+\subsection{\sf Calibração das Sondas P \& S com cilindros de latão}%\label{sec:dados}
+%\subsubsection{\sf Dados Experimentais}\label{sec:dados}
+Preencha as  tabelas indicando  apenas os algarismos significativos. 
+
+Incerteza na medida do comprimento da amostra, $e_L=$ ~\underline{\makebox[1cm][r]{~}} mm% \%
+
+\begin{center}
+	%\centering
+	\begin{tabular}{|l|c|c|c|c|c|c|}
+	\hline
+	 L (mm)  & & & & & &  \\
+	\hline 
+	 Tempo (ms) & $ \quad \pm \quad $ &$ \quad \pm \quad $ &$ \quad \pm \quad $ &$ \quad \pm \quad $ &$ \quad \pm \quad $ &$ \quad \pm \quad $ \\
+\hline
+				\end{tabular}
+\end{center}
+
+Represente graficamente o Tempo de propagação \emph{vs} Comprimento e por Regressão Linear obtenha o melhor ajuste a uma recta.
+
+Declive: $m=$ ~\underline{\makebox[1cm][r]{~}} s/m, Ordenada na origem: $\Delta T_0=$ ~\underline{\makebox[1cm][r]{~}} ms\\
+(Este último valor pode constituir uma estimativa do erro sistemático da medida de intervalo de tempo.)
+
+ %
 \subsection{\sf Velocidade de propagação em meios isótropos}%\label{sec:dados}
 %\subsubsection{\sf Dados Experimentais}\label{sec:dados}
-Preencha as seguintes tabelas indicando  apenas os algarismos significativos. 
+
 %Poderá em alternativa utilizar folhas de cálculo, com o mesmo formato (apresentando-as em anexo) mas terá de peencher as colunas 2, 3, 5 e 6 da tabela seguintes e as colunas 6 e 7 das secção \ref{sec:calc}. 
-Terá que verificar as contas com auxílio calculadora, para um dos ensaios e na presença do docente.
+Nota: Terá que verificar as contas com auxílio da calculadora, para um dos ensaios e na presença do docente.
 
 %Execute as Medições e preencha a tabela seguinte :
 
@@ -162,7 +185,7 @@ Terá que verificar as contas com auxílio calculadora, para um dos ensaios e na
 %$L_y=$~\underline{\makebox[2cm][r]{~}}
 %$\pm$ \underline{\makebox[1cm][r]{~}} m 
 
-Dimensões e densidades
+Dimensões e densidades:
 \begin{center}
 	%\centering
 	\begin{tabular}{|l|c|c|c|c|c|c|c|}
@@ -209,7 +232,7 @@ Tempos e velocidades:
 Incerteza relativa de $\mu=$ ~\underline{\makebox[1cm][r]{~}} \%
 
 %\vspace{4cm}
-\subsection{\sf Velocidade de propagação e meio anisótropo}%\label{sec:dados}
+\subsection{\sf Velocidade de propagação em meio anisótropo}%\label{sec:dados}
 
 Dimensões e densidades
 \begin{center}
