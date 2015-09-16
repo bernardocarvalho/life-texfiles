@@ -44,7 +44,7 @@
 \usepackage{amsmath,amssymb,amsfonts} % Typical maths resource packages
 \usepackage[retainorgcmds]{IEEEtrantools}
 \usepackage{caption}
-
+\usepackage[bookmarks,colorlinks]{hyperref}
 
 \oddsidemargin 0cm
 \evensidemargin 0cm
@@ -52,7 +52,7 @@
 \pagestyle{myheadings}         % Option to put page headers
                                % Needed \documentclass[a4paper,twoside]{article}
 \markboth{{\small \it  Laboratório de Física Experimental Básica}}
-{{\small\it MEFT - 1º Sem. 2014/2015} }
+{{\small\it MEFT - 1º Sem. 2015/2016} }
 
 \addtolength{\hoffset}{-0.5cm}
 \addtolength{\textwidth}{2.5cm}
@@ -89,19 +89,24 @@
 	\HRule \\%[0.5cm]
 
 \section{\sf Princípio do método}
-Um prisma de um meio transparente, homogéneo e isótropo de índice de refração, $n$, colocado no percurso de um feixe luminoso incidente produz um desvio angular no feixe emergente que depende do ângulo de incidência. Pode provar-se facilmente que esse desvio angular apresenta um ponto de estacionariedade (i.e., derivada nula) que é um mínimo se $n > 1$. 
-Essa situação acontece quando as direções dos dois feixes são igualmente inclinadas em relação às faces do prisma, i.e. quando o ângulo de incidência é igual ao ângulo de transmissão 
+Um prisma de um meio transparente, homogéneo e isótropo de índice de refração, $n$, colocado no percurso de um feixe luminoso incidente produz um desvio angular, $\delta$, no feixe emergente que depende do ângulo de incidência, $i_1$. Pode provar-se que a função desvio angular $vs$ apresenta um ponto de estacionariedade (i.e., derivada nula) que é um mínimo se $n > 1$. 
+Mostra-de também que nessa situação as direções dos dois feixes são igualmente inclinadas em relação às faces do prisma, i.e. quando o ângulo de incidência é igual ao ângulo de transmissão 
 emergente (ver Apêndice). 
-Nesse caso  (Figura \ref{fig:angulo}) o índice de refração, $n$, pode ser calculado simplesmente através da expressão seguinte: 
+Nesse caso  (Figura \ref{fig:desvio}) o índice de refração, $n$, pode ser calculado simplesmente através da expressão seguinte: 
+
+\begin{figure}[hb]  \centering 
+	\includegraphics[width=0.6\textwidth]{desvio}
+	\caption{Esquema da transmissão do feixe incidente num prisma colocado na plataforma do goniómetro de Babinet. A direção do feixe transmitido desvia-se do ângulo $\delta$ em relação ao feixe incidente. \label{fig:desvio}} 
+\end{figure}
 
 \begin{equation}
 	\label{eq:desviomim}
 	n= \frac{\sin \left( \frac{\alpha+ \delta_{min}}{2} \right) } {\sin \left(  \frac{\alpha}{2} \right)}  
 \end{equation}
 
-em que $\alpha$ e  $\delta_{min}$ são os ângulos, respetivamente, do prisma e do desvio mínimo referido. Este desvio mínimo depende do comprimento de onda da radiação incidente, $\lambda$, e por consequência $n$ depende de $\lambda$. Define-se \emph{poder dispersivo} dum material como a derivada de $n$ em ordem a $\lambda$. Como esta função não é linear, deve indicar-se o valor do poder dispersivo relativo a um determinado valor de comprimento de onda incidente,  $\lambda_i$,  e escreve-se  como $\left( \frac{\ud n}{\ud \lambda } \right)_{\lambda_i}$.
+em que $\alpha$ e  $\delta_{min}$ são os ângulos, respetivamente, do prisma e o desvio mínimo referido. Este desvio mínimo depende do comprimento de onda da radiação incidente, $\lambda$, e por consequência $n$ depende de $\lambda$. Define-se \emph{poder dispersivo} dum material como a derivada de $n$ em ordem a $\lambda$ ,  e escreve-se  como $\left( \frac{\ud n}{\ud \lambda } \right)$. Como esta função não é constante, deve indicar-se o valor do poder dispersivo relativo a um determinado valor de comprimento de onda incidente, ou $\left( \frac{\ud n}{\ud \lambda } \right)_{\lambda_i}$ .
 
-O poder separador ou poder de resolução de um instrumento óptico\footnote{Optical Resolution}, $R_\lambda = \frac{\lambda}{\Delta \lambda} $,  é a capacidade que possui de poder permitir que se observem separadamente dois comprimentos de onda muito próximos, afastados de Δλ, na vizinhança de um valor médio λ. Esta grandeza é adimensional e quanto maior for o seu valor, melhor é a resolução do instrumento.
+O poder separador ou poder de resolução de um dado instrumento óptico\footnote{Optical Resolution}, $R_\lambda = \frac{\lambda}{\Delta \lambda} $,  é a capacidade que possui de poder permitir que se observem separadamente dois comprimentos de onda muito próximos, afastados de $\Delta \lambda$, na vizinhança de um valor médio $\overline{\lambda}$. Esta grandeza é adimensional e quanto maior for o seu valor, melhor é a resolução do instrumento.
 
 No caso de um prisma obtém-se para $R$ a seguinte expressão (ver Apêndice), se a fonte é linear e se dispõe paralelamente à aresta do prisma:
  \begin{equation}
@@ -126,30 +131,30 @@ sendo $N$  o número de linhas da rede iluminadas pelo feixe.
 \subsection{\sf Equipamento}
 
 \begin{enumerate}
-\item Goniómetro de Babinet com prisma,
+\item Goniómetro de Babinet.
+\item Prisma triangular de vidro.
 \item Lâmpada espetral de Mercúrio ou Hélio.
 \end{enumerate}
 
-Quando se coloca o prisma na plataforma de modo a poderem observar-se as reflexões nas faces que delimitam o prisma óptico, as direções dos raios refletidos fazem um ângulo $\theta$, que se mede com o goniómetro , que é o dobro do ângulo α do prisma. Pode assim determinar-se facilmente o ângulo do prisma e com uma precisão muito melhor do que com um goniómetro de funcionamento mecânico, ou transferidor.
+No Trabalho anterior colocou-se o prisma na plataforma de modo a poderem observar-se as reflexões nas duas faces polidas. As direções dos raios refletidos fazem um ângulo $\theta$, que se mediu com o goniómetro e que é o dobro do ângulo principal do prisma $\alpha$.  Determinou-se facilmente assim o ângulo do prisma com uma precisão e exatidão muito melhores do que com um transferidor, por exemplo.
 
 \begin{figure}[tb]  \centering 
 	\includegraphics[width=0.6\textwidth]{angulo}
-	\caption{Esquema da reflexão do feixe incidente num prisma colocado na plataforma do goniómetro de Babinet. As direções dos dois raios refletidos fazem entre si um ângulo θ que é o dobro do ângulo α do prisma. \label{fig:angulo}} 
+	\caption{Esquema da reflexão do feixe incidente num prisma colocado na plataforma do goniómetro de Babinet. As direções dos dois raios refletidos fazem entre si um ângulo $\theta$ que é o dobro do ângulo α do prisma. \label{fig:angulo}} 
 \end{figure}
 
-Pode determinar-se o ângulo $\delta_{min}$ medindo a direção do raio incidente (sem prisma) e a direção do raio emergente segundo o ângulo $i_2$ em relação à normal (que corresponda ao desvio mínimo) para cada comprimento de onda (Figura \ref{fig:desvio}). Mas devem fazer-se observações para os raios que emergem das duas faces que definem o ângulo do prisma. Neste caso, e como é facil provar que o ângulo formado pelos dois raios emergentes (para a mesma côr) é o dobro do ângulo de desvio, não é necessário determinar a direção do raio incidente, $i_1$.
+À partida podia determinar-se  o ângulo $\delta_{min}$ medindo com a objectiva a direção do raio incidente (sem prisma) e a direção do raio emergente que corresponda ao desvio mínimo (Figura \ref{fig:desvio}). No entanto para compensar as eventuais assimetrias do aparelho devem fazer-se observações para os desvios à esquerda e à direita.
+% para os raios que emergem das duas faces que definem o ângulo do prisma. 
+Neste caso é facil provar que o ângulo formado entre os dois raios emergentes (para a mesma côr) é o dobro do ângulo de desvio, $\delta_{min}$ (e não é necessário determinar a direção do raio incidente, $i_1$).
+% segundo o ângulo $i_2$ em relação à normal (
+% para cada comprimento de onda 
 
 
-\begin{figure}[tb]  \centering 
-	\includegraphics[width=0.6\textwidth]{desvio}
-	\caption{Esquema da transmissão do feixe incidente num prisma colocado na plataforma do goniómetro de Babinet. A direção do feixe transmitido desvia-se da direção do feixe incidente do ângulo $\delta$. \label{fig:desvio}} 
+\begin{figure}[tb]  
+\centering 
+	\includegraphics[width=0.55\textwidth]{Espectrometro-Goniometro-S}
+	\caption{Fotografia do goniómetro de Babinet utilizado na experiência. \label{fig:spectrometer}} 
 \end{figure}
-
-%\begin{figure}[tb]  
-%\centering 
-%	\includegraphics[width=0.45\textwidth]{spectrometer}
-%	\caption{Fotografia do goniómetro de Babinet (modelo Philipe Harris Advanced Spectrometer 30). \label{fig:spectrometer}} 
-%\end{figure}
 
 
 %\begin{figure}[!htb]  
@@ -159,22 +164,23 @@ Pode determinar-se o ângulo $\delta_{min}$ medindo a direção do raio incident
 %\end{figure}
 
 
-O prisma que se usa é em geral de seção reta triangular equilátera e, se nenhuma face está despolida, podem fazer-se leituras envolvendo cada um dos três ângulos. A aresta do ângulo definido pelas superfícies planas onde se produz a reflexão e transmissão deve ficar paralela à fenda(vertical).
-A lâmpada espetral é uma fonte de luz policromática e discreta que contem dois elétrodos situados no interior de um invólucro (vidro em geral) onde existe uma substância “ativa”\footnote{Que dá o nome à lâmpada, e.g. Mercúrio, Hélio, Néon, etc.} em muito pequena quantidade numa atmosfera rarefeita. A alimentação que em geral é dedicada à lâmpada é de alta tensão e produz entre os elétrodos uma descarga que vaporiza, excita e ioniza a substância ativa. As diferentes excitações permitem transições radiativas que dão origem à emissão de um feixe constituido por diferentes comprimentos de onda bem definidos e que se encontram já muito bem identificados na Literatura. 
-Todas as lâmpadas espetrais emitem no ultravioleta que é nocivo para a pele e olhos dos observadores, mas o vidro no interior do qual se dá a descarga absorve a maior parte destas radiações perigosas. Para reduzir os riscos, a lâmpada tem um invólucro em geral metálico apenas com uma abertura para permitir iluminar a fenda do goniómetro.
+O prisma que se usa é em geral de seção reta triangular (equilátero ou isósceles).
+A lâmpada espetral é uma fonte de luz policromática  que contem dois elétrodos situados no interior de um invólucro (vidro em geral) onde existe uma substância “ativa”\footnote{Que dá o nome à lâmpada, e.g. Mercúrio, Hélio, Néon, etc.} em muito pequena quantidade, numa atmosfera rarefeita. A alimentação que em geral é de alta tensão e produz entre os elétrodos uma descarga que vaporiza, excita e ioniza a substância ativa. As diferentes excitações permitem transições radiativas que dão origem à emissão de um feixe constituido por diferentes comprimentos de onda bem definidos e que se encontram já muito bem identificados na literatura\footnote{Pode consultar a extensa base de dados online em  \href{http://physics.nist.gov/asd}{NIST Atomic Spectra Database}.}. 
 
-~
-\newpage
-\subsection{\sf Questões a responder ANTES da sessão de Laboratório:}
-\begin{enumerate}
-\item Descreva quais os objectivos do Trabalho que irá realizar na sessão de Laboratório. Indique as expressões que irá utilizar para obter as grandezas experimentais, bem como as expressões para calcular as incertezas. Inclua esta parte também no Relatório Impresso. Este irá constituir o ÚNICO meio de consulta na Prova Individual.
-\item Obtenha uma imagem típica da dispersão da Luz Branca num prisma triangular. A partir dessa figura pode concluir que índice de refração, $n(\lambda)$, é uma função crescente ou decrescente?
-\item Nessa figura de dispersão como pode identificar qual é a côr que está na posição de \emph{desvio mínimo}?
-\item Se na montagem de laboratório substituir a lâmpada de descarga pela luz Solar que imagem observaria na luneta do goniómetro?. 
-\item O espectro de emissão do Hidrogéneo, na série de Balmer (transição eletrónica de nível $3 \to 2$) tem duas riscas no c.d.o. vermelho, respetivamente a $\lambda = 656.272\, nm$ e $\lambda = 656.2852\,nm$.
-Qual a Resolução mínima de um Instrumento (Espectrómetro) capaz de distinguir estas duas linhas?. Supondo que tem um prisma com aresta de $10\,cm$, calcule o 
-o valor absoluto mínimo para $\left(\frac{\ud n}{\ud \lambda} \right)$?
-\end{enumerate}
+Todas as lâmpadas espetrais emitem no ultravioleta que é nocivo para a pele e olhos dos observadores, mas o vidro no interior do qual se dá a descarga absorve a maior parte destas radiações perigosas. Para ainda reduzir os riscos, a lâmpada tem um invólucro em geral metálico apenas com uma abertura para permitir iluminar uma fenda estreita e regulável junto à luneta do goniómetro, que produz uma linha vertical na imagem.  A aresta do triangulo  definido pelas superfícies planas onde se produz a reflexão e/ou transmissão deve ficar paralela a esta fenda.
+
+% ~
+% \newpage
+% \subsection{\sf Questões a responder ANTES da sessão de Laboratório:}
+% \begin{enumerate}
+% \item Descreva quais os objectivos do Trabalho que irá realizar na sessão de Laboratório. Indique as expressões que irá utilizar para obter as grandezas experimentais, bem como as expressões para calcular as incertezas. Inclua esta parte também no Relatório Impresso. Este irá constituir o ÚNICO meio de consulta na Prova Individual.
+% \item Obtenha uma imagem típica da dispersão da Luz Branca num prisma triangular. A partir dessa figura pode concluir que índice de refração, $n(\lambda)$, é uma função crescente ou decrescente?
+% \item Nessa figura de dispersão como pode identificar qual é a côr que está na posição de \emph{desvio mínimo}?
+% \item Se na montagem de laboratório substituir a lâmpada de descarga pela luz Solar que imagem observaria na luneta do goniómetro?.
+% \item O espectro de emissão do Hidrogéneo, na série de Balmer (transição eletrónica de nível $3 \to 2$) tem duas riscas no c.d.o. vermelho, respetivamente a $\lambda = 656.272\, nm$ e $\lambda = 656.2852\,nm$.
+% Qual a Resolução mínima de um Instrumento (Espectrómetro) capaz de distinguir estas duas linhas?. Supondo que tem um prisma com aresta de $10\,cm$, calcule o
+% o valor absoluto mínimo para $\left(\frac{\ud n}{\ud \lambda} \right)$?
+% \end{enumerate}
 
 
 \section{\sf Protocolo Experimental}
@@ -185,18 +191,21 @@ equilíbrio térmico no seu interior.
 \item Enquanto espera comece por regular a ótica  do goniómetro tal como descrito no Guia do Trabalho anterior.
 \item Verifique o nivelamento horizontal do goniómetro e da plataforma onde vai colocar o prisma com a ajuda de um nível de bolha. 
 \item Utilize o valor do ângulo, $\alpha$, entre as faces polidas prisma obtido no trabalho anterior.
-\item  Observe agora  a  transmissão  das várias côres  através  do  prisma  com  o  feixe  incidente  numa  das  faces, na posiçao da Figura 3 do guia do trabalho anterior.  Deve  observar   uma  série  de 
-imagens da fenda, uma por cada côr (i.e. comprimento de onda).
-\item Escolha uma dessas côres. Rodando o prisma obtenha um conjunto de valores que permita fazer um gráfico do ângulo de desvio, $\delta(i_1)$, 
-em função do ângulo de incidência, $i_1$. Verifique que existe de facto um mínimo no ângulo de desvio,  $\min \delta(i_{min})$. Atenção que o ângulo $i_{min}$ e $\min \delta(i_{min})$ são sempre diferentes para cada côr.
-\item  Em seguida, para medir o desvio mínimo tem  de se colocar o prisma para posição correspondente,  \emph{para cada côr}. Pode finalmente medir os ângulos de desvio, $\delta_{min(esq, dir)}(\lambda)$, à esquerda e direita, com  o auxílio  do  parafuso  micrométrico  associado  à  plataforma.  
-De seguida,  com  o outro parafuso micrométrico associado à luneta, centrar no retículo a imagem colorida da fenda. Cada observador deve efectuar as suas medidas. Calcule os desvio mínimos:
+\item  Observe agora  a  transmissão  das várias côres  através  do  prisma  com  o  feixe  incidente  numa  das  faces, na posiçao da Figura 3 do guia do trabalho anterior.  Se o instrumento estiver bem focado deve  observar   uma  série  de 
+imagens colorida da fenda, i.e. riscas isoladas, uma por cada côr (ou comprimento de onda $\lambda$).
+\item Escolha duas dessas côres bem afastadas. Rodando o prisma obtenha um conjunto de valores que permita fazer um gráfico dos ângulos de desvio, $\delta(i_1)$, 
+em função do ângulo de incidência, $i_1$ e um ajuste polinomial (Nesta fase não precisa de utilizar o nónio da escala de minutos). Pelo gráfico verifique que existe de facto um mínimo no ângulo de desvio,  $ \delta(i_{min})$, mas  que o ângulo $i_{min}$ e $\delta(i_{min})$ são  diferentes para cada côr.
+\item  Em seguida, para medir o desvio mínimo,  \emph{para cada côr}, tem de se colocar o prisma para posição correspondente. Deve portanto olhar pela objectiva e fixando uma côr rodar o prisma até observar o desvio mínimo.
+%Pode finalmente medir os ângulos de desvio, $\delta_{min(esq, dir)}(\lambda)$.
+% agora com o nónio e o auxílio  do  parafuso  micrométrico  associado  à  plataforma.  
+De seguida,  com  o  parafuso micrométrico associado à luneta, centrar  a imagem  da fenda no retículo e meça o  ângulo  $\delta_{min(esq)}(\lambda)$. Comece por usar todas as corês quando o prisma desvia para o lado esquerdo (cada elemento do grupo deve efectuar as suas medidas). 
+\item Repita o ponto anterior, mas para o prisma a desviar o feixe para o lado direito. Calcule os desvio mínimos:
 $$\delta_{min}(\lambda) = \frac{|\delta_{esq} -  \delta_{dir}|}{2}$$ 
-\item Com os desvio mínimos e identificando  valores  dos  comprimentos  de onda  das riscas visíveis, represente  graficamente  o 
-índice de refração, $n(\lambda)$. Ajuste uma função polinomial à curva obtida. Através da  derivada desta função, calcule o poder dispersivo do vidro para o comprimento de onda médio, $\overline{\lambda}_{amare}$, das 
+\item Com os desvio mínimos e identificando  nas tabelas os valores  dos  comprimentos  de onda das riscas visíveis, calcule  
+índice de refração a partir da Equ.~\ref{eq:desviomim} e represente  graficamente a função $n(\lambda)$. Ajuste uma curva polinomial aos pontos obtidos. Através da  estimativa da derivada desta função, calcule o poder dispersivo do vidro para o comprimento de onda médio, $\overline{\lambda}_{amare}$, das 
 duas riscas amarelas do sódio ($\lambda \approx 589\,nm$). 
-\item Faça uma estimativa da maior distância percorrida pelo feixe luminoso no prisma e calcule 
-aproximadamente  o  poder  de  resolução  do  prisma  para  o  $\overline{\lambda}_{amare}$, referido  no  ponto  anterior. 
+\item Faça uma estimativa da maior distância percorrida pelo feixe luminoso no prisma (que é aproximadamente o comprimento da aresta) e calcule 
+  o  Poder  de  Resolução  do  prisma  para  o  $\overline{\lambda}_{amare}$, referido  no  ponto  anterior. 
 %Compare este valor com o que obteria se usasse o mesmo feixe com uma rede de difração 
 %de 600 linhas por milímetro. 
 \item Substitua no centro da plataforma do goniómetro o prisma por uma rede de difração de 
