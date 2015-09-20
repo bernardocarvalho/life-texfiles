@@ -1,0 +1,256 @@
+%%&program=xelatex
+%&encoding=UTF-8 Unicode
+% SVN keywords
+% $Author$
+% $Date$
+% $Revision$
+% $URL$
+\documentclass[a4paper,12pt]{article}  % Comments after  % are ignored
+%\usepackage{hyperref}                 % For creating hyperlinks in cross references
+%
+\usepackage{ifxetex}% for XELATEX, or PDFlatex
+\usepackage{ifplatform} 
+%
+\ifxetex
+	\usepackage{polyglossia} \setmainlanguage{portuges}
+	\usepackage{fontspec}
+	\ifwindows
+		\setmainfont[Ligatures=TeX]{Garamond}
+		\setsansfont[Ligatures=TeX]{Gill Sans MT}
+		\setmonofont{Consolas}
+%		\setmonofont[Scale=MatchLowercase]{Courier}
+	\fi
+	\iflinux
+		\setmainfont[Ligatures=TeX]{Linux Libertine O}
+		\setsansfont[Ligatures=TeX,Scale=MatchLowercase]{Linux Biolinum}
+		\setmonofont[Scale=MatchLowercase]{Courier}
+	\fi
+	\ifmacosx
+	% add settings
+	% Use xelatex -no-shell ...
+		\setmainfont[Ligatures=TeX]{Garamond}
+		\setsansfont[Ligatures=TeX]{Helvetica}
+		\setmonofont{Consolas}
+	\fi
+	\usepackage{xcolor,graphicx} 
+\else
+	\usepackage[portuguese]{babel}
+	%\usepackage[latin1]{inputenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphics}                 % Packages to allow inclusion of graphics
+	\usepackage{color}                    % For creating coloured text and background
+\fi
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\usepackage{amsmath,amssymb,amsfonts} % Typical maths resource packages
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{caption}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,decorations.pathmorphing,intersections}
+
+\usepackage[font={small,sf},labelfont={bf},labelsep=endash]{caption}
+\usepackage{sansmath}
+
+\def\width{18}
+\def\hauteur{24}
+
+\oddsidemargin 0cm
+\evensidemargin 0cm
+
+\pagestyle{myheadings}         % Option to put page headers
+                               % Needed \documentclass[a4paper,twoside]{article}
+\markboth{{\small \it  Laboratório de Física Experimental Básica}}
+{{\small\it IST - MEFT -LFEB - 1º Sem. 2015/2016} }
+
+\addtolength{\hoffset}{-0.5cm}
+\addtolength{\textwidth}{2.5cm}
+\addtolength{\topmargin}{-1.5cm}
+\addtolength{\textheight}{3cm}
+
+%\textwidth 15.5cm
+%\topmargin -1.5cm
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex  plus  0.5ex  minus  0.2ex}
+%\parindent 0.5cm
+%\textheight 25cm
+%\parskip 1mm
+
+
+% Math macros
+\newcommand{\ud}{\,\mathrm{d}} 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\author{Prof. Bernardo B. Carvalho} 
+
+%%%%, Bernardo Brotas Carvalho\\bernardo.carvalho@tecnico.ulisboa.pt} 
+\date{ Setembro 2015} 
+
+\begin{document} 
+
+%	\includegraphics[width=0.2\textwidth]{../logo-ist}%\\[1cm]  %%  Logo_IST_color
+
+%	\HRule \\[0.5cm]
+%	{ \huge \sf  \textsc{Construções Geométricas em Lentes Delgadas (aproximação paraxial)} }\\[0.4cm] % \bfseries 
+%	{ \large \bfseries Determinação da constante de Planck.}\\
+
+%	{ \large \bfseries Procedimento Experimental}\\
+%	\HRule \\%[0.5cm]
+%TURNO:________ GRUPO:________ DATA: ___ \\
+%Número: _______ Nome: ________________ \\
+%Número: _______ Nome: ________________ \\
+{  \sf \Large Relatório da Exp. de Dispersão da Luz por um Prisma.}\\ %[0.4cm] % \bfseries 
+Turno:\underline{\makebox[0.7cm][l]{~}} Grupo:\underline{\makebox[0.7cm][l]{~}} Data:\underline{\makebox[1.2 cm][l]{~}}\\
+\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
+\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
+\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} 
+
+
+%\section{\sf Questões a responder ANTES da sessão de Laboratório:}
+\section{\sf Trabalho preparatório a realizar  ANTES da sessão de Laboratório:}
+\begin{enumerate}
+\item Descreva por palavras suas quais os objectivos do Trabalho que irá realizar.
+%\begin{enumerate}
+%\item Descreva por palavras suas quais os objectivos do Trabalho que irá realizar na sessão de Laboratório (uma folha A4). Indique as expressões que irá utilizar para obter as grandezas experimentais, bem como as expressões para calcular as incertezas. Inclua esta parte também no Relatório. Este irá constituir o ÚNICO meio de consulta na Prova Individual.
+
+%\item A lâmpada de Mercúrio têm um espectro contínuo ou discreto?
+%\item A luz ao passar pela rede de Difração tem os máximos de intensidade segundo os ângulos dados pela expressão $\sin(\theta) = m \frac{\lambda}{a}$, em que $a$ é distância entre as linhas da rede e $m$ é a Ordem de Difração ($m=0,1,2,\ldots$). Como poderá estimar no laboratório o valor de $a$?
+%\item Assumindo que a rede tem $610\,linhas/mm$, obtenha uma tabela de ângulos de difração para três ordens e para todas as cores da Tabela 1 do Guia.
+%\item Poderá haver sobreposição da linha UV (não visível) com as linhas Amarelo/Verde? Que consequências pode ter e como as poderá evitar?
+
+\end{enumerate}
+%\subsection{\sf Objectivos do Trabalho}
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+
+\subsubsection{\sf Equações }
+Escreva no seguinte quadro todas as equações necessárias para calcular as grandezas bem com as suas incertezas.
+\begin{center}
+\framebox[15cm]{\rule{0pt}{6.5cm}}
+\end{center}
+
+
+\section{\sf Relatório}
+\subsection{\sf Montagem Experimental}
+No verso desta página desenhe um diagrama em planta da experiência. Inclua uma  legenda com pelo menos as seguintes siglas: FL-fonte luminosa, C-colimador, F-fenda, Lc-lente convergente do colimador, Pt-plataforma, PP-parafuso de ajuste fino do angulo da Plataforma,  NP- Escala e nónio acoplado à Plataforma, P-Prisma, L-luneta, Pl-parafuso de ajuste fino do angulo da Luneta, Obj-objetiva, Oc-ocular,  NL-Escala e nónio acoplado à luneta. Desenhe também o feixe luminoso escolhendo apenas uma das cores transmitidas.
+
+% \begin{center}
+% \framebox[18cm]{\rule{0pt}{6.5cm}}
+% \end{center}
+
+%\newpage
+
+%\begin{figure}[!btp]
+%     \makebox[\textwidth]{\framebox[18cm]{\rule{0pt}{7cm}}}
+%     \caption{Montagem Experimental\label{montag}}
+%\end{figure}
+
+\subsection{\sf Dados Experimentais}\label{sec:dados}
+\subsubsection{Angulo de Desvio $\delta$ de Luz em função do angulo de incidência na primeira face.
+}\label{sec:desvio}
+
+
+% \begin{itemize}
+% \item Execute as medições e preencha a tabela seguinte:
+% \end{itemize}
+\begin{center}
+	\begin{tabular}{|l|l|r|r|r|r|r|r|r|r|r|r|r|}
+	\hline
+	% Côr / Angulo de  & $V_s$ [V] & $\overline{V_s}$ [V]	& $\delta V_s$ [V] & Tempo [s] & Tempo com  & Tempo com\\
+	%   & & & &  & Filtro Int. 1 [s] & Filtro Int. 2 [s]\\
+	\hline
+	Côr $\quad$ & $i$(grau, min)   & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ &  $\;\;^{\circ}\;\;'$& $\;\;^{\circ}\;\;'$ &  $\;\;^{\circ}\;\;'$& $\;\;^{\circ}\;\;'$ &  $\;\;^{\circ}\;\;'$  \\ \cline{2-13}
+& $i$ (rad)   & & & & & & & & & & &  \\ \cline{2-13}
+	 &  $\delta$(grau, min)&$\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ &  $\;\;^{\circ}\;\;'$& $\;\;^{\circ}\;\;'$ &  $\;\;^{\circ}\;\;'$& $\;\;^{\circ}\;\;'$ &  $\;\;^{\circ}\;\;'$\\ \cline{2-13}
+	&  $\delta$  (rad)   & & & & & & & & & & &  \\	\hline
+	Côr $\quad$ & $i$(grau, min)   & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ &  $\;\;^{\circ}\;\;'$& $\;\;^{\circ}\;\;'$ &  $\;\;^{\circ}\;\;'$& $\;\;^{\circ}\;\;'$ &  $\;\;^{\circ}\;\;'$  \\ \cline{2-13}
+& $i$ (rad)   & & & & & & & & & & &  \\ \cline{2-13}
+	 &  $\delta$(grau, min)&$\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ &  $\;\;^{\circ}\;\;'$& $\;\;^{\circ}\;\;'$ &  $\;\;^{\circ}\;\;'$& $\;\;^{\circ}\;\;'$ &  $\;\;^{\circ}\;\;'$\\ \cline{2-13}
+	&  $\delta$  (rad)   & & & & & & & & & & &  \\	\hline
+	\hline
+ 	\end{tabular}
+%	\caption{Riscas observáveis do espectro de Mercúrio} 
+%	\label{tab:Hg}
+\end{center}
+
+\noindent Desvio Mínimo 1:  $\delta_{min}=$~\underline{\makebox[1.5cm][r]{~}}(~~~), 
+$i_1=$~\underline{\makebox[1.5cm][r]{~}}(~~~) 
+\\
+\noindent Desvio Mínimo 2:  $\delta_{min}=$~\underline{\makebox[1.5cm][r]{~}}(~~~), 
+$i_1=$~\underline{\makebox[1.5cm][r]{~}}(~~~) 
+
+\subsubsection{Desvio mínimo $\delta_{min}$ de Luz em função do comprimento de onda $\lambda$.
+}\label{subsec:minimo}
+
+\noindent Angulo do Prisma:  $\alpha=$~\underline{\makebox[1.5cm][r]{~}}$\pm$\underline{\makebox[1cm][r]{~}}(~~~)\\
+Maior percurso do feixe no prisma  $l=$~\underline{\makebox[1.5cm][r]{~}}$\pm$\underline{\makebox[1cm][r]{~}}(~~~)
+\begin{center}
+ 	\begin{tabular}{|l|l|c|c|c|c|r|r|c|c|}
+ 	\hline
+	% Côr $\quad$ & $i$(grau, min)   & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ & $\;\;^{\circ}\;\;'$ &  $\;\;^{\circ}\;\;'$& $\;\;^{\circ}\;\;'$ &  $\;\;^{\circ}\;\;'$& $\;\;^{\circ}\;\;'$ &  $\;\;^{\circ}\;\;'$  \\ \cline{2-13}
+	Côr &  $\lambda$(nm)   & $\delta_{esq}$ & $\delta_{dir}$& $(\delta_{esq} - \delta_{dir})$ & $\frac{\delta_{esq} - \delta_{dir}}{2}$ & $\delta_{min}$(rad)& $e_{\delta_{min}}$ & $n$  & $e_n$ \quad \\	\hline
+	   &    &  $\;\;^{\circ}\;\;'\;\;''$ & $\;\;^{\circ}\;\;'\;\;''$ & $\;\;^{\circ}\quad'\quad''$ & $\;\;^{\circ}\quad'\quad''$ & & &  $\quad\quad\quad$ &  $\quad\quad\quad$ \\	\hline
+	   &    &  $\;\;^{\circ}\;\;'\;\;''$ & $\;\;^{\circ}\;\;'\;\;''$ & $\;\;^{\circ}\quad'\quad''$ & $\;\;^{\circ}\quad'\quad''$ & & &  $\quad\quad\quad$ &  $\quad\quad\quad$ \\	\hline
+	   &    &  $\;\;^{\circ}\;\;'\;\;''$ & $\;\;^{\circ}\;\;'\;\;''$ & $\;\;^{\circ}\quad'\quad''$ & $\;\;^{\circ}\quad'\quad''$ & & &  $\quad\quad\quad$ &  $\quad\quad\quad$ \\	\hline
+	   &    &  $\;\;^{\circ}\;\;'\;\;''$ & $\;\;^{\circ}\;\;'\;\;''$ & $\;\;^{\circ}\quad'\quad''$ & $\;\;^{\circ}\quad'\quad''$ & & &  $\quad\quad\quad$ &  $\quad\quad\quad$ \\	\hline
+	   &    &  $\;\;^{\circ}\;\;'\;\;''$ & $\;\;^{\circ}\;\;'\;\;''$ & $\;\;^{\circ}\quad'\quad''$ & $\;\;^{\circ}\quad'\quad''$ & & &  $\quad\quad\quad$ &  $\quad\quad\quad$ \\	\hline
+%$\delta=(\delta_{esq} - \delta_{dir})/2$	
+	\end{tabular}
+\end{center}
+
+\subsubsection{Difração pela rede.
+}\label{subsec:difrac}
+
+\noindent Número de linhas iluminadas pelo feixe:  $N=$~\underline{\makebox[1.5cm][r]{~}}$\pm$\underline{\makebox[1cm][r]{~}}
+
+\noindent Separação Angular:  
+$\Delta\delta_{rede}= $~\underline{\makebox[1.5cm][r]{~}}$\pm$\underline{\makebox[1cm][r]{~}}(~~~) 
+
+
+% \newpage
+
+\subsection{\sf Resultados}
+
+\noindent Poder Separador do Prisma: $\left( \frac{\ud n}{\ud \lambda } \right)_{\overline{\lambda}_{amarel}}=$ ~\underline{\makebox[1.5cm][r]{~}} $\pm$ \underline{\makebox[1cm][r]{~}}(~~~)
+%$a.o.= -b/m=$~\underline{\makebox[1.5cm][r]{~}}$\pm$\underline{\makebox[1cm][r]{~}}(~~~) 
+\\
+\noindent Poder de Resolução do Prisma:  $R_{\lambda} = $~\underline{\makebox[1.5cm][r]{~}}$\pm$\underline{\makebox[1cm][r]{~}}
+\\
+\noindent Poder de Resolução da Rede:  $R_{\lambda_{rede}} = $~\underline{\makebox[1.5cm][r]{~}}$\pm$\underline{\makebox[1cm][r]{~}}
+
+
+\subsection{\sf Análise de Resultados, Conclusões e Comentários}
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+
+%\begin{center}
+%     \makebox[\textwidth]{\framebox[18cm]{\rule{0pt}{5cm}}}
+%     \caption{Montagem Experimental\label{montag}}
+%\end{center}
+
+
+
+%\newpage
+
+\end{document} 

@@ -82,33 +82,42 @@
 	\includegraphics[width=0.2\textwidth]{../logo-ist}%\\[1cm]  %%  Logo_IST_color
 
 	\HRule \\[0.5cm]
-	{ \huge \sf  \textsc{Indice de Refração do vidro de um Prisma pelo método  do Desvio Mínimo.}} \\[0.4cm] % \bfseries 
+	{ \huge \sf  \textsc{Dispersão da Luz por um Prisma.}} \\[0.4cm] % \bfseries 
 %	{ \huge \sf  \textsc{Construções Geométricas em Lentes Delgadas (aproximação paraxial)} }\\[0.4cm] % \bfseries 
-	{ \large \bfseries Poder Dispersivo e Poder de Resolução do Vidro.}\\
+	{ \large \bfseries Indice de Refração, Poder Dispersivo e Poder de Resolução do Vidro pelo método do Desvio Mínimo.}\\
 %	{ \large \bfseries Procedimento Experimental}\\
 	\HRule \\%[0.5cm]
 
 \section{\sf Princípio do método}
 Um prisma de um meio transparente, homogéneo e isótropo de índice de refração, $n$, colocado no percurso de um feixe luminoso incidente produz um desvio angular, $\delta$, no feixe emergente que depende do ângulo de incidência, $i_1$. Pode provar-se que a função desvio angular $vs$ apresenta um ponto de estacionariedade (i.e., derivada nula) que é um mínimo se $n > 1$. 
-Mostra-de também que nessa situação as direções dos dois feixes são igualmente inclinadas em relação às faces do prisma, i.e. quando o ângulo de incidência é igual ao ângulo de transmissão 
-emergente (ver Apêndice). 
-Nesse caso  (Figura \ref{fig:desvio}) o índice de refração, $n$, pode ser calculado simplesmente através da expressão seguinte: 
-
-\begin{figure}[hb]  \centering 
-	\includegraphics[width=0.6\textwidth]{desvio}
-	\caption{Esquema da transmissão do feixe incidente num prisma colocado na plataforma do goniómetro de Babinet. A direção do feixe transmitido desvia-se do ângulo $\delta$ em relação ao feixe incidente. \label{fig:desvio}} 
-\end{figure}
+Mostra-de também que nessa situação as direções dos dois feixes são igualmente inclinadas em relação às faces do prisma, i.e.  o ângulo de incidência,$i_1$, é igual ao ângulo de transmissão 
+emergente, $t_2$ (Figura \ref{fig:desvio}). 
+Nesse caso   o índice de refração, $n$, pode ser calculado (ver Apêndice) simplesmente através da expressão seguinte: 
 
 \begin{equation}
 	\label{eq:desviomim}
 	n= \frac{\sin \left( \frac{\alpha+ \delta_{min}}{2} \right) } {\sin \left(  \frac{\alpha}{2} \right)}  
 \end{equation}
 
-em que $\alpha$ e  $\delta_{min}$ são os ângulos, respetivamente, do prisma e o desvio mínimo referido. Este desvio mínimo depende do comprimento de onda da radiação incidente, $\lambda$, e por consequência $n$ depende de $\lambda$. Define-se \emph{poder dispersivo} dum material como a derivada de $n$ em ordem a $\lambda$ ,  e escreve-se  como $\left( \frac{\ud n}{\ud \lambda } \right)$. Como esta função não é constante, deve indicar-se o valor do poder dispersivo relativo a um determinado valor de comprimento de onda incidente, ou $\left( \frac{\ud n}{\ud \lambda } \right)_{\lambda_i}$ .
+\begin{figure}[h!b]  \centering 
+	\includegraphics[width=0.55\textwidth]{darkside}
+	\caption{A famosa capa do LP `Dark Side of the Moon" dos Pink Floyd de 1973 ilustra  o fenómeno de dispersão pelo prisma, que foi inicialmente  analisado por Newton.\label{fig:darkside}} 
+\end{figure}
+
+%\footnote{A figura tem no entanto um problema na refração na segunda face.}
+
+\begin{figure}[htb]  \centering 
+	\includegraphics[width=0.6\textwidth]{desvio}
+	\caption{Esquema da transmissão do feixe incidente num prisma colocado na plataforma do goniómetro de Babinet. A direção do feixe transmitido desvia-se do ângulo $\delta$ em relação ao feixe incidente. \label{fig:desvio}} 
+\end{figure}
+
+
+em que $\alpha$ e  $\delta_{min}$ são os ângulos do prisma e o desvio mínimo referido , respetivamente. Este desvio mínimo depende do comprimento de onda da radiação incidente, $\lambda$ em virtude de  $n$ depender de $\lambda$. Define-se \emph{poder dispersivo} dum material como a derivada de $n$ em ordem a $\lambda$   e escreve-se  como $\left( \frac{\ud n}{\ud \lambda } \right)$. Como esta função não é constante, deve indicar-se o valor do poder dispersivo relativo a um determinado valor de comprimento de onda incidente, ou $\left( \frac{\ud n}{\ud \lambda } \right)_{\lambda_i}$ .
 
 O poder separador ou poder de resolução de um dado instrumento óptico\footnote{Optical Resolution}, $R_\lambda = \frac{\lambda}{\Delta \lambda} $,  é a capacidade que possui de poder permitir que se observem separadamente dois comprimentos de onda muito próximos, afastados de $\Delta \lambda$, na vizinhança de um valor médio $\overline{\lambda}$. Esta grandeza é adimensional e quanto maior for o seu valor, melhor é a resolução do instrumento.
 
-No caso de um prisma obtém-se para $R$ a seguinte expressão (ver Apêndice), se a fonte é linear e se dispõe paralelamente à aresta do prisma:
+No caso do prisma obtém-se  $R$ com a seguinte expressão (ver Apêndice).
+%, se a fonte é linear e se dispõe paralelamente à aresta do prisma:
  \begin{equation}
 	\label{eq:resolu}
 	R_\lambda = l\,\left(\frac{\ud n}{\ud \lambda} \right)_\lambda 
@@ -119,12 +128,12 @@ em que $l$ é o \emph{maior percurso} do feixe luminoso no interior do prisma.
 Uma \emph{rede de difração}
 % (ver apontamentos da Aula Teórica  “Interferência e Difração”)
 permite também observar separadamente dois comprimentos de onda muito próximos.
-No entanto para uma rede de difração linear a resolução além de variar com o comprimento de onda depende da \emph{ordem de difração}, $m$
+No entanto para uma rede de difração linear a resolução, além de variar com o comprimento de onda, depende da \emph{ordem de difração}, $m$
  \begin{equation}
 	\label{eq:resoludrifa}
-	R_\lambda = m\,N 
+	R_{\lambda_{difrac}} = m\,N 
 \end{equation}
-sendo $N$  o número de linhas da rede iluminadas pelo feixe.
+sendo $N$  o número de linhas da rede \emph{iluminadas} pelo feixe.
 
 
 \section{\sf A experiência}
@@ -136,7 +145,7 @@ sendo $N$  o número de linhas da rede iluminadas pelo feixe.
 \item Lâmpada espetral de Mercúrio ou Hélio.
 \end{enumerate}
 
-No Trabalho anterior colocou-se o prisma na plataforma de modo a poderem observar-se as reflexões nas duas faces polidas. As direções dos raios refletidos fazem um ângulo $\theta$, que se mediu com o goniómetro e que é o dobro do ângulo principal do prisma $\alpha$.  Determinou-se facilmente assim o ângulo do prisma com uma precisão e exatidão muito melhores do que com um transferidor, por exemplo.
+No Trabalho anterior colocou-se o prisma na plataforma de modo a poderem observar-se as reflexões nas duas faces polidas (Fig. \ref{fig:angulo}). As direções dos raios refletidos fazem um ângulo $\theta$, que se mediu com o goniómetro e que é o dobro do ângulo principal do prisma $\alpha$.  Determinou-se facilmente assim o ângulo do prisma com uma precisão e exatidão muito melhores do que com um transferidor por exemplo.
 
 \begin{figure}[tb]  \centering 
 	\includegraphics[width=0.6\textwidth]{angulo}
@@ -145,7 +154,7 @@ No Trabalho anterior colocou-se o prisma na plataforma de modo a poderem observa
 
 À partida podia determinar-se  o ângulo $\delta_{min}$ medindo com a objectiva a direção do raio incidente (sem prisma) e a direção do raio emergente que corresponda ao desvio mínimo (Figura \ref{fig:desvio}). No entanto para compensar as eventuais assimetrias do aparelho devem fazer-se observações para os desvios à esquerda e à direita.
 % para os raios que emergem das duas faces que definem o ângulo do prisma. 
-Neste caso é facil provar que o ângulo formado entre os dois raios emergentes (para a mesma côr) é o dobro do ângulo de desvio, $\delta_{min}$ (e não é necessário determinar a direção do raio incidente, $i_1$).
+Neste caso é facil provar que o ângulo formado entre os dois raios emergentes (para a mesma côr) é o dobro do ângulo de desvio, $\delta_{min}$ (não sendo  necessário determinar a direção do raio incidente, $i_1$).
 % segundo o ângulo $i_2$ em relação à normal (
 % para cada comprimento de onda 
 
@@ -165,7 +174,7 @@ Neste caso é facil provar que o ângulo formado entre os dois raios emergentes 
 
 
 O prisma que se usa é em geral de seção reta triangular (equilátero ou isósceles).
-A lâmpada espetral é uma fonte de luz policromática  que contem dois elétrodos situados no interior de um invólucro (vidro em geral) onde existe uma substância “ativa”\footnote{Que dá o nome à lâmpada, e.g. Mercúrio, Hélio, Néon, etc.} em muito pequena quantidade, numa atmosfera rarefeita. A alimentação que em geral é de alta tensão e produz entre os elétrodos uma descarga que vaporiza, excita e ioniza a substância ativa. As diferentes excitações permitem transições radiativas que dão origem à emissão de um feixe constituido por diferentes comprimentos de onda bem definidos e que se encontram já muito bem identificados na literatura\footnote{Pode consultar a extensa base de dados online em  \href{http://physics.nist.gov/asd}{NIST Atomic Spectra Database}.}. 
+A lâmpada espetral é uma fonte de luz policromática  que contem dois elétrodos situados no interior de um invólucro (vidro em geral) onde existe uma substância “ativa”\footnote{Que dá o nome à lâmpada, e.g. Mercúrio, Hélio, Néon, etc.} em muito pequena quantidade, numa atmosfera rarefeita. A alimentação que em geral é de alta tensão e produz entre os elétrodos uma descarga que vaporiza, excita e ioniza a substância ativa. As diferentes excitações permitem transições radiativas que dão origem à emissão de um feixe constituido por diferentes comprimentos de onda bem definidos e que se encontram muito bem identificados na literatura.\footnote{Pode consultar a extensa base de dados online em  \href{http://physics.nist.gov/asd}{NIST Atomic Spectra Database}.} 
 
 Todas as lâmpadas espetrais emitem no ultravioleta que é nocivo para a pele e olhos dos observadores, mas o vidro no interior do qual se dá a descarga absorve a maior parte destas radiações perigosas. Para ainda reduzir os riscos, a lâmpada tem um invólucro em geral metálico apenas com uma abertura para permitir iluminar uma fenda estreita e regulável junto à luneta do goniómetro, que produz uma linha vertical na imagem.  A aresta do triangulo  definido pelas superfícies planas onde se produz a reflexão e/ou transmissão deve ficar paralela a esta fenda.
 
@@ -190,22 +199,23 @@ Todas as lâmpadas espetrais emitem no ultravioleta que é nocivo para a pele e 
 equilíbrio térmico no seu interior. 
 \item Enquanto espera comece por regular a ótica  do goniómetro tal como descrito no Guia do Trabalho anterior.
 \item Verifique o nivelamento horizontal do goniómetro e da plataforma onde vai colocar o prisma com a ajuda de um nível de bolha. 
-\item Utilize o valor do ângulo, $\alpha$, entre as faces polidas prisma obtido no trabalho anterior.
-\item  Observe agora  a  transmissão  das várias côres  através  do  prisma  com  o  feixe  incidente  numa  das  faces, na posiçao da Figura 3 do guia do trabalho anterior.  Se o instrumento estiver bem focado deve  observar   uma  série  de 
-imagens colorida da fenda, i.e. riscas isoladas, uma por cada côr (ou comprimento de onda $\lambda$).
-\item Escolha duas dessas côres bem afastadas. Rodando o prisma obtenha um conjunto de valores que permita fazer um gráfico dos ângulos de desvio, $\delta(i_1)$, 
-em função do ângulo de incidência, $i_1$ e um ajuste polinomial (Nesta fase não precisa de utilizar o nónio da escala de minutos). Pelo gráfico verifique que existe de facto um mínimo no ângulo de desvio,  $ \delta(i_{min})$, mas  que o ângulo $i_{min}$ e $\delta(i_{min})$ são  diferentes para cada côr.
-\item  Em seguida, para medir o desvio mínimo,  \emph{para cada côr}, tem de se colocar o prisma para posição correspondente. Deve portanto olhar pela objectiva e fixando uma côr rodar o prisma até observar o desvio mínimo.
+\item Utilize o valor do ângulo, $\alpha$, entre as faces polidas do prisma obtido no trabalho anterior.
+\item  Observe agora  a  transmissão  das várias cores  através  do  prisma  com  o  feixe  incidente  numa  das  faces, na posição da Figura \ref{fig:desvio}.  Se o instrumento estiver bem focado deve  observar   uma  série  de 
+imagens coloridas da mesma fenda isoladas (riscas), uma por cada comprimento de onda $\lambda$.
+\item Escolha duas dessas cores bem afastadas. Rodando o prisma obtenha um conjunto de valores que permita fazer um gráfico dos ângulos de desvio, $\delta(i_1)$, 
+em função do ângulo de incidência, $i_1$ e um ajuste polinomial (Nesta fase não precisa de utilizar o nónio da escala de minutos). Pelo gráfico verifique que existe de facto um mínimo no ângulo de desvio,  $ \delta(i_{min})$, mas  que este e o ângulo $i_{min}$ são  diferentes para cada cor.
+
+\item  Em seguida, para medir o desvio mínimo,  \emph{para cada risca}, tem primeiro de colocar o prisma na posição apropriada. Deve portanto olhar pela objectiva e fixando a risca  rodar o prisma até observar que o desvio é mínimo.
 %Pode finalmente medir os ângulos de desvio, $\delta_{min(esq, dir)}(\lambda)$.
 % agora com o nónio e o auxílio  do  parafuso  micrométrico  associado  à  plataforma.  
-De seguida,  com  o  parafuso micrométrico associado à luneta, centrar  a imagem  da fenda no retículo e meça o  ângulo  $\delta_{min(esq)}(\lambda)$. Comece por usar todas as corês quando o prisma desvia para o lado esquerdo (cada elemento do grupo deve efectuar as suas medidas). 
+De seguida,  com  o  parafuso micrométrico associado à luneta, centrar  a imagem  da fenda no retículo e meça o  ângulo  $\delta_{min(esq)}(\lambda)$. Comece por usar todas as cores quando o prisma desvia para o lado esquerdo (cada elemento do grupo deve efectuar as suas medidas). 
 \item Repita o ponto anterior, mas para o prisma a desviar o feixe para o lado direito. Calcule os desvio mínimos:
 $$\delta_{min}(\lambda) = \frac{|\delta_{esq} -  \delta_{dir}|}{2}$$ 
 \item Com os desvio mínimos e identificando  nas tabelas os valores  dos  comprimentos  de onda das riscas visíveis, calcule  
-índice de refração a partir da Equ.~\ref{eq:desviomim} e represente  graficamente a função $n(\lambda)$. Ajuste uma curva polinomial aos pontos obtidos. Através da  estimativa da derivada desta função, calcule o poder dispersivo do vidro para o comprimento de onda médio, $\overline{\lambda}_{amare}$, das 
-duas riscas amarelas do sódio ($\lambda \approx 589\,nm$). 
-\item Faça uma estimativa da maior distância percorrida pelo feixe luminoso no prisma (que é aproximadamente o comprimento da aresta) e calcule 
-  o  Poder  de  Resolução  do  prisma  para  o  $\overline{\lambda}_{amare}$, referido  no  ponto  anterior. 
+índice de refração a partir da Equ.~\ref{eq:desviomim} e represente  graficamente a função $n(\lambda)$. Ajuste uma curva polinomial aos pontos obtidos. Através da  estimativa da derivada desta função, calcule o poder dispersivo do vidro para o comprimento de onda médio das 
+duas riscas amarelas do sódio ($\overline{\lambda}_{amarel}\approx 589\,nm$). 
+\item Faça uma estimativa da maior distância percorrida pelo feixe luminoso no prisma,$l$, (que é aproximadamente o comprimento da aresta) e calcule 
+  o  Poder  de  Resolução  do  prisma  para  o  $\overline{\lambda}_{amarel}$, referido  no  ponto  anterior. 
 %Compare este valor com o que obteria se usasse o mesmo feixe com uma rede de difração 
 %de 600 linhas por milímetro. 
 \item Substitua no centro da plataforma do goniómetro o prisma por uma rede de difração de 
@@ -416,7 +426,7 @@ Assim uma pequena variação de comprimento de onda $\Delta \lambda$ produz uma 
 	\Delta \delta =  \frac{\ud n}{\ud \lambda} \frac{l}{l_2} \Delta \lambda 
 \end{equation}
 
-O critério de Rayleigh para que dois comprimentos de onda estejam resolvidos, ie possam ser detetados separadamente, é que o máximo de intensidade (de ordem $n \ge 1$) de um deles coincida com o mínimo de intensidade do outro (Figura \ref{fig:gauss})
+O critério de Rayleigh para que dois comprimentos de onda estejam resolvidos, ie possam ser detectados separadamente, é que o máximo de intensidade (de ordem $n \ge 1$) de um deles coincida com o mínimo de intensidade do outro (Figura \ref{fig:gauss})
 
 \begin{figure}[ht]  \centering 
 	\includegraphics[width=0.6\textwidth]{gauss}
