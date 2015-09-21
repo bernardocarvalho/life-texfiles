@@ -1,4 +1,4 @@
-﻿%%&program=xelatex
+%%&program=xelatex
 %&encoding=UTF-8 Unicode
 % SVN keywords
 % $Author$
@@ -96,12 +96,12 @@ comprimento (Fig. \ref{fig:Fizeau}).
 No presente trabalho utiliza-se como fonte luminosa um díodo (LED) que
 emite radiação  visível com um comprimento de onda (c.d.o.) na
 zona do vermelho. A tensão aplicada ao díodo emissor é 
-sinusoidal de frequência $f_{mod}=50\,MHz$ e  assim a intensidade sinal luminoso
- emitido é \emph{Modulado em Amplitute} (AM) naquela frequência: 
+sinusoidal de frequência $f_{\textrm{mod}}=50$ MHz ficando assim a intensidade sinal luminoso
+ emitido \emph{modulada em amplitute} (AM, do inglês \emph{amplitude modulation}) com aquela frequência: 
 
 \begin{equation*}
 	\label{eq:f_am}
-		I_{diodo}(t) = A_0 (1+ \sin ( 2\pi \cdot 50\times 10^6 \, t))/2
+		I_{\textrm{diodo}}(t) = A_0 (1+ \sin ( 2\pi \cdot 50\times 10^6 \, t))/2
 %		}_\text{Amplitude Modulada} \cdot \sin ( 2\pi \cdot f_{luz} \, t)
 \end{equation*}
 %A(t) \cdot \sin ( 2\pi \cdot f_{luz} \, t) = \underbrace{
@@ -116,12 +116,11 @@ sinusoidal de frequência $f_{mod}=50\,MHz$ e  assim a intensidade sinal luminos
 
 \section{\sf Base do Método}
 No presente trabalho o feixe luminoso proveniente do LED emissor
-é forçado a percorrer um determinado trajeto de comprimento $L$ sendo em seguida a sua Intensidade  detetada
-por um foto-díodo receptor (Fig. \ref{fig:Montagem}). O sistema solidário de espelhos $E_1\,, E_1$, pode deslocar-se ao longo de uma calha graduada,
+é forçado a percorrer um determinado trajeto de comprimento $L$, sendo em seguida a sua intensidade  detetada por um foto-díodo receptor (Fig. \ref{fig:Montagem}). O sistema solidário de espelhos $E_1\,, E_2$ pode deslocar-se ao longo de uma calha graduada,
 sendo assim possível variar o comprimento do trajeto. Os
-sinais de amplitude impostos ao emissor e captados no receptor são aplicados\footnote{Depois de uma deteção \emph{heterodínica}, em que a frequência modulada é desviada \\ 
-$f_{bat}=50\, MHz -50.050\, MHz = 50\,kHz$. Esta operação permite a utilização de um osciloscópio simples de banda de frequências mais estreita.} 
-aos canais de um osciloscópio funcionando em modo “XY” (sem base de tempo).
+sinais de amplitude impostos ao emissor e captados no receptor são registados\footnote{Depois de uma deteção \emph{heteródina}, em que a frequência modulada é desviada de \\ 
+$f_{\textrm{bat}}=50$ MHz -- 50.050 MHz = 50 kHz. Esta operação permite a utilização de um osciloscópio simples de banda de frequências mais estreita.} 
+nos canais de um osciloscópio funcionando em modo “XY” (sem base de tempo).
 
 \begin{figure}[htb] 
  \centering 
@@ -130,26 +129,28 @@ aos canais de um osciloscópio funcionando em modo “XY” (sem base de tempo).
 \end{figure}
 
 
-O sinal visualizado no osciloscópio é uma figura de Lissajous e como em ambos os canais XY (vertical e horizontal) a frequência é a 
+O sinal visualizado no osciloscópio é uma \emph{figura de Lissajous}. Como em ambos os canais X e Y (vertical e horizontal) a frequência é a 
 mesma\footnote{Os sinais são \emph{coerentes}, pois provêm da mesma fonte}, é uma elipse (Fig. \ref{fig:fase}), com um parametro $\delta$ dado pela equação geral:
 \begin{equation}
 	\label{eq:elipse}
 	\sin^2 \delta = \frac{A_x^2}{A_{x0}^2} + \frac{A_y^2}{A_{y0}^2} - \frac{2 A_y\,A_x}{A_{y0}\,A_{x0}} \cos  \delta
 \end{equation}
-
-
-Sendo $A_x(t)$ o sinal de intensidade captado no emissor,  $A_y(t)$ o sinal
-proveniente do recetor, $A_{x0}$, $A_{y0}$ a  amplitude e $\delta$ a desfasagem entre os dois
-sinais. O ângulo $\delta$ irá pois variar com o comprimento do trajecto do raio luminoso.  A elipse pode degenerar em retas quando os dois sinais estiverem
+sendo $A_x(t)$ o sinal de intensidade captado no emissor,  $A_y(t)$ o sinal
+proveniente do recetor, $A_{x0}$, $A_{y0}$ as respectivas amplitudes e $\delta$ a desfasagem entre os dois sinais. O ângulo $\delta$ irá pois variar com o comprimento do trajecto do raio luminoso.  A elipse pode degenerar em retas quando os dois sinais estiverem
 em fase, $\delta = 2n\,\pi$ (nos quadrantes ímpares)  ou em oposição de fase, $\delta = (2n+1)\,\pi$ (nos quadrantes pares). 
 
 \subsection{\sf Velocidade da Luz no ar}
 Neste trabalho a
 velocidade da luz é calculada a partir da determinação do comprimento do
-caminho suplementar, ($\Delta L= 2\,\Delta \,z$), que a luz tem de percorrer para que se passe de uma
+caminho suplementar $\Delta L= 2\,\Delta z_0$ que a luz tem de percorrer para que se passe de uma
 situação em que os sinais estão em fase à situação contígua de
- oposição de fase (ou vice-versa). Assim a luz percorre esse comprimento suplementar num intervalo de
-tempo, ($\Delta t$) ,  que é igual a metade do periodo do sinal modulante ($T/2=1/(2\cdot50\,MHz)= 10\,ns$). 
+ oposição de fase (ou vice-versa). Assim, a luz percorre esse comprimento suplementar num intervalo de tempo $\Delta t$ que é igual a metade do período do sinal modulante ($T/2=1/(2\cdot50\,\textrm{MHz})= 10\,\textrm{ns}$). 
+No trajecto da luz no ar teremos a seguinte expressão para a sua velocidade:
+\begin{equation}
+	\label{eq:vc}
+	c_{ar} = \frac{2\,\Delta z_0}{T/2} 
+\end{equation}
+
 
 \begin{figure}
 	[htb]  \centering 
@@ -157,16 +158,11 @@ tempo, ($\Delta t$) ,  que é igual a metade do periodo do sinal modulante ($T/2
 	\caption{Figuras de Lissajous observadas no osciloscópio. \label{fig:fase}} 
 \end{figure}
 
-No trajecto da luz no ar teremos:
-\begin{equation}
-	\label{eq:vc}
-	c_{ar} = \frac{2\,\Delta z_0}{T/2} 
-\end{equation}
 
 \subsection{\sf Velocidade da Luz em meios sólidos e líquidos}
- O índice de refração de a um meio material $1$ em relação a outro meio  $0$
- para um dado comprimento de onda é definido\footnote{Esta definição só é válida se a condutividade elétrica dos meios $0$ e $1$ forem nulas ou seja nos \emph{dielétricos} perfeitos.}
- como a relação entre as velocidades de propagação da luz nos meios $0$ e $1$:
+ O índice de refração de um meio material $1$ em relação a outro meio $0$
+ para um dado comprimento de onda é definido\footnote{Esta definição só é válida se as condutividades elétricas dos meios $0$ e $1$ forem nulas, ou seja, nos \emph{dielétricos} perfeitos.}
+ como o quociente entre as velocidades de propagação da luz nos meios $0$ e $1$:
 
  \begin{equation}
 	\label{eq:index}
@@ -178,20 +174,18 @@ Nesta expressão $\varepsilon_0$, $\varepsilon_1$ ,	 $\mu_0$, $\mu_1$ são as co
 
 \begin{figure}[h!tb]  
 	\centering 
-	\includegraphics[width=0.8\textwidth]{Vel_esquema_bloco}
+	\includegraphics[width=0.8\textwidth]{Vel_esquema_material}
 	\caption{Montagem para determinar índices de refração em sólidos e líquidos. \label{fig:Montagem_bloco}} 
 \end{figure}
 
-Se no percurso do feixe luminoso interpormos um bloco transparente de material sólido ou líquido  
- de comprimento $l_B$ (Fig.\ref{fig:Montagem_bloco}) então a expressão  (\ref{eq:vc}) pode ser generalizada em:
+Se no percurso do feixe luminoso interpusermos um bloco transparente de material sólido ou líquido  
+ de comprimento $l_B$ (Fig.\ref{fig:Montagem_bloco}), então a expressão  (\ref{eq:vc}) pode ser generalizada:
 
 \begin{equation}
 	\label{eq:vc_bloco}
 	{T/2}  = \frac{2\,\Delta z_1 - l_B}{c_{ar}}  +  \frac{l_B}{c_{B}}
 \end{equation}
-De onde se pode pode extrair a velocidade $c_{B}$. 
-
-Pode obter-se directamente o indíce de refração $n_{B}$, a partir de (\ref{eq:vc}) e (\ref{eq:index}).
+A partir daqui calcula-se a velocidade $c_{B}$.  Pode obter-se directamente o valor do índice de refração $n_{B}$ a partir de (\ref{eq:vc}) e (\ref{eq:index}):
 
 \begin{align}
 	\label{eq:n_bloco}
@@ -201,7 +195,7 @@ Pode obter-se directamente o indíce de refração $n_{B}$, a partir de (\ref{eq
 	n_{B} &= 1 +  \frac{2\,(\Delta z_0- \Delta z_1 )}{l_B} 
 \end{align}
 
- Neste trabalho serão  determınados os índices de refração e a velocidade da
+ Neste trabalho serão  determinados os índices de refração e a velocidade da
 luz em  dois meios materiais, a resina acrílica e a água. 
  
 
@@ -212,14 +206,14 @@ luz em  dois meios materiais, a resina acrílica e a água.
 
 \begin{enumerate}
 \setlength{\itemsep}{0mm}
-\item Unidade de emissão de luz  com amplitude modulada por um sinal de frequência $50\,MHz$) e de recepção.
+\item Unidade de emissão de luz  com amplitude modulada por um sinal de frequência 50 MHz e de recepção.
 % (díodos receptor) amplitude modulada por um sinal de frequência $50\,MHz$)(.
 \item Duas lentes plano-cilíndricas.
 \item Conjunto de dois espelhos planos para inversão do sentido de propagação da luz.
 \item Calha graduada.  
 \item Bloco de vidro acrílico transparente.
 \item Dois tubos com cerca de 1 metro de comprimento para conter água ou ar. 
-\item Osciloscópio de dois canais a funcionar em modo “XY”.
+\item Osciloscópio de dois canais a funcionar em modo XY.
 \end{enumerate}
 
 \subsection{\sf Procedimento Experimental}
@@ -228,7 +222,7 @@ luz em  dois meios materiais, a resina acrílica e a água.
 \begin{enumerate}
 \setlength{\itemsep}{0mm}
 \item Comece por verificar se a montagem ótica está devidamente alinhada. Ajustando a lente junto ao LED emissor e usando um alvo difusor (papel vegetal por exemplo) observe a forma da mancha 
-luminosa ao longo do percurso óptico  de modo a obter um diâmetro constante (feixe de raio paralelos). 
+luminosa ao longo do percurso óptico  de modo a obter um diâmetro constante (feixe de raio paralelos, ou colimado). 
 \item Ainda sem a segunda lente verifique que a mancha está centrada com  a janela do 
 díodo receptor. 
 \item Coloque agora a lente no lado do díodo receptor, alinhando o foco do feixe convergente no seu centro. 
@@ -240,12 +234,12 @@ recebido.
 \subsubsection{\sf Velocidade de propagação da luz no ar}
 \begin{enumerate}
 \item Desloque os espelhos sobre a calha e observe a modificação da figura no ecrã do 
-osciloscópio em particular nas posições que correspondem aos sinais recebidos estarem 
+osciloscópio, em particular nas posições que correspondem a que os sinais recebidos estejam 
 desfasados de $\delta=\pi/2$ (quadratura) e em oposição de fase, $\delta=\pi$. Para esta última situação registe a 
-nova posição dos espelhos e o intervalo de incerteza, $e_z$,  entre o qual os sinais parecem estar ainda em 
+nova posição dos espelhos e o intervalo de incerteza $e_z$  entre o qual os sinais parecem estar ainda em 
 oposição de fase. 
 \item Repita o procedimento para cada observador. 
-\item Calcule a velocidade de propagação da luz no ar, a sua incerteza e o desvio à exatidão\footnote{O valor $c_{ar}$ é muito próximo de $c_{vacuo} = 299 792 458\,m/s$, que é uma constante exacta do Sistema Internacional de Medidas. O índice de refração do ar para a luz visível é $n_{ar}=1.000293$}. 
+\item Calcule a velocidade de propagação da luz no ar, a sua incerteza e o desvio à exatidão\footnote{O valor $c_{ar}$ é muito próximo de $c_{vacuo}$ = 299 792 458 m/s, que é uma constante exacta do Sistema Internacional de Medidas. O índice de refração do ar para a luz visível é $n_{ar}=1.000293$.}. 
 \end{enumerate}
 
 \subsubsection{\sf Velocidade de propagação da luz no vidro acrílico}
@@ -253,9 +247,8 @@ oposição de fase.
 \item Verifique novamente se no zero da posição dos espelhos os sinais estão em fase. Coloque o bloco de vidro 
 acrílico no feixe incidente de modo que incida perpendicularmente à face e usando o percurso 
 mais longo no vidro acrílico. 
-\item Meça a posição e a incerteza correspondente dos espelhos para que 
-que os dois sinais detetados estejam em oposição em fase. 
-\item Repita a medida pelo menos 
+\item Meça a posição e a incerteza correspondente dos espelhos para que os dois sinais detetados estejam em oposição em fase. 
+\item Repita a medição pelo menos 
 duas vezes.
 \item Calcule o índice de refração obtido para o vidro acrílico, $n_{vidro}$, pela expressão (\ref{eq:n_bloco}),  e a sua incerteza. 
 \item Calcule o valor da velocidade.
@@ -266,7 +259,7 @@ duas vezes.
 \item Verifique a fase na posição inicial. Coloque o tubo vazio  nos suportes de modo que o feixe incidente entre perpendicularmente à face. Pode desmontar o tubo com ar para medir o comprimento interno do trajeto no ar/água.
 \item Registe a posição dos espelhos que produz um sinal em oposição de fase com o incidente, $z_{0_{ar}}$. 
 \item Repita estas medidas para o tubo cheio de água ($z_{1_{agua}}$). 
-\item Calcule o valor da índice de refração obtida para a água $n_{agua}$, a sua incerteza e o desvio à exatidão\footnote{O valor tabelado é $n_{agua}=1.3330$}. 
+\item Calcule o valor da índice de refração obtida para a água $n_{agua}$, a sua incerteza e o desvio à exatidão\footnote{O valor tabelado é $n_{agua}=1.3330$.}. 
 \item Comente a precisão do valor da velocidade de propagação da luz obtida nos 
 diferentes meios.
 \end{enumerate}
