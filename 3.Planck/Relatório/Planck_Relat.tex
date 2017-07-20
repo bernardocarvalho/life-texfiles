@@ -1,0 +1,356 @@
+%%&program=xelatex
+%&encoding=UTF-8 Unicode
+% SVN keywords
+% $Author$
+% $Date$
+% $Revision$
+% $URL$
+\documentclass[a4paper,12pt]{article}  % Comments after  % are ignored
+%\usepackage{hyperref}                 % For creating hyperlinks in cross references
+%
+\usepackage{ifxetex}% for XELATEX, or PDFlatex
+\usepackage{ifplatform} 
+%
+\ifxetex
+	\usepackage{polyglossia} \setmainlanguage{portuges}
+	\usepackage{fontspec}
+	\ifwindows
+		\setmainfont[Ligatures=TeX]{Garamond}
+		\setsansfont[Ligatures=TeX]{Gill Sans MT}
+		\setmonofont{Consolas}
+%		\setmonofont[Scale=MatchLowercase]{Courier}
+	\fi
+	\iflinux
+		\setmainfont[Ligatures=TeX]{Linux Libertine O}
+		\setsansfont[Ligatures=TeX,Scale=MatchLowercase]{Linux Biolinum}
+		\setmonofont[Scale=MatchLowercase]{Courier}
+	\fi
+	\ifmacosx
+	% add settings
+	% Use xelatex -no-shell ...
+		\setmainfont[Ligatures=TeX]{Garamond}
+		\setsansfont[Ligatures=TeX]{Helvetica}
+		\setmonofont{Consolas}
+	\fi
+	\usepackage{xcolor,graphicx} 
+\else
+	\usepackage[portuguese]{babel}
+	%\usepackage[latin1]{inputenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphics}                 % Packages to allow inclusion of graphics
+	\usepackage{color}                    % For creating coloured text and background
+\fi
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\usepackage{amsmath,amssymb,amsfonts} % Typical maths resource packages
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{caption}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,decorations.pathmorphing,intersections}
+
+\usepackage[font={small,sf},labelfont={bf},labelsep=endash]{caption}
+\usepackage{sansmath}
+
+\def\width{18}
+\def\hauteur{24}
+
+\oddsidemargin 0cm
+\evensidemargin 0cm
+
+\pagestyle{myheadings}         % Option to put page headers
+                               % Needed \documentclass[a4paper,twoside]{article}
+\markboth{{MEFT}}
+{{\small\it \protect\input{../../LIFE.txt}}}
+
+\addtolength{\hoffset}{-0.5cm}
+\addtolength{\textwidth}{2.5cm}
+\addtolength{\topmargin}{-1.5cm}
+\addtolength{\textheight}{3cm}
+
+%\textwidth 15.5cm
+%\topmargin -1.5cm
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex  plus  0.5ex  minus  0.2ex}
+%\parindent 0.5cm
+%\textheight 25cm
+%\parskip 1mm
+
+
+% Math macros
+\newcommand{\ud}{\,\mathrm{d}} 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\author{Prof. Bernardo B. Carvalho} 
+
+%%%%, Bernardo Brotas Carvalho\\bernardo.carvalho@tecnico.ulisboa.pt} 
+\date{ Setembro 2015} 
+
+\begin{document} 
+
+%	\includegraphics[width=0.2\textwidth]{../logo-ist}%\\[1cm]  %%  Logo_IST_color
+
+%	\HRule \\[0.5cm]
+%	{ \huge \sf  \textsc{Construções Geométricas em Lentes Delgadas (aproximação paraxial)} }\\[0.4cm] % \bfseries 
+%	{ \large \bfseries Determinação da constante de Planck.}\\
+
+%	{ \large \bfseries Procedimento Experimental}\\
+%	\HRule \\%[0.5cm]
+%TURNO:________ GRUPO:________ DATA: ___ \\
+%Número: _______ Nome: ________________ \\
+%Número: _______ Nome: ________________ \\
+{  \sf \Large Relatório da Experiência do Efeito Fotoeléctrico.} %[0.4cm] % \bfseries 
+
+\input{../../Nomes.txt}
+
+%\section{\sf Questões a responder ANTES da sessão de Laboratório:}
+\section{\sf Trabalho preparatório a realizar  ANTES da sessão de laboratório:}
+
+\subsection{\sf Objectivos}
+Descreva por palavras suas quais os objectivos do trabalho que irá realizar na sessão de laboratório.
+%\begin{enumerate}
+%\item Descreva por palavras suas quais os objectivos do Trabalho que irá realizar na sessão de Laboratório (uma folha A4). Indique as expressões que irá utilizar para obter as grandezas experimentais, bem como as expressões para calcular as incertezas. Inclua esta parte também no Relatório. Este irá constituir o ÚNICO meio de consulta na Prova Individual.
+
+%\item A lâmpada de Mercúrio têm um espectro contínuo ou discreto?
+%\item A luz ao passar pela rede de Difração tem os máximos de intensidade segundo os ângulos dados pela expressão $\sin(\theta) = m \frac{\lambda}{a}$, em que $a$ é distância entre as linhas da rede e $m$ é a Ordem de Difração ($m=0,1,2,\ldots$). Como poderá estimar no laboratório o valor de $a$?
+%\item Assumindo que a rede tem $610\,linhas/mm$, obtenha uma tabela de ângulos de difração para três ordens e para todas as cores da Tabela 1 do Guia.
+%\item Poderá haver sobreposição da linha UV (não visível) com as linhas Amarelo/Verde? Que consequências pode ter e como as poderá evitar?
+
+%\subsection{\sf Objectivos do Trabalho}
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+
+\subsection{\sf Equações }
+Escreva no seguinte quadro todas as equações necessárias para calcular as grandezas, bem como as suas incertezas.
+\begin{center}
+\framebox[15cm]{\rule{0pt}{8.5cm}}
+\end{center}
+
+\newpage
+\section{\sf Relatório}
+\subsection{\sf Montagem Experimental}
+Desenhe um diagrama da experiência, marcando as posições de cada componente e a posição de cada risca espectral. Inclua uma lista com a  legenda de instrumentos.
+
+\begin{center}
+\framebox[18cm]{\rule{0pt}{6.5cm}}
+\end{center}
+
+%\newpage
+
+%\begin{figure}[!btp]
+%     \makebox[\textwidth]{\framebox[18cm]{\rule{0pt}{7cm}}}
+%     \caption{Montagem Experimental\label{montag}}
+%\end{figure}
+
+\subsection{\sf Dados Experimentais}\label{sec:dados}
+
+\begin{itemize}
+\item Execute as medições e preencha as tabelas seguintes:
+\end{itemize}
+
+\subsubsection{1.ª ordem}
+\begin{center}
+	%\centering
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	Cor  & Freq. [THz] & $V_s$ [V] & $\overline{V_s}$ [V]	& $\delta V_s$ [V] \\
+	 & & & & \\
+	\hline
+	 &  &  &  &  \\ \cline{3-3}
+	Amarelo & &  & &   \\ \cline{3-3}
+	& &  &  &    \\ 
+	\hline
+	 & &  &  &    \\ \cline{3-3}
+	Verde & & & & \\ \cline{3-3}
+	 &  &  &  &  \\ 
+	\hline
+	 &  &  &  &  \\ \cline{3-3}
+	Azul & & & & \\ \cline{3-3}
+	 &  &  &  &  \\ 
+	\hline
+	 &  &  &  &  \\ \cline{3-3}
+	Violeta & & & & \\ \cline{3-3}
+	 &  &  & &   \\ 
+	\hline
+	 &  &  &  &  \\ \cline{3-3}
+	U.V. & & & & \\ \cline{3-3}
+	 &  &  &  &  \\ 
+	\hline
+%	Azul & 687.858  & 435.835 \\
+%	Violeta & 740.858  & 404.656\\
+%	U.V.    & 820.264  & 365.483 \\
+%	\hline
+ 	\end{tabular}
+%	\caption{Riscas observáveis do espectro de Mercúrio} 
+%	\label{tab:Hg}
+\end{center}
+
+\subsubsection{2.ª ordem}
+\begin{center}
+	%\centering
+	\begin{tabular}{|c|c|c|c|}
+	\hline
+	Cor  & $V_s$ [V] & $\overline{V_s}$ [V]	& $\delta V_s$ [V] \\
+	  & & &  \\
+	\hline
+	 &  &  &    \\ \cline{2-2}
+	Amarelo &  & &   \\ \cline{2-2}
+	 &  &  &    \\ 
+	\hline
+	 &  &  &    \\ \cline{2-2}
+	Verde & & & \\ \cline{2-2}
+	 &  &  &    \\ 
+	\hline
+	 &  &  &    \\ \cline{2-2}
+	Azul & & &  \\ \cline{2-2}
+	 &  &  &    \\ 
+	\hline
+	 &  &  &    \\ \cline{2-2}
+	Violeta & & &  \\ \cline{2-2}
+	 &  &  &    \\ 
+	\hline
+	 &  &  &    \\ \cline{2-2}
+	U.V. & & &  \\ \cline{2-2}
+	 &  &  &    \\ 
+	\hline
+%	Azul & 687.858  & 435.835 \\
+%	Violeta & 740.858  & 404.656\\
+%	U.V.    & 820.264  & 365.483 \\
+%	\hline
+ 	\end{tabular}
+%	\caption{Riscas observáveis do espectro de Mercúrio} 
+%	\label{tab:Hg}
+\end{center}
+
+\subsubsection{Medição dos tempos com filtros de intensidade}
+\begin{center}
+	%\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+	\hline
+	\quad Cor \quad  
+	& S/ filtro
+	& ~\underline{\makebox[0.7cm][r]{~}}\% 
+	& ~\underline{\makebox[0.7cm][r]{~}}\% 
+	& ~\underline{\makebox[0.7cm][r]{~}}\% 
+	& ~\underline{\makebox[0.7cm][r]{~}}\% 
+	& ~\underline{\makebox[0.7cm][r]{~}}\%  \\
+	 & Tempo [s] &  Tempo [s] &  Tempo [s] &  Tempo [s] &  Tempo [s] &  Tempo [s]\\ 
+	\hline
+	 &  &  &  &  &  & \\ \cline{2-2}
+	\hline
+%	Azul & 687.858  & 435.835 \\
+%	Violeta & 740.858  & 404.656\\
+%	U.V.    & 820.264  & 365.483 \\
+%	\hline
+ 	\end{tabular}
+%	\caption{Riscas observáveis do espectro de Mercúrio} 
+%	\label{tab:Hg}
+\end{center}
+
+\begin{itemize}
+\item Analize qualitativamente os resultados obtidos com os filtros de transmissão face aos tempos de estabilização sem filtro.
+\end{itemize}
+
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} 
+
+\subsubsection{Ajuste linear}
+\begin{itemize}
+\item  Na página seguinte faça o gráfico de $V_s$ em função da frequência $\nu$. Escolha os eixos adequadamente e complete o gráfico (com Título, Unidades, Escala, Marcas, etc.). 
+\item Com uma régua, tente  ajustar  uma recta aos pontos experimentais, $y=mx + b$, e determine o seu declive, a  abcissa na origem (a.o.) e a suas \emph{Incertezas}.
+\item Faça também o ajuste numérico com o auxílio de software adequado (\emph{Fitteia}, Calculadora gráfica, Gnuplot, etc.) 
+Compare os dois métodos e obtenha o valores de $h$ e $W_O$ a partir do resultado mais fiável.  
+\end{itemize}
+
+
+
+%\begin{center}
+\begin{tikzpicture}[x=1cm, y=1cm, semitransparent]
+\draw[step=1mm, line width=0.1mm, black!30!white] (0,0) grid (\width,\hauteur);
+\draw[step=5mm, line width=0.2mm, black!40!white] (0,0) grid (\width,\hauteur);
+\draw[step=5cm, line width=0.5mm, black!50!white] (0,0) grid (\width,\hauteur);
+\draw[step=1cm, line width=0.3mm, black!90!white] (0,0) grid (\width,\hauteur);
+\end{tikzpicture}
+%\end{center}
+
+
+
+\subsection{\sf Resultados}
+\noindent Ajuste manual:  $m =$~\underline{\makebox[2cm][r]{~}}$\pm$\underline{\makebox[2cm][r]{~}}(~~~), 
+$a.o.= -b/m=$~\underline{\makebox[2cm][r]{~}}$\pm$\underline{\makebox[2cm][r]{~}}(~~~) 
+\\
+\noindent Ajuste numérico:  $m=$~\underline{\makebox[2cm][r]{~}}$\pm$\underline{\makebox[2cm][r]{~}}(~~~), 
+$b=$~\underline{\makebox[2cm][r]{~}}$\pm$\underline{\makebox[2cm][r]{~}}(~~~) 
+
+\noindent  $h\pm \delta h=($\underline{\makebox[2cm][r]{~}}$\pm$\underline{\makebox[2cm][r]{~}}$)\times 10^{-\,}$ \underline{\makebox[0.5cm][r]{~}}(~~~), 
+$W \pm \delta W=$~\underline{\makebox[1.5cm][r]{~}}$\pm$\underline{\makebox[1.5cm][r]{~}} (~~~) 
+
+\noindent  Desvio à Exactidão $=$~\underline{\makebox[1.5cm][r]{~}}(\%), 
+Incerteza relativa $=$~\underline{\makebox[1.5cm][r]{~}}($\%$) 
+
+
+
+
+
+
+\subsection{\sf Análise de Resultados, Conclusões e Comentários}
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+
+
+
+
+%\vspace{1cm}
+
+\newpage
+
+
+
+
+
+
+%\begin{center}
+%     \makebox[\textwidth]{\framebox[18cm]{\rule{0pt}{5cm}}}
+%     \caption{Montagem Experimental\label{montag}}
+%\end{center}
+
+
+
+%\newpage
+
+\end{document} 

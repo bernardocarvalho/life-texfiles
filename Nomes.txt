@@ -1,0 +1,4 @@
+Turno:\underline{\makebox[1.5cm][l]{~}} Grupo:\underline{\makebox[1.5cm][l]{~}} Data:\underline{\makebox[1.5cm][l]{~}}\\
+\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \resizebox{15pt}{!}{$\square$} \\
+\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \resizebox{15pt}{!}{$\square$}\\
+\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \resizebox{15pt}{!}{$\square$}

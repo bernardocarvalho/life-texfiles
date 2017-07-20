@@ -1,0 +1,169 @@
+%&program=xelatex
+%&encoding=UTF-8 Unicode
+% SVN keywords
+% $Author: bernardo $
+% $Date: 2014-10-10 08:48:19 +0100 (Fri, 10 Oct 2014) $
+% $Revision: 6700 $
+% $URL: http://metis.ipfn.ist.utl.pt:8888/svn/cdaq/Users/Bernardo/Aulas/LFEB/teXfiles/Pendulo/pendulo_guia.tex $
+\documentclass[a4paper,12pt]{article}      % Comments after  % are ignored
+%\usepackage{hyperref}                 % For creating hyperlinks in cross references
+%\documentclass[a4paper,12pt]{article} 
+%
+\usepackage{ifxetex}% for LATEX, or
+\usepackage{ifplatform} 
+\usepackage{verbatim}
+
+\ifxetex
+\usepackage{polyglossia} \setmainlanguage{portuges}
+\usepackage{fontspec}
+%
+\ifwindows
+\setmainfont{Garamond}
+\setsansfont{Gill Sans MT}
+\setmonofont[Scale=0.95]{Courier}
+\fi
+\iflinux
+\setmainfont[Ligatures=TeX]{Linux Libertine O}
+\setsansfont[Ligatures=TeX,Scale=MatchLowercase]{Linux Biolinum}
+\setmonofont[Scale=0.95]{Courier}
+\fi
+\ifmacosx
+% add settings
+\fi
+%
+\usepackage{xcolor,graphicx} 
+\else
+%PdfLaTEX
+\usepackage[portuguese]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphics}                 % Packages to allow inclusion of graphics
+\usepackage{color}                    % For creating coloured text and background
+\fi
+
+\usepackage{amsmath,amssymb,amsfonts} % Typical maths resource packages
+
+\oddsidemargin 0cm
+\evensidemargin 0cm
+
+\pagestyle{myheadings}         % Option to put page headers
+                               % Needed \documentclass[a4paper,twoside]{article}
+\markboth{{MEFT}}
+{{\small\it \protect\input{../../LIFE.txt}}}
+
+\textwidth 15.5cm
+\topmargin -1cm
+\parindent 0cm
+\textheight 24cm
+\parskip 1mm
+
+
+
+% Math macros
+\newcommand{\ud}{\,\mathrm{d}} 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%\title{ e Difracção de Ondas Electromagnéticas num meio dieléctrico, homogéneo e isotrópico } 
+%\subtitle{ aplicação à luz visível} 
+
+\author{Prof. Bernardo B. Carvalho} 
+
+%, Bernardo Brotas Carvalho\\bernardo@ipfn.ist.utl.pt} 
+\date{ Setembro 2012} 
+
+\begin{document} 
+
+
+%	\begin{center}
+%	\textsc{\large Laboratório de Física Experimental Básica - MEFT - 2012/2013 }\\%[0.5cm]
+%	\end{center}
+\includegraphics[width=0.2\textwidth]{../../logo-ist}%\\[1cm]  %%  Logo_IST_color
+	
+	\HRule \\[0.5cm]
+	{ \huge   \bfseries \textsc{ Pendulo Gravítico } }\\[0.4cm]
+	{ \large \bfseries Determinação do período do pêndulo simples e aferição com o valor da Aceleração da Gravidade local $g$  }\\
+%	{ \large \begin{flushleft}
+%	 $\bullet$ Deflexão magnética \\
+%	 $\bullet$ Deflexão magnética em equilíbrio com deflexão eléctrica
+%	\end{flushleft} }
+	\HRule \\%[0.5cm]
+%	\textsc{\Large Laboratório de Física Experimental Básica}\\[0.5cm]
+	
+%	\input{./title_exa.tex} 
+
+%\maketitle
+%\section{\sf  Conceitos necessários:} 
+%\begin{enumerate}
+%	\item Força eléctrica. Campo eléctrico (Electrostático)
+%	\item Potencial eléctrico. Equipotencial. Energia potencial eléctrica 
+%	\item Condutores e dieléctricos. Condensador plano
+%	\item Efeitos da corrente eléctrica estacionária criada por uma espira 	
+%	\item Força de Laplace
+%\end{enumerate}
+
+
+\section{\sf Procedimento Experimental}
+{ \large Material }
+ \begin{flushleft}
+	 $\bullet$ Suporte do Pêndulo \\
+	 $\bullet$ Massas de Chumbo, linha inextensível e com massa desprezável \\
+	 $\bullet$ Régua graduada, Cronómetro, Fita métrica, transferidor, balança
+\end{flushleft} 
+
+Comece a sessão de laboratório por estimar a precisão que obtém na medição do tempo com o cronómetro, tendo em conta 
+o tempo de reacção do corpo humano. 
+Com a ajuda de um colega e de uma régua graduada obtenha 15 medidas da queda da régua e a partir da média e desvio padrão obtenha o seu tempo de reação e a incerteza \footnote{$\overline{t}=\sqrt{\frac{2 \overline{D}}{g}}$ e   
+$e_{\overline{t}}=\sqrt{\frac{2 }{g}} \cdot \frac{1}{2\sqrt{\overline{D}}} \cdot e_{\overline{D}}  
+= \overline{t} \cdot \frac{1}{2\overline{D}} \cdot e_{\overline{D}} $ }
+
+\begin{tabular}{|r|c|c|c|}
+\hline
+Ensaio  & A - Distância & B - Distância & C - Distância  \\
+\# & de queda (cm) & de queda (cm) & de queda (cm)\\
+\hline \hline
+1 & & & \\
+\hline
+2 & &  &\\
+\hline 3 & & & \\
+\hline 4 & & & \\
+\hline 5 & & & \\
+\hline \hline
+Média $\overline{D}$ (m) & &  & \\
+Desvio padrão (m) & & & \\
+Erro da Média  $e_{\overline{D}}$ (m) & & & \\ 
+Tempo de reação $\overline{t} \pm e_{\overline{t}}$ (s) & $\qquad \pm$ \quad(m) & $\qquad \pm$ \quad (m) & $\qquad \pm$ \quad (m) \\
+\hline
+\end{tabular}
+
+Monte o sistema de pêndulo gravítico e obtenha o seu período para diversos comprimentos do fio. 
+Obtenha o valor de $g_{exp}$ para estes ensaios, usando a expressão (9) do texto de apoio, bem como a respectiva incerteza experimental. 
+Compare o valor final de $g_{exp}$ obtido com o valor tabelado $g_{tab}$ e estime o desvio à exactidão que obteve. 
+
+\smallskip
+
+Tenha em atenção os seguintes aspectos:
+ \begin{flushleft}
+	 $\bullet$ Uma massa pendurada num fio tem mais que o grau de liberdade em $\theta$. Tente assegurar-se que o pêndulo oscila apenas ao longo de um plano. \\
+	 $\bullet$ Tente minimizar o efeitos de paralaxe na determinação do ângulo máximo, quer no posição usada para cronometrar um período  \\
+	 $\bullet$ Naturalmente a massa utilizada, não é pontual. Qual é o efeito  na medida e incerteza do comprimento $l$? \\	
+	 $\bullet$ Como pode minimizar a incerteza da medição do período? Usando um ou $N$ ciclos? \\
+\end{flushleft} 
+
+
+Actividades adicionais, se tiver tempo:
+ \begin{flushleft}
+	 $\bullet$ Utilize a montagem para medição precisa do Periodo. Compare com os outros resultados.\\
+	 $\bullet$ Verifique experimentalmente que o período do pêndulo não depende do valor da massa.\\
+	 $\bullet$ Verifique experimentalmente a dependência do ângulo máximo no período do pêndulo. 
+	 Para que valores de $\theta_0$ o valor calculado de $g_{exp}$ se afasta de $\overline{g_{exp}}$ com desvio de $0.05$ ?\\
+	 $\bullet$ Tente estimar a percentagem de energia devido ao atrito que se perde em cada ciclo .
+\end{flushleft} 
+
+ 
+
+
+%\textbf{Ver descrição no guia de laboratório pgs.77-81}
+
+\end{document} 	
+
