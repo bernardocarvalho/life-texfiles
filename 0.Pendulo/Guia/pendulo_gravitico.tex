@@ -115,14 +115,14 @@
 
 Pretende-se com este trabalho determinar o período de oscilação de um pêndulo simples, constituído por um fio e uma massa, para diferentes comprimentos do fio. A partir destes valores é possível determinar o valor da aceleração da gravidade local $g$.
 
-Este tipo de pêndulos foi estudado extensivamente por Galileu Galilei (1564-1642), no início do séc. XVIII. Galileu foi o primeiro a constatar a propriedade de isocronismo do pêndulo: para pequenas amplitudes de oscilação, o período é independente da amplitude do movimento. Também descobriu que o período não depende do valor da massa, e é proporcional à raiz quadrada do comprimento do fio. Estas propriedades vieram a permitir a utilização do pêndulo como instrumentos para medição de intervalos de tempo: os relógios de pêndulo.
+Este tipo de pêndulos foi estudado extensivamente por Galileu Galilei (1564-1642), no início do séc. XVIII. O \emph{pai da Física Moderna} foi o primeiro a constatar a propriedade de isocronismo do pêndulo: para pequenas amplitudes de oscilação, o período é independente quer da amplitude do movimento, quer do valor da massa. Também descobriu que o período é proporcional à raiz quadrada do comprimento do fio. Estas propriedades vieram a permitir a utilização do pêndulo como instrumento de referência para medição de intervalos de tempo e da Hora durante toda a parte d dia: os relógios de pêndulo.
 
 
 \section{\sf Movimento Harmónico Simples}
 
 O pêndulo gravítico é um exemplo simples de um importante modelo matemático, o ``Oscilador Harmónico'' (OH), de vastíssima utilização em quase todos o ramos da Física,
  bem como muitas áreas de Engenharia. 
- Neste modelo, um sistema físico arbitrário encontra-se na vizinhança de uma posição de equilíbrio, onde há um mínimo (local ou absoluto) da sua energia potencial  ($E_P$), de origem gravítica, elástica, eletrostática ou outra. Este sistema apresenta as seguintes características (ver Figura 1):
+ Neste modelo, um sistema físico arbitrário encontra-se na vizinhança de uma posição de equilíbrio, onde há um mínimo (local ou absoluto) da sua energia potencial  ($E_P$). A Energia pode ser de origem gravítica, elástica, eletrostática ou outra desde que seja do tipo \emph{Conservativa}. Um sistema como este apresenta as seguintes características:
 
 \begin{figure}
 	[b] \centering 
@@ -131,10 +131,10 @@ O pêndulo gravítico é um exemplo simples de um importante modelo matemático,
 \end{figure}
  
 \begin{enumerate}
-\item  Ao distanciar-se deste mínimo, por uma perturbação ou outra qualquer força externa inicial, 
-surge uma força de índole conservativa, sempre direcionada de forma a repor o equilíbrio.
+\item  Ao distanciar-se deste mínimo, por uma perturbação ou outra força externa inicial, 
+surge uma força de índole conservativa, sempre direcionada de forma a repor o equilíbrio (ver Figura \ref{fig:1}).
 \item Quando as forças exteriores deixam de actuar, o sistema adquire movimento, 
-transferindo-se a energia potencial para energia cinética ($E_C$).
+transferindoenergia potencial para energia cinética ($E_C$).
 \item Ao retomar a posição de equilíbrio, o movimento prossegue por inércia até se alcançar um 
 novo máximo, normalmente simétrico ao ponto inicial.
 \item Na ausência de atrito, o sistema regressa  ao ponto de partida e o ciclo repete-se infinitamente, com período $T_0$ constante (``Oscilador Livre''). Contudo, na presença de forças dissipativas a energia total deixa de ser constante e irá dissipar-se, diminuindo a amplitude do movimento, até desaparecer (``Oscilador Amortecido'').
@@ -142,11 +142,12 @@ novo máximo, normalmente simétrico ao ponto inicial.
 
 
 \subsection{\sf Sistema massa-mola}
-Antes de analisarmos o pêndulo gravítico, vamos considerar o modelo de OH mecânico mais simples, que consiste num sistema de uma massa $m$ que se 
+Antes de analisarmos o pêndulo gravítico, cuja solução exacta é alago complexa, vamos considerar o modelo de OH mecânico mais simples, que consiste num sistema de uma massa $m$ que se 
 move na horizontal e sem atrito,  presa a uma mola de constante elástica $k_{mola}$ que é fixada na sua outra extremidade a um ponto fixo (Figura \ref{fig:2}). 
 
-Pretendemos determinar a função $x(t)$ que descreve o movimento da massa nestas condições. Caso a massa se desloque da posição de equilíbrio ($x =x_0$), a energia potencial elástica aumenta e mola irá exercer uma força de sentido contrário ao do deslocamento $\Delta x \equiv x - x_0$. Por simplicidade faz-se $x_0=0$, e portanto $x=\Delta x$.
- No modelo ideal da mola \emph{linear}  a força é sempre proporcional ao deslocamento $x$:
+Pretendemos determinar a função $x(t)$ que descreve o movimento da massa nestas condições. Caso a massa se desloque da posição de equilíbrio ($x =x_0$), a energia potencial elástica aumenta e mola irá exercer uma força de sentido contrário ao do deslocamento $\Delta x \equiv x - x_0$. 
+Para simplificar faz-se $x_0=0$ e portanto $\Delta x = x$.
+ No modelo ideal da \emph{ mola linear} a força é sempre proporcional ao deslocamento $x$, com uma constante $k_{mola}$ :
 
 \begin{figure}
 	[b] \centering 
@@ -158,7 +159,7 @@ Pretendemos determinar a função $x(t)$ que descreve o movimento da massa nesta
 F_{mola} = - k_{mola} \, x \qquad 
 \end{equation}
 
-A partir da segunda equação de Newton, $F=m a$, e sabendo que $ a = \ddot{x}= \frac{d^2 x}{dt^2}$, é possível chegar facilmente  à equação de movimento do sistema massa-mola (equação diferencial de 2.º grau),
+A partir da segunda equação de Newton, $F=m a$ e sabendo que $ a \equiv  \ddot{x} \equiv  \frac{d^2 x}{dt^2}$ é possível chegar facilmente  à equação de movimento do sistema massa-mola (equação diferencial de 2.º grau),
 
 \begin{equation}
 	\label{eq:1} 
@@ -173,7 +174,8 @@ Pode-se verificar após alguma álgebra\footnote{Consultar \emph{Notas de apoio 
 x(t) = c_1 \cos(\omega_0 \, t) + c_2 \sin(\omega_0 \, t) = A_0 \sin(\omega_0 \, t + \phi_0) \text{, com } \omega_0 = \sqrt{\frac{k_{mola}}{m}}
 \end{equation}
 
-em que $ A_0 $ é a amplitude e $\phi_0$ é a fase, ambas constantes e dependentes da condições (a posição e a velocidade) iniciais. Finalmente $\omega_0$ é a frequência angular de ressonância, inversamente proporcional ao período, o qual depende apenas da massa $m$ e de $k_{mola}$:
+em que $ A_0 $ é a amplitude e $\phi_0$ é a fase, ambas constantes e dependentes da condições iniciais de posição e velocidade. 
+Finalmente $\omega_0$ é a frequência angular de ressonância, inversamente proporcional ao período, o qual depende apenas da massa $m$ e de $k_{mola}$:
 %, $\frac{2 \pi}{T}$,
 
 \begin{equation}
@@ -186,7 +188,7 @@ Assim, a solução para a posição $x(t)$ é uma função sinusoidal (harmónic
 
 
 \subsection{\sf Pêndulo gravítico}
-O pêndulo gravítico consiste na sua forma idealizada numa massa pontual suspensa\footnote{No Latim \emph{pendulus}} a partir de um fio inextensível, de comprimento $l$ fixo e de massa desprezável, que pode rodar de um ângulo $\theta$ em torno de um ponto (o eixo, ou pivô). Quando a massa se desvia da posição central $\theta=0$, a força gravítica aplicada (o seu peso $F_g = m \, g $) adquire uma componente $F_{\theta}$ na direcção de movimento (tangente à trajectória circular) e que tende a restabelecer o equilíbrio (Figura \ref{fig:3}).
+O pêndulo gravítico consiste na sua forma idealizada numa massa pontual suspensa\footnote{No Latim \emph{pendulus}} a partir de um fio inextensível, de comprimento $l$ fixo e de massa desprezável, que pode rodar de um ângulo $\theta$ em torno de um ponto (o eixo, ou pivô) (Figura \ref{fig:3}). Quando a massa se desvia da posição central $\theta=0$, a força gravítica aplicada (o seu peso $F_g = m \, g $) adquire uma componente $F_{\theta}$ na direcção de movimento (tangente à trajectória) e que tende a restabelecer o equilíbrio.
 
 \begin{figure}
 	[!htbp] \centering 
@@ -194,7 +196,7 @@ O pêndulo gravítico consiste na sua forma idealizada numa massa pontual susp
 	\caption{Força de gravidade $F_g$ no pêndulo gravítico e a sua projecção $F_{\theta}$ na direcção de movimento. \label{fig:3} } 
 \end{figure}
 
-Se a posição do pêndulo for descrita pela coordenada $s= l\cdot \theta$ ao longo da sua trajectória, 
+Se a posição do pêndulo for descrita pela coordenada  ao longo da sua trajectória circular, $s= l\cdot \theta$,
 então a força restauradora é 
 \begin{equation}
 	\label{eq:4} 
@@ -210,7 +212,7 @@ e a equação diferencial de movimento para a posição $s$ resulta em
 %l \,\frac{d^2 x}{dt^2} = \frac{k_{mola}}{m} x
 \end{align}
 
-Esta equação não tem uma resolução analítica simples, mas através do método  da \emph{linearização} (o ``canivete suíço'' dos físicos),  utiliza-se a aproximação $ \sin(\theta) \simeq \theta$ , válida para  $\theta_0 \le 0.08\,\mathrm{rad}$ (aqui  os ângulos têm de ser medido em radianos!\footnote{ Por exemplo: $\sin(5 ^{\circ}) = \sin(0.08726... \, \mathrm{rad}) = 0.08715... $}).
+Esta equação não tem  resolução analítica simples, mas através do método  da \emph{linearização} (o ``canivete suíço'' dos físicos),  utiliza-se a aproximação $ \sin(\theta) \simeq \theta$ , válida para  $\theta_0 \le 0.08\,\mathrm{rad}$ (aqui  os ângulos têm de ser expressos em radianos!\footnote{ Por exemplo: $\sin(5 ^{\circ}) = \sin(0.08726 \, \mathrm{rad}) = 0.08715... $}).
 Com esta aproximação ficamos com 
 
 \begin{equation}
@@ -225,19 +227,21 @@ cuja solução matemática é exacta e semelhante à expressão (\ref{eq:solu_mo
 \theta (t) = \theta_0 \sin(\omega_0 \, t + \phi_0) \text{, com } \omega_0 = \sqrt{\frac{g}{l}}.
 \end{equation}
 
-O que é interessante neste modelo é que o efeito da \emph{massa gravítica } anula o da \emph{massa inercial } e o período do pêndulo $T_0$ fica a  depender apenas do comprimento $l$  e do valor da aceleração da gravidade $g$  local:\footnote{À superfície da Terra e à latitude de Lisboa: $g\approx 9.800\,\mathrm{m s^{-2}}$. Consultar também o Projecto ``Pêndulo Mundial'', baseado no e-lab do IST: http://www.elab.ist.utl.pt/}
+O que é interessante neste modelo é que o efeito da \emph{massa gravítica } anula o da \emph{massa inercial } e o período do pêndulo $T_0$ fica a  depender apenas do comprimento $l$  e do valor da aceleração da gravidade $g$  local:\footnote{À superfície da Terra e à latitude de Lisboa: $g\approx 9.801\,\mathrm{m s^{-2}}$. Consultar também o Projecto ``Pêndulo Mundial'', baseado no e-lab do IST: http://groups.ist.utl.pt/wwwelab/wiki/index.php?title=Pêndulo\_Mundial}
+%http://groups.ist.utl.pt/wwwelab/wiki/index.php?title=Pêndulo_Mundial }
+
 %à superfície da Terra $g\approx 9.81\,m s^{-2}$ e $g/\pi^2 \approx 0.994 \,m s^{-2}$}
 
 \begin{equation}
 	\label{eq:period_pend}
-T_0 = \frac{2 \pi}{\omega_0} = 2\pi\; \sqrt{\frac{l}{g}} \quad  \text{, para }	\theta_0 \ll 1.
+T_0 = \frac{2 \pi}{\omega_0} = 2\pi\; \sqrt{\frac{l}{g}} \quad  \text{, para }	\theta_0 \ll 1 \, \mathrm{rad}.
 \end{equation}
 %\simeq
 
 A equação (\ref{eq:period_pend}) representa precisamente a dependência entre o período e o comprimento do pêndulo deduzida por Galileu.
-A partir dessa época, estes dispositivos foram sistematicamente utilizados para medir o tempo (e consequentemente a latitude), sendo a base 
-de quase todos os relógios de precisão até meados do século passado, com maior ou menor complexidade.
-Actualmente apenas os relógios decorativos ou de luxo usam variações do pêndulo\footnote{Mas ainda são úteis para se fazer ciência: Ver por exemplo a revista \emph{Nature} de Julho de 2015, http://www.nature.com/articles/srep11548}.
+A partir dessa época, estes dispositivos foram sistematicamente utilizados para medir o tempo e a Hora local (e comparando com a Hora Solar também a Latitude), sendo a base 
+de  todos os relógios de precisão até meados do século passado, com maior ou menor complexidade.
+Actualmente apenas os relógios decorativos ou de luxo usam variações do pêndulo\footnote{Mas ainda são úteis para se fazer Ciência: Ver por exemplo a revista \emph{Nature} de Julho de 2015, http://www.nature.com/articles/srep11548, com autores aqui do Técnico}.
 
 \subsubsection{A influência do atrito}
 Até aqui, desprezámos o atrito do ar no movimento do pêndulo. Ao introduzir esta contribuição, na aproximação de atrito cinético 
@@ -248,9 +252,9 @@ proporcional à velocidade, a  equação (\ref{eq:6}) muda para
 	 \frac{d^2 \theta}{dt^2} + \lambda \, \frac{1}{m}  \frac{d \theta}{dt} + \frac{g}{l} \theta =0 \quad (\lambda \text{ = Coeficiente de atrito viscoso})
 \end{equation}
 
-O primeiro efeito, que se pode verificar no laboratório, é na amplitude do movimento $\theta_0$: já não será uma constante, mas irá diminuir inexoravelmente com o tempo. 
+O primeiro efeito, que se pode verificar no laboratório, é na amplitude do movimento $\theta_0$: já não será  constante, mas irá diminuir inexoravelmente com o tempo. 
 
-O segundo efeito, muito mais difícil de observar, é que existe uma muito pequena alteração no período, que tem agora o valor
+O segundo efeito,  mais difícil de observar, é que existe uma muito pequena alteração no período, que tem agora o valor
 \begin{equation}
 T_1= T_0 / \sqrt{1 - \zeta^2}, \quad \text{onde }  \zeta = \frac{\lambda}{2\, m} \sqrt{\frac{l}{g}} .
 \end{equation}
@@ -276,70 +280,70 @@ Naturalmente, verifica-se imediatamente que na aproximação $\theta_0 \ll 1$ a 
 
 
 
-\newpage
-\section{\sf Procedimento Experimental}
-{ \large Material }
- \begin{flushleft}
-	 $\bullet$ Suporte do pêndulo \\
-	 $\bullet$ Massas esféricas de chumbo, linha (quase) inextensível de nylon e com massa desprezável \\
-	 $\bullet$ Régua graduada, cronómetro, fita métrica, transferidor, balança
-\end{flushleft} 
+% \newpage
+% \section{\sf Procedimento Experimental}
+% { \large Material }
+%  \begin{flushleft}
+% 	 $\bullet$ Suporte do pêndulo \\
+% 	 $\bullet$ Massas esféricas de chumbo, linha (quase) inextensível de nylon e com massa desprezável \\
+% 	 $\bullet$ Régua graduada, cronómetro, fita métrica, transferidor, balança
+% \end{flushleft} 
 
-\begin{enumerate}
-\item Comece a sessão de laboratório estimando a precisão que obtém na medição do tempo com o cronómetro, tendo em conta 
-o tempo de reacção do corpo humano. 
-Com a ajuda de um colega e de uma régua graduada, obtenha 15 medidas da distância de queda da régua. 
-\item A partir da média das distâncias $\overline{D}$ e do respectivo desvio padrão obtenha\footnote{Considere $\,\overline{t}=\sqrt{\frac{2 \overline{D}}{g}}$ e   
-$e_{\overline{t}}=\sqrt{\frac{2 }{g}} \cdot \frac{1}{2\sqrt{\overline{D}}} \cdot e_{\overline{D}}= \overline{t} \cdot \frac{1}{2\overline{D}} \cdot e_{\overline{D}} $ } o seu tempo de reacção $\overline{t}$ e a respectiva incerteza $e_{\overline{t}}$. 
-\item Repita para cada um dos demais elementos do grupo e preencha uma tabela semelhante à ilustrada.
-\begin{center}
-\begin{tabular}{|r|c|c|c|}
-\hline
-Ensaio  & $D_A$ - Distância & $D_B$ - Distância & $D_C$ - Distância  \\
-\# & de queda (cm) & de queda (cm) & de queda (cm)\\
-\hline \hline
-1 & & & \\
-\hline
-2 & &  &\\
-\hline ... & & & \\
-%\hline 4 & & & \\
-\hline 15 & & & \\
-\hline \hline
-Média $\overline{D}$ (m) & &  & \\
-Desvio padrão (m) & & & \\
-Erro da média  $e_{\overline{D}}$ (m) & & & \\ 
-Tempo de reacção $\overline{t} \pm e_{\overline{t}}$ (s) & $\qquad \pm$  & $\qquad \pm$  & $\qquad \pm$  \\
-\hline
-\end{tabular}
-\end{center}
+% \begin{enumerate}
+% \item Comece a sessão de laboratório estimando a precisão que obtém na medição do tempo com o cronómetro, tendo em conta 
+% o tempo de reacção do corpo humano. 
+% Com a ajuda de um colega e de uma régua graduada, obtenha 15 medidas da distância de queda da régua. 
+% \item A partir da média das distâncias $\overline{D}$ e do respectivo desvio padrão obtenha\footnote{Considere $\,\overline{t}=\sqrt{\frac{2 \overline{D}}{g}}$ e   
+% $e_{\overline{t}}=\sqrt{\frac{2 }{g}} \cdot \frac{1}{2\sqrt{\overline{D}}} \cdot e_{\overline{D}}= \overline{t} \cdot \frac{1}{2\overline{D}} \cdot e_{\overline{D}} $ } o seu tempo de reacção $\overline{t}$ e a respectiva incerteza $e_{\overline{t}}$. 
+% \item Repita para cada um dos demais elementos do grupo e preencha uma tabela semelhante à ilustrada.
+% \begin{center}
+% \begin{tabular}{|r|c|c|c|}
+% \hline
+% Ensaio  & $D_A$ - Distância & $D_B$ - Distância & $D_C$ - Distância  \\
+% \# & de queda (cm) & de queda (cm) & de queda (cm)\\
+% \hline \hline
+% 1 & & & \\
+% \hline
+% 2 & &  &\\
+% \hline ... & & & \\
+% %\hline 4 & & & \\
+% \hline 15 & & & \\
+% \hline \hline
+% Média $\overline{D}$ (m) & &  & \\
+% Desvio padrão (m) & & & \\
+% Erro da média  $e_{\overline{D}}$ (m) & & & \\ 
+% Tempo de reacção $\overline{t} \pm e_{\overline{t}}$ (s) & $\qquad \pm$  & $\qquad \pm$  & $\qquad \pm$  \\
+% \hline
+% \end{tabular}
+% \end{center}
 
-\item Monte o sistema de pêndulo gravítico e obtenha o período para diversos comprimentos do fio. 
-\item Obtenha o valor de $g_{exp}$ para estes ensaios, usando a expressão (9), bem como a respectiva incerteza experimental. 
-\item Compare o valor final de $g_{exp}$ obtido com o valor tabelado $g_{tab}$ e estime o desvio à exactidão que obteve. 
-\end{enumerate}
+% \item Monte o sistema de pêndulo gravítico e obtenha o período para diversos comprimentos do fio. 
+% \item Obtenha o valor de $g_{exp}$ para estes ensaios, usando a expressão (9), bem como a respectiva incerteza experimental. 
+% \item Compare o valor final de $g_{exp}$ obtido com o valor tabelado $g_{tab}$ e estime o desvio à exactidão que obteve. 
+% \end{enumerate}
 
-\smallskip
+% \smallskip
 
-\subsection{\sf Aspectos a ter em conta:}
+% \subsection{\sf Aspectos a ter em conta:}
 
- \begin{flushleft}
-	 $\bullet$ Uma massa pendurada num fio tem mais que o grau de liberdade em $\theta$. Tente assegurar-se de que o pêndulo oscila apenas ao longo de um plano. \\
-	 $\bullet$ Tente minimizar o efeitos de paralaxe na determinação dos ângulos.\\
-	 $\bullet$ Naturalmente, a massa utilizada não é pontual. Quais os erros sistemático e aleatório na medida do comprimento $l$? \\	
-	 $\bullet$ Como pode minimizar a incerteza da medição do período? Medindo o tempo num ou em vários ciclos? \\
-\end{flushleft} 
+%  \begin{flushleft}
+% 	 $\bullet$ Uma massa pendurada num fio tem mais que o grau de liberdade em $\theta$. Tente assegurar-se de que o pêndulo oscila apenas ao longo de um plano. \\
+% 	 $\bullet$ Tente minimizar o efeitos de paralaxe na determinação dos ângulos.\\
+% 	 $\bullet$ Naturalmente, a massa utilizada não é pontual. Quais os erros sistemático e aleatório na medida do comprimento $l$? \\	
+% 	 $\bullet$ Como pode minimizar a incerteza da medição do período? Medindo o tempo num ou em vários ciclos? \\
+% \end{flushleft} 
 
-\subsection{\sf Actividades adicionais (se houver tempo):}
+% \subsection{\sf Actividades adicionais (se houver tempo):}
 
- \begin{flushleft}
-	 $\bullet$ Verifique experimentalmente que o período do pêndulo não depende do valor da massa.\\
-	 $\bullet$ Verifique experimentalmente que para grandes ângulos iniciais, o período do pêndulo varia. Aumenta ou diminui?\\
-%	 Para que valores de $\theta_0$ o valor calculado de $g_{exp}$ se afasta de $\overline{g_{exp}}$ com desvio de $0.05$ ?\\
-	 $\bullet$ Tente estimar a energia que se perde em cada ciclo (em percentagem) devido ao atrito.\\
-	 $\bullet$ Qual o comprimento do fio para construir um relógio pendular com período de $1$ s? 
-	 E se fosse na superfície da Lua? ($M_{Lua}=0,0123 M_{Terra}, R_{Lua}=0,273 R_{Terra}$)\\
-	 $\bullet$ Utilize o equipamento digital de detecção da passagem da massa para medir o período do pêndulo (para um comprimento apenas), e compare com os valores obtidos manualmente.
-\end{flushleft} 
+%  \begin{flushleft}
+% 	 $\bullet$ Verifique experimentalmente que o período do pêndulo não depende do valor da massa.\\
+% 	 $\bullet$ Verifique experimentalmente que para grandes ângulos iniciais, o período do pêndulo varia. Aumenta ou diminui?\\
+% %	 Para que valores de $\theta_0$ o valor calculado de $g_{exp}$ se afasta de $\overline{g_{exp}}$ com desvio de $0.05$ ?\\
+% 	 $\bullet$ Tente estimar a energia que se perde em cada ciclo (em percentagem) devido ao atrito.\\
+% 	 $\bullet$ Qual o comprimento do fio para construir um relógio pendular com período de $1$ s? 
+% 	 E se fosse na superfície da Lua? ($M_{Lua}=0,0123 M_{Terra}, R_{Lua}=0,273 R_{Terra}$)\\
+% 	 $\bullet$ Utilize o equipamento digital de detecção da passagem da massa para medir o período do pêndulo (para um comprimento apenas), e compare com os valores obtidos manualmente.
+% \end{flushleft} 
 
 %\textbf{Ver descrição no guia de laboratório pgs.77-81}
 
