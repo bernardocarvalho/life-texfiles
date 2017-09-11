@@ -15,7 +15,7 @@
 	\usepackage{fontspec}
 	\ifwindows
 		\setmainfont[Ligatures=TeX]{Garamond}
-		\setsansfont[Ligatures=TeX]{Gill Sans MT}
+		\setsansfont[Ligatures=TeX]{Arial}
 		\setmonofont{Consolas}
 %		\setmonofont[Scale=MatchLowercase]{Courier}
 	\fi
@@ -48,7 +48,7 @@
 
 
 \usepackage{amsmath,amssymb,amsfonts} % Typical maths resource packages
-\usepackage[retainorgcmds]{IEEEtrantools}
+%\usepackage[retainorgcmds]{IEEEtrantools}
 \usepackage{caption}
 
 \oddsidemargin 0cm
@@ -57,7 +57,7 @@
 \pagestyle{myheadings}         % Option to put page headers
                                % Needed \documentclass[a4paper,twoside]{article}
 \markboth{{\small \it  Laboratório de Física Experimental Básica}}
-{{\small\it MEFT - 1º Sem.  2015/2016} }
+{{\small\it MEFT - 1º Sem.  2017/2018} }
 
 \addtolength{\hoffset}{-0.5cm}
 \addtolength{\textwidth}{2.5cm}
@@ -80,11 +80,11 @@
 \author{Prof. Bernardo B. Carvalho} 
 
 %%%%, Bernardo Brotas Carvalho\\bernardo@ipfn.ist.utl.pt} 
-\date{ Outubro 2012} 
+\date{ Setembro 2017} 
 
 \begin{document} 
 
-	\includegraphics[width=0.2\textwidth]{../logo-ist}%\\[1cm]  %%  Logo_IST_color
+	\includegraphics[width=0.2\textwidth]{../../logo-ist}%\\[1cm]  %%  Logo_IST_color
 
 	\HRule \\[0.5cm]
 	{ \huge \sf  \textsc{A Propagação de Ondas Mecânicas em Meios Sólidos Homogéneos.}} \\[0.4cm] % \bfseries 
@@ -286,7 +286,9 @@ O tempo de percurso -- que é relativamente curto já que as velocidades de prop
 
 \subsection{\sf Material utilizado}
 \begin{itemize}
-\item Gerador / receptor de sinais eléctricos, Sensores\item Osciloscópio,\item Cilindros metálicos para calibração (latão) e amostras de rochas e de ‘plexiglass’
+\item Gerador / receptor de sinais eléctricos, Sensores P e S
+\item Osciloscópio,
+\item Cilindros metálicos para calibração (latão), amostras de rochas e de ‘plexiglass’, tina com água
 \end{itemize}
 
 \begin{center}
@@ -295,41 +297,24 @@ O tempo de percurso -- que é relativamente curto já que as velocidades de prop
 \end{center}
 
 
-\begin{table}[htp]
-\caption{Parâmetros do gerador / receptor.}
-\begin{center}
-\begin{tabular}{|r|c|}
-\hline
-\bf{Mode} & THRU (Through Transmission)\\
-\hline
-\bf{PRF (Pulse Repetition Freq.)} & 10.0 KHz\\
-\hline
-\bf{Energy} & 50 ou 100 $\mu$J\\\hline
-\bf{Damping} & 50 $\Omega$\\
-\hline
-\bf{HP Filt ( High Pass Filter)} & 300 KHz\\
-\hline
-\bf{LP Filt (Low Pass Filter)} & 5 MHz\\
-\hline
-\bf{Input Atten} & 50 dB\\\hline
-\bf{Output Atten} & 11.1 dB\\\hline
-\bf{Gain} & 40.0 dB\\
-\hline
-\bf{Sensitivity} & 24.8 dB\\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
+ Estabeleça as ligações como se indica no esquema. Verifique que o gerador de sinais tem as funções definidas com as opções aconselhadas.
+Observe na base de tempo adequada o sinal emitido pelo gerador.
 
-Verifique que o gerador/ receptor tem as funções definidas com as opções da tabela. Estabeleça as ligações como se indica no esquema [quando os sinais observados no osciloscópio forem muito fracos transfira o cabo ligado ao terminal Rcvr out para o terminal R do gerador]. Observe na base de tempo adequada o sinal emitido pelo gerador.
-\subsection{\sf Calibração dos sensores}Utilize os diferentes cilindros de latão e um par de sensores P (referência V 103 ). Para um melhor contacto sensor/cilindro, espalhe uma gota de líquido acoplante\footnote{Utilize óleo de silicone para as ondas longitudinais e o líquido viscoso para as ondas transversais.} na face de cada sensor que vai aplicar a cada extremidade do cilindro.
-Observe no osciloscópio, no mesmo canal, o sinal emitido e o sinal recebido depois de ter atravessado o cilindro e determine o atraso entre os dois sinais. Repita para os outros cilindros. Estime o erro das observações.
-Repita para todos os cilindros, usando agora os sensores S (referência V 153), tendo o cuidado de alinhar a marca (de polarização) existente no casquilho de cada sensor. Observe o que acontece ao sinal à medida que roda um dos sensores em relação ao outro.Estime, usando um processo gráfico, a velocidade de propagação dos dois tipos de ondas, assim como o atraso temporal introduzido pela camada protectora de cada sensor (P e S).
+\subsection{\sf Calibração dos sensores}
+Utilize os diferentes cilindros de latão e um par de sensores P (referência \textbf{V103} ). Para um melhor contacto sensor/cilindro, espalhe uma gota de líquido acoplante\footnote{Utilize óleo de silicone para as ondas longitudinais e o líquido viscoso para as ondas transversais.} na face de cada sensor que vai aplicar a cada extremidade do cilindro.
 
-\subsection{\sf Determinação da velocidade de propagação nas amostras}Faça agora determinações semelhantes às anteriores para duas amostras de rochas e uma amostra de plexiglass com os sensores P. Repita a experiência para os dois pares de sensores S e observe o efeito da rotação, separadamente para cada um dos sensores.
-Estime as velocidades de propagação das ondas P e S (e a correspondente precisão) segundo as direcções ensaiadas e conclua sobre a isotropia observada para esta propriedade. Analise as diferentes contribuições para as incertezas obtidas.
+Observe no osciloscópio, no mesmo canal, o sinal emitido e o sinal recebido depois de ter atravessado o cilindro e determine o atraso entre os dois sinais. Repita para os outros cilindros. Estime o erro das observações.
+Repita para todos os cilindros, usando agora os sensores S (referência  \textbf{V153}), tendo o cuidado de  \emph{alinhar a marca}  (de polarização) existente no casquilho de cada sensor. 
+Observe o que acontece ao sinal à medida que roda um dos sensores em relação ao outro.
+Estime, usando um processo gráfico, a velocidade de propagação dos dois tipos de ondas, assim como o atraso temporal introduzido pela camada protectora de cada sensor (P e S).
+
+\subsection{\sf Determinação da velocidade de propagação nas amostras}
+Faça agora determinações semelhantes às anteriores para duas amostras de rochas, uma amostra de plexiglass e numa tina com água  com os sensores P. Repita a experiência para os dois pares de sensores S e observe o efeito da rotação, separadamente para cada um dos sensores.
+
+Estime as velocidades de propagação das ondas P e S (e a correspondente precisão) segundo as direcções ensaiadas e conclua sobre a isotropia observada para esta propriedade. Analise as diferentes contribuições para as incertezas obtidas.
 
 Para as amostras praticamente isótropas estime os módulos de elasticidade K, $\mu$ e $\sigma$ (e a correspondente precisão) e o coeficiente de anisotropia c.a. para as amostras anisótropas.
+Comente os resultados obtidos das velocidades para a água.
 
 
 
@@ -369,11 +354,15 @@ A velocidade de fase $v$ é definida como a velocidade a que se desloca um ponto
 
 Calculando $\frac{\partial V }{\partial x}, \;\frac{\partial V }{\partial t}, \;\frac{\partial^2 V }{\partial x^2}, \; \textrm{ e } \;\frac{\partial^2 V }{\partial t^2} $   e    obtém-se\footnote{Para simplificação da escrita usa-se $V$ em vez de $\vec{V}$. }
 
-\begin{IEEEeqnarray}{lCr}
+\begin{equation}
+\begin{array}{ccc}
+%\begin{IEEEeqnarray}{lCr}
 \frac{\partial V }{\partial x} = V_{max} \, (-\frac{2\,\pi}{\lambda}) \cos \phi &\qquad& \frac{\partial V }{\partial t} = V_{max} \, (+\frac{2\,\pi}{T}) \cos \phi\\
 %
 \frac{\partial^2 V }{\partial x^2} = -V_{max} \, \left(-\frac{2\,\pi}{\lambda}\right)^2 \sin \phi &\qquad& \frac{\partial^2 V }{\partial t^2} = -V_{max} \, \left(+\frac{2\,\pi}{T}\right)^2 \sin \phi
-\end{IEEEeqnarray}
+\end{array}
+%\end{IEEEeqnarray}
+\end{equation}
 
 A partir das duas últimas expressões podemos escrever
 
