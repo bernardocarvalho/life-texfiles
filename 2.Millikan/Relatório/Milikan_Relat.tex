@@ -16,7 +16,7 @@
 	\usepackage{fontspec}
 	\ifwindows
 		\setmainfont[Ligatures=TeX]{Garamond}
-		\setsansfont[Ligatures=TeX]{Gill Sans MT}
+		\setsansfont[Ligatures=TeX]{Arial}
 		\setmonofont{Consolas}
 %		\setmonofont[Scale=MatchLowercase]{Courier}
 	\fi
@@ -43,7 +43,7 @@
 \setlist{nolistsep}
 
 \usepackage{amsmath,amssymb,amsfonts} % Typical maths resource packages
-\usepackage[retainorgcmds]{IEEEtrantools}
+%\usepackage[retainorgcmds]{IEEEtrantools}
 \usepackage{caption}
 
 \usepackage{tikz}
@@ -79,12 +79,13 @@
 
 % Math macros
 \newcommand{\ud}{\,\mathrm{d}} 
+\newcommand{\smu}{\mathrm{\mu}} 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 \author{Prof. Bernardo B. Carvalho} 
 
 %%%%, Bernardo Brotas Carvalho\\bernardo.carvalho@tecnico.ulisboa.pt} 
-\date{ Outubro 2014} 
+\date{ Setembro 2017} 
 
 \begin{document} 
 
@@ -99,13 +100,14 @@
 %TURNO:________ GRUPO:________ DATA: ___ \\
 %Número: _______ Nome: ________________ \\
 %Número: _______ Nome: ________________ \\
-{  \sf  Relatório da Exp. de Millikan.} %[0.4cm] % \bfseries 
+{  \sf  Relatório da Experiência de Millikan.} %[0.4cm] % \bfseries 
 
 \input{../../Nomes.txt}
 
 \section{\sf Trabalho preparatório a realizar  ANTES da sessão de Laboratório:}
-\begin{enumerate}
-\item Descreva por palavras suas quais os objectivos do trabalho que irá realizar na sessão de laboratório.
+%\begin{enumerate}
+%\item 
+Descreva por palavras suas quais os objectivos do trabalho que irá realizar na sessão de laboratório.
 % (uma folha A4). 
 %Indique as expressões que irá utilizar para obter as grandezas experimentais, bem como as expressões para calcular as incertezas. Inclua esta parte também no Relatório. Este irá constituir o ÚNICO meio de consulta na Prova Individual.
 
@@ -116,7 +118,7 @@
 %\item Qual a carga que a Terra teria de ter para que uma gota de óleo de $R = 10\,\mu m$, carregada com uma carga elementar positiva flutuar na atmosfera?
 %\item Nas condições  normais de temperatura e pressão (PTN) o volume molar do ar é $V_{mol}=22.41 l / mol$. Calcule a distância média das moléculas do ar e guarde o valor para discussão final sobre o ponto $2.3.2$ do Guia.
 %$3.3 n m$ 
-\end{enumerate}
+%\end{enumerate}
 
 \subsection{\sf Objectivos do Trabalho}
 \noindent\underline{\makebox[\textwidth][r]{~}} \\
@@ -130,7 +132,7 @@
 \subsubsection{\sf Equações }
 Escreva no seguinte quadro todas as equações necessárias para calcular as grandezas, bem com as suas incertezas.
 \begin{center}
-\framebox[15cm]{\rule{0pt}{9.5cm}}
+\framebox[18cm]{\rule{0pt}{8.5cm}}
 \end{center}
 
 
@@ -138,21 +140,23 @@ Escreva no seguinte quadro todas as equações necessárias para calcular as gra
 \subsection{\sf Montagem Experimental}
 Desenhe um diagrama da experiência, bem como um esboço da imagem que observa ao microscópio. Inclua uma lista com a Legenda de Instrumentos.
 \begin{center}
-\framebox[18cm]{\rule{0pt}{6.5cm}}
+\framebox[18cm]{\rule{0pt}{8.5cm}}
 \end{center}
 
 \subsection{\sf Dados Experimentais}\label{sec:dados}
-Execute as medições e preencha as tabelas seguintes, para quatro gotas, indicando  apenas os algarismos significativos. Poderá em alternativa utilizar folhas de cálculo, com o mesmo formato (apresentando-as em anexo) mas terá de preencher as colunas 2, 3, 5 e 6 da secção \ref{sec:vlim} e as colunas 6 e 7 das secção \ref{sec:calc}. Em qualquer dos casos, terá que verificar as contas com auxílio da calculadora, para um dos ensaios e na presença do docente.
+Execute as medições e preencha as tabelas seguintes, para seis gotas, indicando  apenas os algarismos significativos. Poderá em alternativa utilizar folhas de cálculo, com o mesmo formato (apresentando-as em anexo) mas terá de preencher as colunas 2, 3, 5 e 6 da secção \ref{sec:vlim} e as colunas 6 e 7 das secção \ref{sec:calc}. Em qualquer dos casos, terá que verificar as contas com auxílio da calculadora, para um dos ensaios e na presença do docente.
 
 \subsubsection{\sf Cálculo da velocidade limite}
 \label{sec:vlim}
+\noindent Menor divisão do retículo  $=$~\underline{\makebox[2cm][r]{~}} mm
+
 \noindent  Distância percorrida pelas gotas $=$~\underline{\makebox[1cm][r]{~}} div $=$~\underline{\makebox[2cm][r]{~}} m
 
 \begin{center}
 	%\centering
 	\begin{tabular}{|c|c|c|c|c|c|}
 	\hline
-	Gota \#  & $U_{paragem}$ [V] & Tempo [s] & $Veloc.$  [m/s]& $\overline{Veloc.}$ [m/s]	& $\delta Veloc.$ [m/s]  \\
+	Gota \# /Aluno   & $U_{paragem}$ [V] & Tempo [s] & $Veloc.$  [m/s]& $\overline{Veloc.}$ [m/s]	& $\delta Veloc.$ [m/s]  \\
 	\hline
 	  &  &  & &  & \\ \cline{2-4}
 	1 &  & & &  & \\ \cline{2-4}
@@ -166,10 +170,16 @@ Execute as medições e preencha as tabelas seguintes, para quatro gotas, indica
 	  &  &  & &  & \\ \cline{2-4}
 	4 &  & & &  & \\ \cline{2-4}
 	  &  &  & &  & \\ \hline
+	  &  &  & &  & \\ \cline{2-4}
+	5 &  & & &  & \\ \cline{2-4}
+	  &  &  & &  & \\ \hline
+	  &  &  & &  & \\ \cline{2-4}
+	6 &  & & &  & \\ \cline{2-4}
+	  &  &  & &  & \\ \hline
  	\end{tabular}
 \end{center}
 
-\vspace{4cm}
+%\vspace{4cm}
 
 \subsubsection{\sf Cálculo da carga das gotas}
 \label{sec:calc}
@@ -177,11 +187,13 @@ Execute as medições e preencha as tabelas seguintes, para quatro gotas, indica
 	\renewcommand{\arraystretch}{1.5}
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 	\hline
-	Gota \#  & $R$ [$\mu$m] & $\delta R$  [$\mu$m] & \,\,\,\,\,\,$q$ [C]\,\,\,\,\,\, & \,\,\,$\delta q$ [C] \,\,\,& $q_{corrig.}$ [C] & $\delta q_{corrig.}$ [C] \\ \hline
-	 1 & &  &  & &  &  \\ \hline
-	 2 & &  &  & &  & \\ \hline
+	Gota \# /Aluno & $R$ [$\smu$m] & $\delta R$  [$\mu$m] & \,\,\,\,\,\,$q$ [C]\,\,\,\,\,\, & \,\,\,$\delta q$ [C] \,\,\,& $q_{corrig.}$ [C] & $\delta q_{corrig.}$ [C] \\ \hline
+	 1  & &  &  & &  &  \\ \hline
+	 2  & &  &  & &  & \\ \hline
 	 3 & &  &  & &  & \\ \hline
 	 4 & &  &  & &  & \\ \hline
+	 5 & &  &  & &  & \\ \hline
+	 6 & &  &  & &  & \\ \hline
  	\end{tabular}
 \end{center}
 
