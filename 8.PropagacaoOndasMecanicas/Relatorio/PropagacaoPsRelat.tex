@@ -1,10 +1,5 @@
 %%&program=xelatex
 %&encoding=UTF-8 Unicode
-% SVN keywords
-% $Author: bernardo $
-% $Date: 2014-07-24 19:33:49 +0100 (Thu, 24 Jul 2014) $
-% $Revision: 6559 $
-% $URL: http://metis.ipfn.ist.utl.pt/svn/cdaq/Users/Bernardo/Aulas/LFEB/teXfiles/Planck/Planck.tex $
 \documentclass[a4paper,12pt]{article}  % Comments after  % are ignored
 %\usepackage{hyperref}                 % For creating hyperlinks in cross references
 %
@@ -16,9 +11,10 @@
 	\usepackage{fontspec}
 	\ifwindows
 		\setmainfont[Ligatures=TeX]{Garamond}
-		\setsansfont[Ligatures=TeX]{Calibri}
+		\setsansfont[Ligatures=TeX]{Arial}
 		\setmonofont{Consolas}
 %		\setmonofont[Scale=MatchLowercase]{Courier}
+		\setmonofont[Scale=0.95]{Courier}
 	\fi
 	\iflinux
 		\setmainfont[Ligatures=TeX]{Linux Libertine O}
@@ -28,6 +24,9 @@
 	\ifmacosx
 	% add settings
 	% Use xelatex -no-shell ...
+		\setmainfont[Ligatures=TeX]{Garamond}
+		\setsansfont[Ligatures=TeX]{Helvetica}
+		\setmonofont{Consolas}
 	\fi
 	\usepackage{xcolor,graphicx} 
 \else
@@ -42,11 +41,11 @@
 \usepackage{enumitem}
 \setlist{nolistsep}
 
-\usepackage{amsmath,amssymb,amsfonts} % Typical maths resource packages
-%\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{amsmath,amssymb,amsfonts} % Typical maths resource packages 
+%\usepackage[retainorgcmds]{IEEEtrantools} 
 \usepackage{caption}
 
-\usepackage{tikz}
+\usepackage{tikz} %install pgf
 \usetikzlibrary{calc,arrows,decorations.pathmorphing,intersections}
 
 \usepackage[font={small,sf},labelfont={bf},labelsep=endash]{caption}
@@ -60,8 +59,9 @@
 
 \pagestyle{myheadings}         % Option to put page headers
                                % Needed \documentclass[a4paper,twoside]{article}
-\markboth{{\small \it  Laboratório de Física Experimental Básica}}
-{{\small\it IST - MEFT -LFEB - 1º Sem. 2017/2018} }
+
+\markboth{{MEFT}}
+{{\small\it \protect\input{../../LIFE.txt}}}
 
 \addtolength{\hoffset}{-0.5cm}
 \addtolength{\textwidth}{2.5cm}
@@ -87,28 +87,14 @@
 \date{ Setembro 2017} 
 
 \begin{document} 
+{  \sf  Relatório da Experiência de Propagação de Ondas Mecânicas} %[0.4cm] % \bfseries 
 
-%	\includegraphics[width=0.2\textwidth]{../logo-ist}%\\[1cm]  %%  Logo_IST_color
-
-%	\HRule \\[0.5cm]
-%	{ \huge \sf  \textsc{Construções Geométricas em Lentes Delgadas (aproximação paraxial)} }\\[0.4cm] % \bfseries 
-%	{ \large \bfseries Determinação da constante de Planck.}\\
-
-%	{ \large \bfseries Procedimento Experimental}\\
-%	\HRule \\%[0.5cm]
-%TURNO:________ GRUPO:________ DATA: ___ \\
-%Número: _______ Nome: ________________ \\
-%Número: _______ Nome: ________________ \\
-{ \sf  Relatório da Exp. Propagação de Ondas Mecânicas P \& S} %[0.4cm] % \bfseries 
-Turno:\underline{\makebox[2cm][l]{~}} Grupo:\underline{\makebox[1cm][l]{~}} Data:\underline{\makebox[2cm][l]{~}}\\
-\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
-\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} \\
-\noindent Número:~\underline{\makebox[2cm][r]{~}} Nome:~\underline{\makebox[10cm][r]{~}} 
+\input{../../Nomes.txt}
 
 
 \section{\sf Trabalho preparatório a realizar  ANTES da sessão de Laboratório:}
 \begin{enumerate}
-\item Descreva por palavras suas quais os objectivos do Trabalho que irá realizar.
+\item Descreva por palavras suas quais os objectivos do trabalho que irá realizar.
 
 %\subsubsection{\sf Questões a responder ANTES da sessão de Laboratório:}
 %\begin{enumerate}
@@ -127,6 +113,10 @@ Turno:\underline{\makebox[2cm][l]{~}} Grupo:\underline{\makebox[1cm][l]{~}} Data
 \noindent\underline{\makebox[\textwidth][r]{~}} \\
 \noindent\underline{\makebox[\textwidth][r]{~}} \\
 \noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+
 
 % (uma folha A4). 
 %Indique as expressões que irá utilizar para obter as grandezas experimentais, bem como as expressões para calcular as incertezas. Inclua esta parte também no Relatório. Este irá constituir o ÚNICO meio de consulta na Prova Individual.
@@ -142,13 +132,13 @@ Escreva no seguinte quadro todas as equações necessárias para calcular as gra
 
 \section{\sf Relatório}
 \subsection{\sf Montagem Experimental}
-Desenhe um diagrama da experiência, bem como um esboço das imagem que observa no osciloscópio. Inclua uma lista com a Legenda de Instrumentos.
+Desenhe um diagrama da experiência, bem como um esboço das imagem que observa no osciloscópio. Inclua uma lista com a legenda de instrumentos.
 
 \begin{center}
-\framebox[18cm]{\rule{0pt}{6.5cm}}
+\framebox[18cm]{\rule{0pt}{7.5cm}}
 \end{center}
 
-\subsection{\sf Calibração das Sondas P \& S com cilindros de latão}%\label{sec:dados}
+\subsection{\sf Calibração dos Sensores P \& S com cilindros de latão}%\label{sec:dados}
 %\subsubsection{\sf Dados Experimentais}\label{sec:dados}
 Preencha as  tabelas indicando  apenas os algarismos significativos. 
 
@@ -160,18 +150,28 @@ Incerteza na medida do comprimento da amostra, $e_L=$ ~\underline{\makebox[1cm][
 	\hline
 	 L (mm)  & & & & & &  \\
 	\hline 
-	 Tempo (ms) & $ \quad \pm \quad $ &$ \quad \pm \quad $ &$ \quad \pm \quad $ &$ \quad \pm \quad $ &$ \quad \pm \quad $ &$ \quad \pm \quad $ \\
+	 P-Tempo (ms) & $ \quad \quad \pm \quad $ &$ \quad \quad \pm \quad $ &$ \quad \quad \pm \quad $ &$ \quad \quad \pm \quad $ &$ \quad \quad \pm \quad $ &$ \quad \quad \pm \quad $ \\
+\hline
+     S-Tempo (ms) & $ \quad \quad \pm \quad $ &$ \quad \quad  \pm \quad $ &$ \quad  \quad \pm \quad $ &$ \quad  \quad \pm \quad $ &$ \quad \quad  \pm \quad $ &$ \quad  \quad \pm \quad $ \\
 \hline
 				\end{tabular}
 \end{center}
 
-Represente graficamente o Tempo de propagação \emph{vs} Comprimento e por Regressão Linear obtenha o melhor ajuste a uma recta.
+Represente graficamente o tempo de propagação \emph{vs} comprimento e por Regressão Linear obtenha o melhor ajuste a uma recta.
 
-Declive: $m=$ ~\underline{\makebox[1cm][r]{~}} s/m, Ordenada na origem: $\Delta T_0=$ ~\underline{\makebox[1cm][r]{~}} ms\\
-(Este último valor pode constituir uma estimativa do erro sistemático da medida de intervalo de tempo.)
+Sensor P
+
+Declive: $m=$ ~\underline{\makebox[2cm][r]{~}} s/m, Ordenada na origem: $\Delta T_0=$ ~\underline{\makebox[2cm][r]{~}} ms\\
+(Este último valor pode constituir uma estimativa do erro sistemático da medida de intervalo de tempo para as ondas P.)
+
+Sensor S
+
+Declive: $m=$ ~\underline{\makebox[2cm][r]{~}} s/m, Ordenada na origem: $\Delta T_0=$ ~\underline{\makebox[2cm][r]{~}} ms\\
+(Este último valor pode constituir uma estimativa do erro sistemático da medida de intervalo de tempo as ondas S.)
+
 
  %
-\subsection{\sf Velocidade de propagação em meios isótropos}%\label{sec:dados}
+\subsection{\sf Velocidade de propagação em meios sólidos}%\label{sec:dados}
 %\subsubsection{\sf Dados Experimentais}\label{sec:dados}
 
 %Poderá em alternativa utilizar folhas de cálculo, com o mesmo formato (apresentando-as em anexo) mas terá de peencher as colunas 2, 3, 5 e 6 da tabela seguintes e as colunas 6 e 7 das secção \ref{sec:calc}. 
@@ -192,8 +192,10 @@ Dimensões e densidades:
 	\hline
 	 Amostra \# & Material  &  $L_x$ [m]  &   $L_y$ [m]  &  $L_z$ [m]  & $Vol$ [$m^3$]  & Massa [$kg$] & $\rho$ [$kg/m^3$] \\
 	\hline \hline
-	  1   &   & $ \quad \pm \quad $ &  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
-	  2   &   & $ \quad \pm \quad $ &  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
+	  1   &   & $ \quad  \quad \pm \quad $ &  $ \quad \quad  \pm \quad $ & $ \quad \quad  \pm \quad $ & $ \quad  \quad \pm \quad $ & $ \quad \quad  \pm \quad $ & $ \quad  \quad \pm \quad $ \\ \hline
+	  2   &   & $ \quad  \quad \pm \quad $ &  $ \quad \quad  \pm \quad $ & $ \quad  \quad \pm \quad $ & $ \quad  \quad \pm \quad $ & $ \quad  \quad \pm \quad $ & $ \quad \quad  \pm \quad $ \\ \hline
+	  3   &   & $ \quad  \quad \pm \quad $ &  $ \quad  \quad \pm \quad $ & $ \quad  \quad \pm \quad $ & $ \quad  \quad \pm \quad $ & $ \quad  \quad \pm \quad $ & $ \quad \quad  \pm \quad $ \\ \hline
+	  4   &   & $ \quad  \quad \pm \quad $ &  $ \quad \quad  \pm \quad $ & $ \quad \quad  \pm \quad $ & $ \quad  \quad \pm \quad $ & $ \quad \quad  \pm \quad $ & $ \quad \quad  \pm \quad $ \\ \hline
 				\end{tabular}
 \end{center}
 
@@ -205,26 +207,30 @@ Tempos e velocidades:
 	\begin{tabular}{|l|c|c|c|c|c|	}
 	\hline
 	  Amostra \# &   $t_x$ [ms]  &   $t_y$ [ms]  &   $v_x$ [m/s] & $v_y$ [m/s] &  
-	  $\overline{v} $ [m/s]	\\
+	  $c.a.$	\\
 	\hline \hline
-	  1 - Onda P   & $ \quad \pm \quad $  & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
-	  1 - Onda S   & $ \quad \pm \quad $  & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
-	  2 - Onda P   & $ \quad \pm \quad $  & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
-	  2 - Onda S   & $ \quad \pm \quad $  & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
+	  1 - Onda P   & $ \quad \quad \pm \quad $  & $ \quad \quad\pm \quad $ & $ \quad \quad\pm \quad $ & $ \quad\quad \pm \quad $ & $ \quad \quad\pm \quad $ \\ \hline
+	  1 - Onda S   & $ \quad \quad \pm \quad $  & $ \quad \quad\pm \quad $ & $ \quad \quad\pm \quad $ & $ \quad\quad \pm \quad $ & $ \quad \quad\pm \quad $ \\ \hline
+	  2 - Onda P   & $ \quad \quad\pm \quad $  & $ \quad \quad\pm \quad $ & $ \quad \quad\pm \quad $ & $ \quad\quad \pm \quad $ & $ \quad \quad\pm \quad $ \\ \hline
+	  2 - Onda S   & $ \quad \quad\pm \quad $  & $ \quad \quad\pm \quad $ & $ \quad \quad\pm \quad $ & $ \quad\quad \pm \quad $ & $ \quad \quad\pm \quad $ \\ \hline
+	  3 - Onda P   & $ \quad \quad\pm \quad $  & $ \quad \quad\pm \quad $ & $ \quad \quad\pm \quad $ & $ \quad\quad \pm \quad $ & $ \quad \quad\pm \quad $ \\ \hline
+	  3 - Onda S   & $ \quad \quad\pm \quad $  & $ \quad \quad\pm \quad $ & $ \quad \quad\pm \quad $ & $ \quad\quad \pm \quad $ & $ \quad \quad\pm \quad $ \\ \hline
+	  4 - Onda P   & $ \quad \quad\pm \quad $  & $ \quad \quad\pm \quad $ & $ \quad \quad\pm \quad $ & $ \quad\quad \pm \quad $ & $ \quad \quad\pm \quad $ \\ \hline
+	  4 - Onda S   & $ \quad \quad\pm \quad $  & $ \quad \quad\pm \quad $ & $ \quad \quad\pm \quad $ & $ \quad\quad \pm \quad $ & $ \quad \quad\pm \quad $ \\ \hline
  	\end{tabular}
 \end{center}
 
-
 \subsubsection{\sf Cálculos de constantes elásticas}%\label{sec:dados}
+Seleccione as amostras isótropas e cálcule a velocidade média e as constantes elásticas médias. 
 
 \begin{center}
 	%\centering
 	\begin{tabular}{|l|c|c|c|c|c|c|}
 	\hline
-	  Amostra \# &   $v_L$ [m/s]  &   $\mu$ [GPa]  &  $v_T$ [m/s] & $K$ [GPa] & $v_L/v_T$  &  $\sigma$  	\\
+	  Material &   $v_P$ [m/s]  &   $\mu$ [GPa]  &  $v_S$ [m/s] & $K$ [GPa] & $v_P/v_S$  &  $\sigma$  	\\
 	\hline \hline
-	  1   & $ \quad \pm \quad $ &  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \qquad \pm \qquad $ \\ \hline
- 	  2   & $ \quad \pm \quad $ &  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \qquad \pm \qquad $ \\ \hline
+	    & $ \quad \quad \pm \quad $ &  $ \quad \quad \pm \quad $ & $ \quad \quad \pm \quad $ & $ \quad \quad \pm \quad $ & $ \quad \quad  \pm \quad $ & $ \quad \quad \pm \quad $ \\ \hline
+ 	     & $ \quad \quad \pm \quad $ &  $ \quad \quad  \pm \quad $ & $ \quad \quad \pm \quad $ & $ \quad \quad \pm \quad $ & $ \quad \quad \pm \quad $ & $ \quad \quad \pm \quad $ \\ \hline
  	\end{tabular}
 \end{center}
 
@@ -232,29 +238,30 @@ Tempos e velocidades:
 Incerteza relativa de $\mu=$ ~\underline{\makebox[1cm][r]{~}} \%
 
 %\vspace{4cm}
-\subsection{\sf Velocidade de propagação em meio anisótropo}%\label{sec:dados}
+\subsection{\sf Velocidade de propagação em meio liquido}%\label{sec:dados}
 
-Dimensões e densidades
+
+%\begin{center}
+%	%\centering
+%	\begin{tabular}{|l|c|c|c|c|c|c|c|}
+%	\hline
+%	 Amostra \# & Material   &  $L_z$ [m]  & $Vol$ [$m^3$]  & Massa [$kg$] & $\rho$ [$kg/m^3$] \\
+%	\hline \hline
+%	  3   &   & $ \quad \pm \quad $ &  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \%quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
+%	\end{tabular}
+%\end{center}
+
+Considere a densidade padrão da água.
+
+Distância, tempos e velocidades:
 \begin{center}
 	%\centering
-	\begin{tabular}{|l|c|c|c|c|c|c|c|}
+	\begin{tabular}{|l|c|c|c|}
 	\hline
-	 Amostra \# & Material  &  $L_x$ [m]  &   $L_y$ [m]  &  $L_z$ [m]  & $Vol$ [$m^3$]  & Massa [$kg$] & $\rho$ [$kg/m^3$] \\
+	  Água &   $L$ [mm] &   $t$ [ms]  &   $v$ [m/s] \\
 	\hline \hline
-	  3   &   & $ \quad \pm \quad $ &  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
-	\end{tabular}
-\end{center}
-
-Tempos e velocidades:
-\begin{center}
-	%\centering
-	\begin{tabular}{|l|c|c|c|c|c|}
-	\hline
-	  Amostra \# &   $t_x$ [ms]  &   $t_y$ [ms]  &  $v_x$ [m/s] & $v_y$ [m/s]  & 
-	   $v_{max}-v_{min}$ [m/s]	\\
-	\hline \hline
-	 3 - Onda P   & $ \quad \pm \quad $ &  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $\quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
-	 3 - Onda S   & $ \quad \pm \quad $ &  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $\quad \pm \quad $ & $ \quad \pm \quad $ \\ \hline
+	 Onda P   & $ \quad \quad \pm \quad $ &  $ \quad \quad \pm \quad $ & $ \quad \quad \pm \quad $  \\ \hline
+	 Onda S   & $ \quad \quad \pm \quad $ &  $ \quad \quad \pm \quad $ & $ \quad \quad \pm \quad $  \\ \hline
  	\end{tabular}
 \end{center}
 
@@ -262,15 +269,15 @@ Tempos e velocidades:
 
 \begin{center}
 	%\centering
-	\begin{tabular}{|l|c|c|c|c|c|}
+	\begin{tabular}{|l|c|c|c|c|c|c|}
 	\hline
-	  Amostra \# &   $v_{L_x}$ [m/s]  &   $\mu_x$ [GPa]  &  $v_{T_x}$ [m/s] & $K_x$ [GPa] & $c.a.$   	\\
+	  Amostra &   $v_P$ [m/s]  &   $\mu$ [GPa]  &  $v_{S}$ [m/s] & $K$ [GPa]  	\\
 	\hline \hline
-	  3   & $ \quad \pm \quad $ &  $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \quad \pm \quad $ & $ \qquad \pm \qquad $ \\ \hline
+	  Água   & $ \quad  \quad \pm \quad $ &  $ \quad  \quad \pm \quad $ & $ \quad  \quad \pm \quad $ & $ \quad \quad  \pm \quad $ \\ \hline
  	\end{tabular}
 \end{center}
 %\noindent Desvio à exactidão de $\overline{c_{ar}} =$~\underline{\makebox[1cm][r]{~}} \%, 
-Incerteza relativa de $K_x=$ ~\underline{\makebox[1cm][r]{~}} \%
+Incerteza relativa de $K=$ ~\underline{\makebox[1cm][r]{~}} \%
 
 
 
@@ -296,7 +303,5 @@ Incerteza relativa de $K_x=$ ~\underline{\makebox[1cm][r]{~}} \%
 
 
 
-
-%\newpage
 
 \end{document} 
