@@ -12,31 +12,31 @@
 \usepackage{ifplatform} 
 %
 \ifxetex
-	\usepackage{polyglossia} \setmainlanguage{portuges}
-	\usepackage{fontspec}
-	\ifwindows
-		\setmainfont[Ligatures=TeX]{Garamond}
-		\setsansfont[Ligatures=TeX]{Arial}
-		\setmonofont{Consolas}
-%		\setmonofont[Scale=MatchLowercase]{Courier}
-	\fi
-	\iflinux
-		\setmainfont[Ligatures=TeX]{Linux Libertine O}
-		\setsansfont[Ligatures=TeX,Scale=MatchLowercase]{Linux Biolinum}
-		\setmonofont[Scale=MatchLowercase]{Courier}
-	\fi
-	\ifmacosx
-	% add settings
-	% Use xelatex -no-shell ...
-	\fi
-	\usepackage{xcolor,graphicx} 
+    \usepackage{polyglossia} \setmainlanguage{portuges}
+    \usepackage{fontspec}
+    \ifwindows
+        \setmainfont[Ligatures=TeX]{Garamond}
+        \setsansfont[Ligatures=TeX]{Arial}
+        \setmonofont{Consolas}
+        %		\setmonofont[Scale=MatchLowercase]{Courier}
+    \fi
+    \iflinux
+        \setmainfont[Ligatures=TeX]{Linux Libertine O}
+        \setsansfont[Ligatures=TeX,Scale=MatchLowercase]{Linux Biolinum}
+        \setmonofont[Scale=MatchLowercase]{Courier}
+    \fi
+    \ifmacosx
+    % add settings
+    % Use xelatex -no-shell ...
+    \fi
+    \usepackage{xcolor,graphicx} 
 \else
-	\usepackage[portuguese]{babel}
-	%\usepackage[latin1]{inputenc}
-	\usepackage[utf8]{inputenc}
-	\usepackage[T1]{fontenc}
-	\usepackage{graphics}                 % Packages to allow inclusion of graphics
-	\usepackage{color}                    % For creating coloured text and background
+    \usepackage[portuguese]{babel}
+    %\usepackage[latin1]{inputenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{graphics}                 % Packages to allow inclusion of graphics
+    \usepackage{color}                    % For creating coloured text and background
 \fi
 
 
@@ -47,7 +47,7 @@
 \evensidemargin 0cm
 
 \pagestyle{myheadings}         % Option to put page headers
-                               % Needed \documentclass[a4paper,twoside]{article}
+% Needed \documentclass[a4paper,twoside]{article}
 \markboth{{MEFT}}
 {{\small\it \protect\input{../../LIFE.txt}}}
 
@@ -72,194 +72,194 @@
 \begin{document} 
 
 %\begin{multicols}{1}
-	\includegraphics[width=0.2\textwidth]{../../logo-ist}%\\[1cm]  %%  Logo_IST_color
+    \includegraphics[width=0.2\textwidth]{../../logo-ist}%\\[1cm]  %%  Logo_IST_color
 
-		\HRule \\[0.5cm]
-	{ \large \bfseries   \textsc{Estimativa da carga elétrica de 
-		gotículas de óleo eletrizadas em suspensão num fluido (Experiência de Millikan)} }\\[0.4cm] % \bfseries 
-	%{ \large  \sf 
-%Ação de um campo elétrico sobre gotículas de óleo eletrizadas num fluido não 
-%condutor. }\\
-%	{ \large \bfseries Protocolo Experimental}\\
-	\HRule \\%[0.5cm]
+        \HRule \\[0.5cm]
+    { \large \bfseries   \textsc{Estimativa da carga elétrica de 
+        gotículas de óleo eletrizadas em suspensão num fluido (Experiência de Millikan)} }\\[0.4cm] % \bfseries 
+        %{ \large  \sf 
+        %Ação de um campo elétrico sobre gotículas de óleo eletrizadas num fluido não 
+        %condutor. }\\
+        %	{ \large \bfseries Protocolo Experimental}\\
+    \HRule \\%[0.5cm]
 
-%	\HRule \\[0.5cm]
-%	{ \huge \sf  \textsc{  Experiência de Millikan} }\\[0.4cm] % \bfseries 
-%	{ \large \bfseries Determinação Experimental da Carga $q$ do Eletrão }\\
-%	{ \large \bfseries Procedimento Experimental}\\
-%	\HRule \\%[0.5cm]
+    %	\HRule \\[0.5cm]
+    %	{ \huge \sf  \textsc{  Experiência de Millikan} }\\[0.4cm] % \bfseries 
+    %	{ \large \bfseries Determinação Experimental da Carga $q$ do Eletrão }\\
+    %	{ \large \bfseries Procedimento Experimental}\\
+    %	\HRule \\%[0.5cm]
 
-%\twocolumn
-%\end{multicols}
+    %\twocolumn
+    %\end{multicols}
 
-%\begin{multicols}{2}
+    %\begin{multicols}{2}
 
-\section{\sf OBJETIVO DO TRABALHO}
-Pretende-se com este trabalho determinar a carga elétrica de pequenas gotas de óleo, tendo como objetivo final mostrar que a carga elétrica não aparece com uma quantidade qualquer mas sempre como um múltiplo de uma unidade fundamental: a carga do eletrão. Deste modo, um corpo eletrizado apresenta um excesso de carga de sinal positivo ou negativo, mas sempre de valor múltiplo da carga elementar $q_{ele}= 1.602176565(35)\cdot 10^{-19}\,$ C.
-Traduz-se este facto dizendo-se que a carga elétrica se \emph{quantifica}.
+        \section{\sf OBJETIVO DO TRABALHO}
+        Pretende-se com este trabalho determinar a carga elétrica de pequenas gotas de óleo, tendo como objetivo final mostrar que a carga elétrica não aparece com uma quantidade qualquer mas sempre como um múltiplo de uma unidade fundamental: a carga do eletrão. Deste modo, um corpo eletrizado apresenta um excesso de carga de sinal positivo ou negativo, mas sempre de valor múltiplo da carga elementar $q_{ele}= 1.602176565(35)\cdot 10^{-19}\,$ C.
+        Traduz-se este facto dizendo-se que a carga elétrica se \emph{quantifica}.
 
-Dentro das várias experiências elaboradas para mostrar este fato, uma montagem clássica é a do físico americano Robert A. Millikan\footnote{Millikan recebeu o prémio Nobel da Física em 1923 pelos seus trabalhos sobre a determinação da carga do eletrão e efeito fotoelétrico.} (1869-1953), também chamada experiência da gota de óleo.
+        Dentro das várias experiências elaboradas para mostrar este fato, uma montagem clássica é a do físico americano Robert A. Millikan\footnote{Millikan recebeu o prémio Nobel da Física em 1923 pelos seus trabalhos sobre a determinação da carga do eletrão e efeito fotoelétrico.} (1869-1953), também chamada experiência da gota de óleo.
 
-\section{\sf INTRODUÇÃO TEÓRICA}
-%\section{\sf }
-%\subsection{\sf }
-\subsection{\sf Corpo esférico em queda livre num fluido}
-Um corpo de dimensões muito pequenas,\footnote{Com número de Reynolds $Re= \frac{\rho v L}{\eta}$ inferior a $\simeq 100$}  ao mover-se com uma velocidade relativamente baixa através de um fluido (líquido ou gás), fica sujeito a uma força de atrito aproximadamente proporcional à sua velocidade, modelada pela expressão:
+        \section{\sf INTRODUÇÃO TEÓRICA}
+        %\section{\sf }
+        %\subsection{\sf }
+        \subsection{\sf Corpo esférico em queda livre num fluido}
+        Um corpo de dimensões muito pequenas,\footnote{Com número de Reynolds $Re= \frac{\rho v L}{\eta}$ inferior a $\simeq 100$}  ao mover-se com uma velocidade relativamente baixa através de um fluido (líquido ou gás), fica sujeito a uma força de atrito aproximadamente proporcional à sua velocidade, modelada pela expressão:
 
-\begin{equation}
-	\label{eq:f_atrito}
-	\vec{F}_{at} = - k \, \eta \vec{v}
-\end{equation}
-em que $\eta$ é o coeficiente de viscosidade do fluido, $\vec{v}$ é a velocidade do corpo e $k$ é um coeficiente que depende da forma do corpo, que no caso deste ser uma esfera de raio $R$ toma o valor (lei de Stokes): 
-\begin{equation}
-	\label{eq:coef_atrito}
-	k = 6 \pi R
-\end{equation}
-
-
-O coeficiente $k$ virá assim expresso em \emph{metro} no Sistema Internacional (SI) e o coeficiente de viscosidade em Pa$\cdot$s (ou N$\cdot$s/m$^2$).
-Normalmente a unidade de viscosidade que aparece na literatura é a unidade do sistema C.G.S. (g/cm$\cdot$s) que é designada por Poise (abreviatura P), verificando-se então a equivalência:
-
-\begin{equation*}
-	1 \, \mathrm{P} = 0,1\, \mathrm{Pa}\cdot\mathrm{s}
-\end{equation*}
-
-Quando um corpo de massa $m$ cai em queda livre sob a ação do seu peso ($\vec{P}=m\vec{g}$) através de um fluido, o seu movimento de queda será abrandado pela força de atrito, e a equação do movimento escreve-se:
-
-\begin{equation}
-	\label{eq:mov}
-	m\,a \equiv m\, \frac{\ud\, v}{\ud\, t} =  m\,g - k  \, \eta \, v
-\end{equation}
-
-A partir de uma velocidade inicial nula, e sendo o peso do corpo constante, a aceleração $a$ produz um aumento  em $v(t)$ e, por consequência, um aumento na força de atrito $F_{at}$. Para uma determinada velocidade limite $v_L$, o segundo membro de (\ref{eq:mov}) anula-se e o corpo passará a deslocar-se com movimento uniforme. A velocidade limite $v_L$ será então obtida fazendo $a= 0$ na equação (\ref{eq:mov}):
-
-\begin{equation}
-	\label{eq:vlimit}
-	v_L = \frac{m\,g}{k  \, \eta}
-\end{equation}
-o que poderá ser facilmente constatado pela resolução\footnote{Ver notas de apoio às aulas teóricas} da equação (\ref{eq:mov}), cuja solução é da forma:
-
-\begin{equation}
-	\label{eq:vlimita}
-	v(t) = \frac{m\,g}{k  \, \eta} (1 - e^{- (k\,\eta / m) t}) = v_L (1-e^{-t/\tau})
-\end{equation}
-à qual corresponde o gráfico  da Fig~\ref{fig:vLim}, e onde se definiu o tempo característico $\tau=k\eta/m$. Quando $t \to \infty$ temos $v(t) \to v_L = \frac{m\,g}{k  \, \eta} $.
+        \begin{equation}
+            \label{eq:f_atrito}
+            \vec{F}_{at} = - k \, \eta \vec{v}
+        \end{equation}
+        em que $\eta$ é o coeficiente de viscosidade do fluido, $\vec{v}$ é a velocidade do corpo e $k$ é um coeficiente que depende da forma do corpo, que no caso deste ser uma esfera de raio $R$ toma o valor (lei de Stokes): 
+        \begin{equation}
+            \label{eq:coef_atrito}
+            k = 6 \pi R
+        \end{equation}
 
 
-%\end{multicols}
+        O coeficiente $k$ virá assim expresso em \emph{metro} no Sistema Internacional (SI) e o coeficiente de viscosidade em Pa$\cdot$s (ou N$\cdot$s/m$^2$).
+        Normalmente a unidade de viscosidade que aparece na literatura é a unidade do sistema C.G.S. (g/cm$\cdot$s) que é designada por Poise (abreviatura P), verificando-se então a equivalência:
+
+        \begin{equation*}
+            1 \, \mathrm{P} = 0,1\, \mathrm{Pa}\cdot\mathrm{s}
+        \end{equation*}
+
+        Quando um corpo de massa $m$ cai em queda livre sob a ação do seu peso ($\vec{P}=m\vec{g}$) através de um fluido, o seu movimento de queda será abrandado pela força de atrito, e a equação do movimento escreve-se:
+
+        \begin{equation}
+            \label{eq:mov}
+            m\,a \equiv m\, \frac{\ud\, v}{\ud\, t} =  m\,g - k  \, \eta \, v
+        \end{equation}
+
+        A partir de uma velocidade inicial nula, e sendo o peso do corpo constante, a aceleração $a$ produz um aumento  em $v(t)$ e, por consequência, um aumento na força de atrito $F_{at}$. Para uma determinada velocidade limite $v_L$, o segundo membro de (\ref{eq:mov}) anula-se e o corpo passará a deslocar-se com movimento uniforme. A velocidade limite $v_L$ será então obtida fazendo $a= 0$ na equação (\ref{eq:mov}):
+
+        \begin{equation}
+            \label{eq:vlimit}
+            v_L = \frac{m\,g}{k  \, \eta}
+        \end{equation}
+        o que poderá ser facilmente constatado pela resolução\footnote{Ver notas de apoio às aulas teóricas} da equação (\ref{eq:mov}), cuja solução é da forma:
+
+        \begin{equation}
+            \label{eq:vlimita}
+            v(t) = \frac{m\,g}{k  \, \eta} (1 - e^{- (k\,\eta / m) t}) = v_L (1-e^{-t/\tau})
+        \end{equation}
+        à qual corresponde o gráfico  da Fig~\ref{fig:vLim}, e onde se definiu o tempo característico $\tau=k\eta/m$. Quando $t \to \infty$ temos $v(t) \to v_L = \frac{m\,g}{k  \, \eta} $.
+
+
+        %\end{multicols}
 
 \begin{figure}[tb]
-  \centering 
-	\includegraphics[width=0.6\textwidth]{./plote}
-	\caption{ Evolução da velocidade de um corpo em queda livre sujeito a uma força de atrito. \label{fig:vLim}} 
+    \centering 
+    \includegraphics[width=0.6\textwidth]{./plote}
+    \caption{ Evolução da velocidade de um corpo em queda livre sujeito a uma força de atrito. \label{fig:vLim}} 
 \end{figure}
 
 %\begin{multicols}{2}
 
-Se pretendermos ser mais rigorosos, devemos substituir  em (\ref{eq:vlimit}) o peso do corpo pelo seu “peso aparente” no fluido. De fato, um corpo em queda livre através de um fluido experimenta, além da ação da força de atrito, outra força de baixo para cima cujo módulo é igual ao peso do fluido deslocado pelo corpo, de acordo com o Princípio de Arquimedes. Assim, as equações (\ref{eq:mov}) e (\ref{eq:vlimit}) deverão ser modificadas para:
+    Se pretendermos ser mais rigorosos, devemos substituir  em (\ref{eq:vlimit}) o peso do corpo pelo seu “peso aparente” no fluido. De fato, um corpo em queda livre através de um fluido experimenta, além da ação da força de atrito, outra força de baixo para cima cujo módulo é igual ao peso do fluido deslocado pelo corpo, de acordo com o Princípio de Arquimedes. Assim, as equações (\ref{eq:mov}) e (\ref{eq:vlimit}) deverão ser modificadas para:
 
-\begin{equation}
-	\label{eq:mov2}
-	m\,a = m\,g - m_f\,g  - k  \, \eta \, v
-\end{equation}
+    \begin{equation}
+        \label{eq:mov2}
+        m\,a = m\,g - m_f\,g  - k  \, \eta \, v
+    \end{equation}
 
 
-\begin{equation}
-	\label{eq:vlimit2}
-	v_L = \frac{(m - m_f)\,g}{k  \, \eta}
-\end{equation}
-onde $m_f$ é a massa do fluido deslocado.
+    \begin{equation}
+        \label{eq:vlimit2}
+        v_L = \frac{(m - m_f)\,g}{k  \, \eta}
+    \end{equation}
+    onde $m_f$ é a massa do fluido deslocado.
 
-No caso de um corpo esférico de raio $R$, introduzindo a equação (\ref{eq:coef_atrito}) em (\ref{eq:vlimit2}) e atendendo a que:
-\begin{equation*}
-	m = \frac{4}{3} \pi R^3 \rho \quad \textrm{  e } \quad  m_f = \frac{4}{3} \pi R^3 \rho_f
-\end{equation*}
-obtemos
-\begin{equation}
-	\label{eq:vlimit3}
-	v_L = \frac{2\,R^2\, (\rho - \rho_f)\,g}{9  \, \eta}
-\end{equation}
-em que $\rho$  e $\rho_f$ são as massas específicas do corpo e do fluido. Note-se que conhecendo o raio do corpo é pois possível determinar  a sua velocidade limite de queda, e vice-versa.
+    No caso de um corpo esférico de raio $R$, introduzindo a equação (\ref{eq:coef_atrito}) em (\ref{eq:vlimit2}) e atendendo a que:
+    \begin{equation*}
+        m = \frac{4}{3} \pi R^3 \rho \quad \textrm{  e } \quad  m_f = \frac{4}{3} \pi R^3 \rho_f
+    \end{equation*}
+    obtemos
+    \begin{equation}
+        \label{eq:vlimit3}
+        v_L = \frac{2\,R^2\, (\rho - \rho_f)\,g}{9  \, \eta}
+    \end{equation}
+    em que $\rho$  e $\rho_f$ são as massas específicas do corpo e do fluido. Note-se que conhecendo o raio do corpo é pois possível determinar  a sua velocidade limite de queda, e vice-versa.
 
-%
+    %
 
-%\end{multicols}
+    %\end{multicols}
 
 \begin{figure}
-	[tb]  \centering 
-	\includegraphics[width=0.7\textwidth]{./F_equil}
-	\caption{Equilíbrio de forças elétrica e gravítica numa gota sujeita a campos gravítico e elétrico. \label{fig:f_equil}} 
+    [tb]  \centering 
+    \includegraphics[width=0.7\textwidth]{./F_equil}
+    \caption{Equilíbrio de forças elétrica e gravítica numa gota sujeita a campos gravítico e elétrico. \label{fig:f_equil}} 
 \end{figure}
 
 %\begin{multicols}{2}
 
-\subsection{\sf Equilíbrio dum corpo carregado, imerso num fluido, através de um campo elétrico vertical}
+    \subsection{\sf Equilíbrio dum corpo carregado, imerso num fluido, através de um campo elétrico vertical}
 
-Considere o esquema representado na figura \ref{fig:f_equil}, em que um fluido não condutor se encontra entre duas placas condutoras paralelas separadas de uma distância $d$. Ao aplicar-se uma diferença de potencial \mbox{$U = V_1 -V_2 > 0$} com a polaridade indicada na figura, é criado um campo elétrico ascendente. Se entre as placas se encontrar uma partícula de massa $m$ e carga positiva\footnote{No caso da partícula estar carregada negativamente obteríamos o mesmo resultado invertendo o sentido do campo elétrico.} $q$  esta ficará sujeita a uma força elétrica que contrariará a sua queda.
-Na hipótese do campo elétrico ser uniforme\footnote{Nomeadamente, se a distância entre as placas for muito menor que as suas dimensões laterais.} o módulo de $\vec{E}$ e o módulo da força elétrica $\vec{F}_e$ que atua na partícula serão dados por:
-
-
-\begin{equation*}
-	E = \frac{U}{d}, \qquad  F_e = |q| \frac{U}{d}
-\end{equation*}
+    Considere o esquema representado na figura \ref{fig:f_equil}, em que um fluido não condutor se encontra entre duas placas condutoras paralelas separadas de uma distância $d$. Ao aplicar-se uma diferença de potencial \mbox{$U = V_1 -V_2 > 0$} com a polaridade indicada na figura, é criado um campo elétrico ascendente. Se entre as placas se encontrar uma partícula de massa $m$ e carga positiva\footnote{No caso da partícula estar carregada negativamente obteríamos o mesmo resultado invertendo o sentido do campo elétrico.} $q$  esta ficará sujeita a uma força elétrica que contrariará a sua queda.
+    Na hipótese do campo elétrico ser uniforme\footnote{Nomeadamente, se a distância entre as placas for muito menor que as suas dimensões laterais.} o módulo de $\vec{E}$ e o módulo da força elétrica $\vec{F}_e$ que atua na partícula serão dados por:
 
 
-% O módulo a será então  dado por: 
-% \begin{equation*}
-% 	F = |q| \frac{U}{d}
-% \end{equation*}
+    \begin{equation*}
+        E = \frac{U}{d}, \qquad  F_e = |q| \frac{U}{d}
+    \end{equation*}
 
-%Se a força elétrica for ascendente 
-Assim, a queda da partícula será agora contrariada pela força elétrica e pela força de atrito.
-A equação (\ref{eq:mov2}) passa a escrever-se:
 
-\begin{equation}
-	\label{eq:mov3}
-	m\,a = (m - m_f)\,g  - q \frac{U}{d} - k  \, \eta_{ar} \, v
-\end{equation}
+    % O módulo a será então  dado por: 
+    % \begin{equation*}
+    % 	F = |q| \frac{U}{d}
+    % \end{equation*}
 
-Variando a diferença de potencial (ddp) $U$, pode-se estabelecer o equilíbrio entre o peso da partícula e a força elétrica, conseguindo-se a sua paragem entre as placas. Nessa situação, tem-se simultaneamente $F_{at}=0$, $a=0$ e  $v$  $=0$:
+    %Se a força elétrica for ascendente 
+    Assim, a queda da partícula será agora contrariada pela força elétrica e pela força de atrito.
+    A equação (\ref{eq:mov2}) passa a escrever-se:
 
-\begin{equation}
-	\label{eq:equil}
-	0 = (m - m_f)\,g  - q \frac{U}{d} 
-\end{equation}
+    \begin{equation}
+        \label{eq:mov3}
+        m\,a = (m - m_f)\,g  - q \frac{U}{d} - k  \, \eta_{ar} \, v
+    \end{equation}
 
-Nesta equação a expressão $(m - m_f)\,g$ pode ser substituída usando a equação (\ref{eq:vlimit2}), obtendo-se:
+    Variando a diferença de potencial (d.d.p.) $U$, pode-se estabelecer o equilíbrio entre o peso da partícula e a força elétrica, conseguindo-se a sua paragem entre as placas. Nessa situação, tem-se simultaneamente $F_{at}=0$, $a=0$ e  $v$  $=0$:
 
-\begin{equation*}
-	v_L\, k\, \eta_{ar} = q \frac{U}{d}
-\end{equation*}
+    \begin{equation}
+        \label{eq:equil}
+        0 = (m - m_f)\,g  - q \frac{U}{d} 
+    \end{equation}
 
-E entrando também com a equação (\ref{eq:coef_atrito}) no caso de a partícula ser esférica, obtemos por fim:
+    Nesta equação a expressão $(m - m_f)\,g$ pode ser substituída usando a equação (\ref{eq:vlimit2}), obtendo-se:
 
-\begin{equation}
-	\label{eq:carga}
-	q = \frac{6 \pi \, R \, \eta_{ar} \, d\, v_L}{U}  
-\end{equation}
-onde
+    \begin{equation*}
+        v_L\, k\, \eta_{ar} = q \frac{U}{d}
+    \end{equation*}
 
-\begin{itemize}
-\item $v_L$, a velocidade limite de queda da partícula através do fluido, na ausência do campo elétrico
-\item $\eta_{ar} = 18,52 \cdot 10^{-5}$ P$ =  18,52 \cdot 10^{-6} \;$ Pa$\cdot$s (viscosidade do ar a 23 $^{\circ}$C)
-\item $\rho = 973 \,$ kg/m$^{3}$ (massa específica do óleo de silicone)
-\item $\rho_f = 1 \,$ kg/m$^{3}$ (massa específica do ar)
-\item $g=9,80\,$ m/s$^{2}$ (aceleração gravítica em Lisboa)
-\item $d$ (distância entre placas, a medir no laboratório)
-\end{itemize}
+    E entrando também com a equação (\ref{eq:coef_atrito}) no caso de a partícula ser esférica, obtemos por fim:
 
-\subsection{\sf Correções}
-\subsubsection{\sf Temperatura ambiente}
+    \begin{equation}
+        \label{eq:carga}
+        q = \frac{6 \pi \, R \, \eta_{ar} \, d\, v_L}{U}  
+    \end{equation}
+    onde
 
-No caso da temperatura ambiente se afastar muito de $23\,^{\circ}\mathrm{C}$, o valor  da viscosidade do ar terá de ser corrigido.\footnote{Utilize por exemplo a calculadora \emph{online}: http://www.lmnoeng.com/Flow/GasViscosity.htm}
+    \begin{itemize}
+        \item $v_L$, a velocidade limite de queda da partícula através do fluido, na ausência do campo elétrico
+        \item $\eta_{ar} = 18,52 \cdot 10^{-5}$ P$ =  18,52 \cdot 10^{-6} \;$ Pa$\cdot$s (viscosidade do ar a 23 $^{\circ}$C)
+        \item $\rho = 973 \,$ kg/m$^{3}$ (massa específica do óleo de silicone)
+        \item $\rho_f = 1 \,$ kg/m$^{3}$ (massa específica do ar)
+        \item $g=9,80\,$ m/s$^{2}$ (aceleração gravítica em Lisboa)
+        \item $d$ (distância entre placas, a medir no laboratório)
+    \end{itemize}
+
+    \subsection{\sf Correções}
+    \subsubsection{\sf Temperatura ambiente}
+
+    No caso da temperatura ambiente se afastar muito de $23\,^{\circ}\mathrm{C}$, o valor  da viscosidade do ar terá de ser corrigido.\footnote{Utilize por exemplo a calculadora \emph{online}: http://www.lmnoeng.com/Flow/GasViscosity.htm}
 
 \subsubsection{\sf Dimensão das gotas}
 
 A Lei de Stokes não é exata quando as dimensões dos corpos esféricos forem comparáveis à distância média entre as moléculas do ar. Nestas condições, Millikan verificou que a viscosidade $\eta_{ar}$ deveria ser substituída por:
 
 \begin{equation}
-	\label{eq:correcao}
-	\eta_{ar}' = \frac{\eta_{ar}}{1 + b/(p\,R)}  
+    \label{eq:correcao}
+    \eta_{ar}' = \frac{\eta_{ar}}{1 + b/(p\,R)}  
 \end{equation}
 em que a constante $b=7,88\cdot 10^{-3}$ Pa$\cdot$m, 
 $p$ é pressão atmosférica expressa em pascal e $R$ é o raio da gota em metros.
@@ -268,20 +268,20 @@ $p$ é pressão atmosférica expressa em pascal e $R$ é o raio da gota em metro
 O valor corrigido $q'$ será  determinado a partir do valor experimental $q$ por
 
 \begin{equation}
-	\label{eq:correcao1}
-	q' = q\, \left(\frac{\eta_{ar}'}{\eta_{ar}}\right)^{3/2}  =q\, \left(\frac{1}{1 + b/(p\,R)}\right)^{3/2}  
+    \label{eq:correcao1}
+    q' = q\, \left(\frac{\eta_{ar}'}{\eta_{ar}}\right)^{3/2}  =q\, \left(\frac{1}{1 + b/(p\,R)}\right)^{3/2}  
 \end{equation}
 
 \begin{figure}
-	[htb]  \centering 
-	\includegraphics[width=0.5\textwidth]{./U131001_01_Aparelho-de-Millikan}
-	\caption{Equipamento para determinação da carga das gotas. \label{fig:Equi}} 
+    [htb]  \centering 
+    \includegraphics[width=0.5\textwidth]{./U131001_01_Aparelho-de-Millikan}
+    \caption{Equipamento para determinação da carga das gotas. \label{fig:Equi}} 
 \end{figure}
 
 \begin{figure}
-	[htb]  \centering 
-	\includegraphics[width=0.5\textwidth]{./U13105-230_01_Aparelho-operacional-de-Millikan}
-	\caption{Gerador de alta tensão DC regulável. \label{fig:fonteDC_HT}} 
+    [htb]  \centering 
+    \includegraphics[width=0.5\textwidth]{./U13105-230_01_Aparelho-operacional-de-Millikan}
+    \caption{Gerador de alta tensão DC regulável. \label{fig:fonteDC_HT}} 
 \end{figure}
 
 
@@ -292,44 +292,48 @@ O valor corrigido $q'$ será  determinado a partir do valor experimental $q$ por
 \subsection{\sf Material utilizado}
 
 \begin{enumerate}
-	\item Célula de Millikan com gerador de alta tensão DC regulável
-	\item  Atomizador e óleo de silicone
-	\item Cronómetro
-	\item Nível de bolha de ar% Parafuso para calibração do retículo do microscópio
+    \item Célula de Millikan com gerador de alta tensão DC regulável
+    \item  Atomizador e óleo de silicone
+    \item Cronómetro digital
+    \item Nível de bolha de ar
+        % Parafuso para calibração do retículo do microscópio
+    \item Craveira
 \end{enumerate}
 \subsection{\sf Procedimento experimental}
 
 \begin{enumerate}
-\item   Começe por destpar a câmera de Millikan. Meça meça o distância entre placas,  $d$, e verifique a ampliação da objectiva e ocular do microscópio. Tente focar o microscópio na zona onde as gotas irão ``flutuar''. Determine a menor divisão da escala
-\item Depois tape de novo a  câmera e verifique que a célula está horizonta.  
+    \item   Comece por destapar a câmara de Millikan. Meça a distância entre placas,  $d$, 
+        e verifique a ampliação da objectiva e ocular do microscópio. Tente focar o microscópio na zona onde as 
+        gotas irão ``flutuar''. Determine a menor divisão da escala.
+    \item Depois tape de novo a  câmara e verifique que a célula está horizontal.
 
-\item Coloque o potenciómetro que controla a alimentação das placas do condensador no valor mínimo de tensão elétrica. 
+    \item Coloque o potenciómetro que controla a alimentação das placas do condensador no valor mínimo de tensão elétrica. 
 
-\item Faça as ligações necessárias para estabelecer um campo eletrico de modo a compensar as gotas de carga \emph{negativa}.
-\item 
-%   Verifique se o interruptor de inversão da alimentação do condensador está na posição ``Neutra''.
-Rode o potenciómetro para uma posição que permita, quando ligar o interruptor campo, estabelecer um campo elétrico entre as placas do condensador. 
+    \item Faça as ligações necessárias para estabelecer um campo eletrico de modo a compensar o movimento das gotas de 
+        carga \emph{negativa}.
+    \item Rode o potenciómetro para uma posição intermédia que permita, quando ligar o interruptor, 
+        estabelecer um campo elétrico entre as placas do condensador. 
 
-\item     Utilizando o pulverizador junto do orifício da célula, produza uma pequena ``nuvem'' %“nuvem”
-de gotículas de óleo. Observe através do microscópio o movimento das gotículas em 
-frente do retículo, ajustando a focagem se necessário.
+    \item     Utilizando o pulverizador junto do orifício da célula, produza uma pequena ``nuvem'' 
+        de gotículas de óleo. Observe através do microscópio o movimento das gotículas em 
+        frente do retículo, ajustando a focagem se necessário.
 
-\item     Ligando o interruptor e variando a intensidade, verifique se existem gotículas eletrizadas. Escolha uma das gotas e tente pará-la.
+    \item  Ligando o interruptor e variando a d.d.p., verifique se existem gotículas eletrizadas. Escolha uma das gotas e tente pará-la.
 
- \item Obrigue a gota a colocar-se numa determinada divisão do retículo, imobilizando-a de seguida. 
-Leia o valor da diferença de potencial que permitiu essa imobilização. Anule o 
-campo elétrico  e verá a gota movimentar-se (com velocidade limite). Com a ajuda de um colega e o 
-cronómetro digital, meça o tempo necessário para que a gota percorra  $N>4$ divisões
-do retículo. Repondo o campo elétrico, conduza a gota para a posição inicial para  medir o tempo pelo menos duas vezes. 
+    \item Obrigue a gota a colocar-se numa determinada divisão do retículo, imobilizando-a de seguida. 
+        Leia o valor da diferença de potencial que permitiu essa imobilização. Anule o 
+        campo elétrico  e verá a gota movimentar-se (com velocidade limite). Com a ajuda de um colega e o 
+        cronómetro digital, meça o tempo necessário para que a gota percorra  $N>4$ divisões
+        do retículo. Repondo o campo elétrico, conduza a gota para a posição inicial para  medir o tempo pelo menos duas vezes. 
 
-\item Troque o sentido do campo elétrico e   repita este processo para várias gotas, tentando \emph{sempre} escolher  as gotas de menor carga.
+    \item Troque o sentido do campo elétrico e   repita este processo para várias gotas, tentando \emph{sempre} escolher  as gotas de menor carga.
 
-\item Troque de posição com o colega para repetir este processo para outras  gotas.
+    \item Troque de posição com o colega para repetir este processo para outras  gotas.
 
-\item   Calcule a velocidade limite média de cada gota e a respetiva incerteza. Estime o raio e 
-a carga de cada gota e correspondentes incertezas. Calcule a carga corrigida pela viscosidade.
+    \item   Calcule a velocidade limite média de cada gota e a respetiva incerteza. Estime o raio e 
+        a carga de cada gota e correspondentes incertezas. Calcule a carga corrigida pela viscosidade.
 
-\item   Compare os valores da carga média das gotas de menor carga  com o valor tabelado da carga do eletrão. 
+    \item   Compare os valores da carga média das gotas de menor carga  com o valor tabelado da carga do eletrão. 
 \end{enumerate}
 
 
