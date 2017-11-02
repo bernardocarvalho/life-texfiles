@@ -108,7 +108,7 @@ Em óptica geométrica, a luz é representada por raios. Esta simplificação é
 
 \begin{enumerate}
 \item Num meio uniforme, como o ar ou um vidro, um raio é uma linha recta
-\item Um meio óptico é caracterizado por uma quantidade $n>1$, chamada índice de refracção
+\item Um meio óptico é caracterizado por uma quantidade $n\geq1$, chamada índice de refracção
 \item Na fronteira entre dois meios, um raio pode ser reflectido e/ou refractado, verificando-se o seguinte
 \begin{itemize}
 \item o ângulo de reflexão é igual ao ângulo de incidência, relativamente à normal à superfície
@@ -140,6 +140,13 @@ A figura ilustra também a geometria dos raios luminosos numa separação entre 
 	\caption{Reflectividade vs. ângulo de incidência e direcção de polarização (esq.) e geometria para ângulo de Brewster (dir.). \label{fig:brewster}} 
 \end{figure}
 
+A figura seguinte ilustra como se pode polarizar a luz emitida por uma fonte não polarizada através de um simples filtro polarizador (ou \textit{polaroide}). Orientando o ângulo do filtro relativamente à direcção dos raios luminosos, é possível definir a direcção de polarização.
+
+\begin{figure}
+	[!hb]  \centering 
+	\includegraphics[width=0.8\textwidth]{2-pol-luz}
+	\caption{Obtenção de luz polarizada (verticalmente, no caso da imagem) através de um filtro polarizador. \label{fig:pol-luz}} 
+\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -205,7 +212,7 @@ De seguida vamos analisar a formação de imagens para lentes convergentes ($f>0
 %\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{\sf Objecto e Imagem - Focos Conjugados}
+\subsection{\sf Objecto e imagem - focos conjugados e ampliação transversal}
 Considere de novo a Fig. \ref{fig:convencoes}. Cada ponto do objecto em $d_O$ tem um único ponto correspondente na imagem em $d_I$. Isto implica que, caso colocássemos o objecto em $d_I$, a imagem seria formada em $d_O$. Chama-se a estas posições \emph{focos conjugados}.
 Pela semelhança de triângulos temos as seguintes relações entre as dimensões do objecto e da imagem:
 
@@ -223,6 +230,18 @@ Das expressões (\ref{eq:1}) e (\ref{eq:3}) obtemos a equação dos focos conjug
     \fbox{
         $ \displaystyle
 	\frac{1}{f} = \frac{1}{d_O} +\frac{1}{d_I} 
+        $
+    }
+% \qquad \text{ equação dos focos conjugados}
+\end{equation}
+
+Uma forma alternativa e muitas vezes conveniente de exprimir esta relação consiste em utilizar as distâncias do objecto e da imagem aos respectivos focos. Designando estas distâncias por $x_O=AF_O$ e $x_I=A'F_I$, tem-se $d_O=f+x_O$ e $d_I=f+x_I$. Substituindo na expressão acima, obtém-se a chamada formulação de Newton para a equação dos focos conjugados:
+
+ \begin{equation}
+	\label{eq:focosconjugnewton}
+    \fbox{
+        $ \displaystyle
+	x_Ox_I = f^2
         $
     }
 % \qquad \text{ equação dos focos conjugados}
@@ -448,6 +467,8 @@ A imagem resultante é agora real ($d_I>0$, à direita da lente) e direita ($A<0
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+
 \section{\sf Associação de lentes delgadas}
 
 Para duas lentes delgadas de distâncias focais $f_1$ e $f_2$ afastadas de $D$ (para $D \ll f_1,f_2$) pode calcular-se a distância focal equivalente do conjunto através de: 
@@ -466,15 +487,20 @@ A dificuldade
 na determinação da distância focal equivalente ${f_{equiv}}$ é a medição das distâncias $d_O$ e $d_I$ 
 (que são diferentes das distância do objecto e da imagem às superfícies das lentes ou aos seus planos médios).
 
-Uma abordagem preferível consiste em usar a equação (\ref{eq:focosconjug}) separadamente para cada uma das lentes, e considerar que a \emph{primeira imagem} (real ou virtual) irá constituir-se como o \emph{objecto} para a segunda lente. Vamos aplicar este método para várias combinações.
+Uma abordagem preferível consiste em usar a equação (\ref{eq:focosconjug}) separadamente para cada uma das lentes, e considerar que a \emph{primeira imagem} (real ou virtual) irá constituir-se como o \emph{objecto} para a segunda lente. Neste caso, as regras descritas acima para o traçado de raios de lentes individuais aplicam-se consecutivamente:
+\begin{enumerate}
+\item  A partir da posição do objecto $AB$ e do tipo da primeira lente $L_1$, determina-se a posição da imagem intermédia $A'B'$
+\item  A partir da posição da imagem intermédia (agora tomada como objecto da segunda lente) e do tipo da segunda lente $L_2$, determina-se a posição da imagem final $A''B''$
+\end{enumerate}
+Vamos aplicar este método para várias combinações de lentes convergentes e divergentes.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{\sf Duas lentes convergentes afastadas de $D$}
-A figura \ref{fig:DuplaConvConv1} representa duas lentes, $L_1$ e $L_2$, de distâncias focais $f_1$ e $f_2$ respectivamente, separadas de uma distância $D$. O objecto (real) $AB$ situa-se à esquerda de $L_1$, e tem uma imagem $A'B'$ por intermédio de $L_1$. Esta imagem constitui-se como objecto virtual para $L_2$, resultando no final a imagem $A''B''$.
+\subsection{\sf Lente convergente - lente convergente}
+A figura \ref{fig:DuplaConvConv1} representa duas lentes convergentes, $L_1$ e $L_2$, de distâncias focais $f_1$ e $f_2$ respectivamente, separadas de uma distância $D$. O objecto (real) $AB$ situa-se à esquerda de $L_1$, e tem uma imagem $A'B'$ por intermédio de $L_1$. Esta imagem constitui-se como objecto virtual para $L_2$, resultando no final a imagem $A''B''$. Esta é a montagem mais simples de um \textbf{telescópio}, a partir do qual se podem obter grandes ampliações.
 
 \begin{figure}	[!htb]  \centering 
 	\includegraphics[width=0.9\textwidth]{9-DuplaConvConv1}
-	\caption{Sistema de duas lentes convergentes. \label{fig:DuplaConvConv1}} 
+	\caption{Sistema de duas lentes convergentes, com objecto intermédio real. \label{fig:DuplaConvConv1}} 
 \end{figure}
 
 %\begin{pspicture*}(-7.5,-3)(7.5,3)
@@ -500,8 +526,8 @@ O_1\,O_2 = D = d_{I_1} + d_{O_2}
 \label{eq:assoclentes_2}
 \end{equation}
 
-Esta é a montagem mais simples de um \textbf{telescópio}, a partir do qual se podem obter grandes ampliações.
-Estas três expressões permitem calcular o valor de uma das incógnitas, conhecidos os valores das outras; por exemplo, podemos determinar $f_2$, conhecidos os valores de $f_1$, $d_{O_1}$, $d_{I_2}$ e $D$.
+
+Estas três expressões permitem calcular o valor de uma das incógnitas, conhecidos os valores das outras. Por exemplo, uma aplicação comum desta montagem consiste em determinar o valor de uma distância focal desconhecida $f_2$, conhecidos os valores de $f_1$, $d_{O_1}$, $d_{I_2}$ e $D$.
 
 As mesmas expressões aplicam-se para o caso de uma imagem obtida por uma lente $L_1$ que passa a ser um “objecto” virtual para $L_2$, isto é, em que $d_{O2}<0$, situação ilustrada na Fig. \ref{fig:DuplaConvConv2}.
 
@@ -511,12 +537,12 @@ As mesmas expressões aplicam-se para o caso de uma imagem obtida por uma lente 
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{\sf Lentes convergente e divergente afastadas de $D$}
+\subsection{\sf Lente convergente - lente divergente}
 O outro sistema de lente dupla de interesse é o caso em que temos uma lente convergente e uma divergente separadas de $D$, ilustrado na Fig. \ref{fig:DuplaConvDiv1}, em que $L_1$ é convergente e $L_2$ é divergente. A lente $L_1$ produz uma imagem intermédia $A'B'$ real e invertida, que é o objecto (real) de $L_2$. Uma vez que a segunda lente é divergente, a sua imagem $A''B''$ (a imagem final) é sempre virtual e invertida.
 
 \begin{figure}	[!htb]  \centering 
 	\includegraphics[width=0.9\textwidth]{11-DuplaConvDiv1}
-	\caption{Sistema de lente convergente e divergente. A imagem final é sempre virtual e invertida. \label{fig:DuplaConvDiv1}} 
+	\caption{Sistema de lente convergente e divergente  com objecto intermédio real: a imagem final é virtual e invertida. \label{fig:DuplaConvDiv1}} 
 \end{figure}
 
 A figura \ref{fig:DuplaConvDiv2} ilustra a situação em que $A'B'$ está numa posição à direita de $L_2$: é uma imagem real (de $L_1$) mas um objecto virtual (de $L_2$), já que $d_{O2}<0$. A imagem $A''B''$ resultante é real e invertida.
@@ -524,7 +550,7 @@ A figura \ref{fig:DuplaConvDiv2} ilustra a situação em que $A'B'$ está numa p
 \begin{figure}	[!htb] 
 \begin{center}
 	\includegraphics[width=0.9\textwidth]{12-DuplaConvDiv2}
-	\caption{Sistema de lente convergente e divergente com objecto (intermédio) virtual. A imagem final é real e invertida. \label{fig:DuplaConvDiv2}} 
+	\caption{Sistema de lente convergente e divergente com objecto intermédio virtual: a imagem final é real e invertida. \label{fig:DuplaConvDiv2}} 
 \end{center}
 \end{figure}
 
@@ -536,7 +562,7 @@ A figura \ref{fig:DuplaConvDiv2} ilustra a situação em que $A'B'$ está numa p
 \end{figure}
 
 
-Se $L_1$ e $L_2$ permutarem (Fig. \ref{fig:DuplaConvDiv3}), obtém-se também uma imagem real  $A''\,B''$ desde que a distância $d_{O1}=A\,O_1$ seja idêntica.
+Por fim, se nesta montagem permutarmos $L_1$ e $L_2$ (Fig. \ref{fig:DuplaConvDiv3}), obtém-se também uma imagem real  $A''\,B''$, desde que a distância $d_{O1}=A\,O_1$ seja idêntica.
 Em qualquer destas situações, pode sempre calcular-se $f_2 < 0$ usando o conjunto das três equações (\ref{eq:assoclentes_2}).
 \clearpage
 
@@ -590,8 +616,9 @@ Em qualquer destas situações, pode sempre calcular-se $f_2 < 0$ usando o conju
 %\end{enumerate}
 
 \subsection{\sf Material utilizado}
+Caixa de óptica equipada com
 \begin{itemize}
-\item caixa de óptica equipada com calha graduada
+\item calha graduada
 \item lentes convergentes e divergente
 \item semi-cilindro de vidro acrílico
 \item diafragmas
@@ -600,7 +627,6 @@ Em qualquer destas situações, pode sempre calcular-se $f_2 < 0$ usando o conju
 \item fonte luminosa com lâmpada de incandescência linear
 \end{itemize}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{\sf Procedimento Experimental}
@@ -608,14 +634,12 @@ Em qualquer destas situações, pode sempre calcular-se $f_2 < 0$ usando o conju
 \subsubsection{\sf  Índice de refracção dum vidro acrílico }
 
 \begin{enumerate}
-\item Utilizando a  fonte  luminosa  obtenha  um  feixe  de  luz  branca  de  raios  paralelos. Que tipo de lente necessita?
-\item Com os diafragmas obtenha um feixe de luz estreito ($\approx$ 1 mm), alinhado com o eixo do Transferidor.
+\item Utilizando a  fonte  luminosa, obtenha  um  feixe  de  luz  branca  de  raios  paralelos. Que tipo de lente necessita? (\textit{Sugestão}: Observe a lâmpada que está no interior da fonte e determine que tipo de simetria tem: planar, esférica, cilíndrica...)
+\item Com os diafragmas, obtenha um feixe de luz estreito ($\approx$ 1 mm), alinhado com o eixo do transferidor.
 \item Faça  incidir  luz  branca  na  superfície  plana  do  semi-cilindro  de  vidro  acrílico.  Observe  e obtenha os ângulos de 
-reflexão e a transmissão para vários ângulos do feixe incidente, à 
-esquerda e à direita.  Faça  medições  pelo  menos  para  nove  valores  diferentes  do 
-ângulo de incidência.
+reflexão e de transmissão para vários ângulos do feixe incidente, à esquerda e à direita.  Faça  medições  para pelo  menos  nove  valores  diferentes  do ângulo de incidência.
 \item  Determine \emph{a partir do gráfico}, por ajuste, o índice de refracção do vidro acrílico.  
-\item Repita  as  medidas  e  a  análise  dos  resultados  fazendo  agora  a  incidência  na  superfície cilíndrica. 
+\item Repita  as  medidas  e  a  análise  dos  resultados, fazendo  agora  a  incidência  na  superfície cilíndrica. 
 \item  Compare o índice de refracção do vidro acrílico a partir da incidência nas duas faces. 
 \item Estime também o valor do índice de refracção a partir do ângulo limite de reflexão total. 
 \item  Compare a precisão dos diferentes valores obtidos de $n_{vidro}$. 
@@ -623,11 +647,12 @@ esquerda e à direita.  Faça  medições  pelo  menos  para  nove  valores  dif
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{\sf Polarização da luz. Ângulo de Brewster}
-Observe o efeito de interposição de dois polaroides paralelos ou cruzados no percurso de um feixe luminoso. 
-Usando a mesma montagem do ponto anterior, polarize o feixe  paralelamente ao plano
-de incidência, orientando o eixo $0^\circ-180^\circ$ do polarizador na vertical. Para valores do ângulo de incidência próximos 
-do  ângulo  de  Brewster  (que  pode  calcular  a  partir  do  índice de refracção) obtenha   o  intervalo 
-angular em que se extingue praticamente o feixe reflectido. 
+\begin{enumerate}
+\item Observe o efeito de interposição de dois filtros polarizadores, paralelos ou cruzados, no percurso de um feixe luminoso. 
+\item Usando a mesma montagem do ponto anterior, polarize o feixe paralelamente ao plano
+de incidência, orientando o eixo $0^\circ-180^\circ$ do filtro polarizador na vertical. 
+\item Para valores do ângulo de incidência próximos do  ângulo  de  Brewster  (que  pode  calcular  a  partir  do  índice de refracção e verificar experimentalmente que, para esse valor, os raios reflectido e transmitido fazem 90$^\circ$ entre si) obtenha   o  intervalo angular em que se extingue praticamente o feixe reflectido. 
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{\sf   Distância focal de uma lente convergente ( $f  \approx$ 75 mm) }
@@ -636,13 +661,13 @@ angular em que se extingue praticamente o feixe reflectido.
 \item Obtenha  um  feixe  de  luz  branca  de  raios  paralelos, usando a lente colimadora.
 Determine  a  distância  focal (d.f.)  da  lente pelo método directo.  Repita  a  experiência  duas  vezes,  colocando  a  lente 
 noutra posição relativamente à lente de raios paralelos. 
-\item Coloque o \emph{objeto} com mira no suporte da calha, iluminando-o directamente com a fonte luminosa. Coloque a mesma lente convergente a uma distância 150 mm $< d_O <$ 75 mm do objeto.
+\item Coloque o \emph{objecto} com mira no suporte da calha, iluminando-o directamente com a fonte luminosa. Coloque a mesma lente convergente a uma distância 150 mm $> d_O >$ 75 mm do objeto.
 
-\item Com o écran plano procure a posição correcta para obter uma \emph{imagem} focada.
+\item Com o écran plano, procure a posição correcta para obter uma \emph{imagem} focada.
 Utilizando a equação dos focos conjugados, calcule de novo a d.f. da lente. 
-\item Na folha quadriculada em anexo desenhe um diagrama com o eixo óptico, o objecto e a lente convergente. Utilizando as aproximações paraxial e das lentes delgadas desenhe a construção geométrica e obtenha a posição da imagem e a respectiva ampliação.
+\item Na folha quadriculada em anexo, desenhe um diagrama com o eixo óptico, o objecto e a lente convergente. Utilizando as aproximações paraxial e das lentes delgadas, desenhe a construção geométrica e obtenha a posição da imagem e a respectiva ampliação.
 
-\item Medindo agora a imagem determine a ampliação linear. Compare-a com a que podia  calcular pelas distância $d_O$  e $d_I$. 
+\item Medindo agora a imagem, determine a ampliação linear. Compare-a com a que podia  calcular pelas distância $d_O$  e $d_I$. 
 \item Repita a experiência duas vezes, colocando a lente noutras posições relativamente ao objecto.  
 \item Compare o valor da distância focal com o obtido em a) e estime a precisão envolvida em 
 cada um dos métodos que utilizou. 
@@ -651,9 +676,9 @@ cada um dos métodos que utilizou.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{\sf   Distância focal de uma lente divergente ( $f  \approx$ --150 mm) }
 \begin{enumerate}
-\item Associe  no  mesmo  suporte  a  lente  divergente  com  uma  convergente ($f  \approx$ 75 mm) de  forma a  que  o 
-conjunto se comporte como um sistema convergente (com $D\approx 0$).
-\item Repita a montagem com objecto e a sua imagem real. 
+\item Associe  no  mesmo  suporte  a  lente  divergente  com  uma  convergente ($f  \approx$ 75 mm), de  forma a  que  o 
+par se comporte como um sistema convergente (com $D\approx 10$ mm). Utilize esta montagem para determinar a distância focal da lente divergente.
+\item Repita a montagem para uma diferente distância ao objecto. 
 %\item Conhecidas  a  distância  focal  da  lente  convergente  e  a  distância  entre  lentes $D$, calcule  a distância focal da lente divergente a partir de $d_O$  e $d_I$. 
 %\item Repita a experiência (pelo menos uma vez), colocando o conjunto das lentes noutra posição relativamente ao objeto. 
 
