@@ -2,14 +2,14 @@
 %&encoding=UTF-8 Unicode
 % SVN keywords
 % $Author: bernardo $
-% $Date: 2014-10-10 08:48:19 +0100 (Fri, 10 Oct 2014) $
-% $Revision: 6700 $
-% $URL: http://metis.ipfn.ist.utl.pt:8888/svn/cdaq/Users/Bernardo/Aulas/LFEB/teXfiles/Pendulo/pendulo_guia.tex $
+%
 \documentclass[a4paper,12pt]{article}      % Comments after  % are ignored
 %\usepackage{hyperref}                 % For creating hyperlinks in cross references
 %\documentclass[a4paper,12pt]{article} 
 %
 \usepackage{ifxetex}% for LATEX, or
+% Compiled with  XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit)
+
 \usepackage{ifplatform} 
 \usepackage{verbatim}
 
@@ -19,7 +19,7 @@
 %
 \ifwindows
 \setmainfont{Garamond}
-\setsansfont{Gill Sans MT}
+%\setsansfont{Gill Sans MT}
 \setmonofont[Scale=0.95]{Courier}
 \fi
 \iflinux
@@ -70,10 +70,12 @@
 \author{Prof. Bernardo B. Carvalho} 
 
 %, Bernardo Brotas Carvalho\\bernardo@ipfn.ist.utl.pt} 
-\date{ Outubro 2017} 
+\date{ Setembro 2017} 
 
 \begin{document} 
 {  \sf  Relatório da Experiência do Pêndulo Gravítico} %[0.4cm] % \bfseries 
+
+
 
 \input{../../Nomes.txt}
 
@@ -81,7 +83,6 @@
 \section{\sf Trabalho preparatório a realizar ANTES da sessão de Laboratório:}
 \begin{enumerate}
 \item Descreva quais os objectivos do trabalho que irá realizar na sessão de laboratório. 
-%\ref{sec:dados}.
 \end{enumerate}
 
 \subsection{\sf Objectivos do Trabalho}
@@ -90,64 +91,47 @@
 \noindent\underline{\makebox[\textwidth][r]{~}} \\
 \noindent\underline{\makebox[\textwidth][r]{~}} \\
 \noindent\underline{\makebox[\textwidth][r]{~}} \\
-%\noindent\underline{\makebox[\textwidth][r]{~}} \\
 
 \subsubsection{\sf Equações }
-Complete o seguinte quadro com todas as equações necessárias para calcular as grandezas, bem como as suas incertezas e a lengenda de símbolos.  
-Numere as equações para futura referência. Indique nas tabelas qual a equação que utiliza para os cálculos.
-
+Escreva no seguinte quadro todas as equações necessárias para calcular as grandezas, bem como as suas incertezas.
 %\begin{center}
-
-%\framebox(215,215){%
-%    \parbox{100,100}{
-%    $\overline{t}=\sqrt{\frac{2 \overline{D}}{g}}$ \\
-% ee
- %   $\sigma_{\overline{t}}=\sqrt{\frac{2 }{g}} \cdot \frac{1}{2\sqrt{\overline{D}}} \cdot \sigma_{\overline{D}}  
-%= \overline{t} \cdot \frac{1}{2\overline{D}} \cdot \sigma_{\overline{D}} $ 
- %}	%
-%}
-
-\framebox(415,215)[l]{%
-    \parbox[t][150\unitlength]{215\unitlength}{$\overline{t}=\sqrt{\frac{2 \overline{D}}{g}}$\\
-    $\sigma_{\overline{t}}=\sqrt{\frac{2 }{g}} \cdot \frac{1}{2\sqrt{\overline{D}}} \cdot \sigma_{\overline{D}}  
-      = \overline{t} \cdot \frac{1}{2\overline{D}} \cdot \sigma_{\overline{D}} $
-  }%
-}
-
+%\framebox[13cm]{\rule{0pt}{6.5cm}}
 %\end{center}
 
+\fbox{\begin{minipage}{36em}
+$\overline{t}=\sqrt{\frac{2 \overline{D}}{g}}$\\
+$\sigma_{\overline{t}}=\sqrt{\frac{2 }{g}} \cdot \frac{1}{2\sqrt{\overline{D}}} \cdot \sigma_{\overline{D}}  
+= \overline{t} \cdot \frac{1}{2\overline{D}} \cdot \sigma_{\overline{D}} $ 
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
 
-%	\begin{center}
-%	\textsc{\large Laboratório de Física Experimental Básica - MEFT - 2012/2013 }\\%[0.5cm]
-%	\end{center}
-%\includegraphics[width=0.2\textwidth]{../../logo-ist}%\\[1cm]  %%  Logo_IST_color
-	
-%	\HRule \\[0.5cm]
-%	{ \huge   \bfseries \textsc{ Pendulo Gravítico } }\\[0.4cm]
-%	{ \large \bfseries Determinação do período do pêndulo simples e aferição com o valor da Aceleração da Gravidade local $g$  }\\
-%	{ \large \begin{flushleft}
-%	 $\bullet$ Deflexão magnética \\
-%	 $\bullet$ Deflexão magnética em equilíbrio com deflexão eléctrica
-%	\end{flushleft} }
-%	\HRule \\%[0.5cm]
-%	\textsc{\Large Laboratório de Física Experimental Básica}\\[0.5cm]
-	
+\end{minipage}}
+
+\newpage
+
 
 \section*{\sf Procedimento Experimental}
 { \large Material }
  \begin{flushleft}
-	 $\bullet$ Suporte do Pêndulo. \\
+	 $\bullet$ Suporte do pêndulo. \\
 	 $\bullet$ Massas de chumbo, linha inextensível e com massa desprezável. \\
 	 $\bullet$ Régua graduada, cronómetro, fita métrica, transferidor, balança.
 \end{flushleft} 
 
-Comece a sessão de laboratório por estimar o atraso e a precisão que obtém na medição do tempo com o cronómetro, tendo em conta 
-o tempo de reacção do sistema nervoso. 
+\subsubsection*{\sf Determinação do tempo de reação}
+Comece a sessão de laboratório por estimar o atraso e a precisão que obtém na medição do tempo com o cronómetro, tendo em conta o tempo de reacção do sistema nervoso. 
 Para cada membro do grupo, com  uma régua graduada e a ajuda de um(a) colega obtenha 15 medidas da queda da régua. A partir da média e desvio padrão obtenha o  tempo de reação  e a incerteza. 
 
-%$\overline{t}=\sqrt{\frac{2 \overline{D}}{g}}$ e   
-%$\sigma_{\overline{t}}=\sqrt{\frac{2 }{g}} \cdot \frac{1}{2\sqrt{\overline{D}}} \cdot \sigma_{\overline{D}}  
-%= \overline{t} \cdot \frac{1}{2\overline{D}} \cdot \sigma_{\overline{D}} $ 
 
 %\footnote{\, 
 
@@ -188,13 +172,11 @@ Desvio padrão  $\sigma_{\overline{t}}$ [s] & & & \\
 \end{footnotesize}
 \end{center}
 
-
+\subsubsection*{\sf Determinação do período do pêndulo}
 Monte o sistema de pêndulo gravítico e obtenha o seu período para diversos comprimentos do fio $L$, usando a medição de $N$ ciclos. 
-A medição é de um intervalo de tempo e como tal os atrasos da reação compensam no início e no fim da contagem. No entando deve considerar como  
-erro de medição o dobro do desvio padrão. Para o erro da média $\overline{\Delta t}$ deve considerar o majorante entre este erro, $2 \sigma_{\overline{t}}$ e o maior desvio entre o valor  $\overline{\Delta  t} $ e cada ensaio individual. 
+A medição é de um intervalo de tempo e, como tal, os atrasos da reação compensam no início e no fim da contagem. No entanto, deve considerar como erro de medição o dobro do desvio padrão. Para o erro da média $\overline{\Delta t}$ deve considerar o majorante entre este erro, $2 \sigma_{\overline{t}}$ e o maior desvio entre o valor  $\overline{\Delta  t} $ e cada ensaio individual. 
 
-Obtenha o valor de $g_{exp}$ para estes ensaios, usando a expressão (9) do texto de apoio, bem como a respectiva incerteza experimental. 
-Compare o valor final de $g_{exp}$ obtido com o valor tabelado $g_{tab}$ para Lisboa e estime o desvio à exactidão que obteve. 
+Obtenha o valor de $g_{exp}$ para estes ensaios, usando a expressão (9) do texto de apoio, bem como a respectiva incerteza experimental. Compare o valor final de $g_{exp}$ obtido com o valor tabelado $g_{tab}$ para Lisboa e estime o desvio à exactidão que obteve. 
 
 \begin{center}
 \begin{small}
@@ -230,13 +212,13 @@ Tenha em atenção os seguintes aspectos e comente-os na discussão final:
 	 $\bullet$ Qual a posição do pêndulo que usa para cronometrar o intervalo de tempo?  \\
 \end{flushleft} 
 
-\subsubsection*{\sf Resultados}
+\subsubsection*{\sf Resultados finais}
 %\bigskip
 %	\noindent
 $g_{exp}=$ \underline{\makebox[1.5cm][r]{~}}  $\pm$  	\underline{\makebox[1cm][r]{~}} [ms$^{-2}$]
 
 \noindent  
-Desvio à Exatidão $=$~\underline{\makebox[1cm][r]{~}}\%, 
+Desvio à exatidão $=$~\underline{\makebox[1cm][r]{~}}\%, 
 Incerteza relativa $=$~\underline{\makebox[1cm][r]{~}}\% 
 
 
