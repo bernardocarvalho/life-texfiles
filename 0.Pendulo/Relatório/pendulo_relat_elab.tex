@@ -1,0 +1,273 @@
+%&program=xelatex
+%&encoding=UTF-8 Unicode
+% SVN keywords
+% $Author: bernardo $
+%
+\documentclass[a4paper,12pt]{article}      % Comments after  % are ignored
+%\usepackage{hyperref}                 % For creating hyperlinks in cross references
+%\documentclass[a4paper,12pt]{article} 
+%
+\usepackage{ifxetex}% for LATEX, or
+% Compiled with  XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6800 64-bit)
+
+\usepackage{ifplatform} 
+\usepackage{verbatim}
+
+\ifxetex
+\usepackage{polyglossia} \setmainlanguage{portuges}
+\usepackage{fontspec}
+%
+\ifwindows
+\setmainfont{Garamond}
+%\setsansfont{Gill Sans MT}
+\setmonofont[Scale=0.95]{Courier}
+\fi
+\iflinux
+\setmainfont[Ligatures=TeX]{Linux Libertine O}
+\setsansfont[Ligatures=TeX,Scale=MatchLowercase]{Linux Biolinum}
+\setmonofont[Scale=0.95]{Courier}
+\fi
+\ifmacosx
+% add settings
+\fi
+%
+\usepackage{xcolor,graphicx} 
+\else
+%PdfLaTEX
+\usepackage[portuguese]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphics}                 % Packages to allow inclusion of graphics
+\usepackage{color}                    % For creating coloured text and background
+\fi
+
+\usepackage{amsmath,amssymb,amsfonts} % Typical maths resource packages
+
+\oddsidemargin 0cm
+\evensidemargin 0cm
+
+\pagestyle{myheadings}         % Option to put page headers
+                               % Needed \documentclass[a4paper,twoside]{article}
+\markboth{{MEFT}}
+{{\small\it \protect\input{../../LIFE.txt}}}
+
+\textwidth 15.5cm
+\topmargin -1cm
+\parindent 0cm
+\textheight 24cm
+\parskip 1mm
+
+
+
+% Math macros
+\newcommand{\ud}{\,\mathrm{d}} 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%\title{ e Difracção de Ondas Electromagnéticas num meio dieléctrico, homogéneo e isotrópico } 
+%\subtitle{ aplicação à luz visível} 
+
+\author{Prof. Bernardo B. Carvalho} 
+
+%, Bernardo Brotas Carvalho\\bernardo@ipfn.ist.utl.pt} 
+\date{ Setembro 2019} 
+
+\begin{document} 
+{  \sf  Relatório da Experiência do Pêndulo Gravítico} %[0.4cm] % \bfseries 
+
+
+
+%\input{../../Nomes.txt}
+
+
+\section{\sf Trabalho preparatório a realizar ANTES da sessão de Laboratório:}
+
+
+\subsection{\sf Objectivos do Trabalho}
+%\begin{enumerate}
+ \begin{flushleft}
+	 $\bullet$  Descreva sucintamente quais os objectivos do trabalho que irá realizar e que tipo de equipamentos irá utilizar.
+ \end{flushleft}
+%\end{enumerate}
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+
+%\subsubsection{\sf Equações }
+%Escreva no seguinte quadro todas as equações necessárias para calcular as grandezas, bem como as suas incertezas.
+%%\begin{center}
+%%\framebox[13cm]{\rule{0pt}{6.5cm}}
+%%\end{center}
+%
+%\fbox{\begin{minipage}{36em}
+%$\overline{t}=\sqrt{\frac{2 \overline{D}}{g}}$\\
+%$\sigma_{\overline{t}}=\sqrt{\frac{2 }{g}} \cdot \frac{1}{2\sqrt{\overline{D}}} \cdot \sigma_{\overline{D}}  
+%= \overline{t} \cdot \frac{1}{2\overline{D}} \cdot \sigma_{\overline{D}} $ 
+%\\
+%\\
+%\\
+%\\
+%\\
+%\\
+%\\
+%\\
+%\\
+%\\
+%\\
+%\\
+%
+%\end{minipage}}
+%
+%\newpage
+
+
+\section{\sf Procedimento Experimental}
+{ \large Material }
+ \begin{flushleft}
+	 $\bullet$	Material utilizado e suas dimensões. Inclua uma fotografia do dispositivo empregue.  \\
+%	 $\bullet$ Massas de chumbo, linha inextensível e com massa desprezável. \\
+%	 $\bullet$ Régua graduada, cronómetro, fita métrica, transferidor, balança.
+\end{flushleft} 
+
+\subsubsection*{\sf Determinação do tempo de reação - incerteza da medida}
+Obtenha uma aplicação na internet que lhe permita determinar O SEU tempo de reação. Efetue várias medidas e calcule o desvio padrão de modo a determinar a precisão com que conseguirá medir futuramente um intervalo de tempo com o cronómetro.
+
+%Comece a sessão de laboratório por estimar o atraso e a precisão que obtém na medição do tempo com o cronómetro, tendo em conta o tempo de reacção do sistema nervoso. 
+%Para cada membro do grupo, com  uma régua graduada e a ajuda de um(a) colega obtenha 15 medidas da queda da régua. A partir da média e desvio padrão obtenha o  tempo de reação  %e a incerteza. 
+
+
+%\footnote{\, 
+
+
+\begin{center}
+\begin{footnotesize}
+\begin{tabular}{|r|c|}
+\hline
+Ensaio  & Tempo de reação  \\
+\# &  [ms] \\
+\hline \hline
+1 &  \\
+\hline
+2 & \\
+\hline ... & \\
+%\hline 4 & & & \\
+%\hline 5 & & & \\
+%\hline 6 & & & \\
+%\hline 7 & & & \\
+%\hline 8 & & & \\
+%\hline 9 & & & \\
+%\hline 10 & & & \\
+\hline 11 &  \\
+\hline \hline
+%Erro da Média  $e_{\overline{D}}$ [m] & & & \\ 
+%Tempo de reação $\overline{t} \pm e_{\overline{t}}$ [s] & $\qquad \pm$ \quad (s) & $\qquad \pm$ \quad (s) & $\qquad \pm$ \quad (s) \\
+Tempo de reação $\overline{t}$ [ms] &  \\ \hline % \pm e_{\overline{t}}$ 
+Desvio padrão  $\sigma_{\overline{t}}$ [ms] & \\
+\hline
+
+\end{tabular}
+\end{footnotesize}
+\end{center}
+
+\subsubsection*{\sf Determinação do período do pêndulo}
+Monte o sistema de pêndulo gravítico e obtenha o seu período $T$ para diversos comprimentos do fio $L$, usando a medição de $N$ ciclos. 
+\emph{A medição é de um intervalo de tempo, $\Delta t$ e, como tal, os atrasos da reação compensam no início e no fim da contagem.} No entanto, deve considerar como como incerteza na medida do tempo total o dobro do desvio padrão obtido anteriormente na determinação do seu tempo de reação.
+%. Para o erro da média $\overline{\Delta t}$ deve considerar o majorante entre este erro, $2 \sigma_{\overline{t}}$ e o maior desvio entre o valor  $\overline{\Delta  t} $ e cada ensaio individual. 
+
+%Obtenha o valor de $g_{exp}$ para estes ensaios, usando a expressão (9) do texto de apoio, bem como a respectiva incerteza experimental. Compare o valor final de $g_{exp}$ obtido com o valor tabelado $g_{tab}$ para Lisboa e estime o desvio à exactidão que obteve. 
+
+\begin{center}
+\begin{small}
+	\noindent Angulo inicial:	$\theta \simeq$ \underline{\makebox[1.5cm][r]{~}} rad,  Número de ciclos: $\quad N=$\underline{\makebox[1cm][r]{~}} \\
+\bigskip
+\begin{tabular}{|r|c|c|c|c|}
+\hline
+Ensaio  \# & L: $\qquad \pm$ \qquad [mm] & L: $\qquad \pm$ \qquad[mm] & L: $\qquad \pm$ \qquad[mm] & L: $\qquad \pm$ \qquad[mm]\\
+\hline \hline
+$\Delta t_1$   [s]&  $\qquad \pm$ \quad &  $\qquad \pm$ \quad&  $\qquad \pm$ \quad&  $\qquad \pm$ \quad\\ \hline
+$\Delta t_2$   [s]&  $\qquad \pm$ \quad &  $\qquad \pm$ \quad&  $\qquad \pm$ \quad&  $\qquad \pm$ \quad\\ \hline
+$\Delta t_2$   [s]&  $\qquad \pm$ \quad &  $\qquad \pm$ \quad&  $\qquad \pm$ \quad&  $\qquad \pm$ \quad\\ \hline
+\hline 
+Média $\overline{\Delta t}$ [s] & $\qquad \pm$ \quad  & $\qquad \pm$ \quad  &  $\qquad \pm$ \quad  & $\qquad \pm$ \quad \\
+Período $\overline{T}$ [s] & $\qquad \pm$ \quad  & $\qquad \pm$ \quad  &  $\qquad \pm$ \quad  &  $\qquad \pm$ \quad  \\
+% $\overline{g}$ [ms$^{-2}$] & $\qquad \pm$ \quad  & $\qquad \pm$ \quad  & $\qquad \pm$ \quad & $\qquad \pm$ \quad \\
+%Erro da Média  $e_{\overline{D}}$ [m] & & & \\ 
+% $\overline{t} \pm e_{\overline{t}}$ [s] & $\qquad \pm$ \quad [s] & $\qquad \pm$ \quad [s] & $\qquad \pm$ \quad [s] \\
+\hline
+
+\end{tabular}
+\end{small}
+\end{center}
+
+\subsubsection*{\sf Determinação da relação entre o período do Pêndulo e o comprimento }
+Estabeleça graficamente a relação entre o período e o comprimento do cabo, ajustando uma função adequada  de acordo com o modelo dimensional estabelecido. 
+
+\subsubsection*{\sf Discussão }
+ 
+Questione o seu trabalho de acordo com as instruções de revisão – \emph{peer review}.
+
+
+Tenha em atenção os seguintes aspectos e comente-os:
+ \begin{flushleft}
+	 $\bullet$ Utilize apenas algarismos significativos (a.s.) nas tabelas. O erros devem conter no máximo 2 a.s. \\
+	 $\bullet$ Qual a vantagem de usar na medição $N$ ciclos do pêndulo? \\
+	 $\bullet$  Qual é a incerteza na medida do comprimento $L$? \\	
+	 $\bullet$ Uma massa pendurada num fio tem mais que o grau de liberdade. Tente assegurar que o pêndulo oscila apenas no plano vertical. \\
+	 $\bullet$ Tente minimizar o efeitos de paralaxe na determinação do ângulo máximo.  \\
+	 $\bullet$ Qual a posição do pêndulo que usa para cronometrar o intervalo de tempo?  \\
+\end{flushleft} 
+
+%\subsubsection*{\sf Resultados finais}
+%%\bigskip
+%%	\noindent
+%$g_{exp}=$ \underline{\makebox[1.5cm][r]{~}}  $\pm$  	\underline{\makebox[1cm][r]{~}} [ms$^{-2}$]
+%
+%\noindent  
+%Desvio à exatidão $=$~\underline{\makebox[1cm][r]{~}}\%, 
+%Incerteza relativa $=$~\underline{\makebox[1cm][r]{~}}\% 
+
+
+%\smallskip
+
+
+
+\subsubsection*{\sf Actividades adicionais, se tiver tempo}
+ \begin{flushleft}
+%	 $\bullet$ Utilize uma montagem electrónica com barreira óptica para medição precisa do período. Compare com os outros resultados.\\
+	 $\bullet$ Verifique experimentalmente que o período do pêndulo não depende do valor da massa.\\
+%	 $\bullet$ Verifique experimentalmente a alteração do período do pêndulo para ângulos iniciais grandes. 
+%	 Para que valores de $\theta_0$ o valor calculado de $g$’ se afasta de $g_{exp}$ com desvio $\ge 5 \%$ ?\\
+	 $\bullet$ Tente determinar para que valores da posição inicial o período se desvia mais do que $ 5 \%$  do valor médio para pequenas oscilações.\\
+	 $\bullet$ Tente estimar a percentagem de energia devido ao atrito que se perde em cada ciclo.
+\end{flushleft} 
+
+\newpage
+
+ \subsection*{\sf Análise, conclusões e comentários finais}
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+\noindent\underline{\makebox[\textwidth][r]{~}} \\
+%\noindent\underline{\makebox[16.2cm][r]{~}} \\
+
+
+
+\end{document} 	
+
